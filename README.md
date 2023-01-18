@@ -20,12 +20,13 @@ Despite this, the onboarding was really difficult for new comers : You need to b
 
 Something is missing ! A mass adoption is utopian with no easy/fun Web3 on-ramp.
 Revolte is using game approach and is a interactive story which capture the attention to hold users spelbound.
+
 ## Overview
 
-Revolte is based on a dystopian universe and very similar to an interactive comic. The adventure is split in 3 chapters :
+Revolte is based on a dystopian universe, similar to an interactive comic. The adventure is split in 3 chapters :
  1. Prelude : No relation with Web3. The aim is to introduce the story/universe and to grab audience's attention.
- 2. At the end of the prelude, events from the story require a wallet installation. Wallet is mandatory for chapter 2. The narration of the story details how works a wallet and what are its benefits. This chapter introducs basic concepts and uses of a wallet: public/private key, gas, token, block explorer, NFTs, ...
- 3. At the end of chapter 2, a deposit/swap is required to start chapter 3. This section goes deeper in Web3 use : swap, deposit/borrow, layer 2, ...
+ 2. At the end of the prelude, events from the story require a wallet installation. Wallet is mandatory for chapter 2. The narration of the story details how works a wallet and what are its benefits. This chapter introduces basic concepts and uses of a wallet: public/private key, gas, token, block explorer, NFTs, ...
+ 3. At the end of chapter 2, a deposit/swap is required to start chapter 3. This section goes deeper in Web3 use : swap, deposit/borrow, bridge, layer 2, ...
 
 ## Story
 
@@ -33,9 +34,7 @@ This section is a draft of the story to start with a base. Our ambition is to cr
 
 ### Logline
 
-In a totalitarian state, Azad is a journalist who discovers a health scandal and becomes a whistleblower wanted by the whole government. His only way to survive and to bring the truth to light is using new IT tools.
-Azad
-
+In a totalitarian state, Azad is a journalist who discovers a financial scandal and becomes a whistleblower wanted by the whole government. His only way to survive and to bring the truth to light is using new IT tools.
 
 ### Outline
 
