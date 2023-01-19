@@ -1,17 +1,55 @@
 'use client';
 
+import { motion } from "framer-motion";
+
+const tVariant = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 0.5 } },
+}
+
+const pVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 1 } },
+}
+
+const bVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 1.5 } },
+}
+
+
 const Hero = () => (
     <section>
-        <h1 className="text-white text-center pt-52 pb-2 text-5xl"> Revolte</ h1>
-        <p className="text-white text-center pb-20"> Story of a whistleblower</ p>
+        <motion.h1
+            className="text-white text-center pt-52 pb-2 text-5xl"
+            initial="hidden"
+            animate="visible"
+            variants={tVariant}
+        >
+            Revolte
+        </motion.h1>
+        <motion.p
+            className="text-white text-center pb-20"
+            initial="hidden"
+            animate="visible"
+            variants={pVariant}
+        >
+            Story of a whistleblower
+        </ motion.p>
         <div className="grid mx-auto place-content-center">
-            <button className="bg-white hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+            <motion.button
+                className="bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                initial="hidden"
+                animate="visible"
+                variants={bVariant}
+                whileHover={{ rotate: 180, scale: 2 }}
                 onClick={() => alert("In Development!")}
             >
                 Enter the adventure
-            </button>
+            </motion.button>
         </div>
-    </section>
+
+    </section >
 );
 
 export default Hero; 
