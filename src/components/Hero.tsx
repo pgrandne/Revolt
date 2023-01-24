@@ -48,7 +48,6 @@ const Hero = () => {
                     Enter the adventure
                 </motion.button>
             </Link>
-
         </section >
     )
 }

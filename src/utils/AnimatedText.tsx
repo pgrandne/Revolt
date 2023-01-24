@@ -2,8 +2,19 @@
 
 import { satisfy } from "@/app/font";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
+import { Dispatch, SetStateAction, useState } from "react";
 
-const AnimatedText = ({ text }: { text: string }) => {
+const AnimatedText = (
+    { textBtn1, textBtn2, stage, setStage, text }: {
+        textBtn1: string,
+        textBtn2: string,
+        stage: number,
+        setStage: Dispatch<SetStateAction<number>>,
+        text: string
+    }) => {
+    const router = useRouter();
+    const [modal, setModal] = useState(false)
     const words = text.split("")
     const container = {
         hidden: { opacity: 0 },
@@ -24,23 +35,51 @@ const AnimatedText = ({ text }: { text: string }) => {
             }
         }
     }
+
     return (
-        <motion.div
-            className="text-white mx-auto"
-            variants={container}
-            initial="hidden"
-            animate="visible"
-        >
-            {words.map((word, index) =>
-                <motion.span
+        <>
+            <motion.div
+                className="text-white"
+                variants={container}
+                initial="hidden"
+                animate="visible"
+            >
+                {words.map((word, index) =>
+                    <motion.span
+                        className={satisfy.className}
+                        key={index}
+                        variants={child}
+                    >
+                        {word}
+                    </motion.span>
+                )}
+                <motion.div
                     className={satisfy.className}
-                    key={index}
                     variants={child}
                 >
-                    {word}
-                </motion.span>
-            )}
-        </motion.div>
+                    <button
+                        className="bg-transparent text-white hover:bg-red-800 py-2 px-6 border border-gray-400 rounded-full m-3"
+                        onClick={() => setStage(stage + 1)}
+                    >
+                        {textBtn1}
+                    </button>
+                    <button
+                        className="bg-transparent text-white hover:bg-red-800 py-2 px-6 border border-gray-400 rounded-full m-3"
+                        onClick={() => {
+                            alert("You have stopped the adventure")
+                            router.push('/')
+                        }
+                        }
+                    >
+                        {textBtn2}
+                    </button>
+                </motion.div>
+            </motion.div >
+
+
+
+
+        </>
     )
 }
 
