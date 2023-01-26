@@ -10,6 +10,8 @@ This playful fiction explains and illustrates each concept and tool in a non bor
 - Use decentralized applications
 - Discover Layer 2 like Optimism 
 
+Another good example about what we want to build is https://ethereumhacker.com/ but for learning basics about blockchain instead of vulnerabilities in smart contracts 
+
 ## Genesis
 
 During 2021-22 we developed a project for French Government and European Union about decentralized identity. We did a lot of user testings. 99% of our users had no knowledge about Web3, decentralization and wallet. They were immediately afraid by the idea of installing an extension and keeping safe the seed phrase. They was not understanding why our portal was not using login/password like other websites.
@@ -43,6 +45,6 @@ The 3 chapters of the story follow three-act structure:
 - inciting incident
 - redemption
 
- #### Setup
-
- Game starts in newspaper office where Azad works as journalist.
+ #### Alpha Version
+ The Alpha version is built without design or drawing but only with text.
+ The core of the story is writing during this phase. The end of this first phase is estimated for January 31st.
