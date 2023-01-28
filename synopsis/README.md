@@ -18,21 +18,21 @@
 
 ##### Case 4
 *Zoom sur l'écran d'ordinateur, clic pour ouvrir le chat de sa messagerie*
-> Bonjour M  Azad,  une personne de confiance m'a donnée votre contact. Je lis vos articles depuis un long moment et j'apprécie votre courage dans vos enquêtes. Votre travail patient, sérieux et sans concession permet d'éveiller les consciences et de mettre en lumières les dérives de notre monde politique et économique.
+> Bonjour M  Azad,  une personne de confiance m'a donnée votre contact. Je lis vos articles depuis un long moment et j'apprécie votre courage dans vos enquêtes. Votre travail sérieux et sans concession permet d'éveiller les consciences et de mettre en lumières les dérives de notre monde.
 > ... (*en mouvement avec effacement pour simuler l'écriture*)
-> Votre quête de vérité est redoutable et salutaire pour notre pays. 
+> Votre quête de vérité est salutaire pour notre pays
 > - **Merci/C'est ma première motivation**
 > 
-> Je dispose de documents qui pourraient vous intéresser concernant une affaire qui dépasse de loin toutes les révélations que vous avez faites dans votre carrière. Etes-vous interessé ?
-> - **Oui/Non merci, j'enquête sur autre chose en ce moment**
+> Je dispose de documents qui pourraient vous intéresser concernant une affaire qui dépasse de loin toutes les révélations que vous avez pû faire dans votre carrière. Etes-vous interessé ?
+> - **Ca se pourrait mais il faut m'en dire plus/Non merci, j'enquête sur autre chose en ce moment**
 > 
-> OK, je ne peux pas vous en dire plus pour le moment, je vous recontacte très prochainement. Soyez très prudent, cette histoire m'a coûté ma vie.
+> OK, je ne peux pas pour le moment, je vous recontacte très prochainement. Soyez très prudent, cette histoire m'a coûté ma vie.
 >  - **Que voulez-vous dire par "m'a couté ma vie" ?**
 >  - **Vous m'effrayez là, je préfère mettre un terme à cette discussion**
 >
->Ils m'ont volé ma vie  ... (*en mouvement avec effacement pour simuler l'écriture*), ils ont usurpé mon identité pour m'accuser de crime que je n'ai pas commis, ils ont fermé tous mes comptes bancaires, je ne peux plus voir ma famille, rentrer chez moi... Je suis un fugitif, traqué nuit et jour qui cherche à faire éclater la vérité.
+>Ils m'ont volé ma vie  ... (*en mouvement avec effacement pour simuler l'écriture*), ils ont sali mon nom en m'accusant de crimes que je n'ai pas commis, ils ont fermé tous mes comptes bancaires, je ne peux plus voir ma famille, rentrer chez moi... Je suis un fugitif, traqué nuit et jour, qui cherche simplement à faire éclater la vérité.
 > - **Qui est ce "ils"?**
-> - **Je ne veux pas être mêlé à cette histoire**
+> - **Merci mais je ne veux pas être mêlé à cette histoire**
 >
 > Je dois y aller, je ne peux jamais rester connecté trop longtemps au même endroit, je vous recontacte très vite!
 ##### Case 5
