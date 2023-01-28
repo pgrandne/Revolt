@@ -1,4 +1,5 @@
 # Revolte
+Create an amazing Web3 experience
 
 Revolte is an adventure game to onboard Web2 users into Web3.
 We want to provide a complete journey with a real immersive story to attract people and encourage them to achieve small steps to follow up the narrative. These steps (like installing a wallet) are mandatory to get access to the next part of the story.
