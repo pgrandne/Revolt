@@ -1,26 +1,31 @@
 'use client';
 
-import { satisfy } from "@/app/font";
+import { satisfy } from "@/utils/font";
 import { motion } from "framer-motion";
 import { useRouter } from 'next/navigation';
 import { Dispatch, SetStateAction, useState } from "react";
 
+interface IContent {
+    id: number,
+    text: string,
+    textBtn1: string,
+    textBtn2: string,
+}
+
 const AnimatedText = (
-    { textBtn1, textBtn2, stage, setStage, text }: {
-        textBtn1: string,
-        textBtn2: string,
+    { stage, setStage, content }: {
         stage: number,
         setStage: Dispatch<SetStateAction<number>>,
-        text: string
+        content: IContent,
     }) => {
     const router = useRouter();
     const [modal, setModal] = useState(false)
-    const words = text.split("")
+    const words = content.text.split("")
     const container = {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
             opacity: 1,
-            transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+            transition: { staggerChildren: 0.03, delayChildren: 0.03 * i },
         })
     }
 
@@ -61,7 +66,7 @@ const AnimatedText = (
                         className="bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-2 px-4 border border-gray-400 rounded m-3"
                         onClick={() => setStage(stage + 1)}
                     >
-                        {textBtn1}
+                        {content.textBtn1}
                     </button>
                     <button
                         className="bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-2 px-4 border border-gray-400 rounded m-3"
@@ -71,7 +76,7 @@ const AnimatedText = (
                         }
                         }
                     >
-                        {textBtn2}
+                        {content.textBtn2}
                     </button>
                 </motion.div>
             </motion.div >

@@ -22,7 +22,7 @@ const Hero = () => {
     return (
         <section>
             <motion.h1
-                className="text-white text-center pt-52 pb-2 text-5xl"
+                className="text-center pt-52 pb-4 text-5xl"
                 initial="hidden"
                 animate="visible"
                 variants={tVariant}
@@ -30,7 +30,7 @@ const Hero = () => {
                 Revolte
             </motion.h1>
             <motion.p
-                className="text-white text-center pb-20"
+                className="text-center pb-12"
                 initial="hidden"
                 animate="visible"
                 variants={pVariant}
@@ -39,11 +39,11 @@ const Hero = () => {
             </ motion.p>
             <Link href="/prologue" className="grid mx-auto place-content-center">
                 <motion.button
-                    className="bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    className="btnHero"
                     initial="hidden"
                     animate="visible"
                     variants={bVariant}
-                    whileHover={{ rotate: 180, scale: 2 }}
+                    whileHover={{ rotate: 12, scale: 1.5 }}
                 >
                     Enter the adventure
                 </motion.button>

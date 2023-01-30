@@ -1,69 +1,102 @@
 'use client';
 
-import AnimatedText from "@/utils/AnimatedText";
-import { useState } from 'react'
-
-import { perm_marker } from '../font';
+import AnimatedText from "@/components/AnimatedText"
+import { useState } from "react"
+import { chapterOneStory } from "@/utils/constant"
+import { motion } from "framer-motion"
+import Image from "next/image"
+import listenbourgPic from "../../../public/listenbourg.jpg"
+import newsroomPic from "../../../public/newsroom.jpg"
+import computerPic from "../../../public/computer-screen.jpg"
 
 const Prologue = () => {
     const [stage, setStage] = useState(0)
+
     return (
-        <section>
-            <div className="w-screen h-screen">
-                {stage < 5 && <div>
-                    <div className="m-3">
-                        <AnimatedText
-                            stage={stage}
-                            setStage={setStage}
-                            text="Hi mr Azad, a trustworthy person gave me our email address. I'm looking for an investigative reporter. Are you the right person?"
-                            textBtn1="Yes"
-                            textBtn2="No"
-                        />
+        <>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1, 1, 0] }}
+                transition={{ duration: 5, times: [0, .4, .8, 1] }}
+            >
+                <Image
+                    src={listenbourgPic}
+                    alt="Listenbourg"
+                    fill={true}
+                    className="-z-10"
+                />
+                <div className="m-3 p-3 fixed w-64 bg-amber-600 rounded border border-black z-10 opacity-50">
+                    Listenbourg, Lurenberg,<br /> lundi 30 octobre 2023, 9h43
+                </div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 0, 1, 1, 0] }}
+                transition={{ duration: 10, times: [0, .5, .7, .9, 1] }}
+            >
+                <Image
+                    src={newsroomPic}
+                    alt="Newsroom"
+                    fill={true}
+                    className="-z-10"
+                />
+                <div className="m-3 p-3 fixed w-64 bg-amber-600 rounded border border-black z-10 opacity-50">
+                    Kanalerde Times, Newsroom
+                </div>
+            </motion.div>
+
+            {stage < 6 && <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 0, 1,] }}
+                transition={{ duration: 15, times: [0, .75, 1] }}
+            >
+                <Image
+                    src={computerPic}
+                    alt="Computer"
+                    fill={true}
+                    className="-z-10"
+                />
+                {stage === 0 &&
+                    <div className="grid grid-cols-1 gap-4 place-items-center">
+                        <p className="w-72 mt-64 mb-12 text-center">You have a message, click to open it</p>
+                        <div className="flex">
+                            <button className=" bg-white p-4 rounded-full text-black hover:scale-105 hover:bg-slate-400"
+                                onClick={() => setStage(1)}>Read the message</button>
+                            <span className="relative top-0 right-4 inline-flex h-3 w-3 rounded-full bg-sky-400 opacity-75"></span>
+                            <span className="relative top-0 right-7 animate-ping inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                        </div>
                     </div>
+                }
+                {stage !== 0 &&
+                    <ul className="m-3">
+                        {chapterOneStory.filter(paragraph => paragraph.id < stage).map((paragraph) => (
+                            <li key={paragraph.id}>
+                                <AnimatedText
+                                    stage={stage}
+                                    setStage={setStage}
+                                    content={paragraph}
+                                />
+                            </li>
 
-                    {stage > 0 && <div className="m-3">
-                        <AnimatedText
-                            stage={stage}
-                            setStage={setStage}
-                            text="You have a reputation for integrity and never giving up, do you?"
-                            textBtn1="Yes"
-                            textBtn2="No"
-                        />
-                    </div>}
+                        ))}
 
-                    {stage > 1 && <div className="m-3">
-                        <AnimatedText
-                            stage={stage}
-                            setStage={setStage}
-                            text="OK, I recovered compromising documents about someone very important! I can't tell you much more at this time, I will contact you soon. Be very carreful this state scandal cost me my life"
-                            textBtn1='What do you mean by "cost your life"?'
-                            textBtn2="You scare me now, let's end our discussion here" />
-                    </div>}
+                    </ul>}
+            </motion.div>}
+            {stage === 6 && <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1, 1, 0] }}
+                transition={{ duration: 5, times: [0, .4, .8, 1] }}
+            >
+                <Image
+                    src={newsroomPic}
+                    alt="Newsroom"
+                    fill={true}
+                    className="-z-10"
+                />
+            </motion.div>}
 
-                    {stage > 2 && <div className="m-3">
-                        <AnimatedText
-                            stage={stage}
-                            setStage={setStage}
-                            text="Because of this info, they persecuted my whole family, they closed my bank account, and I am enemy number 1 to kill, I can only keep hidden"
-                            textBtn1='Who are "they"?'
-                            textBtn2="I don't want to be mixed up in this" />
-                    </div>}
-
-                    {stage > 3 && <div className="m-3">
-                        <AnimatedText
-                            stage={stage}
-                            setStage={setStage}
-                            text="It's too early and too risky to talk about this with you, I have to go, I will contact you soon"
-                            textBtn1="OK Bye!"
-                            textBtn2="No, please do not contact me anymore!" />
-                    </div>}
-                </div>}
-                {stage === 5 && <h1 className={`${perm_marker.className} text-white text-center pt-52 pb-2 text-5xl`}>
-                    End of Chapter 1
-                </h1>}
-            </div>
-
-        </section >
+        </>
     )
 }
 
