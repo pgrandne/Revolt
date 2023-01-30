@@ -21,6 +21,7 @@ const Hero = () => {
 
     return (
         <section>
+
             <motion.h1
                 className="text-center pt-52 pb-4 text-5xl"
                 initial="hidden"
