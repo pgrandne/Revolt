@@ -1,7 +1,9 @@
 'use client';
 
 import { motion } from "framer-motion";
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
+import bgPic from "../../public/journalist.jpeg"
 
 const Hero = () => {
     const tVariant = {
@@ -19,11 +21,28 @@ const Hero = () => {
         visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 1.5 } },
     }
 
+    const iVariant = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 0.3, transition: { delay: 2.5, duration: 2 } },
+    }
+
     return (
-        <section>
+        <section className="container m-auto">
+            <motion.div
+                className="container mt-40"
+                initial="hidden"
+                animate="visible"
+                variants={iVariant}
+            >
+                <Image
+                    className="mx-auto rounded"
+                    src={bgPic}
+                    alt="Picture of materials"
+                />
+            </motion.div>
 
             <motion.h1
-                className="text-center pt-52 pb-4 text-5xl"
+                className="text-center pb-4 -mt-52 text-5xl"
                 initial="hidden"
                 animate="visible"
                 variants={tVariant}

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const Modal = ({ handleClick }: { handleClick: any }) => {
     return (
 
-        <div className="fixed top-5 left-5 w-full h-full max-w-2xl md:h-auto">
+        <div className="flex justify-center m-10">
             <div className="relative rounded-lg shadow bg-gray-700">
                 <div className="flex items-start justify-between p-4 border-b rounded-t border-gray-600">
                     <h3 className="text-xl font-semibold text-white">
@@ -18,17 +18,23 @@ const Modal = ({ handleClick }: { handleClick: any }) => {
                 </div>
                 <div className="p-6 space-y-6">
                     <p className="text-base leading-relaxed text-gray-400">
-                        This adventure is fictional but is strongly inspired by real events. For the sake of the story, we have exaggerated the facts but they are much closer to reality than you imagine.
+                        This adventure is fictional but is strongly inspired by real events. For the sake of the story, we have created a dystopia based on a conspiracy but facts are much closer to reality than you imagine.
+                        <br />We wanted to create a gripping story for onboarding people in Web3. We hope to show use cases of Web3 and give you a taste of all the possibilities of this technology.
+                        Examples shown in this adventure can be used in daily life even if you are not harassed or hunted by any organization. <br />Opportunities offered by Web3 are infinite, we will present new applications and protocols in every new chapter.
                     </p>
                     <p className="text-base leading-relaxed text-gray-400">
-                        The goal of this adventure is not to cry conspiracy, we want to create a gripping story for onboarding people in Web3.
+                        Click on Start button at the bottom left to launch the story.<br /> The bottom right will be used to load your game where you stopped the last time (can be used from chapter 2).
                     </p>
                 </div>
-                <div className="flex items-center p-6 space-x-2 border-t rounded-b border-gray-600">
+                <div className="flex justify-between items-center p-6 space-x-2 border-t rounded-b border-gray-600">
                     <button
                         className="focus:ring-4 focus:outline-none rounded-lg border text-sm font-medium px-5 py-2.5 focus:z-10 bg-gray-700 text-gray-300 border-gray-500 hover:text-white hover:bg-gray-600 focus:ring-gray-600"
                         onClick={() => handleClick()}
                     >Start</button>
+                    <button
+                        className="focus:ring-4 focus:outline-none rounded-lg border text-sm font-medium px-5 py-2.5 focus:z-10 bg-gray-700 text-gray-300 border-gray-500 hover:text-white hover:bg-gray-600 focus:ring-gray-600"
+                        onClick={() => handleClick()}
+                    >Connect with a wallet</button>
                 </div>
             </div>
         </div >

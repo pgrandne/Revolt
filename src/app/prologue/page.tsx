@@ -1,14 +1,15 @@
 'use client';
 
 import AnimatedText from "@/components/AnimatedText"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Howl } from 'howler';
 import { chapterOneStory } from "@/utils/constant"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import listenbourgPic from "../../../public/listenbourg.jpg"
-import newsroomPic from "../../../public/newsroom.jpg"
-import computerPic from "../../../public/computer-screen.jpg"
+import listenbourgPic from "../../../public/city.png"
+import newsroomPic from "../../../public/newsroom.png"
+import computerPic from "../../../public/computer.png"
+import screenPic from "../../../public/computer-screen.jpg"
 import Modal from "@/components/Modal";
 
 const Prologue = () => {
@@ -62,15 +63,26 @@ const Prologue = () => {
                             Kanalerde Times, Newsroom
                         </div>
                     </motion.div>
-
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: [0, 0, 1, 1, 0] }}
+                        transition={{ duration: 15, times: [0, .7, .8, .9, 1] }}
+                    >
+                        <Image
+                            src={computerPic}
+                            alt="Computer"
+                            fill={true}
+                            className="-z-10"
+                        />
+                    </motion.div>
                     {stage < 6 && <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: [0, 0, 1,] }}
                         transition={{ duration: 15, times: [0, .75, 1] }}
                     >
                         <Image
-                            src={computerPic}
-                            alt="Computer"
+                            src={screenPic}
+                            alt="Computer Screen"
                             fill={true}
                             className="-z-10"
                         />
@@ -86,7 +98,7 @@ const Prologue = () => {
                             </div>
                         }
                         {stage !== 0 &&
-                            <ul className="m-3">
+                            <ul className="m-10">
                                 {chapterOneStory.filter(paragraph => paragraph.id < stage).map((paragraph) => (
                                     <li key={paragraph.id}>
                                         <AnimatedText
