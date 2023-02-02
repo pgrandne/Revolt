@@ -63,13 +63,13 @@ const AnimatedText = (
                     variants={child}
                 >
                     <button
-                        className="bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-2 px-4 border border-gray-400 rounded m-3"
+                        className="btnCase"
                         onClick={() => setStage(stage + 1)}
                     >
                         {content.textBtn1}
                     </button>
                     <button
-                        className="bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-2 px-4 border border-gray-400 rounded m-3"
+                        className="btnCase"
                         onClick={() => {
                             alert("You have stopped the adventure")
                             router.push('/')

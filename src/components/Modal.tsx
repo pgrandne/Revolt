@@ -18,12 +18,14 @@ const Modal = ({ handleClick }: { handleClick: any }) => {
                 </div>
                 <div className="p-6 space-y-6">
                     <p className="text-base leading-relaxed text-gray-400">
-                        This adventure is fictional but is strongly inspired by real events. For the sake of the story, we have created a dystopia based on a conspiracy but facts are much closer to reality than you imagine.
-                        <br />We wanted to create a gripping story for onboarding people in Web3. We hope to show use cases of Web3 and give you a taste of all the possibilities of this technology.
-                        Examples shown in this adventure can be used in daily life even if you are not harassed or hunted by any organization. <br />Opportunities offered by Web3 are infinite, we will present new applications and protocols in every new chapter.
+                        This adventure is a work of fiction but draws inspiration from real events. To enhance the narrative, a dystopian setting based on a conspiracy has been created, though the underlying facts are closer to reality than you think. The goal is to create a captivating story to introduce you to Web3, highlight its potential use cases, and give you a glimpse of what this technology can do.
+                        Although the scenarios in the story may seem extreme, the ideas and applications demonstrated can be applied to daily life, (even without any organization hunting or harassing you).<br />
+
                     </p>
                     <p className="text-base leading-relaxed text-gray-400">
-                        Click on Start button at the bottom left to launch the story.<br /> The bottom right will be used to load your game where you stopped the last time (can be used from chapter 2).
+                        The possibilities offered by Web3 are endless, and new applications and protocols will be introduced in each subsequent chapter.<br />
+                        To begin the story, click the "Start" button in the bottom left.<br />
+                        The bottom right will be used to save your progress and pick up from where you left off (available from chapter 2).
                     </p>
                 </div>
                 <div className="flex justify-between items-center p-6 space-x-2 border-t rounded-b border-gray-600">

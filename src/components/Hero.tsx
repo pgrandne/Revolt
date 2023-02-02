@@ -23,7 +23,7 @@ const Hero = () => {
 
     const iVariant = {
         hidden: { opacity: 0 },
-        visible: { opacity: 0.3, transition: { delay: 2.5, duration: 2 } },
+        visible: { opacity: 0.4, transition: { delay: 2.5, duration: 2 } },
     }
 
     return (
@@ -35,14 +35,14 @@ const Hero = () => {
                 variants={iVariant}
             >
                 <Image
-                    className="mx-auto rounded"
+                    className="mx-auto rounded-md border-4 border-white"
                     src={bgPic}
                     alt="Picture of materials"
                 />
             </motion.div>
 
             <motion.h1
-                className="text-center pb-4 -mt-52 text-5xl"
+                className="text-center pb-4 -mt-56 text-5xl"
                 initial="hidden"
                 animate="visible"
                 variants={tVariant}
