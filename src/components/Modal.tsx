@@ -24,7 +24,7 @@ const Modal = ({ handleClick }: { handleClick: any }) => {
                     </p>
                     <p className="text-base leading-relaxed text-gray-400">
                         The possibilities offered by Web3 are endless, and new applications and protocols will be introduced in each subsequent chapter.<br />
-                        To begin the story, click the "Start" button in the bottom left.<br />
+                        To begin the story, click the Start button in the bottom left.<br />
                         The bottom right will be used to save your progress and pick up from where you left off (available from chapter 2).
                     </p>
                 </div>
