@@ -19,7 +19,7 @@ const Modal = ({ handleClick }: { handleClick: any }) => {
                 <div className="p-6 space-y-6">
                     <p className="text-base leading-relaxed text-gray-400">
                         This adventure is a work of fiction but draws inspiration from real events. To enhance the narrative, a dystopian setting based on a conspiracy has been created, though the underlying facts are closer to reality than you think. The goal is to create a captivating story to introduce you to Web3, highlight its potential use cases, and give you a glimpse of what this technology can do.
-                        Although the scenarios in the story may seem extreme, the ideas and applications demonstrated can be applied to daily life, (even without any organization hunting or harassing you).<br />
+                        Although the scenarios in the story may seem extreme, the ideas and applications demonstrated can be applied to daily life.<br />
 
                     </p>
                     <p className="text-base leading-relaxed text-gray-400">
