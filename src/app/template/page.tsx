@@ -90,7 +90,7 @@ const Template = () => {
                   </div>
                   <div className="self-start w-3/4 my-2">
                     <div className="p-4 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black">
-                      You don't know me yet but I'm about to expose an unprecedented political and financial scandal.
+                      You don`&apos;`t know me yet but I`&apos;`m about to expose an unprecedented political and financial scandal.
                     </div>
                   </div>
                   <div className="self-start w-3/4 my-2">
