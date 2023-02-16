@@ -39,7 +39,7 @@ const Mobile = () => {
     return (
         <motion.div className="flex h-screen justify-center" >
             <motion.div
-                className="text-white my-auto"
+                className="text-white my-auto p-3"
                 variants={sentence}
                 initial="hidden"
                 animate="visible"
