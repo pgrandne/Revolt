@@ -1,11 +1,15 @@
 'use client';
 
 import { motion } from "framer-motion";
+import { isMobile } from 'mobile-device-detect';
 import Link from "next/link";
 import Image from "next/image";
 import bgPic from "../../public/journalist.jpg"
+import { useState } from "react";
 
 const Hero = () => {
+    const [modal, setModal] = useState(false)
+
     const tVariant = {
         hidden: { opacity: 0, y: -50 },
         visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 0.5 } },
@@ -25,6 +29,8 @@ const Hero = () => {
         hidden: { opacity: 0 },
         visible: { opacity: 0.4, transition: { delay: 2.5, duration: 2 } },
     }
+
+    console.log(isMobile)
 
     return (
         <section className="container m-auto">
@@ -57,7 +63,7 @@ const Hero = () => {
             >
                 Story of a whistleblower
             </ motion.p>
-            <Link href="/prologue" className="grid mx-auto place-content-center">
+            <Link href={isMobile ? "/mobile" : "/mobile"} className="grid mx-auto place-content-center">
                 <motion.button
                     className="btnHero"
                     initial="hidden"
