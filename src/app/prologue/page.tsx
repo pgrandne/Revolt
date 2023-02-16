@@ -14,25 +14,24 @@ import screenPic from "../../../public/computer-screen.jpg"
 import Modal from "@/components/Modal";
 
 const Prologue = () => {
-    const [stage, setStage] = useState(0)
-    const [modal, setModal] = useState(true)
+    // const [stage, setStage] = useState(0)
+    // const [modal, setModal] = useState(true)
 
-    console.log(stage)
+    // const sound = new Howl({
+    //     src: ['office.mp3']
+    // });
 
-    const sound = new Howl({
-        src: ['office.mp3']
-    });
-
-    const handleClick = () => {
-        setModal(false)
-        const timer = setTimeout(() => {
-            sound.play()
-        }, 5000);
-    }
+    // const handleClick = () => {
+    //     setModal(false)
+    //     const timer = setTimeout(() => {
+    //         sound.play()
+    //     }, 5000);
+    // }
 
     return (
-        <>
-            {modal && <Modal handleClick={handleClick} />}
+        <div className="flex justify-center h-screen">
+            <div className="relative my-auto">
+                {/* {modal && <Modal handleClick={handleClick} />}
             {!modal && <div className="case">
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -49,9 +48,9 @@ const Prologue = () => {
                     <div className="recitative w-72">
                         Listenbourg, Lurenberg,<br />  Monday, October 30, 2023, 9:43 am
                     </div>
-                </motion.div>
+                </motion.div> */}
 
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0, 0, 1, 1, 0] }}
                     transition={{ duration: 10, times: [0, .5, .7, .9, 1] }}
@@ -79,8 +78,8 @@ const Prologue = () => {
                         width={800}
                         height={600}
                     />
-                </motion.div>
-                {stage < 6 && <motion.div
+                </motion.div> */}
+                {/* {stage < 6 && <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0, 0, 1,] }}
                     transition={{ duration: 15, times: [0, .8, 1] }}
@@ -117,32 +116,27 @@ const Prologue = () => {
                             ))}
 
                         </ul>}
-                </motion.div>}
-                {stage === 6 &&
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: [0, 1] }}
-                        transition={{ duration: 5 }}
-                    >
-                        <Image
-                            className="bgCase -z-10"
-                            src={newsroomPic}
-                            alt="Newsroom"
-                            width={800}
-                            height={600}
+                </motion.div>} */}
 
-                        />
-                        <div className={`${perm_marker.className} absolute bg-red-800 top-4 left-4 p-2 text-3xl`}>
-                            continuation under construction
-                        </div>
-                    </motion.div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0, 1] }}
+                    transition={{ duration: 5 }}
+                >
+                    <Image
+                        className="bgCase -z-10"
+                        src={newsroomPic}
+                        alt="Newsroom"
+                        width={800}
+                        height={600}
 
-
-
-                }
-            </div >
-            }
-        </>
+                    />
+                    <div className={`${perm_marker.className} absolute bg-red-800 top-4 left-4 p-2 text-3xl`}>
+                        Chapter 1 under construction
+                    </div>
+                </motion.div>
+            </div>
+        </div>
     )
 }
 

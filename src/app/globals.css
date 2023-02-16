@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        @apply bg-zinc-800 text-white;
+        @apply bg-[#0f1216] text-white;
     }
 
     .btnHero {
@@ -20,14 +20,18 @@
     }
 
     .bgCase {
-        @apply absolute top-0 left-0 rounded-md border-4 border-white;
+        @apply rounded-md border-4 border-white;
     }
 
     .recitative {
-        @apply absolute top-2 left-2 p-2 bg-amber-600 rounded border-2 border-white z-10 opacity-60;
+        @apply absolute top-24 left-10 p-2 bg-amber-600 rounded border-2 border-white z-10 opacity-60;
     }
 
     .btnCase {
         @apply bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-1 px-2 border border-gray-400 rounded m-2;
+    }
+
+    .templateCase {
+        @apply
     }
 }

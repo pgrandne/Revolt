@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import bgPic from "../../public/journalist.jpeg"
+import bgPic from "../../public/journalist.jpg"
 
 const Hero = () => {
     const tVariant = {
@@ -63,7 +63,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                     variants={bVariant}
-                    whileHover={{ rotate: 12, scale: 1.5 }}
+                    whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
                 >
                     Enter the adventure
                 </motion.button>
