@@ -32,6 +32,7 @@ const Hero = () => {
         <section className="flex justify-center h-screen">
             <div className="my-auto relative">
                 <motion.div
+                    className="p-2"
                     initial="hidden"
                     animate="visible"
                     variants={iVariant}
@@ -42,9 +43,9 @@ const Hero = () => {
                         alt="Picture of materials"
                     />
                 </motion.div>
-                <div className="absolute top-28 container">
+                <div className="absolute top-8 sm:top-28 h-full w-full">
                     <motion.h1
-                        className="text-center text-5xl"
+                        className="text-center text-2xl sm:text-5xl"
                         initial="hidden"
                         animate="visible"
                         variants={tVariant}
@@ -52,7 +53,7 @@ const Hero = () => {
                         Revolte
                     </motion.h1>
                     <motion.p
-                        className="text-center pb-12"
+                        className="text-center pb-6 sm:pb-12"
                         initial="hidden"
                         animate="visible"
                         variants={pVariant}
