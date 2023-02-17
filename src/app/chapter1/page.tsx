@@ -3,8 +3,9 @@
 import { perm_marker } from '@/utils/font';
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Modal from "@/components/Modal";
 import lurembergPic from "./img/luremberg2.jpg"
+import tassePic from "./img/tasse.png"
+import kiosquePic from "./img/kiosque.png"
 
 const Chapter1 = () => {
     const tVariant = {
@@ -54,6 +55,39 @@ const Chapter1 = () => {
                     alt="Luremberg"
                 />
             </motion.div>
+            <motion.div
+                className="absolute top-20 left-10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1] }}
+                transition={{ duration: 5, times: [.9, 1] }}
+            >
+                <Image
+                    className="w-[500px] h-[300px] rounded border-4 border-amber-200"
+                    src={tassePic}
+                    alt="tasse"
+                />
+            </motion.div>
+            <motion.div
+                className="absolute bottom-20 right-20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1] }}
+                transition={{ duration: 6, times: [.9, 1] }}
+            >
+                <Image
+                    className="w-[500px] h-[300px] rounded border-4 border-amber-200"
+                    src={kiosquePic}
+                    alt="Kiosque"
+                />
+            </motion.div>
+            <motion.p
+                className="box-decoration-slice p-1 bg-zinc-700 absolute bottom-4 left-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1] }}
+                transition={{ duration: 7, times: [.9, 1] }}
+            >
+                Lurenberg, Listenbourg
+            </ motion.p>
+
         </div>
     )
 }
