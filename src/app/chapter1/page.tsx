@@ -4,6 +4,7 @@ import { perm_marker } from '@/utils/font';
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Modal from "@/components/Modal";
+import lurembergPic from "./img/luremberg2.jpg"
 
 const Chapter1 = () => {
     const tVariant = {
@@ -17,12 +18,12 @@ const Chapter1 = () => {
     }
 
     return (
-        <div className={`${perm_marker.className} flex justify-center w-screen h-screen my-auto`}>
+        <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
             <motion.div
                 className="my-auto"
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0 }}
-                transition={{ duration: 3 }}
+                transition={{ duration: 3, times: [.9] }}
             >
                 <motion.h1
                     className="text-center text-5xl"
@@ -41,7 +42,18 @@ const Chapter1 = () => {
                     Nothing is immutable
                 </ motion.p>
             </motion.div>
-        </div >
+            <motion.div
+                className="absolute top-0"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1] }}
+                transition={{ duration: 5, times: [.5, 1] }}
+            >
+                <Image
+                    src={lurembergPic}
+                    alt="Luremberg"
+                />
+            </motion.div>
+        </div>
     )
 }
 
