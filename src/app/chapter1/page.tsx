@@ -49,6 +49,7 @@ const Chapter1 = () => {
                 transition={{ duration: 5, times: [.5, 1] }}
             >
                 <Image
+                    className="w-screen h-screen"
                     src={lurembergPic}
                     alt="Luremberg"
                 />
