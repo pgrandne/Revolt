@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { perm_marker } from "@/utils/font";
 
 const Mobile = () => {
-    const text = "The first version of Revolte is only accessible on Desktop. The mobile version will be available in several months"
+    const text = "The first version of Revolte is only accessible on Desktop. The mobile version will be available soon"
     const words = text.split("")
 
     const container = {
