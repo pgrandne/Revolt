@@ -43,7 +43,7 @@ const Hero = () => {
                         alt="Picture of materials"
                     />
                 </motion.div>
-                <div className="absolute top-8 sm:top-28 h-full w-full">
+                <div className="absolute top-6 sm:top-28 h-full w-full">
                     <motion.h1
                         className="text-center text-2xl sm:text-5xl"
                         initial="hidden"
@@ -53,7 +53,7 @@ const Hero = () => {
                         Revolte
                     </motion.h1>
                     <motion.p
-                        className="text-center pb-6 sm:pb-12"
+                        className="text-center pb-4 sm:pb-12"
                         initial="hidden"
                         animate="visible"
                         variants={pVariant}
