@@ -5,10 +5,8 @@ import { isMobile } from 'mobile-device-detect';
 import Link from "next/link";
 import Image from "next/image";
 import bgPic from "../../public/journalist.jpg"
-import { useState } from "react";
 
 const Hero = () => {
-    const [modal, setModal] = useState(false)
 
     const tVariant = {
         hidden: { opacity: 0, y: -50 },
@@ -29,8 +27,6 @@ const Hero = () => {
         hidden: { opacity: 0 },
         visible: { opacity: 0.4, transition: { delay: 2.5, duration: 2 } },
     }
-
-    console.log(isMobile)
 
     return (
         <section className="container m-auto">
@@ -63,7 +59,7 @@ const Hero = () => {
             >
                 Story of a whistleblower
             </ motion.p>
-            <Link href={isMobile ? "/mobile" : "/mobile"} className="grid mx-auto place-content-center">
+            <Link href={isMobile ? "/mobile" : "/prologue"} className="grid mx-auto place-content-center">
                 <motion.button
                     className="btnHero"
                     initial="hidden"
