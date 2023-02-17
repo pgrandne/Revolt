@@ -29,47 +29,49 @@ const Hero = () => {
     }
 
     return (
-        <section className="container m-auto">
-            <motion.div
-                className="container mt-40"
-                initial="hidden"
-                animate="visible"
-                variants={iVariant}
-            >
-                <Image
-                    className="mx-auto rounded-md border-4 border-white"
-                    src={bgPic}
-                    alt="Picture of materials"
-                />
-            </motion.div>
-
-            <motion.h1
-                className="text-center pb-4 -mt-56 text-5xl"
-                initial="hidden"
-                animate="visible"
-                variants={tVariant}
-            >
-                Revolte
-            </motion.h1>
-            <motion.p
-                className="text-center pb-12"
-                initial="hidden"
-                animate="visible"
-                variants={pVariant}
-            >
-                Story of a whistleblower
-            </ motion.p>
-            <Link href={isMobile ? "/mobile" : "/prologue"} className="grid mx-auto place-content-center">
-                <motion.button
-                    className="btnHero"
+        <section className="flex justify-center h-screen">
+            <div className="my-auto relative">
+                <motion.div
                     initial="hidden"
                     animate="visible"
-                    variants={bVariant}
-                    whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
+                    variants={iVariant}
                 >
-                    Enter the adventure
-                </motion.button>
-            </Link>
+                    <Image
+                        className="rounded-md border-4 border-white"
+                        src={bgPic}
+                        alt="Picture of materials"
+                    />
+                </motion.div>
+                <div className="absolute top-28 container">
+                    <motion.h1
+                        className="text-center text-5xl"
+                        initial="hidden"
+                        animate="visible"
+                        variants={tVariant}
+                    >
+                        Revolte
+                    </motion.h1>
+                    <motion.p
+                        className="text-center pb-12"
+                        initial="hidden"
+                        animate="visible"
+                        variants={pVariant}
+                    >
+                        Story of a whistleblower
+                    </ motion.p>
+                    <Link href={isMobile ? "/mobile" : "/prologue"} className="grid mx-auto place-content-center">
+                        <motion.button
+                            className="btnHero"
+                            initial="hidden"
+                            animate="visible"
+                            variants={bVariant}
+                            whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
+                        >
+                            Enter the adventure
+                        </motion.button>
+                    </Link>
+                </div>
+            </div>
         </section >
     )
 }
