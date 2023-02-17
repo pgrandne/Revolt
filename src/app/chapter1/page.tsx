@@ -3,6 +3,7 @@
 import { perm_marker } from '@/utils/font';
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link";
 import lurembergPic from "./img/luremberg2.jpg"
 import tassePic from "./img/tasse.png"
 import kiosquePic from "./img/kiosque.png"
@@ -126,8 +127,27 @@ const Chapter1 = () => {
                 <Image
                     src={journalPic}
                     fill={true}
+                    style={{ objectFit: "contain" }}
                     alt="journal"
                 />
+            </motion.div>
+            <motion.div
+                className="absolute h-screen w-screen bg-[#0f1216]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 9, duration: 1 }}
+            >
+                <Image
+                    src={journalPic}
+                    fill={true}
+                    style={{ objectFit: "contain" }}
+                    alt="journal"
+                />
+                <Link href="/prologue" className="absolute bottom-8 right-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </Link>
             </motion.div>
 
         </div>

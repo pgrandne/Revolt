@@ -60,7 +60,7 @@ const Hero = () => {
                     >
                         Story of a whistleblower
                     </ motion.p>
-                    <Link href={isMobile ? "/mobile" : "/prologue"} className="grid mx-auto place-content-center">
+                    <Link href={isMobile ? "/mobile" : "/chapter1"} className="grid mx-auto place-content-center">
                         <motion.button
                             className="btnHero"
                             initial="hidden"
