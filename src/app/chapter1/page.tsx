@@ -6,7 +6,8 @@ import Image from "next/image"
 import lurembergPic from "./img/luremberg2.jpg"
 import tassePic from "./img/tasse.png"
 import kiosquePic from "./img/kiosque.png"
-import AnimatedInfo from '@/components/AnimatedInfo';
+import journalPic from "./img/journal.png"
+
 
 const Chapter1 = () => {
     const tVariant = {
@@ -26,7 +27,7 @@ const Chapter1 = () => {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: { staggerChildren: 0.05, delayChildren: 3 },
+            transition: { staggerChildren: 0.1, delayChildren: 3 },
         }
     }
 
@@ -44,7 +45,7 @@ const Chapter1 = () => {
                 className="my-auto"
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0 }}
-                transition={{ duration: 3, times: [.9] }}
+                transition={{ delay: 3, duration: 0.5 }}
             >
                 <motion.h1
                     className="text-center text-5xl"
@@ -66,8 +67,8 @@ const Chapter1 = () => {
             <motion.div
                 className="absolute top-0"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1] }}
-                transition={{ duration: 5, times: [.5, 1] }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.8, duration: 0.6 }}
             >
                 <Image
                     className="w-screen h-screen"
@@ -76,7 +77,7 @@ const Chapter1 = () => {
                 />
             </motion.div>
             <motion.div
-                className="box-decoration-slice p-1 absolute bottom-20 left-20 text-2xl"
+                className="box-decoration-slice p-1 absolute bottom-20 left-20 text-4xl"
                 variants={container}
                 initial="hidden"
                 animate="visible"
@@ -94,8 +95,8 @@ const Chapter1 = () => {
             <motion.div
                 className="absolute top-20 left-10"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1] }}
-                transition={{ duration: 6, times: [.9, 1] }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 5, duration: 0.5 }}
             >
                 <Image
                     className="w-[500px] h-[300px] rounded border-4 border-amber-200"
@@ -107,7 +108,7 @@ const Chapter1 = () => {
                 className="absolute bottom-20 right-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1] }}
-                transition={{ duration: 7, times: [.9, 1] }}
+                transition={{ delay: 6, duration: 0.5 }}
             >
                 <Image
                     className="w-[500px] h-[300px] rounded border-4 border-amber-200"
@@ -115,6 +116,20 @@ const Chapter1 = () => {
                     alt="Kiosque"
                 />
             </motion.div>
+
+            <motion.div
+                className="absolute h-screen w-screen p-4"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 8, duration: 0.5 }}
+            >
+                <Image
+                    src={journalPic}
+                    fill={true}
+                    alt="journal"
+                />
+            </motion.div>
+
         </div>
     )
 }
