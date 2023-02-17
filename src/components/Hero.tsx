@@ -29,7 +29,7 @@ const Hero = () => {
     }
 
     return (
-        <section className="flex justify-center h-screen">
+        <section className="flex justify-center h-screen w-screen">
             <div className="my-auto relative">
                 <motion.div
                     className="p-2"
