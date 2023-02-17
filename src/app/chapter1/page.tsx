@@ -6,6 +6,7 @@ import Image from "next/image"
 import lurembergPic from "./img/luremberg2.jpg"
 import tassePic from "./img/tasse.png"
 import kiosquePic from "./img/kiosque.png"
+import AnimatedInfo from '@/components/AnimatedInfo';
 
 const Chapter1 = () => {
     const tVariant = {
@@ -16,6 +17,25 @@ const Chapter1 = () => {
     const pVariant = {
         hidden: { opacity: 0, x: -100 },
         visible: { opacity: 1, x: 0, transition: { type: 'spring', delay: 1 } },
+    }
+
+    const text = "Lurenberg, Listenbourg"
+    const words = text.split("")
+
+    const container = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.05, delayChildren: 3 },
+        }
+    }
+
+    const child = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { type: "spring" }
+        }
     }
 
     return (
@@ -56,10 +76,26 @@ const Chapter1 = () => {
                 />
             </motion.div>
             <motion.div
+                className="box-decoration-slice p-1 absolute bottom-20 left-20 text-2xl"
+                variants={container}
+                initial="hidden"
+                animate="visible"
+            >
+                {words.map((word, index) =>
+                    <motion.span
+                        className={perm_marker.className}
+                        key={index}
+                        variants={child}
+                    >
+                        {word}
+                    </motion.span>
+                )}
+            </motion.div>
+            <motion.div
                 className="absolute top-20 left-10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1] }}
-                transition={{ duration: 5, times: [.9, 1] }}
+                transition={{ duration: 6, times: [.9, 1] }}
             >
                 <Image
                     className="w-[500px] h-[300px] rounded border-4 border-amber-200"
@@ -71,7 +107,7 @@ const Chapter1 = () => {
                 className="absolute bottom-20 right-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1] }}
-                transition={{ duration: 6, times: [.9, 1] }}
+                transition={{ duration: 7, times: [.9, 1] }}
             >
                 <Image
                     className="w-[500px] h-[300px] rounded border-4 border-amber-200"
@@ -79,15 +115,6 @@ const Chapter1 = () => {
                     alt="Kiosque"
                 />
             </motion.div>
-            <motion.p
-                className="box-decoration-slice p-1 bg-zinc-700 absolute bottom-4 left-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1] }}
-                transition={{ duration: 7, times: [.9, 1] }}
-            >
-                Lurenberg, Listenbourg
-            </ motion.p>
-
         </div>
     )
 }
