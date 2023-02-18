@@ -8,68 +8,37 @@ import lurembergPic from "./img/luremberg2.jpg"
 import tassePic from "./img/tasse.png"
 import kiosquePic from "./img/kiosque.png"
 import journalPic from "./img/journal.png"
+import { textAnimation, child } from "@/utils/animatedText"
 
-
-const Chapter1 = () => {
-    const tVariant = {
-        hidden: { opacity: 0, x: -100 },
-        visible: { opacity: 1, x: 0, transition: { type: 'spring', delay: 0.5 } },
-    }
-
-    const pVariant = {
-        hidden: { opacity: 0, x: -100 },
-        visible: { opacity: 1, x: 0, transition: { type: 'spring', delay: 1 } },
-    }
-
-    const text = "Lurenberg, Listenbourg"
+const Chap1s1 = () => {
+    const text = "Lurenberg, Listenbourg, September 21, 2023"
     const words = text.split("")
-
-    const container = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1, delayChildren: 3 },
-        }
-    }
-
-    const child = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { type: "spring" }
-        }
-    }
 
     return (
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
-            <motion.div
-                className="my-auto"
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 0 }}
-                transition={{ delay: 3, duration: 0.5 }}
-            >
+            <div className="my-auto">
                 <motion.h1
                     className="text-center text-5xl"
-                    initial="hidden"
-                    animate="visible"
-                    variants={tVariant}
+                    initial={{ opacity: 0, x: -200 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ type: 'spring', delay: 0.8, duration: 1 }}
                 >
                     Chapter 1
                 </motion.h1>
                 <motion.p
                     className="text-center"
-                    initial="hidden"
-                    animate="visible"
-                    variants={pVariant}
+                    initial={{ opacity: 0, x: -200 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ type: 'spring', delay: 1.5, duration: 1 }}
                 >
-                    Nothing is immutable
+                    Nothing can be taken for granted
                 </ motion.p>
-            </motion.div>
+            </div>
             <motion.div
                 className="absolute top-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2.8, duration: 0.6 }}
+                transition={{ delay: 3.5, duration: 1 }}
             >
                 <Image
                     className="w-screen h-screen"
@@ -78,8 +47,8 @@ const Chapter1 = () => {
                 />
             </motion.div>
             <motion.div
-                className="box-decoration-slice p-1 absolute bottom-20 left-20 text-4xl"
-                variants={container}
+                className="p-1 absolute bottom-20 left-20 text-4xl"
+                variants={textAnimation(0.1, 5)}
                 initial="hidden"
                 animate="visible"
             >
@@ -97,7 +66,7 @@ const Chapter1 = () => {
                 className="absolute top-20 left-10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 5, duration: 0.5 }}
+                transition={{ delay: 9.2, duration: 0.8 }}
             >
                 <Image
                     className="w-[500px] h-[300px] rounded border-4 border-amber-200"
@@ -106,10 +75,10 @@ const Chapter1 = () => {
                 />
             </motion.div>
             <motion.div
-                className="absolute bottom-20 right-20"
+                className="absolute bottom-36 right-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1] }}
-                transition={{ delay: 6, duration: 0.5 }}
+                transition={{ delay: 11, duration: 0.8 }}
             >
                 <Image
                     className="w-[500px] h-[300px] rounded border-4 border-amber-200"
@@ -117,25 +86,11 @@ const Chapter1 = () => {
                     alt="Kiosque"
                 />
             </motion.div>
-
-            <motion.div
-                className="absolute h-screen w-screen p-4"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 8, duration: 0.5 }}
-            >
-                <Image
-                    src={journalPic}
-                    fill={true}
-                    style={{ objectFit: "contain" }}
-                    alt="journal"
-                />
-            </motion.div>
             <motion.div
                 className="absolute h-screen w-screen bg-[#0f1216]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 9, duration: 1 }}
+                transition={{ delay: 13, duration: 1 }}
             >
                 <Image
                     src={journalPic}
@@ -143,7 +98,7 @@ const Chapter1 = () => {
                     style={{ objectFit: "contain" }}
                     alt="journal"
                 />
-                <Link href="/prologue" className="absolute bottom-8 right-8">
+                <Link href="/chapter1/scene2" className="absolute bottom-8 right-8">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
@@ -154,4 +109,4 @@ const Chapter1 = () => {
     )
 }
 
-export default Chapter1;
+export default Chap1s1;

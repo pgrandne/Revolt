@@ -10,22 +10,22 @@ const Hero = () => {
 
     const tVariant = {
         hidden: { opacity: 0, y: -50 },
-        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 0.5 } },
+        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 1 } },
     }
 
     const pVariant = {
         hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 1 } },
+        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 2 } },
     }
 
     const bVariant = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 1.5 } },
+        hidden: { opacity: 0, y: 100 },
+        visible: { opacity: 1, y: 0, transition: { delay: 3 } },
     }
 
     const iVariant = {
         hidden: { opacity: 0 },
-        visible: { opacity: 0.4, transition: { delay: 2.5, duration: 2 } },
+        visible: { opacity: 0.4, transition: { delay: 3, duration: 3 } },
     }
 
     return (
@@ -60,7 +60,7 @@ const Hero = () => {
                     >
                         Story of a whistleblower
                     </ motion.p>
-                    <Link href={isMobile ? "/mobile" : "/chapter1"} className="grid mx-auto place-content-center">
+                    <Link href={isMobile ? "/mobile" : "/chapter1/scene1"} className="grid mx-auto place-content-center">
                         <motion.button
                             className="btnHero"
                             initial="hidden"
