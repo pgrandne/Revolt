@@ -6,11 +6,11 @@ import { useState } from "react"
 import { chapterOneStory } from "@/utils/constant"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import listenbourgPic from "../../../public/lurenberg1.jpg"
-import newsroomPic from "../../../public/redaction.jpg"
-import computerPic from "../../../public/journaliste3.png"
-import screenPic from "../../../public/computer-screen.jpg"
-import cincinnatus from "../../../public/cincinnatus.jpg"
+// import listenbourgPic from "../../../public/lurenberg1.jpg"
+// import newsroomPic from "../../../public/redaction.jpg"
+// import computerPic from "../../../public/journaliste3.png"
+// import screenPic from "../../../public/computer-screen.jpg"
+// import cincinnatus from "../../../public/cincinnatus.jpg"
 import Modal from "@/components/Modal";
 
 const Template = () => {
@@ -19,8 +19,8 @@ const Template = () => {
 
   return (
     <div className="flex flex-row">
-      <div className="basis-2/3 h-screen flex justify-center">
-        {/* <Image
+      {/* <div className="basis-2/3 h-screen flex justify-center">
+         <Image
           className="bgCase"
           src={listenbourgPic}
           alt="Listenbourg"
@@ -29,7 +29,7 @@ const Template = () => {
         />
         <div className="recitative">
           Listenbourg, Lurenberg,<br />  Monday, October 30, 2023, 9:43 am
-        </div> */}
+        </div> 
         <div className="flex w-full h-screen">
           <div className="container relative w-[500px] h-[500px]  m-auto">
             <Image src={newsroomPic} alt="" className="card border-4 absolute top-0 border-white shadow shadow-white inline-block w-[500px] h-[500px] rounded-3xl transform -rotate-12" />
@@ -192,13 +192,10 @@ const Template = () => {
                   <p className="pt-1 cursor-pointer">Choix 2</p>
 
                 </div>
-              } */}
-
-
             </div>
           </div>
         </div>
-      </div >
+      </div > */}
     </div >
   )
 }
