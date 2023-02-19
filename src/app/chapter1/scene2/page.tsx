@@ -8,16 +8,16 @@ import { useState } from 'react';
 import redactionPic from "./img/redaction.jpg"
 import discussionPic from "./img/discussion.png"
 import { child, textAnimation } from "@/utils/animatedText"
-import { scene2 } from "@/utils/story"
-import { useRouter } from 'next/navigation';
+import ExternalDiscussion from '@/components/ExternalDiscussion';
+import AzadDiscussion from '@/components/AzadDiscussion';
+import AzadChoices from '@/components/AzadChoices';
 
 const Chap1s2 = () => {
-    const text = "The Lerenberg Post, Newsroom"
-    const words = text.split("")
+    const narration = "The Lerenberg Post, Newsroom, 8:53 am"
+    const words = narration.split("")
     const [write, setWrite] = useState(false)
     const [stage, setStage] = useState(0)
-    const [stage1Text, setStage1Text] = useState("")
-    const router = useRouter();
+    const [azadText, setAzadText] = useState<string[]>([])
 
     return (
         <div className="flex flex-row">
@@ -26,17 +26,18 @@ const Chap1s2 = () => {
                     className="grid grid-cols-1 my-auto pr-1"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ delay: 1, duration: 2 }}
                 >
                     <Image
                         className="w-[700px] h-[400px]"
                         src={redactionPic}
+                        priority={true}
                         alt="redaction"
                     />
 
                     <motion.div
                         className="pl-1 text-xl"
-                        variants={textAnimation(0.1, 1)}
+                        variants={textAnimation(0.1, 2)}
                         initial="hidden"
                         animate="visible"
                     >
@@ -54,7 +55,7 @@ const Chap1s2 = () => {
                         className="absolute bottom-28 right-0"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 4, duration: 1 }}
+                        transition={{ delay: 6, duration: 1 }}
                     >
                         <Image
                             className="w-[280px] h-[320px]"
@@ -69,129 +70,45 @@ const Chap1s2 = () => {
                     <div className="relative flex flex-col flex-1">
                         <div className="self-center flex-1 w-full max-w-xl overflow-auto">
                             <div className="relative flex flex-col px-3 py-2 m-auto">
-                                <div className="w-3/4 my-1">
-                                    <motion.div
-                                        className="my-2 p-2 bg-slate-100 rounded-t-lg rounded-r-lg shadow shadow-slate-100"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ delay: 5, duration: 1 }}
-                                    >
-                                        <div className="text-xs text-slate-600">Estelle</div>
-                                        <motion.div
-                                            className="text-sm text-slate-900"
-                                            variants={textAnimation(0.03, 5)}
-                                            initial="hidden"
-                                            animate="visible"
-                                        >
-                                            {scene2[0].text?.split("").map((word, index) =>
-                                                <motion.span
-                                                    key={index}
-                                                    variants={child}
-                                                >
-                                                    {word}
-                                                </motion.span>
-                                            )}
-                                        </motion.div>
-                                    </motion.div>
-                                </div>
-                                {stage === 1 && <>
-                                    <div className="self-end">
-                                        <motion.div
-                                            className="my-2 p-2 text-sm bg-lime-200 rounded-t-lg rounded-l-lg shadow text-slate-900 self-end"
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ delay: 0.2, duration: 0.7 }}
-
-                                        >
-                                            {stage1Text}
-                                        </motion.div>
-                                    </div>
-                                    <motion.div
-                                        className="my-2 p-2 bg-slate-100 rounded-t-lg rounded-r-lg shadow shadow-slate-100"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ delay: 1, duration: 1 }}
-                                    >
-                                        <div className="text-xs text-slate-600">Estelle</div>
-                                        <motion.div
-                                            className="text-sm text-slate-900"
-                                            variants={textAnimation(0.03, 1)}
-                                            initial="hidden"
-                                            animate="visible"
-                                        >
-
-                                            {scene2[1].text?.split("").map((word, index) =>
-                                                <motion.span
-                                                    key={index}
-                                                    variants={child}
-                                                >
-                                                    {word}
-                                                </motion.span>
-                                            )}
-                                        </motion.div>
-                                    </motion.div>
+                                <ExternalDiscussion index={0} name="Skyler" delay={7.5} duration={1} textDelay={5} />
+                                {stage > 0 && <>
+                                    <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.7} />
+                                    <ExternalDiscussion index={1} name="Skyler" delay={1} duration={1} textDelay={1} />
+                                </>}
+                                {stage > 1 && <>
+                                    <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.7} />
+                                    <ExternalDiscussion index={2} name="Skyler" delay={1} duration={1} textDelay={1} />
+                                </>}
+                                {stage > 2 && <>
+                                    <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.7} />
                                 </>}
                             </div>
                         </div>
-                        <motion.div
-                            className="my-1 w-full"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 6, duration: .5 }}
+                        <div className="my-1 w-full"
                         >
-                            {stage === 0 && <div className="grid grid-cols-2 gap-4 justify-center mb-8">
-                                <button
-                                    className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
-                                    onClick={() => {
-                                        setStage(1)
-                                        setStage1Text("Yes it's insane!")
-                                    }}
+                            {stage === 0 &&
+                                <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} index={0} delay={9} duration={.5} />
+                            }
+                            {stage === 1 &&
+                                <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} index={1} delay={4} duration={.5} />
+                            }
+                            {stage === 2 &&
+                                <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} index={2} delay={4} duration={.5} />
+                            }
+                            {stage === 3 &&
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 1, duration: 1 }}
                                 >
-                                    Yes it&apos;s insane!
-                                </button>
-                                <button
-                                    className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
-                                    onClick={() => {
-                                        setStage(1)
-                                        setStage1Text("What do you mean?")
-                                    }}
-                                >
-                                    What do you mean?
-                                </button>
-                            </div>}
-                        </motion.div>
-
-                        {stage === 1 && <motion.div
-                            className="my-1 w-full"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 1, duration: .5 }}
-                        >
-                            <div className="grid grid-cols-2 gap-4 justify-center mb-8">
-                                <button
-                                    className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
-                                    onClick={() => {
-                                        router.push('/prologue')
-                                    }}
-                                >
-                                    I don&apos;t know!
-                                </button>
-                                <button
-                                    className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
-                                    onClick={() => {
-                                        router.push('/prologue')
-                                    }}
-                                >
-                                    nothing surprises me anymore
-                                </button>
-                            </div>
-                        </motion.div>}
-
-
-
-
-
-
+                                    <Link href="/chapter1/scene3" className="absolute bottom-8 right-8">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </Link>
+                                </motion.div>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

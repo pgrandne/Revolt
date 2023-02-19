@@ -1,13 +1,23 @@
 export const scene2 = [
+    "Hey Azad, did you watch the news?",
+    "Billions of fake money discovered!!! It is 15% of our GDP! Maybe it is only the tip of the iceberg",
+    "I guess everyone will work on that for next weeks, I am in meetings all day, we talk about it tonight"
+]
+
+export const scene2Choices = [
     {
-        id: 1,
-        text: 'What is happening is completely crazy'
+        choice1: "Yes it's unreal",
+        choice2: "About what?"
     },
     {
-        id: 2,
-        text: 'How is it possible?'
+        choice1: "Nobody could have imagined that",
+        choice2: "Hard to believe"
     },
     {
-        id: 'Please help me to understand'
-    }
+        choice1: "Sure",
+        choice2: "(say nothing)"
+    },
+
+
+
 ]
