@@ -1,19 +1,23 @@
 'use client';
 
-import { perm_marker } from '@/utils/font';
-import AnimatedText from "@/components/AnimatedText"
-import { useState } from "react"
-
+import { Dispatch, SetStateAction, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/app/chapter1/scene3/img/cincinnatus.jpg"
+import ExternalDiscussion from "./ExternalDiscussion";
+import { scene2, scene2Choices } from "@/utils/story"
+import Link from "next/link";
 
-const Telegram = () => {
-    const [stage, setStage] = useState(0)
+const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [write, setWrite] = useState(false)
 
     return (
-        <div className="flex w-full h-full overflow-hidden antialiased rounded-md">
+        <motion.div
+            className="flex w-full h-full overflow-hidden antialiased rounded-md"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+        >
             <div className="relative flex flex-col flex-1 bg-zinc-300">
                 <div className="z-20 flex flex-grow-0 flex-shrink-0 w-full pr-3 bg-white border-b">
                     <div className="w-12 h-12 mx-4 my-2 bg-blue-500 bg-center bg-no-repeat bg-cover rounded-full cursor-pointer">
@@ -54,38 +58,18 @@ const Telegram = () => {
                 </div>
                 <div className="top-0 bottom-0 left-0 right-0 flex flex-col flex-1 overflow-hidden bg-transparent bg-bottom bg-cover">
                     <div className="self-center flex-1 w-full max-w-xl overflow-auto">
-
-
                         <div className="relative flex flex-col px-3 py-2 m-auto">
                             <div className="self-center px-2 py-1 mx-0 my-1 text-sm text-gray-700 bg-white border border-gray-200 rounded-full shadow rounded-tg">Channel was created</div>
                             <div className="self-center px-2 py-1 mx-0 my-1 text-sm text-gray-700 bg-white border border-gray-200 rounded-full shadow rounded-tg">September 29</div>
-                            <div className="self-start w-3/4 my-1">
-                                <div className="p-2 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black">
-                                    Hello Mr Azad, a trusted person gave me your contact.
-                                </div>
-                            </div>
-                            <div className="self-start w-1/4 my-1 relative">
-                                <motion.div
-                                    className="absolute p-2 w-20 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black"
-                                    animate={{ opacity: [0, 1, 1, 0] }}
-                                    transition={{ delay: 2, duration: 3, times: [0, 0.2, 0.9, 1] }}
-                                >
-                                    <div className="animate-bounce text-teal-500 w-6 h-6 ...">
-                                        writing...
+                            <div className="w-3/4 my-1">
+                                <div className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow">
+                                    <div className="text-sm text-black">
+                                        {scene2[3]}
                                     </div>
-                                </motion.div>
-                            </div>
-                            <motion.div
-                                className="self-start w-3/4 my-1"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 5, duration: 0.2 }}
-                            >
-                                <div className="p-2 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black">
-                                    I have some documents about a very sensitive case, Are you interested ?
                                 </div>
-                            </motion.div>
-
+                                <ExternalDiscussion index={4} name="Cincinnatus" delay={5} telegramWindow={true} />
+                                {/* <ExternalDiscussion index={5} name="Cincinnatus" delay={0} telegramWindow={true} /> */}
+                            </div>
                         </div>
                     </div>
                     {!write &&
@@ -116,15 +100,15 @@ const Telegram = () => {
                             <div className="w-full">
                                 <div
                                     className="w-full p-1 text-sm bg-white border border-transparent appearance-none rounded cursor-default grid grid-cols-1 divide-gray-600 divide-y gap-1">
-                                    <p className=" cursor-pointer">Choix 1</p>
-                                    <p className=" cursor-pointer">Choix 2</p>
+                                    <Link href="/prologue" >{scene2Choices[3].choice1}</Link>
+                                    <Link href="/prologue">{scene2Choices[3].choice2}</Link>
                                 </div>
                             </div>
                         </div>
                     }
                 </div>
             </div>
-        </div>
+        </motion.div >
     )
 }
 

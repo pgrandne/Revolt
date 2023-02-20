@@ -4,41 +4,64 @@ import { motion } from "framer-motion"
 import { child, textAnimation } from "@/utils/animatedText"
 import { scene2 } from "@/utils/story"
 
-const ExternalDiscussion = ({ index, name, delay, duration, textDelay }: {
+const ExternalDiscussion = ({ index, name, delay, telegramWindow }: {
     index: number,
     name: string,
     delay: number,
-    duration: number,
-    textDelay: number,
+    telegramWindow: boolean,
 }) => {
-    const words = scene2[index].split("")
 
     return (
 
         <div className="w-3/4 my-1">
-            <motion.div
-                className="my-2 p-2 bg-slate-100 rounded-t-lg rounded-r-lg shadow shadow-slate-100"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: delay, duration: duration }}
-            >
-                <div className="text-xs text-slate-600">{name}</div>
+            {!telegramWindow &&
                 <motion.div
-                    className="text-sm text-slate-900"
-                    variants={textAnimation(0.03, textDelay)}
-                    initial="hidden"
-                    animate="visible"
+                    className="my-2 p-2 bg-slate-100 rounded-t-lg rounded-r-lg shadow shadow-slate-100"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: delay, duration: 1 }}
                 >
-                    {words.map((word, index) =>
-                        <motion.span
-                            key={index}
-                            variants={child}
-                        >
-                            {word}
-                        </motion.span>
-                    )}
+                    <div className="text-xs text-slate-600">{name}</div>
+                    <motion.div
+                        className="text-sm text-slate-900"
+                        variants={textAnimation(0.03, delay)}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        {scene2[index].split("").map((word, index) =>
+                            <motion.span
+                                key={index}
+                                variants={child}
+                            >
+                                {word}
+                            </motion.span>
+                        )}
+                    </motion.div>
                 </motion.div>
-            </motion.div>
+            }
+            {telegramWindow &&
+                <>
+                    <motion.div
+                        className="absolute p-2 w-20 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black"
+                        animate={{ opacity: [0, 1, 1, 0] }}
+                        transition={{ delay: 2, duration: 3, times: [0, 0.2, 0.9, 1] }}
+                    >
+                        <div className="animate-bounce text-teal-500 w-6 h-6 ...">
+                            writing...
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: delay, duration: 1 }}
+                    >
+                        <div className="text-sm text-black">
+                            {scene2[index]}
+                        </div>
+                    </motion.div>
+                </>
+            }
         </div>
     )
 }
