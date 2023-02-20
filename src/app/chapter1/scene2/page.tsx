@@ -17,9 +17,9 @@ const Chap1s2 = () => {
     const narration = "The Lerenberg Post, Newsroom"
     const hour1 = "8:53 am"
     const hour2 = "2:44 pm"
-    const [stage, setStage] = useState(3)
-    const [discussionWindow, setDiscussionWindow] = useState(false)
-    const [telegramWindow, setTelegramWindow] = useState(true)
+    const [stage, setStage] = useState(0)
+    const [discussionWindow, setDiscussionWindow] = useState(true)
+    const [telegramWindow, setTelegramWindow] = useState(false)
 
     return (
         <div className="flex flex-row">
