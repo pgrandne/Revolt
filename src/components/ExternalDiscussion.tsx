@@ -44,7 +44,7 @@ const ExternalDiscussion = ({ index, name, delay, telegramWindow }: {
                     <motion.div
                         className="absolute p-2 w-20 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black"
                         animate={{ opacity: [0, 1, 1, 0] }}
-                        transition={{ delay: 2, duration: 3, times: [0, 0.2, 0.9, 1] }}
+                        transition={{ delay: delay, duration: 3, times: [0, 0.2, 0.9, 1] }}
                     >
                         <div className="animate-bounce text-teal-500 w-6 h-6 ...">
                             writing...
@@ -54,7 +54,7 @@ const ExternalDiscussion = ({ index, name, delay, telegramWindow }: {
                         className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: delay, duration: 1 }}
+                        transition={{ delay: delay + 3, duration: 1 }}
                     >
                         <div className="text-sm text-black">
                             {scene2[index]}

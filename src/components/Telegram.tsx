@@ -5,18 +5,21 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/app/chapter1/scene3/img/cincinnatus.jpg"
 import ExternalDiscussion from "./ExternalDiscussion";
-import { scene2, scene2Choices } from "@/utils/story"
+import { scene2 } from "@/utils/story"
 import Link from "next/link";
+import TelegramChoices from "./TelegramChoices";
+import AzadDiscussion from "./AzadDiscussion";
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [write, setWrite] = useState(false)
+    const [azadText, setAzadText] = useState<string[]>([])
 
     return (
         <motion.div
             className="flex w-full h-full overflow-hidden antialiased rounded-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 1, duration: 0.8 }}
         >
             <div className="relative flex flex-col flex-1 bg-zinc-300">
                 <div className="z-20 flex flex-grow-0 flex-shrink-0 w-full pr-3 bg-white border-b">
@@ -67,14 +70,19 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                         {scene2[3]}
                                     </div>
                                 </div>
-                                <ExternalDiscussion index={4} name="Cincinnatus" delay={5} telegramWindow={true} />
-                                {/* <ExternalDiscussion index={5} name="Cincinnatus" delay={0} telegramWindow={true} /> */}
+                                <ExternalDiscussion index={4} name="Cincinnatus" delay={3} telegramWindow={true} />
+                                {stage > 3 &&
+                                    <>
+                                        <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
+                                        <ExternalDiscussion index={5} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    </>
+                                }
                             </div>
                         </div>
                     </div>
                     {!write &&
                         <div className="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400"
-                            onClick={() => setWrite(true)}>
+                            onClick={() => { stage === 3 && setWrite(true) }}>
                             <div className="w-full">
                                 <span className="absolute inset-y-0 left-0 flex items-center pl-6">
                                     <svg className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -93,15 +101,12 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             </div>
                         </div>
                     }
-
-                    {write &&
-                        <div className="relative flex items-center self-center w-full max-w-xl px-4 py-2 overflow-hidden text-gray-600 focus-within:text-gray-400"
+                    {write && stage === 3 &&
+                        <div className="relative flex w-full max-w-xl px-4 py-2 overflow-hidden text-gray-600 focus-within:text-gray-400"
                             onClick={() => setWrite(false)}>
                             <div className="w-full">
-                                <div
-                                    className="w-full p-1 text-sm bg-white border border-transparent appearance-none rounded cursor-default grid grid-cols-1 divide-gray-600 divide-y gap-1">
-                                    <Link href="/prologue" >{scene2Choices[3].choice1}</Link>
-                                    <Link href="/prologue">{scene2Choices[3].choice2}</Link>
+                                <div className="w-full p-1 text-sm bg-white border border-transparent appearance-none rounded cursor-default grid grid-cols-1 divide-gray-600 divide-y">
+                                    <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} index={3} />
                                 </div>
                             </div>
                         </div>
@@ -109,6 +114,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                 </div>
             </div>
         </motion.div >
+
     )
 }
 

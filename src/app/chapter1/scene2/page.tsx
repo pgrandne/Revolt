@@ -14,12 +14,12 @@ import Discussion from '@/components/Discussion';
 import Telegram from '@/components/Telegram';
 
 const Chap1s2 = () => {
-    const narration1 = "The Lerenberg Post, Newsroom, 8:53 am"
-    const narration2 = "The Lerenberg Post, Newsroom, 11:24 am"
-    const [write, setWrite] = useState(false)
-    const [stage, setStage] = useState(0)
-    const [discussionWindow, setDiscussionWindow] = useState(true)
-    const [telegramWindow, setTelegramWindow] = useState(false)
+    const narration = "The Lerenberg Post, Newsroom"
+    const hour1 = "8:53 am"
+    const hour2 = "2:44 pm"
+    const [stage, setStage] = useState(3)
+    const [discussionWindow, setDiscussionWindow] = useState(false)
+    const [telegramWindow, setTelegramWindow] = useState(true)
 
     return (
         <div className="flex flex-row">
@@ -36,91 +36,119 @@ const Chap1s2 = () => {
                         priority={true}
                         alt="redaction"
                     />
-                    <>
-                        {discussionWindow &&
-                            <motion.div
-                                className="pl-1 text-xl"
-                                variants={textAnimation(0.1, 2)}
-                                initial="hidden"
-                                animate="visible"
+                    <motion.div
+                        className="pl-1 text-xl"
+                        variants={textAnimation(0.08, 2)}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        {narration.split("").map((word, index) =>
+                            <motion.span
+                                className={perm_marker.className}
+                                key={index}
+                                variants={child}
                             >
-                                {narration1.split("").map((word, index) =>
-                                    <motion.span
-                                        className={perm_marker.className}
-                                        key={index}
-                                        variants={child}
-                                    >
-                                        {word}
-                                    </motion.span>
-                                )}
-                            </motion.div>
-                        }
-                        {!discussionWindow &&
+                                {word}
+                            </motion.span>
+                        )}
+                    </motion.div>
+                    {discussionWindow &&
+                        <motion.div
+                            className="pl-1 text-xl"
+                            variants={textAnimation(0.1, 4)}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            {hour1.split("").map((word, index) =>
+                                <motion.span
+                                    className={perm_marker.className}
+                                    key={index}
+                                    variants={child}
+                                >
+                                    {word}
+                                </motion.span>
+                            )}
+                        </motion.div>
+                    }
+                    {!discussionWindow &&
+                        <motion.div
+                            className="pl-1 text-xl"
+                            variants={textAnimation(0.1, 0.5)}
+                            initial="hidden"
+                            animate="visible"
+                        >
+                            {hour2.split("").map((word, index) =>
+                                <motion.span
+                                    className={perm_marker.className}
+                                    key={index}
+                                    variants={child}
+                                >
+                                    {word}
+                                </motion.span>
+                            )}
+                        </motion.div>
+                    }
+                    {discussionWindow &&
+                        <motion.div
+                            className="absolute bottom-28 right-0"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 5.2, duration: 1 }}
+                        >
+                            <Image
+                                className="w-[280px] h-[320px]"
+                                src={discussionPic}
+                                alt="discussion"
+                            />
+                        </motion.div>
+                    }
+                    {!discussionWindow &&
+                        <>
                             <motion.div
-                                className="pl-1 text-xl"
-                                variants={textAnimation(0.1, 0.5)}
-                                initial="hidden"
-                                animate="visible"
-                            >
-                                {narration2.split("").map((word, index) =>
-                                    <motion.span
-                                        className={perm_marker.className}
-                                        key={index}
-                                        variants={child}
-                                    >
-                                        {word}
-                                    </motion.span>
-                                )}
-                            </motion.div>
-                        }
-                        {discussionWindow &&
-                            <motion.div
-                                className="absolute bottom-28 right-0"
+                                className="absolute bottom-16 right-0"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ delay: 6, duration: 1 }}
+                                transition={{ delay: 2, duration: 1 }}
                             >
                                 <Image
-                                    className="w-[280px] h-[320px]"
-                                    src={discussionPic}
-                                    alt="discussion"
+                                    className="w-[400px] h-[280px]"
+                                    src={manPic}
+                                    alt="Azad"
                                 />
                             </motion.div>
-                        }
-                        {!discussionWindow &&
-                            <>
+                            {!telegramWindow &&
                                 <motion.div
-                                    className="absolute bottom-16 right-0"
+                                    className="absolute top-20 right-12 shadow-xl shadow-white"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    transition={{ delay: 5, duration: 1 }}
+                                    transition={{ delay: 3.5, duration: 1 }}
                                 >
                                     <Image
-                                        className="w-[400px] h-[280px]"
-                                        src={manPic}
-                                        alt="Azad"
+                                        className="w-[200px] h-[100px] cursor-pointer animate-pulse"
+                                        src={notifPic}
+                                        alt="notification"
+                                        onClick={() => setTelegramWindow(true)}
                                     />
                                 </motion.div>
-                                {!telegramWindow &&
-                                    <motion.div
-                                        className="absolute top-20 right-12"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ delay: 6.5, duration: 1 }}
-                                    >
-                                        <Image
-                                            className="w-[200px] h-[100px] cursor-pointer animate-pulse"
-                                            src={notifPic}
-                                            alt="notification"
-                                            onClick={() => setTelegramWindow(true)}
-                                        />
-                                    </motion.div>
-                                }
+                            }
 
-                            </>
-                        }
-                    </>
+                        </>
+                    }
+
                 </motion.div >
+                {stage === 4 &&
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1, duration: 1 }}
+                    >
+                        <Link href="/construction" className="absolute bottom-8 right-8 animate-pulse box">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </Link>
+                    </motion.div>
+                }
             </div>
             <div className="basis-1/3 p-6 h-screen flex-grow-0">
                 {discussionWindow &&
@@ -130,18 +158,19 @@ const Chap1s2 = () => {
                     <Telegram stage={stage} setStage={setStage} />
                 }
             </div>
-            {stage === 3 && discussionWindow &&
+            {
+                stage === 3 && discussionWindow &&
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
                 >
                     <button
-                        className="absolute bottom-8 right-8"
+                        className="absolute bottom-8 right-8 animate-pulse"
                         onClick={() => setDiscussionWindow(false)}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
                     </button>
                 </motion.div>
