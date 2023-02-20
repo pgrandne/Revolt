@@ -80,7 +80,7 @@ const Chap1s3 = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <Telegram />
+
                 </motion.div>}
         </div >
     )
