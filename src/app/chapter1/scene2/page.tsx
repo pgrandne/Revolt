@@ -10,7 +10,7 @@ import discussionPic from "./img/discussion.png"
 import manPic from "./img/man-desk.png"
 import notifPic from "./img/notif.png"
 import { child, textAnimation } from "@/utils/animatedText"
-import Discussion from '@/components/Discussion';
+import Discussion from './Discussion';
 import Telegram from '@/components/Telegram';
 
 const Chap1s2 = () => {

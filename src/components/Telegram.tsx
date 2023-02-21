@@ -3,7 +3,7 @@
 import { Dispatch, SetStateAction, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import cincinnatus from "@/app/chapter1/scene3/img/cincinnatus.jpg"
+import cincinnatus from "@/components/img/cincinnatus.jpg"
 import ExternalDiscussion from "./ExternalDiscussion";
 import { scene2 } from "@/utils/story"
 import Link from "next/link";
@@ -70,14 +70,14 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                         {scene2[3]}
                                     </div>
                                 </div>
-                                <ExternalDiscussion index={4} name="Cincinnatus" delay={3} telegramWindow={true} />
-                                {stage > 3 &&
-                                    <>
-                                        <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                        <ExternalDiscussion index={5} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    </>
-                                }
                             </div>
+                            <ExternalDiscussion index={4} name="Cincinnatus" delay={3} telegramWindow={true} />
+                            {stage > 3 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion index={5} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                </>
+                            }
                         </div>
                     </div>
                     {!write &&

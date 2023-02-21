@@ -5,16 +5,13 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link";
 import { useState } from 'react';
-import redactionPic from "../scene2/img/redaction.jpg"
-import discussionPic from "../scene2/img/discussion.png"
+import decorsPic from "./img/decors.png"
+import amisPic from "./img/amis.png"
 import { child, textAnimation } from "@/utils/animatedText"
-import ExternalDiscussion from '@/components/ExternalDiscussion';
-import AzadDiscussion from '@/components/AzadDiscussion';
-import AzadChoices from '@/components/AzadChoices';
-import Telegram from '@/components/Telegram';
+import Discussion from './Discussion';
 
 const Chap1s3 = () => {
-    const narration = "The Lerenberg Post, Newsroom, 11:23 am"
+    const narration = "dsfd"
     const words = narration.split("")
     const [telegramWindow, setTelegramWindow] = useState(false)
     const [write, setWrite] = useState(false)
@@ -22,69 +19,17 @@ const Chap1s3 = () => {
     const [azadText, setAzadText] = useState<string[]>([])
 
     return (
-        <div className="flex flex-row">
-            <div className="basis-2/3 h-screen flex relative">
-                <div className="grid grid-cols-1 my-auto pr-1">
-                    <Image
-                        className="w-[700px] h-[400px]"
-                        src={redactionPic}
-                        priority
-                        alt="redaction"
-                    />
-                    <motion.div
-                        className="pl-1 text-xl"
-                        variants={textAnimation(0.1, 2)}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        {words.map((word, index) =>
-                            <motion.span
-                                className={perm_marker.className}
-                                key={index}
-                                variants={child}
-                            >
-                                {word}
-                            </motion.span>
-                        )}
-                    </motion.div>
-                    <motion.div
-                        className="absolute bottom-28 right-0"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 6, duration: 1 }}
-                    >
-                        <Image
-                            className="w-[280px] h-[320px]"
-                            src={discussionPic}
-                            alt="discussion"
-                        />
-                    </motion.div>
-                    {!telegramWindow &&
-                        <motion.div
-                            className="absolute bottom-36 right-10"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 8, duration: 1 }}
-                        >
-                            <button
-                                className="bg-green-500 w-[110px] h-[50px] animate-pulse"
-                                onClick={() => setTelegramWindow(true)}
-                            >Telegram</button>
-                        </motion.div>}
-                </div >
+        <div className="h-screen bg-blue-500">
+            <div className="h-screen flex py-[5%] bg-green-500">
+                <div className="flex bg-blue-500 relative">
+                    <img src="/decors.png" alt="decors" />
+                    <div className="absolute bottom-0 right-0">
+                        <img src="/amis.png" alt="amis" />
+                    </div>
+                </div>
             </div>
-            {telegramWindow &&
-                <motion.div
-                    className="basis-1/3 p-6 h-screen flex-grow-0"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
-
-                </motion.div>}
         </div >
     )
 }
-
 
 export default Chap1s3

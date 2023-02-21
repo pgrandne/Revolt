@@ -6,7 +6,7 @@ import { perm_marker } from '@/utils/font';
 export default function Home() {
   return (
     <>
-      <main className={`${perm_marker.className} w-screen h-screen`}>
+      <main className={perm_marker.className}>
         <Hero />
       </main>
       <Footer />
