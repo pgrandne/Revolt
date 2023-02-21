@@ -20,19 +20,22 @@ const Chap1s3 = () => {
 
     return (
         <div className="basis-2/3 h-screen flex py-[5%] pr-[33%]">
-            <div className="flex w-full relative">
+            <div className="relative flex w-full">
                 <motion.div
+                    className="flex pb-[5%] pr-[30%]"
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.5 }}>
-                    <img className="w-[60%] h-full" src="/decors.png" alt="decors" />
+                    <img className="object-contain" src=" /decors.png" alt="decors" />
                 </motion.div>
                 <motion.div
-                    className="absolute bottom-0 right-0 w-[80%]"
+                    className="absolute bottom-0 right-0 flex h-full"
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1, duration: 0.5 }}>
-                    <img className="w-[80%]" src="/amis.png" alt="amis" />
+                    <div className="flex pl-[10%] pt-[5%]">
+                        <img className="object-contain" src="/amis.png" alt="amis" />
+                    </div>
                 </motion.div>
             </div >
         </div >
