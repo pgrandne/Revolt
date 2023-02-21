@@ -19,15 +19,22 @@ const Chap1s3 = () => {
     const [azadText, setAzadText] = useState<string[]>([])
 
     return (
-        <div className="h-screen bg-blue-500">
-            <div className="h-screen flex py-[5%] pr-[33%] bg-green-500">
-                <div className="flex bg-blue-500 w-full relative">
-                    <img src="/decors.png" alt="decors" />
-                    <div className="absolute bottom-0 right-0">
-                        <img src="/amis.png" alt="amis" />
-                    </div>
-                </div>
-            </div>
+        <div className="basis-2/3 h-screen flex py-[5%] pr-[33%]">
+            <div className="flex w-full relative">
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}>
+                    <img className="w-[60%] h-full" src="/decors.png" alt="decors" />
+                </motion.div>
+                <motion.div
+                    className="absolute bottom-0 right-0 w-[80%]"
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 1, duration: 0.5 }}>
+                    <img className="w-[80%]" src="/amis.png" alt="amis" />
+                </motion.div>
+            </div >
         </div >
     )
 }
