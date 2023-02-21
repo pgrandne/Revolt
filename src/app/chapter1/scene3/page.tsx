@@ -27,7 +27,6 @@ const Chap1s3 = () => {
                 </div>
             </div>
         </div>
-        </div >
     )
 }
 
