@@ -21,13 +21,12 @@ const Chap1s3 = () => {
     return (
         <div className="h-screen bg-blue-500">
             <div className="h-screen flex py-[5%] bg-green-500">
-                <div className="flex bg-blue-500 relative">
+                <div className="bg-blue-500">
                     <img src="/decors.png" alt="decors" />
-                    <div className="absolute bottom-0 right-0">
-                        <img src="/amis.png" alt="amis" />
-                    </div>
+                    <img src="/amis.png" alt="amis" />
                 </div>
             </div>
+        </div>
         </div >
     )
 }
