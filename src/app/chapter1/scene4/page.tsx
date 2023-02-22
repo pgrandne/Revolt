@@ -10,12 +10,15 @@ import Image from "next/image";
 import journalPic from "./img/journal.png"
 import AnimatedText from '@/components/AnimatedText';
 import ArrowButton from "@/components/ArrowButton";
+import Discussion from "./Discussion";
 
 const Chap1s4 = () => {
     const [stage, setStage] = useState(0)
     const [telegramWindow, setTelegramWindow] = useState(false)
     const narration = "October 30, 2023"
 
+    console.log(stage)
+    console.log(telegramWindow)
     return (
         <div className="flex flex-row">
             <div className="absolute h-screen w-screen flex-flex-col p-1">
@@ -35,24 +38,43 @@ const Chap1s4 = () => {
                 </motion.div>
             </div>
             <div className="relative basis-2/3 w-full overflow-hidden">
-                <Sequence telegramWindow={telegramWindow} setTelegramWindow={setTelegramWindow} />
+                <Sequence stage={stage} telegramWindow={telegramWindow} setTelegramWindow={setTelegramWindow} />
                 {stage === 5 &&
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 3, duration: 1 }}
                     >
-                        <Link href="/construction" className="absolute bottom-8 right-8 animate-pulse">
+                        <button
+                            className="absolute bottom-8 right-8 animate-pulse"
+                            onClick={() => setStage(6)}
+                        >
                             <ArrowButton />
-                        </Link>
+                        </button>
                     </motion.div>
                 }
             </div>
             <div className="basis-1/3 p-6 h-screen flex-grow-0">
-                {telegramWindow &&
-                    <Telegram stage={stage} setStage={setStage} />
+                {telegramWindow && stage < 6 &&
+                    < Telegram stage={stage} setStage={setStage} />
+                }
+                {stage > 5 &&
+                    <Discussion stage={stage} setStage={setStage} />
+
                 }
             </div>
+            {
+                stage === 9 &&
+                < motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
+                >
+                    <Link href="/construction" className="absolute bottom-8 right-8 animate-pulse">
+                        <ArrowButton />
+                    </Link>
+                </motion.div>
+            }
         </div >
     )
 }

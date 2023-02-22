@@ -21,9 +21,10 @@ export const scene4 = [
     "Before I tell you, I need to make sure that our discussions remain private. The matter is extremely touchy",
     "At this stage, I can only give you its code name: NDC",
     "Do not speak to anyone about our exchanges, I will never contact you anywhere other than on this encrypted app",
-    "You will go to the locker at Central Street, locker 29. The code is 311009. I have put a first sample of documents, you will realize the extent of the matter"
-
-
+    "You will go to the locker at Central Street, locker 29. The code is 311009. I have put a first sample of documents, you will realize the extent of the matter",
+    "It sounded urgent, is there a problem?",
+    "It costs nothing to see where it takes you",
+    "What is it?",
 ]
 
 export const scene2Choices = [
@@ -72,5 +73,17 @@ export const scene4Choices = [
     {
         choice1: "It's worthy of a spy movie!",
         choice2: "Count on me."
+    },
+    {
+        choice1: "Not really, but I have a source who just contacted me",
+        choice2: "Someone contaced me, I don't know if I can trust him"
+    },
+    {
+        choice1: "NDC, does it mean anything to you?",
+        choice2: "He spoke about NDC"
+    },
+    {
+        choice1: "Sorry, I shouldn't have mentioned it. I have to go",
+        choice2: "Never mind, I'll keep you posted"
     },
 ]

@@ -5,7 +5,7 @@ import Image from "next/image"
 import AnimatedText from '@/components/AnimatedText';
 import { Dispatch, SetStateAction } from "react";
 import redactionPic from "@/components/img/redaction.jpg"
-import chatPic from "./img/chat.png"
+import chatPic from "@/components/img/chat.png"
 import manPic from "./img/man-desk.png"
 import notifPic from "./img/notif.png"
 
