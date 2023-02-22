@@ -31,4 +31,19 @@
         @apply bg-white text-gray-800 hover:bg-red-800 hover:text-white font-semibold py-1 px-2 border border-gray-400 rounded m-2 z-20;
     }
 
+    .Skyler {
+        @apply text-slate-600 text-xs;
+    }
+
+    .Rob {
+        @apply text-purple-600 text-xs;
+    }
+
+    .Jessy {
+        @apply text-green-600 text-xs;
+    }
+
+
+
+
 }

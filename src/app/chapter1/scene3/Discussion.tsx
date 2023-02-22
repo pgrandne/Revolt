@@ -19,19 +19,16 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                         <ExternalDiscussion text={scene3[1]} name="Rob" delay={7} telegramWindow={false} />
                         <ExternalDiscussion text={scene3[2]} name="Rob" delay={10} telegramWindow={false} />
                         <ExternalDiscussion text={scene3[3]} name="Jessy" delay={13} telegramWindow={false} />
-                        <ExternalDiscussion text={scene3[4]} name="Rob" delay={16} telegramWindow={false} />
-                        <ExternalDiscussion text={scene3[5]} name="Rob" delay={20} telegramWindow={false} />
                         {stage > 0 && <>
                             <AzadDiscussion azadText={azadText[0]} delay={1} duration={0.7} />
-                            <ExternalDiscussion text={scene3[6]} name="Jessy" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={scene3[7]} name="Skyler" delay={4} telegramWindow={false} />
+                            <ExternalDiscussion text={scene3[4]} name="Skyler" delay={2} telegramWindow={false} />
                         </>}
                     </div>
                 </div>
                 <div className="my-1 w-full"
                 >
                     {stage === 0 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene3Choices[0]} delay={22} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene3Choices[0]} delay={15} duration={.5} />
                     }
                 </div>
             </div>

@@ -20,7 +20,7 @@ const ExternalDiscussion = ({ text, name, delay, telegramWindow }: {
                     animate={{ opacity: 1 }}
                     transition={{ delay: delay, duration: 1 }}
                 >
-                    <div className="text-xs text-slate-600">{name}</div>
+                    <div className={name}>{name}</div>
                     <motion.div
                         className="text-sm text-slate-900"
                         variants={textAnimation(0.03, delay)}
@@ -38,7 +38,8 @@ const ExternalDiscussion = ({ text, name, delay, telegramWindow }: {
                     </motion.div>
                 </motion.div>
             }
-            {telegramWindow &&
+            {
+                telegramWindow &&
                 <>
                     <motion.div
                         className="absolute p-2 w-20 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black"
@@ -61,7 +62,7 @@ const ExternalDiscussion = ({ text, name, delay, telegramWindow }: {
                     </motion.div>
                 </>
             }
-        </div>
+        </div >
     )
 }
 

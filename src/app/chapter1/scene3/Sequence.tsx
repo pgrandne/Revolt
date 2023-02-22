@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import AnimatedText from '@/components/AnimatedText';
-import decorPic from "./img/decor.png"
-import friendsPic from "./img/friends.png"
+import decorPic from "./img/decor2.png"
+import friendsPic from "./img/friends2.png"
 
 const Sequence = () => {
     const narration = "Azad's place"
@@ -13,7 +13,7 @@ const Sequence = () => {
     return (
         <div className="relative flex flex-col h-screen py-[5%] pr-[33%]">
             <motion.div
-                className="flex pb-[5%] pr-[30%]"
+                className="flex pb-[5%] pr-[25%]"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 1.5 }}>

@@ -9,11 +9,8 @@ export const scene2 = [
 
 export const scene3 = [
     "This counterfeit money story is terrible",
-    "Yes, since this morning, I get scared every time a customer is going to pay",
+    "Yes, since this morning, I get scared every time a customer is going to pay at the restaurant",
     "Will he pay in cash? How to be sure that it's true money",
-    "How many people pay you in cash? ",
-    "I don't know, ... Like 50% usually, but because many of them just buy water bottle or soda ",
-    "When they buy a sandwich or a menu they pay with their card",
     "Yeah, it's going to be a real disaster for our country",
     "Apparently, there are several billion in circulation as we speak",
 ]
