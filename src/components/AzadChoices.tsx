@@ -1,15 +1,19 @@
 'use client';
 
 import { motion } from "framer-motion"
-import { scene2Choices } from "@/utils/story"
 import { Dispatch, SetStateAction } from "react";
 
-const AzadChoices = ({ stage, setStage, azadText, setAzadText, index, delay, duration }: {
+interface IChoices {
+    choice1: string,
+    choice2: string
+}
+
+const AzadChoices = ({ stage, setStage, azadText, setAzadText, choices, delay, duration }: {
     stage: number,
     setStage: Dispatch<SetStateAction<number>>,
     azadText: string[],
     setAzadText: Dispatch<SetStateAction<string[]>>,
-    index: number
+    choices: IChoices,
     delay: number,
     duration: number,
 }) => {
@@ -24,22 +28,22 @@ const AzadChoices = ({ stage, setStage, azadText, setAzadText, index, delay, dur
                 className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
                 onClick={() => {
                     setStage(stage + 1)
-                    setAzadText([...azadText, scene2Choices[index].choice1])
+                    setAzadText([...azadText, choices.choice1])
                 }}
             >
-                {scene2Choices[index].choice1}
+                {choices.choice1}
             </button>
             <button
                 className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
                 onClick={() => {
                     setStage(stage + 1)
-                    setAzadText([...azadText, scene2Choices[index].choice2])
+                    setAzadText([...azadText, choices.choice2])
                 }}
             >
-                {scene2Choices[index].choice2}
+                {choices.choice2}
             </button>
         </motion.div>
     )
 }
 
-export default AzadChoices
+export default AzadChoices;

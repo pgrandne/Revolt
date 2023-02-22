@@ -11,8 +11,8 @@ import journalPic from "./img/journal.png"
 import { textAnimation, child } from "@/utils/animatedText"
 
 const Chap1s1 = () => {
-    const text = "Lurenberg, Listenbourg, September 21, 2023"
-    const words = text.split("")
+    const text = "Lurenberg, Listenbourg"
+    const day = "September 21, 2023"
 
     return (
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
@@ -46,22 +46,40 @@ const Chap1s1 = () => {
                     alt="Luremberg"
                 />
             </motion.div>
-            <motion.div
-                className="p-1 absolute bottom-20 left-20 text-4xl"
-                variants={textAnimation(0.1, 5)}
-                initial="hidden"
-                animate="visible"
-            >
-                {words.map((word, index) =>
-                    <motion.span
-                        className={perm_marker.className}
-                        key={index}
-                        variants={child}
-                    >
-                        {word}
-                    </motion.span>
-                )}
-            </motion.div>
+            <div className="p-1 absolute bottom-20 left-20 flex flex-col">
+                <motion.div
+                    className="text-4xl"
+                    variants={textAnimation(0.1, 5)}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    {text.split("").map((word, index) =>
+                        <motion.span
+                            className={perm_marker.className}
+                            key={index}
+                            variants={child}
+                        >
+                            {word}
+                        </motion.span>
+                    )}
+                </motion.div>
+                <motion.div
+                    className="text-3xl"
+                    variants={textAnimation(0.1, 7)}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    {day.split("").map((word, index) =>
+                        <motion.span
+                            className={perm_marker.className}
+                            key={index}
+                            variants={child}
+                        >
+                            {word}
+                        </motion.span>
+                    )}
+                </motion.div>
+            </div>
             <motion.div
                 className="absolute top-20 left-10"
                 initial={{ opacity: 0 }}

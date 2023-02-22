@@ -1,7 +1,6 @@
 'use client';
 
 import { perm_marker } from '@/utils/font';
-import AnimatedText from "@/components/AnimatedText"
 import { useState } from "react"
 import { chapterOneStory } from "@/utils/constant"
 import { motion } from "framer-motion"

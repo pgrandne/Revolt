@@ -6,7 +6,6 @@ import Image from "next/image"
 import cincinnatus from "@/components/img/cincinnatus.jpg"
 import ExternalDiscussion from "./ExternalDiscussion";
 import { scene2 } from "@/utils/story"
-import Link from "next/link";
 import TelegramChoices from "./TelegramChoices";
 import AzadDiscussion from "./AzadDiscussion";
 
@@ -71,11 +70,11 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     </div>
                                 </div>
                             </div>
-                            <ExternalDiscussion index={4} name="Cincinnatus" delay={3} telegramWindow={true} />
+                            <ExternalDiscussion text={scene2[4]} name="Cincinnatus" delay={3} telegramWindow={true} />
                             {stage > 3 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion index={5} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene2[5]} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                         </div>

@@ -2,10 +2,9 @@
 
 import { motion } from "framer-motion"
 import { child, textAnimation } from "@/utils/animatedText"
-import { scene2 } from "@/utils/story"
 
-const ExternalDiscussion = ({ index, name, delay, telegramWindow }: {
-    index: number,
+const ExternalDiscussion = ({ text, name, delay, telegramWindow }: {
+    text: string,
     name: string,
     delay: number,
     telegramWindow: boolean,
@@ -28,7 +27,7 @@ const ExternalDiscussion = ({ index, name, delay, telegramWindow }: {
                         initial="hidden"
                         animate="visible"
                     >
-                        {scene2[index].split("").map((word, index) =>
+                        {text.split("").map((word, index) =>
                             <motion.span
                                 key={index}
                                 variants={child}
@@ -57,7 +56,7 @@ const ExternalDiscussion = ({ index, name, delay, telegramWindow }: {
                         transition={{ delay: delay + 3, duration: 1 }}
                     >
                         <div className="text-sm text-black">
-                            {scene2[index]}
+                            {text}
                         </div>
                     </motion.div>
                 </>
