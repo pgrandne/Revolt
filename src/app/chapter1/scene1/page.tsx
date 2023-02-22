@@ -12,13 +12,13 @@ import { textAnimation, child } from "@/utils/animatedText"
 
 const Chap1s1 = () => {
     const text = "Lurenberg, Listenbourg"
-    const day = "September 21, 2023"
+    const day = "October 18, 2023"
 
     return (
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
             <div className="my-auto">
                 <motion.h1
-                    className="text-center text-5xl"
+                    className="text-center text-7xl"
                     initial={{ opacity: 0, x: -200 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ type: 'spring', delay: 0.8, duration: 1 }}
@@ -26,7 +26,7 @@ const Chap1s1 = () => {
                     Chapter 1
                 </motion.h1>
                 <motion.p
-                    className="text-center"
+                    className="text-center text-xl"
                     initial={{ opacity: 0, x: -200 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ type: 'spring', delay: 1.5, duration: 1 }}
@@ -64,8 +64,8 @@ const Chap1s1 = () => {
                     )}
                 </motion.div>
                 <motion.div
-                    className="text-3xl"
-                    variants={textAnimation(0.1, 7)}
+                    className="text-2xl"
+                    variants={textAnimation(0.1, 8)}
                     initial="hidden"
                     animate="visible"
                 >
@@ -81,25 +81,25 @@ const Chap1s1 = () => {
                 </motion.div>
             </div>
             <motion.div
-                className="absolute top-20 left-10"
+                className="absolute top-[21%] left-[7%]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 9.2, duration: 0.8 }}
+                transition={{ delay: 10.2, duration: 0.8 }}
             >
                 <Image
-                    className="w-[500px] h-[300px] rounded border-4 border-amber-200"
+                    className="h-[240px] w-full border-8 border-[#dac8bc]"
                     src={tassePic}
                     alt="tasse"
                 />
             </motion.div>
             <motion.div
-                className="absolute bottom-36 right-20"
+                className="absolute bottom-[17%] right-[7%]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1] }}
-                transition={{ delay: 11, duration: 0.8 }}
+                transition={{ delay: 12, duration: 0.8 }}
             >
                 <Image
-                    className="w-[500px] h-[300px] rounded border-4 border-amber-200"
+                    className="object-contain h-[360px] w-full border-8 border-[#dac8bc]"
                     src={kiosquePic}
                     alt="Kiosque"
                 />
@@ -108,7 +108,7 @@ const Chap1s1 = () => {
                 className="absolute h-screen w-screen bg-[#0f1216]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 13, duration: 1 }}
+                transition={{ delay: 15, duration: 1 }}
             >
                 <Image
                     src={journalPic}
