@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
-import Telegram from '@/components/Telegram'
+import Telegram from './Telegram'
 import ArrowButton from '@/components/ArrowButton';
 
 const Chap1s2 = () => {

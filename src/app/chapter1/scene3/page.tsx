@@ -27,7 +27,7 @@ const Chap1s3 = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 6.5, duration: 1 }}
                 >
-                    <Link href="/construction" className="absolute bottom-8 right-8 animate-pulse">
+                    <Link href="/chapter1/scene4" className="absolute bottom-8 right-8 animate-pulse">
                         <ArrowButton />
                     </Link>
                 </motion.div>

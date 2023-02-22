@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import AnimatedText from '@/components/AnimatedText';
 import { Dispatch, SetStateAction } from "react";
-import redactionPic from "./img/redaction.jpg"
+import redactionPic from "@/components/img/redaction.jpg"
 import chatPic from "./img/chat.png"
 import manPic from "./img/man-desk.png"
 import notifPic from "./img/notif.png"
@@ -27,7 +27,7 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                 transition={{ delay: 0.2, duration: 1.5 }}>
                 <Image className="object-contain" src={redactionPic} alt="redaction" />
             </motion.div>
-            <div className="pl-2 text-xl z-10">
+            <div className="pl-2 z-10">
                 <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={2} />
                 {discussionWindow &&
                     <AnimatedText size={"text-base"} content={hour1} speed={0.08} delay={4} />
