@@ -43,9 +43,9 @@ const Hero = () => {
                         alt="Picture of materials"
                     />
                 </motion.div>
-                <div className="absolute top-6 sm:top-28 h-full w-full">
+                <div className="absolute top-6 sm:top-36 h-full w-full">
                     <motion.h1
-                        className="text-center text-2xl sm:text-5xl"
+                        className="text-center text-2xl sm:text-7xl"
                         initial="hidden"
                         animate="visible"
                         variants={tVariant}
