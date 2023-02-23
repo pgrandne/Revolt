@@ -1,9 +1,9 @@
 export const scene2 = [
     "Hey Azad, did you watch the news?",
-    "Billions of fake money discovered!!! It is 15% of our GDP! Maybe it is only the tip of the iceberg",
-    "I guess everyone will work on that for next weeks, I am in meetings all day, we talk about it tonight",
+    "Billions of fake money discovered!!! It's 15% of our GDP! And it'sprobably only the tip of the iceberg...",
+    "Everyone will work on it during the next weeks! I have meetings all day, we'll talk later.",
     "Hello Mr Azad, a trusted person gave me your contact",
-    "I have some documents about a very sensitive case, Are you interested ?",
+    "I have some documents about a very sensitive case, are you interested?",
     "I can't say more at the moment, I'll get back to you very soon.",
 ]
 
