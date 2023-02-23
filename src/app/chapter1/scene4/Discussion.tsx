@@ -9,6 +9,7 @@ import { Dispatch, SetStateAction } from "react";
 
 const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
+    console.log(stage)
 
     return (
         <div className="flex w-full h-full">
@@ -34,13 +35,13 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                 <div className="my-1 w-full"
                 >
                     {stage === 6 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[5]} delay={9} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[4]} delay={9} duration={.5} />
                     }
                     {stage === 7 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[6]} delay={6} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[5]} delay={6} duration={.5} />
                     }
                     {stage === 8 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[7]} delay={3} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[6]} delay={3} duration={.5} />
                     }
                 </div>
             </div>

@@ -102,7 +102,7 @@ export const scene4Choices = [
     },
     {
         choice1: "Not really, but I have a source who just contacted me",
-        choice2: "Someone contaced me, I don't know if I can trust him"
+        choice2: "Someone contacted me, I don't know if I can trust him"
     },
     {
         choice1: "NDC, does it mean anything to you?",
