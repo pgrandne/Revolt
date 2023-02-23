@@ -3,22 +3,19 @@
 import { motion } from "framer-motion"
 import Link from "next/link";
 import { useState } from 'react'
-// import Discussion from './Discussion'
+import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Telegram from './Telegram'
 import Image from "next/image";
 import journalPic from "./img/journal.png"
 import AnimatedText from '@/components/AnimatedText';
 import ArrowButton from "@/components/ArrowButton";
-import Discussion from "./Discussion";
 
 const Chap1s4 = () => {
     const [stage, setStage] = useState(0)
     const [telegramWindow, setTelegramWindow] = useState(false)
     const narration = "October 30, 2023"
 
-    console.log(stage)
-    console.log(telegramWindow)
     return (
         <div className="flex flex-row">
             <div className="absolute h-screen w-screen flex-flex-col p-1">

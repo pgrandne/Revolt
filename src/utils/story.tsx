@@ -27,6 +27,12 @@ export const scene4 = [
     "What is it?",
 ]
 
+export const scene5 = [
+    "That will be 18 LIS, sir",
+    "Your card has been declined, sir",
+    "It's still not working. Do you have any other means of payment?"
+]
+
 export const scene2Choices = [
     {
         choice1: "Yes it's unreal",
@@ -85,5 +91,20 @@ export const scene4Choices = [
     {
         choice1: "Sorry, I shouldn't have mentioned it. I have to go",
         choice2: "Never mind, I'll keep you posted"
+    },
+]
+
+export const scene5Choices = [
+    {
+        choice1: "By card, please",
+        choice2: "(say nothing)"
+    },
+    {
+        choice1: "Let me try with the PIN",
+        choice2: "(say nothing)"
+    },
+    {
+        choice1: "I have 20LIS in cash...",
+        choice2: "(say nothing)"
     },
 ]
