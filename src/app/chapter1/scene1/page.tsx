@@ -8,10 +8,10 @@ import lurembergPic from "./img/luremberg2.jpg"
 import tassePic from "./img/tasse.png"
 import kiosquePic from "./img/kiosque.png"
 import journalPic from "./img/journal.png"
-import { textAnimation, child } from "@/utils/animatedText"
+import AnimatedText from '@/components/AnimatedText';
 
 const Chap1s1 = () => {
-    const text = "Lurenberg, Listenbourg"
+    const narration = "Lurenberg, Listenbourg"
     const day = "October 18, 2023"
 
     return (
@@ -47,38 +47,8 @@ const Chap1s1 = () => {
                 />
             </motion.div>
             <div className="p-1 absolute bottom-20 left-20 flex flex-col">
-                <motion.div
-                    className="text-4xl"
-                    variants={textAnimation(0.1, 5)}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    {text.split("").map((word, index) =>
-                        <motion.span
-                            className={perm_marker.className}
-                            key={index}
-                            variants={child}
-                        >
-                            {word}
-                        </motion.span>
-                    )}
-                </motion.div>
-                <motion.div
-                    className="text-2xl"
-                    variants={textAnimation(0.1, 8)}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    {day.split("").map((word, index) =>
-                        <motion.span
-                            className={perm_marker.className}
-                            key={index}
-                            variants={child}
-                        >
-                            {word}
-                        </motion.span>
-                    )}
-                </motion.div>
+                <AnimatedText size="text-4xl" content={narration} speed={0.1} delay={5} />
+                <AnimatedText size="text-2xl" content={day} speed={0.1} delay={8} />
             </div>
             <motion.div
                 className="absolute top-[21%] left-[7%]"

@@ -20,7 +20,7 @@ const Hero = () => {
 
     const bVariant = {
         hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 3, duration: 0.9 } },
+        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 3, duration: 1.1 } },
     }
 
     const iVariant = {
@@ -61,15 +61,18 @@ const Hero = () => {
                         Story of a whistleblower
                     </ motion.p>
                     <Link href={isMobile ? "/mobile" : "/chapter1/scene1"} className="grid mx-auto place-content-center">
-                        <motion.button
-                            className="btnHero"
+                        <motion.div
                             initial="hidden"
                             animate="visible"
                             variants={bVariant}
-                            whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
                         >
-                            Enter the adventure
-                        </motion.button>
+                            <motion.button
+                                className="btnHero"
+                                whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
+                            >
+                                Enter the adventure
+                            </motion.button>
+                        </motion.div>
                     </Link>
                 </div>
             </div>
