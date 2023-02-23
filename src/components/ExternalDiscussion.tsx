@@ -23,7 +23,7 @@ const ExternalDiscussion = ({ text, name, delay, telegramWindow }: {
                     <div className={name}>{name}</div>
                     <motion.div
                         className="text-sm text-slate-900"
-                        variants={textAnimation(0.03, delay)}
+                        variants={textAnimation(0.05, delay)}
                         initial="hidden"
                         animate="visible"
                     >

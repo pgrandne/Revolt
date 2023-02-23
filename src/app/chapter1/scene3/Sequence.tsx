@@ -11,24 +11,24 @@ const Sequence = () => {
     const hour = "8:24 pm"
 
     return (
-        <div className="relative flex flex-col h-screen py-[5%] pr-[33%]">
+        <div className="relative flex flex-col justify-center h-screen py-[5%]">
             <motion.div
-                className="flex pb-[5%] pr-[25%]"
+                className="flex pr-[52%]"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 1.5 }}>
                 <Image className="object-contain" src={decorPic} alt="decor" priority={true} />
             </motion.div>
-            <div className="pl-2 text-xl z-10">
-                <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={2.5} />
-                <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={3.5} />
+            <div className="pl-6 pt-2 z-10">
+                <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={3.5} />
+                <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={5.2} />
             </div>
             <motion.div
                 className="absolute bottom-0 right-0 flex h-full"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.7, duration: 1.5 }}>
-                <div className="flex justify-end pl-[20%] pt-[10%] pb-[5%]">
+                <div className="flex justify-end pl-[25%] pt-[20%] pb-[10%]">
                     <Image className="object-contain" src={friendsPic} alt="friends" />
                 </div>
             </motion.div>

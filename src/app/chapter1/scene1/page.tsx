@@ -7,7 +7,7 @@ import Link from "next/link";
 import lurembergPic from "./img/luremberg2.jpg"
 import tassePic from "./img/tasse.png"
 import kiosquePic from "./img/kiosque.png"
-import journalPic from "./img/journal.png"
+import journalPic from "./img/journal18oct.png"
 import AnimatedText from '@/components/AnimatedText';
 
 const Chap1s1 = () => {
@@ -84,7 +84,7 @@ const Chap1s1 = () => {
                     src={journalPic}
                     fill={true}
                     style={{ objectFit: "contain" }}
-                    alt="journal"
+                    alt="Journal"
                 />
                 <Link href="/chapter1/scene2" className="absolute bottom-8 right-8 animate-pulse">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
