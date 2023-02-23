@@ -20,7 +20,7 @@ const Hero = () => {
 
     const bVariant = {
         hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0, transition: { delay: 3 } },
+        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 3, duration: 0.9 } },
     }
 
     const iVariant = {
