@@ -70,22 +70,87 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     </div>
                                 </div>
                             </div>
-                            <ExternalDiscussion text={scene6[4]} name="Cincinnatus" delay={3} telegramWindow={true} />
-                            {stage > 3 &&
+                            {stage > 4 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion text={scene6[4]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 5 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
                                     <ExternalDiscussion text={scene6[5]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene6[6]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 6 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion text={scene6[7]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 7 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion text={scene6[8]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene6[9]} name="Cincinnatus" delay={6} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 8 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion text={scene6[10]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene6[11]} name="Cincinnatus" delay={6} telegramWindow={true} />
+                                </>
+                            }
+
+                            {stage > 9 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[5]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion text={scene6[12]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 10 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[6]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion text={scene6[13]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 11 &&
+                                <>
+                                    <AzadDiscussion azadText={azadText[7]} delay={0.2} duration={0.2} />
+                                    <ExternalDiscussion text={scene6[14]} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                         </div>
                     </div>
-                    {stage === 3 &&
+                    {stage === 4 &&
                         <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[3]} />
+                    }
+                    {stage === 5 &&
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[4]} />
+                    }
+                    {stage === 6 &&
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[5]} />
+                    }
+                    {stage === 7 &&
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[6]} />
+                    }
+                    {stage === 8 &&
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[7]} />
+                    }
+                    {stage === 9 &&
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[8]} />
+                    }
+                    {stage === 10 &&
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[9]} />
+                    }
+                    {stage === 11 &&
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[10]} />
                     }
                 </div>
             </div>
         </motion.div >
-
     )
 }
 

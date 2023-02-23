@@ -33,9 +33,9 @@ const Hero = () => {
             <div className="my-auto relative">
                 <motion.div
                     className="p-2"
-                    initial="hidden"
-                    animate="visible"
-                    variants={iVariant}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.4 }}
+                    transition={{ delay: 3, duration: 3 }}
                 >
                     <Image
                         className="rounded-md border-4 border-white"
@@ -46,25 +46,25 @@ const Hero = () => {
                 <div className="absolute top-6 sm:top-36 h-full w-full">
                     <motion.h1
                         className="text-center text-2xl sm:text-7xl"
-                        initial="hidden"
-                        animate="visible"
-                        variants={tVariant}
+                        initial={{ opacity: 0, y: -200 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ type: 'spring', delay: 1, duration: 1.1 }}
                     >
                         Revolte
                     </motion.h1>
                     <motion.p
                         className="text-center pb-4 sm:pb-12"
-                        initial="hidden"
-                        animate="visible"
-                        variants={pVariant}
+                        initial={{ opacity: 0, y: 250 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ type: 'spring', delay: 2, duration: 1.1 }}
                     >
                         Story of a whistleblower
                     </ motion.p>
                     <Link href={isMobile ? "/mobile" : "/chapter1/scene1"} className="grid mx-auto place-content-center">
                         <motion.div
-                            initial="hidden"
-                            animate="visible"
-                            variants={bVariant}
+                            initial={{ opacity: 0, y: 250 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ type: 'spring', delay: 3, duration: 3 }}
                         >
                             <motion.button
                                 className="btnHero"

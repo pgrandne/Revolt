@@ -48,14 +48,22 @@ export const scene6 = [
     "I'm going to send you some money so you can finish this investigation",
     "Let's just say money is not an issue, and I really need you for this case",
     "You need to install a wallet",
-    "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash. I have to go now. Let me know when you've installed a wallet, and I'll send you money"
-
-
-
-
-
+    "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash. I have to go now. Let me know when you've installed a wallet, and I'll send you money",
 ]
 
+export const scene7 = [
+    "Of course you can sleep here tonight, tomorrow I leave in Vienna for 5 days but you can stay here",
+    `Your source is probably right. If you want to follow through with this investigation, you need funds. Your account being frozen for "suspicious activity" is likely an attempt to intimidate you.`,
+    "I learned a lot about the SBFTX investigation earlier this year...a wallet is not a bad idea to solve your problem, especially if it allows you to receive money",
+    "Actually, it's quite simple. It's like a digital safe where anyone can deposit money, but no one can open it except for you",
+    "And most importantly, no one can ever stop you from accessing it. Never",
+    "Real money, you mean the one in your bank account that you can no longer use since your account is frozen?",
+    "Even if they are digital currencies, they are real, many stores accept some of these cryptocurrencies",
+    "Okay, first you need to install a digital wallet, also known as a wallet. Metamask is the most used, with over 30 million users",
+    "I'm not surprised, it's one of the references, plus it's just a browser extension",
+    "I'll guide you, we'll do it together",
+    "Go to https://metamask.io/ and download the extension"
+]
 
 export const scene2Choices = [
     {
@@ -174,6 +182,25 @@ export const scene6Choices = [
 
     {
         choice1: "A wallet?",
+        choice2: "(say nothing)"
+    },
+]
+
+export const scene7Choices = [
+    {
+        choice1: "I'm freaking out, thank you Skyler for helping me out tonight",
+        choice2: "I admit I'm overwhelmed"
+    },
+    {
+        choice1: "I must admit I didn't understand much. All of this is unclear to me. Is it related to Bitcoin and cryptocurrencies?",
+        choice2: "Or just a technical issue. And I don't know nothing about digital wallet"
+    },
+    {
+        choice1: `But it's still "virtual" money compared to real money in my bank account`,
+        choice2: "(say nothing)"
+    },
+    {
+        choice1: "That's what Cincinnatus told me to install",
         choice2: "(say nothing)"
     },
 ]

@@ -1,16 +1,11 @@
 'use client';
 
-import { perm_marker } from '@/utils/font';
 import { useState } from "react"
-import { chapterOneStory } from "@/utils/constant"
-import { motion } from "framer-motion"
-import Image from "next/image"
 // import listenbourgPic from "../../../public/lurenberg1.jpg"
 // import newsroomPic from "../../../public/redaction.jpg"
 // import computerPic from "../../../public/journaliste3.png"
 // import screenPic from "../../../public/computer-screen.jpg"
 // import cincinnatus from "../../../public/cincinnatus.jpg"
-import Modal from "@/components/Modal";
 
 const Template = () => {
   const [stage, setStage] = useState(0)
