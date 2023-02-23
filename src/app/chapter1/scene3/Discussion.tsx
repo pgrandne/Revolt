@@ -9,7 +9,7 @@ import { Dispatch, SetStateAction } from "react";
 
 const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
-    console.log(stage)
+
     return (
         <div className="flex w-full h-full">
             <div className="relative flex flex-col flex-1">

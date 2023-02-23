@@ -61,15 +61,18 @@ const Hero = () => {
                         Story of a whistleblower
                     </ motion.p>
                     <Link href={isMobile ? "/mobile" : "/chapter1/scene1"} className="grid mx-auto place-content-center">
-                        <motion.button
-                            className="btnHero"
+                        <motion.div
                             initial="hidden"
                             animate="visible"
                             variants={bVariant}
-                            whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
                         >
-                            Enter the adventure
-                        </motion.button>
+                            <motion.button
+                                className="btnHero"
+                                whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
+                            >
+                                Enter the adventure
+                            </motion.button>
+                        </motion.div>
                     </Link>
                 </div>
             </div>
