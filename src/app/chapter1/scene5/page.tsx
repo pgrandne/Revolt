@@ -1,6 +1,5 @@
 'use client';
 
-import { perm_marker } from '@/utils/font';
 import { motion } from "framer-motion"
 import Link from "next/link";
 import { useState } from 'react'
@@ -21,7 +20,7 @@ const Chap1s5 = () => {
     return (
         <>
             {!lockerOpened &&
-                <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
+                <div className="relative flex justify-center w-screen h-screen my-auto">
                     <motion.div
                         className="absolute top-0"
                         initial={{ opacity: 0 }}
@@ -69,6 +68,20 @@ const Chap1s5 = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 2, duration: 1 }}
+                >
+                    <button
+                        className="absolute bottom-8 right-8 animate-pulse"
+                        onClick={() => setStage(4)}
+                    >
+                        <ArrowButton />
+                    </button>
+                </motion.div>
+            }
+            {stage === 4 &&
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 7, duration: 1 }}
                 >
                     <Link href="/construction" className="absolute bottom-8 right-8 animate-pulse">
                         <ArrowButton />
