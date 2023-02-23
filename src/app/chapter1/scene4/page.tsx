@@ -18,29 +18,31 @@ const Chap1s4 = () => {
 
     return (
         <div className="flex flex-row">
-            <div className="absolute h-screen w-screen flex-flex-col p-1">
+            <div className="absolute overflow-hidden h-screen w-screen flex-flex-col p-1">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0, 1, 1, 0] }}
-                    transition={{ delay: 1, duration: 6, times: [0, 0.2, 0.8, 1] }}
+                    transition={{ delay: 1, duration: 8, times: [0, 0.2, 0.8, 1] }}
                 >
-                    <div className="w-[55%] m-auto">
+                    <div className=" transform rotate-[-10deg] w-[62%] m-auto">
                         <Image
                             className="object-contain"
                             src={journalPic}
                             alt="journal"
                         />
                     </div>
+                    <div className="absolute bottom-10 left-6 ">
                     <AnimatedText size={"text-2xl"} content={narration} speed={0.08} delay={2.5} />
+                    </div>
                 </motion.div>
             </div>
             <div className="relative basis-2/3 w-full overflow-hidden">
                 <Sequence stage={stage} telegramWindow={telegramWindow} setTelegramWindow={setTelegramWindow} />
-                {stage === 5 &&
+                {stage === 4 &&
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 3, duration: 1 }}
+                        transition={{ delay: 1.5, duration: 1 }}
                     >
                         <button
                             className="absolute bottom-8 right-8 animate-pulse"

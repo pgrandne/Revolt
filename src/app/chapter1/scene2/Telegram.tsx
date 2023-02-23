@@ -71,10 +71,12 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 </div>
                             </div>
                             <ExternalDiscussion text={scene2[4]} name="Cincinnatus" delay={3} telegramWindow={true} />
+                            <ExternalDiscussion text={scene2[5]} name="Cincinnatus" delay={7} telegramWindow={true} />
+
                             {stage > 3 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene2[5]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene2[6]} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                         </div>

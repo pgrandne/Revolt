@@ -28,29 +28,29 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                         className="flex pr-[35%]"
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 6.5, duration: 1.5 }}>
+                        transition={{ delay: 9.5, duration: 1 }}>
                         <Image className="object-contain" src={redactionPic} alt="redaction" />
                     </motion.div>
-                    <div className="pl-2 z-10">
-                        <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={8} />
-                        <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={10} />
+                    <div className="pl-6 pt-2 z-10">
+                        <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={11.5} />
+                        <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={14.5} />
                     </div>
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 9, duration: 1.5 }}>
-                        <div className="flex justify-end pl-[40%] pt-[15%] pb-[5%]">
+                        transition={{ delay: 16, duration: 1.5 }}>
+                        <div className="flex justify-end pl-[45%] pt-[15%] pb-[5%]">
                             <Image className="object-contain" src={azadPic} alt="Azad" />
                         </div>
                     </motion.div>
                     {!telegramWindow &&
                         < motion.div
                             className="absolute top-0 right-0 flex h-full"
-                            initial={{ y: -100, opacity: 0 }}
+                            initial={{ y: -20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 11, duration: 1.5 }}>
-                            <div className="flex pl-[75%] pt-[10%] pb-[80%]">
+                            transition={{ delay: 18, duration: 1.5 }}>
+                            <div className="flex pl-[73%] pt-[10%] pb-[80%]">
                                 <Image
                                     className="object-contain cursor-pointer animate-pulse"
                                     src={telegramPic}
@@ -71,7 +71,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                         transition={{ delay: 2, duration: 1.5 }}>
                         <Image className="object-contain" src={skylerPic} alt="skyler office" />
                     </motion.div>
-                    <div className="pl-2 z-10">
+                    <div className="pl-6 pt-2 z-10">
                         <AnimatedText size={"text-xl"} content={narration2} speed={0.08} delay={3.5} />
                         <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} />
                     </div>
