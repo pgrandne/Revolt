@@ -2,34 +2,21 @@
 
 import { motion } from "framer-motion";
 import { isMobile } from 'mobile-device-detect';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from "next/link";
 import Image from "next/image";
 import bgPic from "../../public/journalist.jpg"
 
+
 const Hero = () => {
-
-    const tVariant = {
-        hidden: { opacity: 0, y: -50 },
-        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 1 } },
-    }
-
-    const pVariant = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 2 } },
-    }
-
-    const bVariant = {
-        hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0, transition: { type: 'spring', delay: 3, duration: 1.1 } },
-    }
-
-    const iVariant = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 0.4, transition: { delay: 3, duration: 3 } },
-    }
 
     return (
         <section className="flex justify-center h-screen w-screen">
+            {typeof window.ethereum !== 'undefined' &&
+                <div className="absolute top-3 right-3">
+                    <ConnectButton />
+                </div>
+            }
             <div className="my-auto relative">
                 <motion.div
                     className="p-2"

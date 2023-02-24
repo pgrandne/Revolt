@@ -1,4 +1,5 @@
 import './globals.css'
+import '@rainbow-me/rainbowkit/styles.css';
 
 export default function RootLayout({
   children,
