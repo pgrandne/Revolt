@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
     "@rainbow-me/rainbowkit": "^0.11.0",
     "@types/node": "18.14.0",
     "@types/react": "18.0.28",
@@ -21,7 +20,7 @@
     "howler": "^2.2.3",
     "iron-session": "^6.3.1",
     "mobile-device-detect": "^0.4.3",
-    "next": "13.1.6",
+    "next": "13.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "siwe": "^1.1.6",

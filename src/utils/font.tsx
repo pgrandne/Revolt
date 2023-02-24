@@ -1,4 +1,4 @@
-import { Permanent_Marker, Satisfy } from '@next/font/google';
+import { Permanent_Marker, Satisfy } from 'next/font/google';
 
 export const satisfy = Satisfy({
     weight: '400',

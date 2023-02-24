@@ -6,13 +6,21 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from "next/link";
 import Image from "next/image";
 import bgPic from "../../public/journalist.jpg"
+import { useEffect, useState } from "react";
 
 
 const Hero = () => {
+    const [wallet, setWallet] = useState(false)
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setWallet(true)
+        }
+    }, [])
 
     return (
         <section className="flex justify-center h-screen w-screen">
-            {typeof window.ethereum !== 'undefined' &&
+            {wallet &&
                 <div className="absolute top-3 right-3">
                     <ConnectButton />
                 </div>
@@ -67,4 +75,8 @@ const Hero = () => {
     )
 }
 
-export default Hero; 
+export default Hero;
+
+function useeffect(arg0: () => void) {
+    throw new Error("Function not implemented.");
+}
