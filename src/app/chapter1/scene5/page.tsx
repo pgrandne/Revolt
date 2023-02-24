@@ -14,8 +14,8 @@ import ArrowButton from "@/components/ArrowButton";
 const Chap1s5 = () => {
     const [lockerOpened, setLockerOpened] = useState(false)
     const [stage, setStage] = useState(0)
-    const narration = "Central Street"
-    const hour = "5:47 pm"
+    const narration = "Central Street Station"
+    const hour = "5:40 pm"
 
     return (
         <>
@@ -25,7 +25,7 @@ const Chap1s5 = () => {
                         className="absolute top-0"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 3.5, duration: 1 }}
+                        transition={{ delay: 4.7, duration: 1 }}
                     >
                         <Image
                             className="w-screen h-screen"
@@ -33,18 +33,18 @@ const Chap1s5 = () => {
                             alt="Locker"
                         />
                     </motion.div>
-                    <div className="p-1 absolute bottom-20 left-20 flex flex-col">
-                        <AnimatedText size="text-4xl" content={narration} speed={0.1} delay={5} />
-                        <AnimatedText size="text-2xl" content={hour} speed={0.1} delay={7} />
+                    <div className="p-1 absolute bottom-14 left-20 flex flex-col">
+                        <AnimatedText size="text-4xl" content={narration} speed={0.1} delay={0.5} />
+                        <AnimatedText size="text-2xl" content={hour} speed={0.1} delay={3.5} />
                     </div>
                     <motion.div
-                        className="absolute bottom-[17%] right-[7%]"
+                        className="absolute bottom-[16%] right-[9%]"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 9, duration: 0.8 }}
+                        transition={{ delay: 7, duration: 0.8 }}
                     >
                         <Image
-                            className="object-contain h-[360px] w-full border-8 border-[#dac8bc] animate-pulse cursor-pointer"
+                            className="object-contain h-[340px] w-full border-8 border-[#dac8bc] animate-pulse cursor-pointer"
                             onClick={() => setLockerOpened(true)}
                             src={pickupPic}
                             alt="Pickup"

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import takeawayPic from "./img/takeaway.png"
+import takeawayPic from "./img/takeaway2.png"
 import phonePic from "./img/onthephone.png"
 import paymentPic from "./img/payment.png"
 import refusedPic from "./img/refused.png"
@@ -20,41 +20,50 @@ const Sequence = ({ stage, }: { stage: number }) => {
         <div className="relative flex justify-center h-screen py-[5%]">
             {stage < 4 &&
                 <>
-                    <motion.div
-                        className="flex pr-[35%]"
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 1, duration: 1.5 }}>
-                        <Image className="object-contain" src={takeawayPic} alt="redaction" />
-                    </motion.div>
+
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 2.5, duration: 1.5 }}>
-                        <div className="flex justify-end pl-[40%] pt-[15%] pb-[5%]">
+                        transition={{ delay: 1, duration: 1.5 }}>
+                        <div className="flex justify-end pl-[28%] pt-[5%] pb-[5%]">
                             <Image className="object-contain" src={phonePic} alt="Azad" />
                         </div>
                     </motion.div>
+                    <motion.div
+                        className="flex pr-[35%] pb-[5%]"
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 6, duration: 1.5 }}>
+                        <Image className="object-contain" src={takeawayPic} alt="Takeaway" />
+                    </motion.div>
                     {stage > 0 && stage < 3 &&
                         <>
+                            
+                            <motion.div
+                                className="absolute h-screen w-screen bg-[#0f1216]"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 1, duration: 1 }}
+                            >
                             < motion.div
-                                className="absolute bottom-0 right-0 flex h-full"
+                                className="absolute flex h-full "
                                 initial={{ y: 100, opacity: 0 }}
                                 animate={{ y: 0, opacity: [0, 1, 1, 0] }}
-                                transition={{ delay: 1, duration: 2, times: [0, 0.25, 0.8, 1] }}>
-                                <div className="flex justify-end pl-[40%] pt-[15%] pb-[5%]">
-                                    <Image className="object-contain" src={paymentPic} alt="Azad" />
+                                transition={{ delay: 2, duration: 2, times: [0, 0.25, 0.8, 1] }}>
+                                <div className="flex justify-end pr-[0%] pt-[0%] pb-[0%]">
+                                    <Image className="object-contain" src={paymentPic} alt="Payment" />
                                 </div>
                             </motion.div>
                             < motion.div
-                                className="absolute bottom-0 right-0 flex h-full"
+                                className="absolute flex h-full"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 3.5, duration: 0.5 }}>
-                                <div className="flex justify-end pl-[40%] pt-[15%] pb-[5%]">
-                                    <Image className="object-contain" src={refusedPic} alt="Azad" />
+                                <div className="flex justify-end pl-[20%] pt-[50%] pb-[5%]">
+                                    <Image className="object-contain" src={refusedPic} alt="Rejected" />
                                 </div>
+                            </motion.div>
                             </motion.div>
                         </>
                     }

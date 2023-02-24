@@ -18,7 +18,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
     const narration = "The Lerenberg Post, Newsroom"
     const narration2 = "The Lerenberg Post, Skyler's office"
     const hour = "11:10 am"
-    const hour2 = "4:16 pm"
+    const hour2 = "4:55 pm"
 
     return (
         <div className="relative flex flex-col justify-center h-screen py-[5%]">
