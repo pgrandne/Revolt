@@ -29,8 +29,8 @@ export const scene4 = [
 
 export const scene5 = [
     
-    "Hey Skyler, I won't be stopping by the newsroom tonight...",
-    "That will be 18 LIS, sir",
+    "Hey Skyler, I won't be stopping by the office tonight...",
+    "That will be 12 LIS, sir",
     "Your card has been declined, sir",
     "It's still not working. Do you have any other means of payment?"
 ]
@@ -127,15 +127,15 @@ export const scene4Choices = [
 export const scene5Choices = [
     {
         choice1: "By card, please",
-        choice2: "(say nothing)"
+        choice2: "Do you have contactless?"
     },
     {
         choice1: "Let me try with the PIN",
-        choice2: "(say nothing)"
+        choice2: "I'm going to insert it"
     },
     {
-        choice1: "I have 20LIS in cash...",
-        choice2: "(say nothing)"
+        choice1: "I have 20 LIS in cash...",
+        choice2: "Let me check"
     },
 ]
 

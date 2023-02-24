@@ -8,6 +8,9 @@ import Sequence from './Sequence'
 import Image from "next/image";
 import lockerPic from "./img/locker.png"
 import pickupPic from "./img/pickup2.png"
+import classifiedPic from "./img/classified.png"
+import foodPic from "./img/food.png"
+import backPic from './img/azadback.png'
 import AnimatedText from '@/components/AnimatedText';
 import ArrowButton from "@/components/ArrowButton";
 
@@ -16,6 +19,8 @@ const Chap1s5 = () => {
     const [stage, setStage] = useState(0)
     const narration = "Central Street Station"
     const hour = "5:40 pm"
+    const narration2 = "Azad's place"
+    const hour2 = "7:56 pm"
 
     return (
         <>
@@ -25,7 +30,7 @@ const Chap1s5 = () => {
                         className="absolute top-0"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 4.7, duration: 1 }}
+                        transition={{ delay: 4.7, duration: 1.5 }}
                     >
                         <Image
                             className="w-screen h-screen"
@@ -52,7 +57,7 @@ const Chap1s5 = () => {
                     </motion.div>
                 </div >
             }
-            {lockerOpened &&
+            {lockerOpened && stage < 4 &&
                 <div className="flex flex-row">
                     <div className="relative basis-2/3 w-full overflow-hidden">
                         <Sequence stage={stage} />
@@ -62,6 +67,42 @@ const Chap1s5 = () => {
                     </div>
                 </div>
 
+            }
+             {stage === 4 &&
+                 <div className="relative overflow-hidden flex justify-center w-screen h-screen my-auto ">   
+                    < motion.div
+                        className="absolute bottom-0 right-0 flex h-full"
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: [30,0,0,0], opacity: [0, 1, 1, 0] }}
+                        transition={{ delay: 0.2 , duration: 6, times: [0, 0.1, 0.9, 1] }}>
+                        <div className="flex justify-end pr-[25%] pb-[10%] pt-[25%]">
+                            <Image className="object-contain" src={foodPic} alt="Food" />
+                        </div>
+                    </motion.div>
+                    <div className="flex flex-col justify-center pr-[35%]">
+                        <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 3.5, duration: 1.5 }}
+                    >
+                        <Image className="object-contain" src={classifiedPic} alt="Classified" />
+                        </motion.div>
+                        <div className="pl-40 pt-2 z-10">
+                            <AnimatedText size={"text-xl"} content={narration2} speed={0.08} delay={1.2} />
+                            {/* <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} /> */}
+                        </div>
+                    </div>
+
+                    < motion.div
+                        className="absolute bottom-0 right-0 flex h-full"
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 6.5, duration: 2 }}>
+                        <div className="flex justify-end pl-[20%] pb-[10%] pt-[20%] ">
+                            <Image className="object-contain" src={backPic} alt="Azad" />
+                        </div>
+                    </motion.div>
+                </div>
             }
             {stage === 3 &&
                 <motion.div
