@@ -28,6 +28,8 @@ export const scene4 = [
 ]
 
 export const scene5 = [
+    
+    "Hey Skyler, I won't be stopping by the newsroom tonight...",
     "That will be 18 LIS, sir",
     "Your card has been declined, sir",
     "It's still not working. Do you have any other means of payment?"
