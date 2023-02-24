@@ -4,7 +4,7 @@ import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import { perm_marker } from '@/utils/font';
 import merge from 'lodash.merge'
-import { getDefaultWallets, RainbowKitProvider, darkTheme, Theme } from '@rainbow-me/rainbowkit';
+import { getDefaultWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
@@ -18,7 +18,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'My RainbowKit App',
+  appName: 'Revolte.app',
   chains
 });
 
@@ -31,10 +31,13 @@ const wagmiClient = createClient({
 export default function Home() {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider theme={darkTheme({
-        accentColor: 'grey',
-        accentColorForeground: 'black',
-      })} chains={chains}>
+      <RainbowKitProvider
+        theme={darkTheme({
+          accentColor: 'grey',
+          accentColorForeground: 'black',
+        })}
+        chains={chains}
+      >
         <main className={perm_marker.className}>
           <Hero />
         </main>
