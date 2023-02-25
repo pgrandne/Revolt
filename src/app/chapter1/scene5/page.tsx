@@ -38,7 +38,7 @@ const Chap1s5 = () => {
                             alt="Locker"
                         />
                     </motion.div>
-                    <div className="p-1 absolute bottom-14 left-20 flex flex-col">
+                    <div className="p-1 absolute bottom-14 left-14 flex flex-col">
                         <AnimatedText size="text-4xl" content={narration} speed={0.1} delay={0.5} />
                         <AnimatedText size="text-2xl" content={hour} speed={0.1} delay={3.5} />
                     </div>

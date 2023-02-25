@@ -15,16 +15,16 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
     telegramWindow: boolean,
 }) => {
     const narration = "The Lerenberg Post, Newsroom"
-    const hour1 = "8:53 am"
-    const hour2 = "2:44 pm"
+    const hour1 = "8:50 am"
+    const hour2 = "2:45 pm"
 
     return (
         <div className="relative flex flex-col justify-center h-screen py-[5%]">
             <motion.div
                 className="flex pr-[35%]"
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 1.5 }}>
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 1 }}>
                 <Image className="object-contain" src={redactionPic} alt="redaction" />
             </motion.div>
             <div className="pl-6 pt-2 z-10">
