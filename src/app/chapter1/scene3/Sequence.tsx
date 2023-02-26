@@ -141,6 +141,7 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                 </>
             }
             </div >
+
         </div >
     )
 }
