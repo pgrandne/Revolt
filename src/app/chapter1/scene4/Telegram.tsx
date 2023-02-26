@@ -9,14 +9,19 @@ import ExternalDiscussion from "@/components/ExternalDiscussion";
 import TelegramChoices from "@/components/TelegramChoices";
 import AzadDiscussion from "@/components/AzadDiscussion";
 
+let messageEnd: HTMLElement | null
+
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
-    const messageEnd = document.getElementById("end");
-    const scrollToBottom = () => {
-        if (messageEnd !== null)
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            messageEnd = document.getElementById("end")
+        }
+        if (messageEnd !== null) {
             messageEnd.scrollIntoView({ behavior: "smooth" })
-    };
-    useEffect(scrollToBottom, [stage]);
+        }
+
+    }, [stage])
 
     return (
         <motion.div

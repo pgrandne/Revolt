@@ -6,15 +6,20 @@ import AzadDiscussion from '@/components/AzadDiscussion';
 import AzadChoices from '@/components/AzadChoices';
 import { scene6, scene6Choices } from '@/utils/story'
 
+let messageEnd: HTMLElement | null
+
+
 const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
-    const messageEnd = document.getElementById("end");
-    const scrollToBottom = () => {
-        if (messageEnd !== null)
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            messageEnd = document.getElementById("end")
+        }
+        if (messageEnd !== null) {
             messageEnd.scrollIntoView({ behavior: "smooth" })
-    };
-    useEffect(scrollToBottom, [stage]);
+        }
 
+    }, [stage])
     return (
         <div className="flex w-full h-full">
             <div className="relative flex flex-col flex-1">

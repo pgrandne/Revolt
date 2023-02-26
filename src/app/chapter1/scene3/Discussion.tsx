@@ -7,14 +7,21 @@ import AzadChoices from '@/components/AzadChoices';
 import { scene3, scene3Choices } from '@/utils/story'
 import { Dispatch, SetStateAction } from "react";
 
+let messageEnd: HTMLElement | null
+
 const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>> }) => {
     const [azadText, setAzadText] = useState<string[]>([])
-    const messageEnd = document.getElementById("end");
-    const scrollToBottom = () => {
-        if (messageEnd !== null)
+
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            messageEnd = document.getElementById("end")
+        }
+        if (messageEnd !== null) {
             messageEnd.scrollIntoView({ behavior: "smooth" })
-    };
-    useEffect(scrollToBottom, [stage]);
+        }
+
+    }, [stage])
+
 
     return (
         <div className="flex w-full h-full">
