@@ -7,22 +7,41 @@ import Link from "next/link";
 import Image from "next/image";
 import bgPic from "../../public/journalist.jpg"
 import { useEffect, useState } from "react";
+import { Noto_Sans_New_Tai_Lue } from "next/font/google";
 
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
+    const handleEthereum = () => {
+        const { ethereum } = window;
+        if (ethereum && ethereum.isMetaMask) {
+            console.log('Ethereum successfully detected!');
             setWallet(true)
+            // Access the decentralized web!
         }
+    }
+
+    useEffect(() => {
+        if (window.ethereum) {
+            handleEthereum();
+        } else {
+            window.addEventListener('ethereum#initialized', handleEthereum, {
+                once: true,
+            });
+
+            // If the event is not dispatched by the end of the timeout,
+            // the user probably doesn't have MetaMask installed.
+            setTimeout(handleEthereum, 3000); // 3 seconds
+        }
+
     }, [])
 
     return (
         <section className="flex justify-center h-screen w-screen">
             {wallet &&
                 <div className="absolute top-3 right-3">
-                    <ConnectButton />
+                    <ConnectButton chainStatus="none" showBalance={false} />
                 </div>
             }
             <div className="my-auto relative">

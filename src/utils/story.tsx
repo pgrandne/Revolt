@@ -58,7 +58,7 @@ export const scene7 = [
     "So, I learned a lot about the SBFTX investigation earlier this year...a wallet is not a bad idea to solve your problem, especially if it allows you to receive money",
     "Actually, it's quite simple. It's like a digital safe where anyone can deposit money, but no one can open it except for you",
     "And most importantly, no one can ever stop you from accessing it. Never",
-    "Real money, you mean the one in your bank account that you can no longer use since your account is frozen and cash banned?",
+    "Real money from your bank account, you mean the one that you can no longer use since your account is frozen and cash banned?",
     "Even if they are digital currencies, they are real, many stores accept some of these cryptocurrencies",
     "Okay, first you need to install a digital wallet, also known as a wallet. Metamask is the most used, with over 30 million users",
     "I'm not surprised, it's one of the references, plus it's just a browser extension",
