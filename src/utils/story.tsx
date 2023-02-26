@@ -39,15 +39,15 @@ export const scene5 = [
 ]
 
 export const scene6 = [
-    "This is insane, are we in an Orwellian novel or what? They've banned cash!",
-    "People only have 15 days to bring in their cash. That's crazy. Some don't even have credit cards or are on vacation. And they said ATMs will be closed starting tomorrow",
-    "It is a big issue for you, you bank card still doesn't work and with this news I guess everyone is calling their bank or going at the place",
+    "This is insane. Are we in an Orwellian novel or what? They've banned cash!",
+    "Really? Who is it, an inside man?",
+    "Why would he take such a risk just before it goes public? That doesn't make sense...",
     "Hi Azad, I assume you're following the news live",
     "The situation has escalated. I didn't think they would move this quickly",
-    "You have no idea what we're about to reveal. This announcement is one part of the story...",
-    "Oh shit! bad situation... Listen I can send you money to help you and continue this case",
+    "You have no idea what we're about to reveal. This is only the tip of the iceberg...",
+    "Damn! Bad timing... Listen I'm willing to send you some money to assist you and keep up with the case.",
     "You have no idea what we're getting into. We need to see this through now",
-    "Let's just say money is not an issue, and I really need you for this case",
+    "Let's just say money is not an issue, and I really need you to bring this story to light.",
     "You need to install a wallet",
     "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash. I have to go now. Just install Metamask and send me your address and I'll send you money",
 ]
@@ -164,16 +164,16 @@ export const scene5Choices = [
 
 export const scene6Choices = [
     {
-        choice1: "It will be temporary as they said",
-        choice2: "It's definitely an emergency solution while they fix the problem."
+        choice1: "Remember the source I mentioned yesterday? He knew about it.",
+        choice2: "My source warn me yesterday."
     },
     {
-        choice1: "I'm sure they thought it through. They probably didn't have a choice",
-        choice2: "It was either that or our economy would collapse"
+        choice1: "I don't know yet. He sent me classified documents I collected last night.",
+        choice2: "He sent me classified documents about the ClearPath operation."
     },
     {
-        choice1: "Yes I know, it's the worst time for that",
-        choice2: "Indeed, the next few days are going to be complicated"
+        choice1: "You're right. I need to find out.",
+        choice2: "I need to get in touch with my source."
     },
     {
         choice1: "Yes, we're in front of the TV",
@@ -185,10 +185,10 @@ export const scene6Choices = [
     },
     {
         choice1: "Do you know something else? My bank card is blocked so it's a terrible situation for me",
-        choice2: "The funny part of this story is that by bank card doesn't work anymore"
+        choice2: "The ironic part of this story is that by bank card doesn't work anymore"
     },
     {
-        choice1: "Why are you doing this?",
+        choice1: "Why would you do this?",
         choice2: "(say nothing)"
     },
 
@@ -199,7 +199,7 @@ export const scene6Choices = [
 
     {
         choice1: "Install a wallet?",
-        choice2: "(say nothing)"
+        choice2: "What is it?"
     },
 ]
 
