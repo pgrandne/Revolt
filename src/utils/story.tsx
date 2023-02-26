@@ -9,14 +9,14 @@ export const scene2 = [
 ]
 
 export const scene3 = [
-    "Hey Azad, please can you buy some food, Rob comes with Jessy and I didn't count him",
+    "Hey Azad, can you please buy some food? Rob is coming with Jessy and I didn't count him...",
     "What can I get you, sir ?",
     "That will be 12 LIS, sir",
     "Your card has been declined, sir",
     "It's still not working. Do you have any other means of payment?",
-    "I hope it's not fake money",
+    "I hope it's not fake money...",
     "This counterfeit money story is terrible!",
-    "Since this morning, I'm afraid that every time a customer pays in cash at the restaurant, it might be counterfeit bills...",
+    "Since this morning, I'm afraid that every time a customer pays in cash at the restaurant, it might be fake bills...",
     "Yeah, it's going to be a complete disaster for our country",
     "Apparently, there are several billion in circulation as we speak",
 ]
@@ -25,7 +25,7 @@ export const scene4 = [
     "Hello Azad",
     "I contacted you last week about a sensitive matter",
     "Before I tell you, I need to make sure that our discussions remain private. The matter is extremely touchy",
-    "At this stage, I can only give you its code name: NDC",
+    "At this stage, I can only give you its code name: ClearPath",
     "Do not speak to anyone about our exchanges, I will never contact you anywhere other than on this encrypted app",
     "There is a locker, number 29, at Central Street Station. The code is 311009. I have put a first sample of documents, you will realize the extent of the matter",
     "It sounded urgent, is there a problem?",
@@ -87,12 +87,12 @@ export const scene2Choices = [
 
 export const scene3Choices = [
     {
-        choice1: "No problem, I'm just close to lebanese food truck",
+        choice1: "No problem, I'm just close to the lebanese food truck",
         choice2: "Yes, sure"
     },
     {
-        choice1: "5 falafel please",
-        choice2: "1 medium meze"
+        choice1: "Can I have 5 falafels please?",
+        choice2: "A medium meze"
     },
     {
         choice1: "By card, please",
@@ -111,7 +111,7 @@ export const scene3Choices = [
         choice2: "I don't see what the government could do to solve the problem"
     },
     {
-        choice1: "This is the worst time for having trouble with my bank card",
+        choice1: "Having issues with my bank card couldn't have happened at a worse time",
         choice2: "(say nothing)"
     },
 ]
@@ -119,7 +119,7 @@ export const scene3Choices = [
 export const scene4Choices = [
     {
         choice1: "Hi. Yes, I remember very well",
-        choice2: "Hello, I still have no clue of what you're talking about"
+        choice2: "Hello 'Cincinnatus', I still have no clue of what you're talking about"
     },
     {
         choice1: "I understand, can you at least tell me what it's about?",
@@ -134,12 +134,12 @@ export const scene4Choices = [
         choice2: "Count on me"
     },
     {
-        choice1: "Not really, but I have a strange source who just contacted me",
+        choice1: "Not really, but I have an unexpected source who just contacted me",
         choice2: "Someone contacted me, I don't know if I can trust him"
     },
     {
-        choice1: "NDC, does it mean anything to you?",
-        choice2: "He spoke about NDC"
+        choice1: "ClearPath, does it mean anything to you?",
+        choice2: "He spoke about ClearPath"
     },
     {
         choice1: "Sorry, I shouldn't have mentioned it. I have to go",

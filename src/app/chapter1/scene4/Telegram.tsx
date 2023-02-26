@@ -100,14 +100,14 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             {stage > 1 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene4[3]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussion text={scene4[4]} name="Cincinnatus" delay={5} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene4[3]} name="Cincinnatus" delay={1.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene4[4]} name="Cincinnatus" delay={5.5} telegramWindow={true} />
                                 </>
                             }
                             {stage > 2 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene4[5]} name="Cincinnatus" delay={4} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene4[5]} name="Cincinnatus" delay={1.5} telegramWindow={true} />
                                 </>
                             }
                             {stage > 3 &&

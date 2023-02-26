@@ -26,8 +26,8 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                 <>
                     <motion.div
                         className="flex pr-[35%]"
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 9.5, duration: 1 }}>
                         <Image className="object-contain" src={redactionPic} alt="redaction" />
                     </motion.div>
@@ -65,15 +65,15 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
             {stage > 5 &&
                 <>
                     <motion.div
-                        className="flex pr-[35%]"
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 2, duration: 1.5 }}>
+                        className="flex pr-[37%]"
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 2, duration: 1 }}>
                         <Image className="object-contain" src={skylerPic} alt="skyler office" />
                     </motion.div>
                     <div className="pl-6 pt-2 z-10">
                         <AnimatedText size={"text-xl"} content={narration2} speed={0.08} delay={3.5} />
-                        <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} />
+                        {/* <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} /> */}
                     </div>
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"

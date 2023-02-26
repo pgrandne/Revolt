@@ -7,7 +7,7 @@ import phonePic from "./img/onthephone.png"
 import takeawayPic from "./img/takeaway2.png"
 import paymentPic from "./img/payment.png"
 import refusedPic from "./img/refused.png"
-import cashPic from "./img/cash.png"
+import cashPic from "./img/cash2.png"
 import decorPic from "./img/decor2.png"
 import friendsPic from "./img/friends3.png"
 import ArrowButton from "@/components/ArrowButton";
@@ -22,7 +22,7 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
     console.log(stage)
 
     return (
-        <div className="relative flex flex-col justify-center h-screen py-[5%]">
+        <div className="relative flex justify-center h-screen py-[5%]">
             {stage < 4 &&
                 <>
                     < motion.div
@@ -34,10 +34,10 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <Image className="object-contain" src={phonePic} alt="Azad" />
                         </div>
                     </motion.div>
-                    <div className="absolute bottom-20 pl-6 pt-2 z-10">
+                    {/* <div className="absolute bottom-20 pl-6 pt-2 z-10">
                         <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={3} />
                         <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={3.5} />
-                    </div>
+                    </div> */}
                     {stage > 0 &&
                         <motion.div
                             className="flex pr-[35%] pb-[5%] -z-10"
@@ -95,15 +95,15 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                         className="absolute bottom-0 right-0 flex h-full"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 2, duration: 0.5 }}>
+                        transition={{ delay: 1, duration: 0.5 }}>
                         <div className="flex justify-end pl-[0%] pt-[10%] pb-[10%]">
-                            <Image className="object-contain" src={cashPic} alt="Azad" />
+                            <Image className="object-contain" src={cashPic} alt="Cash" />
                         </div>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 6.5, duration: 1 }}
+                        transition={{ delay: 4.5, duration: 1 }}
                     >
                         <button
                             className="absolute bottom-8 right-8 animate-pulse"
@@ -114,14 +114,15 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                     </motion.div>
                 </>
             }
+            <div className="relative flex justify-center flex-col">
             {
                 stage > 5 &&
                 <>
                     <motion.div
-                        className="flex pr-[52%]"
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 1.5 }}>
+                        className="flex pr-[48%]"
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 1 }}>
                         <Image className="object-contain" src={decorPic} alt="decor" priority={true} />
                     </motion.div>
                     <div className="pl-6 pt-2 z-10">
@@ -133,12 +134,13 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 1.7, duration: 1.5 }}>
-                        <div className="flex justify-end pl-[25%] pt-[20%] pb-[10%]">
+                        <div className="flex justify-end pl-[32%] pt-[13%] pb-[0%]">
                             <Image className="object-contain" src={friendsPic} alt="friends" />
                         </div>
                     </motion.div>
                 </>
             }
+            </div >
         </div >
     )
 }
