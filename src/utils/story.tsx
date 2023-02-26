@@ -3,12 +3,18 @@ export const scene2 = [
     "Billions of fake money discovered!!! It's 15% of our GDP! And it's probably only the tip of the iceberg...",
     "Everyone will work on it during the next weeks! I have meetings all day, we'll talk later.",
     "Hello Mr Azad, a trusted person gave me your contact.",
-    "You don’t know me yet but I’m about to expose an unprecedented political and financial scandal.",
+    "I have some documents about a very sensitive case",
     "Are you interested?",
     "I can't say more at the moment, I'll get back to you very soon.",
 ]
 
 export const scene3 = [
+    "Hey Azad, please can you buy some food, Rob comes with Jessy and I didn't count him",
+    "What can I get you, sir ?",
+    "That will be 12 LIS, sir",
+    "Your card has been declined, sir",
+    "It's still not working. Do you have any other means of payment?",
+    "I hope it's not fake money",
     "This counterfeit money story is terrible!",
     "Since this morning, I'm afraid that every time a customer pays in cash at the restaurant, it might be counterfeit bills...",
     "Yeah, it's going to be a complete disaster for our country",
@@ -28,38 +34,31 @@ export const scene4 = [
 ]
 
 export const scene5 = [
-    
-    "Hey Skyler, I won't be stopping by the office tonight...",
-    "That will be 12 LIS, sir",
-    "Your card has been declined, sir",
-    "It's still not working. Do you have any other means of payment?"
+
+
 ]
 
 export const scene6 = [
     "This is insane, are we in an Orwellian novel or what? They've banned cash!",
-    "Anyway, it's going to screw over a lot of people. Some don't even have credit cards. The ATMs will be closed starting tomorrow, and people only have 15 days to bring in their cash. That's way too short. Some people are abroad or on vacation...",
-    "It will be a big issue for you, you bank card doesn't work and with this news I guess everyone is calling their bank or going at the place",
+    "People only have 15 days to bring in their cash. That's crazy. Some don't even have credit cards or are on vacation. And they said ATMs will be closed starting tomorrow",
+    "It is a big issue for you, you bank card still doesn't work and with this news I guess everyone is calling their bank or going at the place",
     "Hi Azad, I assume you're following the news live",
     "The situation has escalated. I didn't think they would move this quickly",
-    "You have no idea what we're about to reveal. This announcement is just the tip of the iceberg...",
-    "You can go to this place...to meet a contact",
-    "Wait, you didn't mention our business, did you? I don't believe in coincidences",
-    "It's not necessarily your colleague. Our entire environment is bugged with microphones. Our phones, personal assistants, etc. NBS must have raised some red flags.",
-    "It's better if you don't go home tonight",
-    "Listen, you have no idea what we're getting into. We need to see this through now",
-    "I'm going to send you some money so you can finish this investigation",
+    "You have no idea what we're about to reveal. This announcement is one part of the story...",
+    "Oh shit! bad situation... Listen I can send you money to help you and continue this case",
+    "You have no idea what we're getting into. We need to see this through now",
     "Let's just say money is not an issue, and I really need you for this case",
     "You need to install a wallet",
-    "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash. I have to go now. Let me know when you've installed a wallet, and I'll send you money",
+    "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash. I have to go now. Just install Metamask and send me your address and I'll send you money",
 ]
 
 export const scene7 = [
-    "Of course you can sleep here tonight, tomorrow I leave in Vienna for 5 days but you can stay here",
     `Your source is probably right. If you want to follow through with this investigation, you need funds. Your account being frozen for "suspicious activity" is likely an attempt to intimidate you.`,
-    "I learned a lot about the SBFTX investigation earlier this year...a wallet is not a bad idea to solve your problem, especially if it allows you to receive money",
+    "It is a strange coincidence",
+    "So, I learned a lot about the SBFTX investigation earlier this year...a wallet is not a bad idea to solve your problem, especially if it allows you to receive money",
     "Actually, it's quite simple. It's like a digital safe where anyone can deposit money, but no one can open it except for you",
     "And most importantly, no one can ever stop you from accessing it. Never",
-    "Real money, you mean the one in your bank account that you can no longer use since your account is frozen?",
+    "Real money, you mean the one in your bank account that you can no longer use since your account is frozen and cash banned?",
     "Even if they are digital currencies, they are real, many stores accept some of these cryptocurrencies",
     "Okay, first you need to install a digital wallet, also known as a wallet. Metamask is the most used, with over 30 million users",
     "I'm not surprised, it's one of the references, plus it's just a browser extension",
@@ -82,14 +81,38 @@ export const scene2Choices = [
     },
     {
         choice1: "Maybe but you need to tell me more",
-        choice2: "A political and financial scandal?"
+        choice2: "Yes, I am"
     },
 ]
 
 export const scene3Choices = [
     {
+        choice1: "No problem, I'm just close to lebanese food truck",
+        choice2: "Yes, sure"
+    },
+    {
+        choice1: "5 falafel please",
+        choice2: "1 medium meze"
+    },
+    {
+        choice1: "By card, please",
+        choice2: "Do you have contactless?"
+    },
+    {
+        choice1: "Let me try with the PIN",
+        choice2: "I'm going to insert it"
+    },
+    {
+        choice1: "I have 20 LIS in cash...",
+        choice2: "Let me check"
+    },
+    {
         choice1: "People might lose all confidence in our currency",
         choice2: "I don't see what the government could do to solve the problem"
+    },
+    {
+        choice1: "This is the worst time for having trouble with my bank card",
+        choice2: "(say nothing)"
     },
 ]
 
@@ -111,7 +134,7 @@ export const scene4Choices = [
         choice2: "Count on me"
     },
     {
-        choice1: "Not really, but I have a source who just contacted me",
+        choice1: "Not really, but I have a strange source who just contacted me",
         choice2: "Someone contacted me, I don't know if I can trust him"
     },
     {
@@ -161,16 +184,8 @@ export const scene6Choices = [
         choice2: "(say nothing)"
     },
     {
-        choice1: "I have a problem with my bank since yesterday. My account is blocked.",
-        choice2: "(say nothing)"
-    },
-    {
-        choice1: "I simply mentioned CCCC to a trusted colleague.",
-        choice2: "I had doubts about your intentions"
-    },
-    {
-        choice1: "What are you talking about?",
-        choice2: "(say nothing)"
+        choice1: "Do you know something else? My bank card is blocked so it's a terrible situation for me",
+        choice2: "The funny part of this story is that by bank card doesn't work anymore"
     },
     {
         choice1: "Why are you doing this?",
@@ -178,20 +193,20 @@ export const scene6Choices = [
     },
 
     {
-        choice1: "Money isn't my problem either. I just can't use it.",
+        choice1: "Lucky you",
         choice2: "(say nothing)"
     },
 
     {
-        choice1: "A wallet?",
+        choice1: "Install a wallet?",
         choice2: "(say nothing)"
     },
 ]
 
 export const scene7Choices = [
     {
-        choice1: "I'm freaking out, thank you Skyler for helping me out tonight",
-        choice2: "I admit I'm overwhelmed"
+        choice1: "What are you saying? I have started nothing for the moment",
+        choice2: "Please don't be paranoid, it doesn't help me"
     },
     {
         choice1: "I must admit I didn't understand much. All of this is unclear to me. Is it related to Bitcoin and cryptocurrencies?",

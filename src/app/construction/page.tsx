@@ -25,7 +25,7 @@ const Construction = () => {
                         height={600}
                     />
                     <div className={`${perm_marker.className} absolute bg-red-800 top-4 left-4 p-2 text-3xl`}>
-                        Chapter 1 under construction
+                        Chapter 2 under construction
                     </div>
                 </motion.div>
             </div>

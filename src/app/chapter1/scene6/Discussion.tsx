@@ -1,14 +1,19 @@
 'use client';
 
-import { useState } from "react"
+import { useEffect, useState, Dispatch, SetStateAction } from "react"
 import ExternalDiscussion from '@/components/ExternalDiscussion';
 import AzadDiscussion from '@/components/AzadDiscussion';
 import AzadChoices from '@/components/AzadChoices';
 import { scene6, scene6Choices } from '@/utils/story'
-import { Dispatch, SetStateAction } from "react";
 
 const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
+    const messageEnd = document.getElementById("end");
+    const scrollToBottom = () => {
+        if (messageEnd !== null)
+            messageEnd.scrollIntoView({ behavior: "smooth" })
+    };
+    useEffect(scrollToBottom, [stage]);
 
     return (
         <div className="flex w-full h-full">
@@ -29,6 +34,7 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                         {stage > 3 && <>
                             <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.7} />
                         </>}
+                        <div id="end" />
                     </div>
                 </div>
                 <div className="my-1 w-full"

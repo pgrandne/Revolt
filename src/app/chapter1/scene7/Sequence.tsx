@@ -8,7 +8,7 @@ import skylerhomePic from "./img/skyler-place.png"
 import { Dispatch, SetStateAction } from "react";
 
 const Sequence = () => {
-    const narration = "Skyler's place"
+    const narration = "Azad's place"
     const hour = "8:03 pm"
 
     return (

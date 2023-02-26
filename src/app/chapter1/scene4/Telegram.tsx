@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, SetStateAction, useState } from "react"
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/components/img/cincinnatus.jpg"
@@ -11,6 +11,12 @@ import AzadDiscussion from "@/components/AzadDiscussion";
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
+    const messageEnd = document.getElementById("end");
+    const scrollToBottom = () => {
+        if (messageEnd !== null)
+            messageEnd.scrollIntoView({ behavior: "smooth" })
+    };
+    useEffect(scrollToBottom, [stage]);
 
     return (
         <motion.div
@@ -79,7 +85,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 </div>
                             </div>
                             <ExternalDiscussion text={scene4[1]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                            
+
                             {stage > 0 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
@@ -104,6 +110,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.2} />
                                 </>
                             }
+                            <div id="end" />
                         </div>
                     </div>
                     {stage === 0 &&
