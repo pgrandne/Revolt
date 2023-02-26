@@ -32,7 +32,7 @@ const Chap1s4 = () => {
                         />
                     </div>
                     <div className="absolute bottom-10 left-6 ">
-                    <AnimatedText size={"text-2xl"} content={narration} speed={0.08} delay={2.5} />
+                        <AnimatedText size={"text-2xl"} content={narration} speed={0.08} delay={2.5} />
                     </div>
                 </motion.div>
             </div>
@@ -69,7 +69,7 @@ const Chap1s4 = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
                 >
-                    <Link href="/construction" className="absolute bottom-8 right-8 animate-pulse">
+                    <Link href="/chapter1/scene5" className="absolute bottom-8 right-8 animate-pulse">
                         <ArrowButton />
                     </Link>
                 </motion.div>

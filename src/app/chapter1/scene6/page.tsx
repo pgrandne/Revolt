@@ -24,39 +24,38 @@ const Chap1s6 = () => {
     return (
         <>
             {stage === 0 &&
-                <div className="w-screen h-screen py-[5%]">
-                    <div className="flex flex-col justify-center my-auto">
-                        <motion.div
-                            className="pr-[40%]"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 1, duration: 1 }}
-                        >
-                            <Image
-                                className="object-contain"
-                                src={tvPic}
-                                alt="tv"
-                            />
-                        </motion.div>
-                        <AnimatedText size="text-2xl" content={narration} speed={0.1} delay={2.5} />
-                        <AnimatedText size="text-4xl" content={narration2} speed={0.1} delay={4} />
-                        <motion.div
-                            className="absolute bottom-0 right-20"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 3, duration: 0.8 }}
-                        >
-                            <Image
-                                className="object-contain"
-                                src={journalPic}
-                                alt="journal"
-                            />
-                        </motion.div>
-                    </div >
+                <div className="relative overflow-hidden flex justify-center w-screen h-screen my-auto">
                     <motion.div
+                        className="flex justify-center py-[0%]"
+                        initial={{ x: -50, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 1, duration: 0.5 }}
+                    >
+                        <Image className="object-contain" src={tvPic} alt="TV" />
+                    </motion.div>
+                    <div className="pt-10 pl-6 z-10">
+                        <AnimatedText size="text-2xl" content={narration} speed={0.05} delay={5} />
+                        <div className="pt-3">
+                            <AnimatedText size="text-3xl" content={narration2} speed={0.05} delay={7} />
+                        </div>
+                    </div>
+                    <div className="absolute flex flex-col right-0">
+
+                        < motion.div
+                            className="flex h-full pb-[5%]"
+                            initial={{ y: 0, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 2, duration: 2 }}>
+                            <div className="flex justify-end pl-[0%] pb-[0%] pt-[30%]">
+                                <Image className="object-contain" src={journalPic} alt="Journal" />
+                            </div>
+                        </motion.div>
+                    </div>
+                    <motion.div
+                        className="z-10"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 3, duration: 1 }}
+                        transition={{ delay: 10, duration: 1 }}
                     >
                         <button
                             className="absolute bottom-8 right-8 animate-pulse"
@@ -77,6 +76,18 @@ const Chap1s6 = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 3, duration: 1 }}
+                            >
+                                <Link href="/chapter1/scene7" className="absolute bottom-8 right-8 animate-pulse">
+                                    <ArrowButton />
+                                </Link>
+                            </motion.div>
+                        }
+                        {
+                            stage === 10 &&
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 5, duration: 1 }}
                             >
                                 <Link href="/chapter1/scene7" className="absolute bottom-8 right-8 animate-pulse">
                                     <ArrowButton />

@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, SetStateAction, useState } from "react"
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/components/img/cincinnatus.jpg"
@@ -9,8 +9,19 @@ import ExternalDiscussion from "@/components/ExternalDiscussion";
 import TelegramChoices from "@/components/TelegramChoices";
 import AzadDiscussion from "@/components/AzadDiscussion";
 
+let messageEnd: HTMLElement | null
+
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            messageEnd = document.getElementById("end")
+        }
+        if (messageEnd !== null) {
+            messageEnd.scrollIntoView({ behavior: "smooth" })
+        }
+
+    }, [stage])
 
     return (
         <motion.div
@@ -46,7 +57,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <path fillRule="nonzero" d="M9.5,3 C13.0898509,3 16,5.91014913 16,9.5 C16,10.9337106 15.5358211,12.2590065 14.7495478,13.3338028 L19.7071068,18.2928932 C20.0976311,18.6834175 20.0976311,19.3165825 19.7071068,19.7071068 C19.3466228,20.0675907 18.7793918,20.0953203 18.3871006,19.7902954 L18.2928932,19.7071068 L13.3338028,14.7495478 C12.2590065,15.5358211 10.9337106,16 9.5,16 C5.91014913,16 3,13.0898509 3,9.5 C3,5.91014913 5.91014913,3 9.5,3 Z M9.5,5 C7.01471863,5 5,7.01471863 5,9.5 C5,11.9852814 7.01471863,14 9.5,14 C11.9852814,14 14,11.9852814 14,9.5 C14,7.01471863 11.9852814,5 9.5,5 Z" />
                         </svg>
                     </button>
-                    <button type="button" className="flex self-center hidden p-2 ml-2 text-gray-500 rounded-full md:block focus:outline-none hover:text-gray-600 hover:bg-gray-300">
+                    <button type="button" className="flex self-center p-2 ml-2 text-gray-500 rounded-full md:block focus:outline-none hover:text-gray-600 hover:bg-gray-300">
                         <svg className="w-6 h-6 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fillRule="nonzero" d="M12,16 C13.1045695,16 14,16.8954305 14,18 C14,19.1045695 13.1045695,20 12,20 C10.8954305,20 10,19.1045695 10,18 C10,16.8954305 10.8954305,16 12,16 Z M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M12,4 C13.1045695,4 14,4.8954305 14,6 C14,7.1045695 13.1045695,8 12,8 C10.8954305,8 10,7.1045695 10,6 C10,4.8954305 10.8954305,4 12,4 Z" />
                         </svg>
@@ -61,16 +72,6 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                     <div className="self-center flex-1 w-full max-w-xl overflow-auto">
                         <div className="relative flex flex-col px-3 py-2 m-auto">
                             <div className="self-center px-2 py-1 mx-0 my-1 text-sm text-gray-700 bg-white border border-gray-200 rounded-full shadow rounded-tg">October 30</div>
-                            {/* {scene2.map((text, index) =>
-                                <div key={index} className="w-3/4 my-1">
-                                    <div className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow">
-                                        <div className="text-sm text-black">
-                                            {text}
-                                        </div>
-                                    </div>
-                                </div>
-
-                            )} */}
                             <div className="w-3/4 my-1">
                                 <div className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow">
                                     <div className="text-sm text-black">
@@ -79,7 +80,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 </div>
                             </div>
                             <ExternalDiscussion text={scene4[1]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                            
+
                             {stage > 0 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
@@ -89,14 +90,14 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             {stage > 1 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene4[3]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussion text={scene4[4]} name="Cincinnatus" delay={5} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene4[3]} name="Cincinnatus" delay={1.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene4[4]} name="Cincinnatus" delay={5.5} telegramWindow={true} />
                                 </>
                             }
                             {stage > 2 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene4[5]} name="Cincinnatus" delay={4} telegramWindow={true} />
+                                    <ExternalDiscussion text={scene4[5]} name="Cincinnatus" delay={1.5} telegramWindow={true} />
                                 </>
                             }
                             {stage > 3 &&
@@ -104,6 +105,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.2} />
                                 </>
                             }
+                            <div id="end" />
                         </div>
                     </div>
                     {stage === 0 &&

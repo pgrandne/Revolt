@@ -6,8 +6,8 @@ import AnimatedText from '@/components/AnimatedText';
 import { Dispatch, SetStateAction } from "react";
 import redactionPic from "@/components/img/redaction.jpg"
 import chatPic from "@/components/img/chat.png"
+import notifPic from "@/components/img/notif.png"
 import manPic from "./img/azad-desk.png"
-import notifPic from "./img/notif.png"
 
 const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
     discussionWindow: boolean,
@@ -64,7 +64,7 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                             initial={{ y: -10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 5.5, duration: 1.5 }}>
-                            <div className="flex pl-[59%] pt-[15%] pb-[47%]">
+                            <div className="flex pl-[70%] pt-[15%] pb-[47%]">
                                 <Image
                                     className="object-contain cursor-pointer animate-pulse"
                                     src={notifPic}
@@ -72,7 +72,8 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                                     onClick={() => setTelegramWindow(true)}
                                 />
                             </div>
-                        </motion.div>}
+                        </motion.div>
+                    }
                 </>
             }
         </div >

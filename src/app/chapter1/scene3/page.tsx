@@ -13,19 +13,17 @@ const Chap1s3 = () => {
     return (
         <div className="flex flex-row">
             <div className="relative basis-2/3 w-full overflow-hidden">
-                <Sequence />
+                <Sequence stage={stage} setStage={setStage} />
             </div>
             <div className="basis-1/3 p-6 h-screen flex-grow-0">
-                {stage < 3 &&
-                    <Discussion stage={stage} setStage={setStage} />
-                }
+                <Discussion stage={stage} setStage={setStage} />
             </div>
             {
-                stage === 1 &&
+                stage === 8 &&
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 6.5, duration: 1 }}
+                    transition={{ delay: 2, duration: 1 }}
                 >
                     <Link href="/chapter1/scene4" className="absolute bottom-8 right-8 animate-pulse">
                         <ArrowButton />

@@ -6,7 +6,7 @@ import AnimatedText from '@/components/AnimatedText';
 import redactionPic from "@/components/img/redaction.jpg"
 import azadPic from "./img/azadDesk.png"
 import skylerPic from "./img/skylerDesk.png"
-import telegramPic from "./img/telegram.png"
+import notifPic from "@/components/img/notif.png"
 import chatPic from "@/components/img/chat.png"
 import { Dispatch, SetStateAction } from "react";
 
@@ -47,13 +47,13 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                     {!telegramWindow &&
                         < motion.div
                             className="absolute top-0 right-0 flex h-full"
-                            initial={{ y: -20, opacity: 0 }}
+                            initial={{ y: -10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 18, duration: 1.5 }}>
-                            <div className="flex pl-[73%] pt-[10%] pb-[80%]">
+                            <div className="flex pl-[70%] pt-[10%] pb-[55%]">
                                 <Image
                                     className="object-contain cursor-pointer animate-pulse"
-                                    src={telegramPic}
+                                    src={notifPic}
                                     alt="notification"
                                     onClick={() => setTelegramWindow(true)}
                                 />
@@ -65,7 +65,9 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
             {stage > 5 &&
                 <>
                     <motion.div
-                        className="flex pr-[35%]"
+
+                        className="flex pr-[37%]"
+
                         initial={{ x: -100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 2, duration: 1 }}>
@@ -73,7 +75,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                     </motion.div>
                     <div className="pl-6 pt-2 z-10">
                         <AnimatedText size={"text-xl"} content={narration2} speed={0.08} delay={3.5} />
-                        <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} />
+                        {/* <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} /> */}
                     </div>
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"
