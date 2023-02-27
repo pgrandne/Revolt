@@ -7,11 +7,11 @@ import Link from "next/link";
 import Image from "next/image";
 import bgPic from "../../public/journalist.jpg"
 import { useEffect, useState } from "react";
-import { Noto_Sans_New_Tai_Lue } from "next/font/google";
-
+import Modal from "./Modal";
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
+    const [modal, setModal] = useState(false)
 
     const handleEthereum = () => {
         const { ethereum } = window;
@@ -39,11 +39,11 @@ const Hero = () => {
 
     return (
         <section className="flex justify-center h-screen w-screen">
-            {wallet &&
+            {/* {wallet &&
                 <div className="absolute top-3 right-3">
                     <ConnectButton chainStatus="none" showBalance={false} />
                 </div>
-            }
+            } */}
             <div className="my-auto relative">
                 <motion.div
                     className="p-2"
@@ -57,7 +57,7 @@ const Hero = () => {
                         alt="Picture of materials"
                     />
                 </motion.div>
-                <div className="absolute top-6 sm:top-36 h-full w-full">
+                <div className="absolute top-0 pt-6 sm:pt-36 h-full w-full overflow-hidden">
                     <motion.h1
                         className="text-center text-2xl sm:text-7xl"
                         initial={{ opacity: 0, y: -200 }}
@@ -90,6 +90,20 @@ const Hero = () => {
                     </Link>
                 </div>
             </div>
+            <motion.div
+                className="absolute bottom-3 right-3"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 1 }}
+                onClick={() => { setModal(true) }}
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 cursor-pointer">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                </svg>
+            </motion.div>
+            {modal &&
+                <Modal setModal={setModal} />
+            }
         </section >
     )
 }

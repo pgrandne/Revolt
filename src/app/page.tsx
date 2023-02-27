@@ -1,9 +1,7 @@
 'use client'
 
 import Hero from '@/components/Hero';
-import Footer from '@/components/Footer';
 import { perm_marker } from '@/utils/font';
-import merge from 'lodash.merge'
 import { getDefaultWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
@@ -41,7 +39,6 @@ export default function Home() {
         <main className={perm_marker.className}>
           <Hero />
         </main>
-        <Footer />
       </RainbowKitProvider>
     </WagmiConfig>
 

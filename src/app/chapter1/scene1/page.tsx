@@ -81,7 +81,6 @@ const Chap1s1 = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 15, duration: 1 }}
             >
-                <div></div>
                 <Image
                     src={journalPic}
                     fill={true}
