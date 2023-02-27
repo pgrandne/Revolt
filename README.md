@@ -27,9 +27,9 @@ Revolte is using game approach and is an interactive story which capture the att
 ## Overview
 
 Revolte is based on a dystopian universe, similar to an interactive comic. The adventure is split in 3 chapters :
- 1. Prelude : No relation with Web3. The aim is to introduce the story/universe and to grab audience's attention.
- 2. At the end of the prelude, events from the story require a wallet installation. Wallet is mandatory for chapter 2. The narration of the story details how works a wallet and what are its benefits. This chapter introduces basic concepts and uses of a wallet: public/private key, gas, token, block explorer, NFTs, ...
- 3. At the end of chapter 2, a deposit/swap is required to start chapter 3. This section goes deeper in Web3 use : swap, deposit/borrow, bridge, layer 2, ...
+ 1. No relation with Web3. The aim is to introduce the story/universe and to grab audience's attention. At the end of the chapter we explain what is a wallet and how to install it.
+ 2. Wallet is mandatory for chapter 2. The narration of the story details how works a wallet and what are its benefits. This chapter introduces basic concepts and uses of a wallet: public/private key, gas, token, block explorer, NFTs, ... At the end of chapter 2 a deposit we explain how to do a deposit on Aave
+ 3. A deposit is required to start chapter 3. This section goes deeper in Web3 use : swap, deposit/borrow, bridge, layer 2, ...
 
 ## Story
 
@@ -37,15 +37,19 @@ This section is a draft of the story to start with a base. Our ambition is to cr
 
 ### Logline
 
-In a totalitarian state, Azad is a journalist who discovers a financial scandal and becomes a whistleblower wanted by the whole government. His only way to survive and to bring the truth to light is using new IT tools.
+In a imaginary country, Azad is a journalist who is contacted by a whisteblower. His only way to survive and to bring the truth to light is using new IT tools.
 
-### Outline
+### Funding
 
-The 3 chapters of the story follow three-act structure:
-- setup
-- inciting incident
-- redemption
+- Public Good Funding / Grants
+- Partnerships with protocols, affiliate links, comissions
+- Custom built adventures for protocols, we include a protocol in a story and explain how to use it
+- Donations
 
  #### Alpha Version
  The Alpha version is built without design or drawing but only with text.
  The core of the story is writing during this phase. The end of this first phase is estimated for January 31st.
+
+  #### Beta Version
+ The Beta version is built to start user tests with the chapter 1.
+ The end of this second phase is estimated for February 28th.
