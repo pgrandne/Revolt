@@ -52,15 +52,33 @@ const Chap1s5 = () => {
                     >
                         <Image
                             className="object-contain h-[340px] w-full border-8 border-[#dac8bc] animate-pulse cursor-pointer"
-                            onClick={() => setLockerOpened(true)}
+                            onClick={() => {
+                                setStage(1)
+                                setTimeout(() => setLockerOpened(true), 1000)
+                            }}
                             src={pickupPic}
                             alt="Pickup"
                         />
                     </motion.div>
+                    {stage === 1 &&
+                        < motion.div
+                            className="absolute h-screen w-screen bg-[#0f1216]"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+                        >
+                        </motion.div>
+                    }
                 </div >
+
+
+
+
+
             }
 
-            {lockerOpened &&
+            {
+                lockerOpened &&
                 <div className="relative overflow-hidden flex justify-center w-screen h-screen my-auto ">
                     <div className="flex flex-col justify-center pr-[35%]">
                         <motion.div
@@ -78,7 +96,7 @@ const Chap1s5 = () => {
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"
                         initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: [30, 0, 0, 0], opacity: [0, 1, 1, 0]  }}
+                        animate={{ y: [30, 0, 0, 0], opacity: [0, 1, 1, 0] }}
                         transition={{ delay: 4.5, duration: 4, times: [0, 0.2, 0.7, 1] }}>
                         <div className="flex justify-end pl-[20%] pb-[10%] pt-[20%] ">
                             <Image className="object-contain" src={backPic} alt="Azad" />

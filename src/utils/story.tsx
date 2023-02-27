@@ -1,7 +1,7 @@
 export const scene2 = [
     "Hey Azad, did you watch the news?",
-    "Billions of fake money discovered!!! It's 15% of our GDP! And it's probably only the tip of the iceberg...",
-    "Everyone will work on it during the next weeks! I have meetings all day, we'll talk later.",
+    "Billions of fake money discovered!!! It's 15% of our GDP!",
+    "Everyone will work on it during the next weeks! I have meetings all day, we'll talk tonight.",
     "Hello Mr Azad, a trusted person gave me your contact.",
     "I have some documents about a very sensitive case",
     "Are you interested?",
@@ -27,16 +27,13 @@ export const scene4 = [
     "Before I tell you, I need to make sure that our discussions remain private. The matter is extremely touchy",
     "At this stage, I can only give you its code name: ClearPath",
     "Do not speak to anyone about our exchanges, I will never contact you anywhere other than on this encrypted app",
-    "There is a locker, number 29, at Central Street Station. The code is 311009. I have put a first sample of documents, you will realize the extent of the matter",
+    "There is a locker, number 29, at Central Street Station. The code is 103109. I have put a first sample of documents, you will realize the extent of the matter",
     "It sounded urgent, is there a problem?",
     "It costs nothing to see where it takes you",
     "What is it?",
 ]
 
-export const scene5 = [
-
-
-]
+export const scene5 = []
 
 export const scene6 = [
     "This is insane. Are we in an Orwellian novel or what? They've banned cash!",
@@ -58,7 +55,7 @@ export const scene7 = [
     "Remember the SBFTX investigation earlier this year? I learnt a lot from it... a wallet is not a bad idea to solve your problem, especially if it allows you to receive money.",
     "Actually, it's quite simple. It's like a digital safe, or digital mailbox if you prefer, where anyone can deposit money, but no one can open it except for you.",
     "And most importantly, no one can ever stop you from accessing it. Never.",
-    "Real money, you mean the one in your bank account that you can no longer use since your account is frozen?",
+    "Real money, you mean the one in your bank account that you can no longer use since they froze it?",
     "Even if they are digital currencies, they are real, many stores accept cryptocurrencies.",
     "Okay, first you need to install a digital wallet. Metamask is the most used.",
     "About 30 million of people use it, plus it's just a browser extension.",
@@ -134,7 +131,7 @@ export const scene4Choices = [
         choice2: "Count on me"
     },
     {
-        choice1: "Not really, but I have an unexpected source who just contacted me",
+        choice1: "Not really, but I have some doubts about a source who just contacted me.",
         choice2: "Someone contacted me, I don't know if I can trust him"
     },
     {
@@ -142,7 +139,7 @@ export const scene4Choices = [
         choice2: "He spoke about ClearPath"
     },
     {
-        choice1: "Sorry, I shouldn't have mentioned it. I have to go",
+        choice1: "I'm not sure yet, I have to go",
         choice2: "Never mind, I'll keep you posted"
     },
 ]
