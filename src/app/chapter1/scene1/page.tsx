@@ -9,6 +9,7 @@ import tassePic from "./img/tasse.png"
 import kiosquePic from "./img/kiosque.png"
 import journalPic from "./img/journal18oct.png"
 import AnimatedText from '@/components/AnimatedText';
+import ArrowButton from '@/components/ArrowButton';
 
 const Chap1s1 = () => {
     const narration = "Lurenberg, Listenbourg"
@@ -80,6 +81,7 @@ const Chap1s1 = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 15, duration: 1 }}
             >
+                <div></div>
                 <Image
                     src={journalPic}
                     fill={true}
@@ -87,9 +89,7 @@ const Chap1s1 = () => {
                     alt="Journal"
                 />
                 <Link href="/chapter1/scene2" className="absolute bottom-8 right-8 animate-pulse">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
+                    <ArrowButton />
                 </Link>
             </motion.div>
 
