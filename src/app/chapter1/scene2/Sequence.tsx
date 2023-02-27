@@ -6,8 +6,8 @@ import AnimatedText from '@/components/AnimatedText';
 import { Dispatch, SetStateAction } from "react";
 import redactionPic from "@/components/img/redaction.jpg"
 import chatPic from "@/components/img/chat.png"
+import notifPic from "@/components/img/notif.png"
 import manPic from "./img/azad-desk.png"
-import notifPic from "./img/notif.png"
 
 const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
     discussionWindow: boolean,
@@ -72,7 +72,8 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                                     onClick={() => setTelegramWindow(true)}
                                 />
                             </div>
-                        </motion.div>}
+                        </motion.div>
+                    }
                 </>
             }
         </div >

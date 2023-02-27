@@ -20,6 +20,7 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
 
     }, [stage])
 
+    console.log(stage)
     return (
         <div className="flex w-full h-full">
             <div className="relative flex flex-col flex-1">
@@ -47,8 +48,8 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                         {stage > 3 && <>
                             <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.7} />
                             <ExternalDiscussion text={scene7[8]} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={scene7[9]} name="Skyler" delay={5} telegramWindow={false} />
-                            <ExternalDiscussion text={scene7[10]} name="Skyler" delay={8} telegramWindow={false} />
+                            <ExternalDiscussion text={scene7[9]} name="Skyler" delay={7} telegramWindow={false} />
+                            <ExternalDiscussion text={scene7[10]} name="Skyler" delay={10} telegramWindow={false} />
                         </>}
                         <div id="end" />
                     </div>

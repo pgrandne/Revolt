@@ -25,7 +25,7 @@ const AzadChoices = ({ stage, setStage, azadText, setAzadText, choices, delay, d
             transition={{ delay: delay, duration: duration }}
         >
             <button
-                className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
+                className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg border-2 text-slate-900 border-4 border-lime-400"
                 onClick={() => {
                     setStage(stage + 1)
                     setAzadText([...azadText, choices.choice1])
@@ -34,7 +34,7 @@ const AzadChoices = ({ stage, setStage, azadText, setAzadText, choices, delay, d
                 {choices.choice1}
             </button>
             <button
-                className="p-2 text-sm bg-lime-200 hover:bg-lime-400 rounded-lg text-slate-900 border-4 border-lime-400"
+                className="p-2 text-sm bg-lime-200 hover:bg-lime-300 rounded-lg text-slate-900 border-4 border-lime-300"
                 onClick={() => {
                     setStage(stage + 1)
                     setAzadText([...azadText, choices.choice2])

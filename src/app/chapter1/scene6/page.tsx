@@ -25,21 +25,21 @@ const Chap1s6 = () => {
         <>
             {stage === 0 &&
                 <div className="relative overflow-hidden flex justify-center w-screen h-screen my-auto">
-                        <motion.div
-                            className="flex justify-center py-[0%]"
-                            initial={{ x: -50, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 1, duration: 0.5 }}
-                        >
-                            <Image className="object-contain" src={tvPic} alt="TV" />
-                        </motion.div>
-                            <div className="pt-10 pl-6 z-10">
-                                <AnimatedText size="text-2xl" content={narration} speed={0.05} delay={5} />
-                                <div className="pt-3">
-                                    <AnimatedText size="text-3xl" content={narration2} speed={0.05} delay={7} />
-                                </div>
-                            </div>
-                        <div className="absolute flex flex-col right-0">  
+                    <motion.div
+                        className="flex justify-center py-[0%]"
+                        initial={{ x: -50, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: 1, duration: 0.5 }}
+                    >
+                        <Image className="object-contain" src={tvPic} alt="TV" />
+                    </motion.div>
+                    <div className="pt-10 pl-6 z-10">
+                        <AnimatedText size="text-2xl" content={narration} speed={0.05} delay={5} />
+                        <div className="pt-3">
+                            <AnimatedText size="text-3xl" content={narration2} speed={0.05} delay={7} />
+                        </div>
+                    </div>
+                    <div className="absolute flex flex-col right-0">
 
                         < motion.div
                             className="flex h-full pb-[5%]"
@@ -50,7 +50,7 @@ const Chap1s6 = () => {
                                 <Image className="object-contain" src={journalPic} alt="Journal" />
                             </div>
                         </motion.div>
-                        </div>
+                    </div>
                     <motion.div
                         className="z-10"
                         initial={{ opacity: 0 }}
@@ -87,7 +87,7 @@ const Chap1s6 = () => {
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                transition={{ delay: 4, duration: 1 }}
+                                transition={{ delay: 5, duration: 1 }}
                             >
                                 <Link href="/chapter1/scene7" className="absolute bottom-8 right-8 animate-pulse">
                                     <ArrowButton />
