@@ -18,7 +18,7 @@ const ExternalDiscussion = ({ name, delay }: {
             >
                 <div className={name}>{name}</div>
                 <div className="text-sm text-slate-900">
-                    Go to <a className="underline" href="https://metamask.io/">metamask.io</a> and download the extension
+                    Go to <a className="underline" href="https://metamask.io/" target="_blank" rel="noreferrer">metamask.io</a> and download the extension. Tell me when it&apos;ts done
                 </div>
             </motion.div>
         </div >

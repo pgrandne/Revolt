@@ -235,6 +235,10 @@ export const scene7Choices = [
         choice1: "All right",
         choice2: "(say nothing)"
     },
+    {
+        choice1: "It's done",
+        choice2: "It gave me hard time but I finally made it"
+    },
 
 
 ]

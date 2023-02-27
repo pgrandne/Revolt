@@ -93,6 +93,10 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                     {stage === 6 &&
                         <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[6]} delay={14} duration={.5} />
                     }
+                    {stage === 7 &&
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[7]} delay={3} duration={.5} />
+                    }
+
                 </div>
             </div>
         </div>
