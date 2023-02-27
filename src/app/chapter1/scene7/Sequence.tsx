@@ -9,16 +9,16 @@ import { Dispatch, SetStateAction } from "react";
 
 const Sequence = () => {
     const narration = "Azad's place"
-    const hour = "8:03 pm"
+    const hour = "8:00 pm"
 
     return (
         <div className="relative flex flex-col justify-center h-screen py-[5%]">
             <motion.div
                 className="flex pr-[35%]"
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 1.5 }}>
-                <Image className="object-contain" src={skylerhomePic} alt="redaction" />
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 1 }}>
+                <Image className="object-contain" src={skylerhomePic} alt="Skyler Home" />
             </motion.div>
             <div className="pl-6 pt-2 z-10">
                 <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={2} />
