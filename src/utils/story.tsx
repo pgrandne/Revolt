@@ -45,7 +45,7 @@ export const scene6 = [
     "Hi Azad, I assume you're following the news live",
     "The situation has escalated. I didn't think they would move this quickly",
     "You have no idea what we're about to reveal. This is only the tip of the iceberg...",
-    "Damn! Bad timing... Listen I'm willing to send you some money to assist you and keep up with the case.",
+    "Damn! Bad timing... Listen I'm willing to send you some money to assist you and keep up with the investigation.",
     "You have no idea what we're getting into. We need to see this through now",
     "Let's just say money is not an issue, and I really need you to bring this story to light.",
     "You need to install a wallet",
@@ -54,16 +54,16 @@ export const scene6 = [
 
 export const scene7 = [
     `Your source is probably right. If you want to follow through with this investigation, you need funds. Your account being frozen for "suspicious activity" is likely an attempt to intimidate you.`,
-    "It is a strange coincidence",
-    "So, I learned a lot about the SBFTX investigation earlier this year...a wallet is not a bad idea to solve your problem, especially if it allows you to receive money",
-    "Actually, it's quite simple. It's like a digital safe where anyone can deposit money, but no one can open it except for you",
-    "And most importantly, no one can ever stop you from accessing it. Never",
-    "Real money from your bank account, you mean the one that you can no longer use since your account is frozen and cash banned?",
-    "Even if they are digital currencies, they are real, many stores accept some of these cryptocurrencies",
-    "Okay, first you need to install a digital wallet, also known as a wallet. Metamask is the most used, with over 30 million users",
-    "I'm not surprised, it's one of the references, plus it's just a browser extension",
-    "I'll guide you, we'll do it together",
-    "Go to https://metamask.io/ and download the extension"
+    "It is a strange coincidence.",
+    "Remember the SBFTX investigation earlier this year? I learnt a lot from it... a wallet is not a bad idea to solve your problem, especially if it allows you to receive money.",
+    "Actually, it's quite simple. It's like a digital safe, or digital mailbox if you prefer, where anyone can deposit money, but no one can open it except for you.",
+    "And most importantly, no one can ever stop you from accessing it. Never.",
+    "Real money, you mean the one in your bank account that you can no longer use since your account is frozen?",
+    "Even if they are digital currencies, they are real, many stores accept cryptocurrencies.",
+    "Okay, first you need to install a digital wallet. Metamask is the most used.",
+    "About 30 million of people use it, plus it's just a browser extension.",
+    "I'll guide you, we'll do it together.",
+    "Go to https://metamask.io/ and download the extension."
 ]
 
 export const scene2Choices = [
@@ -205,19 +205,19 @@ export const scene6Choices = [
 
 export const scene7Choices = [
     {
-        choice1: "What are you saying? I have started nothing for the moment",
-        choice2: "Please don't be paranoid, it doesn't help me"
+        choice1: "What are you saying? I haven't started anything.",
+        choice2: "Please don't be paranoid, it doesn't help..."
     },
     {
-        choice1: "I must admit I didn't understand much. All of this is unclear to me. Is it related to Bitcoin and cryptocurrencies?",
-        choice2: "Or just a technical issue. And I don't know nothing about digital wallet"
+        choice1: "I didn't get this digital wallet thing...",
+        choice2: "Is it related to Bitcoin and cryptocurrencies?"
     },
     {
-        choice1: `But it's still "virtual" money compared to real money in my bank account`,
-        choice2: "(say nothing)"
+        choice1: `But it's still "virtual" money compared to the real one in my bank account.`,
+        choice2: "I would prefer real money."
     },
     {
-        choice1: "That's what Cincinnatus told me to install",
+        choice1: "That's what Cincinnatus told me to install.",
         choice2: "(say nothing)"
     },
 ]

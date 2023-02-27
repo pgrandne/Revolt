@@ -2,7 +2,7 @@
 
 import { perm_marker } from '@/utils/font';
 
-import newsroomPic from "../../../public/redaction.jpg"
+import equipmentPic from "./img/equipment.png"
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -17,16 +17,17 @@ const Construction = () => {
                     animate={{ opacity: [0, 1] }}
                     transition={{ duration: 5 }}
                 >
+                    <div className={`${perm_marker.className} absolute transform rounded-sm rotate-[-5deg] -mt-5 -ml-7 bg-red-800 p-2 text-3xl`}>
+                        Chapter 2 under construction
+                    </div>
                     <Image
                         className="bgCase -z-10"
-                        src={newsroomPic}
+                        src={equipmentPic}
                         alt="Newsroom"
                         width={800}
                         height={600}
                     />
-                    <div className={`${perm_marker.className} absolute bg-red-800 top-4 left-4 p-2 text-3xl`}>
-                        Chapter 2 under construction
-                    </div>
+                    
                 </motion.div>
             </div>
         </div>

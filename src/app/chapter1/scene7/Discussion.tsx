@@ -32,18 +32,18 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                         {stage > 0 && <>
                             <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.7} />
                             <ExternalDiscussion text={scene7[1]} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={scene7[2]} name="Skyler" delay={4} telegramWindow={false} />
+                            <ExternalDiscussion text={scene7[2]} name="Skyler" delay={4.5} telegramWindow={false} />
                         </>}
                         {stage > 1 && <>
                             <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.7} />
                             <ExternalDiscussion text={scene7[3]} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={scene7[4]} name="Skyler" delay={9} telegramWindow={false} />
+                            <ExternalDiscussion text={scene7[4]} name="Skyler" delay={10.6} telegramWindow={false} />
                         </>}
                         {stage > 2 && <>
                             <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.7} />
                             <ExternalDiscussion text={scene7[5]} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={scene7[6]} name="Skyler" delay={9} telegramWindow={false} />
-                            <ExternalDiscussion text={scene7[7]} name="Skyler" delay={15} telegramWindow={false} />
+                            <ExternalDiscussion text={scene7[6]} name="Skyler" delay={8} telegramWindow={false} />
+                            <ExternalDiscussion text={scene7[7]} name="Skyler" delay={13} telegramWindow={false} />
                         </>}
                         {stage > 3 && <>
                             <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.7} />
@@ -60,13 +60,13 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                         <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[0]} delay={18} duration={.5} />
                     }
                     {stage === 1 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[1]} delay={13} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[1]} delay={14} duration={.5} />
                     }
                     {stage === 2 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[2]} delay={13} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[2]} delay={14.6} duration={.5} />
                     }
                     {stage === 3 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[3]} delay={21} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[3]} delay={18} duration={.5} />
                     }
                 </div>
             </div>
