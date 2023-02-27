@@ -19,8 +19,6 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
     const narration2 = "Skyler's place"
     const hour2 = "8:24 pm"
 
-    console.log(stage)
-
     return (
         <div className="relative flex justify-center h-screen py-[5%]">
             {stage < 4 &&
@@ -115,31 +113,31 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                 </>
             }
             <div className="relative flex justify-center flex-col">
-            {
-                stage > 5 &&
-                <>
-                    <motion.div
-                        className="flex pr-[48%]"
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 1 }}>
-                        <Image className="object-contain" src={decorPic} alt="decor" priority={true} />
-                    </motion.div>
-                    <div className="pl-6 pt-2 z-10">
-                        <AnimatedText size={"text-xl"} content={narration2} speed={0.08} delay={3.5} />
-                        <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5.2} />
-                    </div>
-                    <motion.div
-                        className="absolute bottom-0 right-0 flex h-full"
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 1.7, duration: 1.5 }}>
-                        <div className="flex justify-end pl-[32%] pt-[13%] pb-[0%]">
-                            <Image className="object-contain" src={friendsPic} alt="friends" />
+                {
+                    stage > 5 &&
+                    <>
+                        <motion.div
+                            className="flex pr-[48%]"
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.2, duration: 1 }}>
+                            <Image className="object-contain" src={decorPic} alt="decor" priority={true} />
+                        </motion.div>
+                        <div className="pl-6 pt-2 z-10">
+                            <AnimatedText size={"text-xl"} content={narration2} speed={0.08} delay={3.5} />
+                            <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5.2} />
                         </div>
-                    </motion.div>
-                </>
-            }
+                        <motion.div
+                            className="absolute bottom-0 right-0 flex h-full"
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 1.7, duration: 1.5 }}>
+                            <div className="flex justify-end pl-[32%] pt-[13%] pb-[0%]">
+                                <Image className="object-contain" src={friendsPic} alt="friends" />
+                            </div>
+                        </motion.div>
+                    </>
+                }
             </div >
 
         </div >

@@ -37,7 +37,7 @@ export const scene5 = []
 
 export const scene6 = [
     "This is insane. Are we in an Orwellian novel or what? They've banned cash!",
-    "Really? Who is it, an inside man?",
+    "Really? Who is he? An inside man?",
     "Why would he take such a risk just before it goes public? That doesn't make sense...",
     "Hi Azad, I assume you're following the news live",
     "The situation has escalated. I didn't think they would move this quickly",
@@ -60,7 +60,13 @@ export const scene7 = [
     "Okay, first you need to install a digital wallet. Metamask is the most used.",
     "About 30 million of people use it, plus it's just a browser extension.",
     "I'll guide you, we'll do it together.",
-    "Go to https://metamask.io/ and download the extension."
+    "So when Metamask will be added to your browser a new tab will open and ask you to create a new wallet ",
+    "First you will have to set up a password to access the extension on your device.",
+    "Then, comes the most important step. Metamask will generate randomly 12 words. This is what we call the master key.",
+    "This is the only key to open your mailbox if we come back to the previous metaphor.",
+    "If you lose it, your wallet will be locked forever.",
+    "And if someone can access these words, he will have access to everything that is stored inside.",
+    "That's why keeping those 12 words in a safe place is essential",
 ]
 
 export const scene2Choices = [
@@ -105,7 +111,7 @@ export const scene3Choices = [
     },
     {
         choice1: "People might lose all confidence in our currency",
-        choice2: "I don't see what the government could do to solve the problem"
+        choice2: "I don't see how the government could solve the problem"
     },
     {
         choice1: "Having issues with my bank card couldn't have happened at a worse time",
@@ -162,7 +168,7 @@ export const scene5Choices = [
 export const scene6Choices = [
     {
         choice1: "Remember the source I mentioned yesterday? He knew about it.",
-        choice2: "My source warn me yesterday."
+        choice2: "My source warned me yesterday."
     },
     {
         choice1: "I don't know yet. He sent me classified documents I collected last night.",
@@ -217,4 +223,18 @@ export const scene7Choices = [
         choice1: "That's what Cincinnatus told me to install.",
         choice2: "(say nothing)"
     },
+    {
+        choice1: "Yes please",
+        choice2: "Thanks a lot"
+    },
+    {
+        choice1: "What happen if I lose it?",
+        choice2: "OK"
+    },
+    {
+        choice1: "All right",
+        choice2: "(say nothing)"
+    },
+
+
 ]

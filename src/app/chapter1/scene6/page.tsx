@@ -19,8 +19,6 @@ const Chap1s6 = () => {
     const narration2 = "Government announces the end of cash"
     const [discussionWindow, setDiscussionWindow] = useState(true)
 
-    console.log(stage)
-
     return (
         <>
             {stage === 0 &&

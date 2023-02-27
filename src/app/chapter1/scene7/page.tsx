@@ -8,7 +8,6 @@ import Sequence from './Sequence'
 import ArrowButton from "@/components/ArrowButton";
 
 const Chap1s7 = () => {
-    const [telegramWindow, setTelegramWindow] = useState(false)
     const [stage, setStage] = useState(0)
 
     return (
@@ -16,11 +15,11 @@ const Chap1s7 = () => {
             <div className="relative basis-2/3 w-full overflow-hidden">
                 <Sequence />
                 {
-                    stage === 4 &&
+                    stage === 7 &&
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 10, duration: 1 }}
+                        transition={{ delay: 1.5, duration: 1 }}
                     >
                         <Link href="/construction" className="absolute bottom-8 right-8 animate-pulse"
                         >

@@ -12,7 +12,6 @@ import AzadDiscussion from "@/components/AzadDiscussion";
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [write, setWrite] = useState(false)
     const [azadText, setAzadText] = useState<string[]>([])
-    console.log(stage)
     const messageEnd = document.getElementById("end");
     const scrollToBottom = () => {
         if (messageEnd !== null)
