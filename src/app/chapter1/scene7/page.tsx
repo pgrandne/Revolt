@@ -15,7 +15,7 @@ const Chap1s7 = () => {
             <div className="relative basis-2/3 w-full overflow-hidden">
                 <Sequence />
                 {
-                    stage === 7 &&
+                    stage === 8 &&
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

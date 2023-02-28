@@ -52,6 +52,7 @@ export const scene6 = [
 export const scene7 = [
     `Your source is probably right. If you want to follow through with this investigation, you need funds. Your account being frozen for "suspicious activity" is likely an attempt to intimidate you.`,
     "It is a strange coincidence.",
+    "Anyway, you also need money for living, you can't keep borrowing money from colleagues like you've been doing for a week",
     "Remember the SBFTX investigation earlier this year? I learnt a lot from it... a wallet is not a bad idea to solve your problem, especially if it allows you to receive money.",
     "Actually, it's quite simple. It's like a digital safe, or digital mailbox if you prefer, where anyone can deposit money, but no one can open it except for you.",
     "And most importantly, no one can ever stop you from accessing it. Never.",
@@ -133,8 +134,8 @@ export const scene4Choices = [
         choice2: "OK, fine"
     },
     {
-        choice1: "It's worthy of a spy movie!",
-        choice2: "Count on me"
+        choice1: "Count on me",
+        choice2: "It's worthy of a spy movie!"
     },
     {
         choice1: "Not really, but I have some doubts about a source who just contacted me.",
@@ -179,8 +180,8 @@ export const scene6Choices = [
         choice2: "I need to get in touch with my source."
     },
     {
-        choice1: "Yes, we're in front of the TV",
-        choice2: "How did you find out?"
+        choice1: "How did you find out?",
+        choice2: "Yes, we're in front of the TV"
     },
     {
         choice1: "I had a hard time believing it when I was going through the documents yesterday.",
@@ -210,6 +211,10 @@ export const scene7Choices = [
     {
         choice1: "What are you saying? I haven't started anything.",
         choice2: "Please don't be paranoid, it doesn't help..."
+    },
+    {
+        choice1: "You're right! And with the new events, my issue will be not the priority of the bank.",
+        choice2: "Why didn't I try to fix it faster?"
     },
     {
         choice1: "I didn't get this digital wallet thing...",
