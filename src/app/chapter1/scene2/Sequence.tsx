@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import AnimatedText from '@/components/AnimatedText';
 import { Dispatch, SetStateAction } from "react";
-import redactionPic from "@/components/img/redaction.jpg"
-import chatPic from "@/components/img/chat.png"
-import notifPic from "@/components/img/notif.png"
-import manPic from "./img/azad-desk.png"
+import redactionPic from "@/img/redaction.jpg"
+import chatPic from "@/img/chat.png"
+import notifPic from "@/img/notif.png"
+import manPic from "@/img/azad-desk.png"
 
 const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
     discussionWindow: boolean,

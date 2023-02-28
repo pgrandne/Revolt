@@ -3,13 +3,13 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import AnimatedText from '@/components/AnimatedText';
-import phonePic from "./img/onthephone.png"
-import takeawayPic from "./img/takeaway2.png"
-import paymentPic from "./img/payment.png"
-import refusedPic from "./img/refused.png"
-import cashPic from "./img/cash2.png"
-import decorPic from "./img/decor2.png"
-import friendsPic from "./img/friends3.png"
+import phonePic from "@/img/onthephone.png"
+import takeawayPic from "@/img/takeaway2.png"
+import paymentPic from "@/img/payment.png"
+import refusedPic from "@/img/refused.png"
+import cashPic from "@/img/cash2.png"
+import decorPic from "@/img/decor2.png"
+import friendsPic from "@/img/friends3.png"
 import ArrowButton from "@/components/ArrowButton";
 import { Dispatch, SetStateAction } from "react";
 

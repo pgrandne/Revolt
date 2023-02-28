@@ -2,10 +2,9 @@
 
 import { motion } from "framer-motion";
 import { isMobile } from 'mobile-device-detect';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from "next/link";
 import Image from "next/image";
-import bgPic from "../../public/journalist.jpg"
+import bgPic from "@/img/equipment.jpg"
 import { useEffect, useState } from "react";
 import Modal from "./Modal";
 

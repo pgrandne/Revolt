@@ -17,8 +17,8 @@ export const scene3 = [
     "I hope it's not fake money...",
     "This counterfeit money story is terrible!",
     "Since this morning, I'm afraid that every time a customer pays in cash at the restaurant, it might be fake bills...",
-    "Yeah, it's going to be a complete disaster for our country",
-    "Apparently, there are several billion in circulation as we speak",
+    "Yeah, it's going to be a complete disaster for our country.",
+    "Apparently, there are several billion in circulation as we speak.",
 ]
 
 export const scene4 = [
@@ -42,9 +42,9 @@ export const scene6 = [
     "Hi Azad, I assume you're following the news live",
     "The situation has escalated. I didn't think they would move this quickly",
     "You have no idea what we're about to reveal. This is only the tip of the iceberg...",
-    "Damn! Bad timing... Listen I'm willing to send you some money to assist you and keep up with the investigation.",
+    "Damn! Bad timing... Listen I'm willing to send you some money to assist you and keep up with the investigation",
     "You have no idea what we're getting into. We need to see this through now",
-    "Let's just say money is not an issue, and I really need you to bring this story to light.",
+    "Let's just say money is not an issue, and I really need you to bring this story to light",
     "You need to install a wallet",
     "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash. I have to go now. Just install Metamask and send me your address and I'll send you money",
 ]
@@ -52,7 +52,7 @@ export const scene6 = [
 export const scene7 = [
     `Your source is probably right. If you want to follow through with this investigation, you need funds. Your account being frozen for "suspicious activity" is likely an attempt to intimidate you.`,
     "It is a strange coincidence.",
-    "Anyway, you also need money for living, you can't keep borrowing money from colleagues like you've been doing for a week",
+    "Anyway, you also need money for living, you can't keep borrowing money from colleagues like you've been doing for a week.",
     "Remember the SBFTX investigation earlier this year? I learnt a lot from it... a wallet is not a bad idea to solve your problem, especially if it allows you to receive money.",
     "Actually, it's quite simple. It's like a digital safe, or digital mailbox if you prefer, where anyone can deposit money, but no one can open it except for you.",
     "And most importantly, no one can ever stop you from accessing it. Never.",
@@ -67,7 +67,8 @@ export const scene7 = [
     "This is the only key to open your mailbox if we come back to the previous metaphor.",
     "If you lose it, your wallet will be locked forever.",
     "And if someone can access these words, he will have access to everything that is stored inside.",
-    "That's why keeping those 12 words in a safe place is essential",
+    "That's why keeping those 12 words in a safe place is essential.",
+    "Come back to me once you have completed all the steps I just described to you."
 ]
 
 export const scene2Choices = [
@@ -111,11 +112,11 @@ export const scene3Choices = [
         choice2: "Let me check"
     },
     {
-        choice1: "People might lose all confidence in our currency",
-        choice2: "I don't see how the government could solve the problem"
+        choice1: "People might lose all confidence in our currency.",
+        choice2: "I don't see how the government could solve the problem."
     },
     {
-        choice1: "Having issues with my bank card couldn't have happened at a worse time",
+        choice1: "Having issues with my bank card couldn't have happened at a worse time.",
         choice2: "(say nothing)"
     },
 ]
@@ -152,18 +153,6 @@ export const scene4Choices = [
 ]
 
 export const scene5Choices = [
-    {
-        choice1: "By card, please",
-        choice2: "Do you have contactless?"
-    },
-    {
-        choice1: "Let me try with the PIN",
-        choice2: "I'm going to insert it"
-    },
-    {
-        choice1: "I have 20 LIS in cash...",
-        choice2: "Let me check"
-    },
 ]
 
 export const scene6Choices = [
@@ -184,7 +173,7 @@ export const scene6Choices = [
         choice2: "Yes, we're in front of the TV"
     },
     {
-        choice1: "I had a hard time believing it when I was going through the documents yesterday.",
+        choice1: "I had a hard time believing it when I was going through the documents yesterday",
         choice2: "(say nothing)"
     },
     {
@@ -214,7 +203,7 @@ export const scene7Choices = [
     },
     {
         choice1: "You're right! And with the new events, my issue will be not the priority of the bank.",
-        choice2: "Why didn't I try to fix it faster?"
+        choice2: "I should have fixed the problem last week."
     },
     {
         choice1: "I didn't get this digital wallet thing...",
@@ -229,19 +218,19 @@ export const scene7Choices = [
         choice2: "(say nothing)"
     },
     {
-        choice1: "Yes please",
-        choice2: "Thanks a lot"
+        choice1: "Yes please!",
+        choice2: "Thanks a lot!"
     },
     {
         choice1: "What happen if I lose it?",
         choice2: "OK"
     },
     {
-        choice1: "All right",
+        choice1: "All right!",
         choice2: "(say nothing)"
     },
     {
-        choice1: "It's done",
+        choice1: "Okay, I'm finished.",
         choice2: "It gave me hard time but I finally made it"
     },
 

@@ -4,10 +4,10 @@ import { perm_marker } from '@/utils/font';
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link";
-import lurembergPic from "./img/luremberg2.jpg"
-import tassePic from "./img/tasse.png"
-import kiosquePic from "./img/kiosque.png"
-import journalPic from "./img/journal18oct.png"
+import lurembergPic from "@/img/luremberg2.jpg"
+import tassePic from "@/img/tasse.png"
+import kiosquePic from "@/img/kiosque.png"
+import journalPic from "@/img/journal18oct.png"
 import AnimatedText from '@/components/AnimatedText';
 import ArrowButton from '@/components/ArrowButton';
 

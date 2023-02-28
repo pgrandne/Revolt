@@ -6,8 +6,8 @@ import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Image from "next/image";
-import tvPic from "./img/tv.png"
-import journalPic from "./img/manreadjournal.png"
+import tvPic from "@/img/tv.png"
+import journalPic from "@/img/manreadjournal.png"
 import AnimatedText from '@/components/AnimatedText';
 import ArrowButton from "@/components/ArrowButton";
 import Telegram from "./Telegram";

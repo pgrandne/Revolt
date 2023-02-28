@@ -2,7 +2,7 @@
 
 import { perm_marker } from '@/utils/font';
 
-import equipmentPic from "./img/equipment.png"
+import equipmentPic from "@/img/equipment.jpg"
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -27,7 +27,7 @@ const Construction = () => {
                         width={800}
                         height={600}
                     />
-                    
+
                 </motion.div>
             </div>
         </div>

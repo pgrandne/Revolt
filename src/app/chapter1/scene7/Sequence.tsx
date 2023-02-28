@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import AnimatedText from '@/components/AnimatedText';
-import azadPic from "./img/back.png"
-import skylerhomePic from "./img/skyler-place.png"
+import azadPic from "@/img/back.png"
+import skylerhomePic from "@/img/skyler-place.png"
 
 const Sequence = () => {
     const narration = "Azad's place"

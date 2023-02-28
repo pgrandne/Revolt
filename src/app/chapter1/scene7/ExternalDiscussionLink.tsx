@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion"
-import { child, textAnimation } from "@/utils/animatedText"
 
 const ExternalDiscussion = ({ name, delay }: {
     name: string,
@@ -18,7 +17,7 @@ const ExternalDiscussion = ({ name, delay }: {
             >
                 <div className={name}>{name}</div>
                 <div className="text-sm text-slate-900">
-                    Go to <a className="underline" href="https://metamask.io/" target="_blank" rel="noreferrer">metamask.io</a> and download the extension. Tell me when it&apos;ts done
+                    Go to <a className="underline" href="https://metamask.io/" target="_blank" rel="noreferrer">metamask.io</a> and download the extension.
                 </div>
             </motion.div>
         </div >

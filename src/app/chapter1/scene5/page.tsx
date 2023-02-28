@@ -6,11 +6,11 @@ import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Image from "next/image";
-import lockerPic from "./img/locker.png"
-import pickupPic from "./img/pickup2.png"
-import classifiedPic from "./img/classified.png"
-import documentPic from "./img/classified-document.png"
-import backPic from './img/azadback.png'
+import lockerPic from "@/img/locker.png"
+import pickupPic from "@/img/pickup2.png"
+import classifiedPic from "@/img/classified.png"
+import documentPic from "@/img/classified-document.png"
+import backPic from '@/img/azadback.png'
 import AnimatedText from '@/components/AnimatedText';
 import ArrowButton from "@/components/ArrowButton";
 
