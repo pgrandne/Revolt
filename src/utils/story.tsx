@@ -140,15 +140,15 @@ export const scene4Choices = [
     },
     {
         choice1: "Not really, but I have some doubts about a source who just contacted me.",
-        choice2: "Someone contacted me, I don't know if I can trust him"
+        choice2: "Someone contacted me, I don't know if I can trust him."
     },
     {
         choice1: "ClearPath, does it mean anything to you?",
-        choice2: "He spoke about ClearPath"
+        choice2: "He spoke about ClearPath."
     },
     {
-        choice1: "I'm not sure yet, I have to go",
-        choice2: "Never mind, I'll keep you posted"
+        choice1: "I'm not sure yet, I have to go.",
+        choice2: "Never mind, I'll keep you posted."
     },
 ]
 
