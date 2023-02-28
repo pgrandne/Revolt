@@ -12,8 +12,11 @@ import { handleEthereum } from "@/components/checkWallet";
 const Chap2 = () => {
     const { chain } = useNetwork()
     const { isConnected } = useAccount()
-    console.log(chain)
+    const [wallet, setWallet] = useState(false)
 
+    useEffect(() => {
+        setWallet(handleEthereum());
+    }, [])
 
     const [state, setState] = useState<{
         address?: string
@@ -64,7 +67,7 @@ const Chap2 = () => {
                 >
                     Paradigm shift
                 </ motion.p>
-                {!handleEthereum() &&
+                {!wallet &&
                     <div className="my-10 text-center text-xl">
                         <motion.p
                             initial={{ opacity: 0 }}
@@ -82,7 +85,7 @@ const Chap2 = () => {
                         </ motion.p>
                     </div>
                 }
-                {handleEthereum() &&
+                {wallet &&
                     <>
                         <motion.div
                             className="my-10 text-center text-xl"
