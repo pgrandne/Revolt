@@ -210,7 +210,7 @@ export const scene7Choices = [
         choice2: "Is it related to Bitcoin and cryptocurrencies?"
     },
     {
-        choice1: `But it's still "virtual" money compared to the real one in my bank account.`,
+        choice1: `But it's still "virtual" money compared to real LIS money.`,
         choice2: "I would prefer real money."
     },
     {
