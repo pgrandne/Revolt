@@ -49,7 +49,7 @@ const SignInButton = ({
             const message = new SiweMessage({
                 domain: window.location.host,
                 address,
-                statement: 'Sign in with Ethereum to Revolte.app',
+                statement: 'Sign in to Revolte.app',
                 uri: window.location.origin,
                 version: '1',
                 chainId,
@@ -79,8 +79,12 @@ const SignInButton = ({
     }
 
     return (
-        <button disabled={!state.nonce || state.loading} onClick={signIn}>
-            Sign-In with Ethereum
+        <button
+            className="btnHero"
+            disabled={!state.nonce || state.loading}
+            onClick={signIn}
+        >
+            Sign-In
         </button>
     )
 }

@@ -7,42 +7,24 @@ import Image from "next/image";
 import bgPic from "@/img/equipment.jpg"
 import { useEffect, useState } from "react";
 import Modal from "./Modal";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { handleEthereum } from "./checkWallet";
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
     const [modal, setModal] = useState(false)
 
-    const handleEthereum = () => {
-        const { ethereum } = window;
-        if (ethereum && ethereum.isMetaMask) {
-            console.log('Ethereum successfully detected!');
-            setWallet(true)
-            // Access the decentralized web!
-        }
-    }
-
     useEffect(() => {
-        if (window.ethereum) {
-            handleEthereum();
-        } else {
-            window.addEventListener('ethereum#initialized', handleEthereum, {
-                once: true,
-            });
-
-            // If the event is not dispatched by the end of the timeout,
-            // the user probably doesn't have MetaMask installed.
-            setTimeout(handleEthereum, 3000); // 3 seconds
-        }
-
+        setWallet(handleEthereum());
     }, [])
 
     return (
         <section className="flex justify-center h-screen w-screen">
-            {/* {wallet &&
+            {wallet &&
                 <div className="absolute top-3 right-3">
                     <ConnectButton chainStatus="none" showBalance={false} />
                 </div>
-            } */}
+            }
             <div className="my-auto relative">
                 <motion.div
                     className="p-2"
