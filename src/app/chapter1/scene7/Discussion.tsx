@@ -72,6 +72,9 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                             <ExternalDiscussionLink name="Skyler" delay={1.2} />
                             <ExternalDiscussion text={scene7[18]} name="Skyler" delay={3} telegramWindow={false} />
                         </>}
+                        {stage > 8 && <>
+                            <AzadDiscussion azadText={azadText[8]} delay={0.2} duration={0.7} />
+                        </>}
                         <div id="end" />
                     </div>
                 </div>
@@ -102,7 +105,7 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                         <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[7]} delay={14} duration={.5} />
                     }
                     {stage === 8 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[8]} delay={6} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene7Choices[8]} delay={8} duration={.5} />
                     }
 
                 </div>

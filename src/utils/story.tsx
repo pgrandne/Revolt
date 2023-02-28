@@ -124,7 +124,7 @@ export const scene3Choices = [
 export const scene4Choices = [
     {
         choice1: "Hi. Yes, I remember very well",
-        choice2: "Hello 'Cincinnatus', I still have no clue of what you're talking about"
+        choice2: "Hello ”Cincinnatus”, I still have no clue of what you're talking about"
     },
     {
         choice1: "I understand, can you at least tell me what it's about?",
@@ -230,7 +230,7 @@ export const scene7Choices = [
         choice2: "(say nothing)"
     },
     {
-        choice1: "Okay, I'm finished.",
+        choice1: "Okay, I'm done.",
         choice2: "It gave me hard time but I finally made it"
     },
 
