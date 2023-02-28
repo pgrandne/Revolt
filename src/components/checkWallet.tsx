@@ -1,6 +1,5 @@
 export const handleEthereum = () => {
-    const { ethereum } = window;
-    if (ethereum) {
+    if (typeof window.ethereum !== 'undefined') {
         console.log('Ethereum successfully detected!');
         return true
     }
