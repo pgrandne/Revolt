@@ -106,7 +106,7 @@ const Chap2 = () => {
                                 className="text-center"
                                 initial={{ opacity: 0, y: 250 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ type: 'spring', delay: 3, duration: 3 }}
+                                transition={{ type: 'spring', delay: 1, duration: 3 }}
                             >
                                 <SignInButton
                                     onSuccess={({ address }) => setState((x) => ({ ...x, address }))}

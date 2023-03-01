@@ -70,12 +70,8 @@ const SignInButton = ({
             if (!verifyRes.ok) throw new Error('Error verifying message')
 
             setState((x) => ({ ...x, loading: false }))
-
-            console.log(verifyRes)
-
-
-
-            // router.push('/construction')
+            alert("Progression saved!")
+            router.push('/construction')
 
         } catch (error) {
             setState((x) => ({ ...x, loading: false, nonce: undefined }))
