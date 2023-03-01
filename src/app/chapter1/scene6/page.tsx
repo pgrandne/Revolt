@@ -67,6 +67,12 @@ const Chap1s6 = () => {
             {
                 stage > 0 &&
                 <div className="flex flex-row">
+                    {stage < 5 &&
+                        <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-9/12" />
+                    }
+                    {stage > 4 &&
+                        <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-10/12" />
+                    }
                     <div className="relative basis-2/3 w-full overflow-hidden">
                         <Sequence discussionWindow={discussionWindow} setTelegramWindow={setTelegramWindow} telegramWindow={telegramWindow} />
                         {stage === 12 &&

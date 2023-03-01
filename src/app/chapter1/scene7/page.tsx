@@ -13,6 +13,9 @@ const Chap1s7 = () => {
 
     return (
         <div className="flex flex-row">
+            {true &&
+                <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-11/12" />
+            }
             <div className="relative basis-2/3 w-full overflow-hidden">
                 <Sequence />
                 {

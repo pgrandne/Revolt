@@ -103,7 +103,7 @@ const Chap2 = () => {
                         </ motion.div>
                         {chain?.id === 420 &&
                             <motion.div
-                                className="text-center"
+                                className="flex justify-center"
                                 initial={{ opacity: 0, y: 250 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ type: 'spring', delay: 1, duration: 3 }}
@@ -119,7 +119,7 @@ const Chap2 = () => {
                 }
 
             </div>
-        </div>
+        </div >
     )
 }
 

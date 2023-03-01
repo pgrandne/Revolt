@@ -17,6 +17,7 @@ const Chap1s1 = () => {
 
     return (
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
+            <div className="bar-of-progress fixed top-0 left-0 h-2 bg-red-800 w-1/12" />
             <div className="my-auto">
                 <motion.h1
                     className="text-center text-7xl"
@@ -92,7 +93,7 @@ const Chap1s1 = () => {
                 </Link>
             </motion.div>
 
-        </div>
+        </div >
     )
 }
 

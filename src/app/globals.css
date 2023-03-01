@@ -8,7 +8,7 @@
     }
 
     .btnHero {
-        @apply bg-white text-gray-800 font-semibold py-2 px-4 border-2 border-gray-400 rounded z-20;
+        @apply flex bg-white text-gray-800 font-semibold py-2 px-4 border-2 border-gray-400 rounded z-20;
     }
 
     .btnHero:hover {
@@ -47,7 +47,7 @@
         @apply text-purple-600 text-xs;
     }
 
-
-
-
+    .bar-of-progress:after {
+        @apply content-[""] block absolute right-0 w-[100px] h-full shadow rotate-3 translate-y-1;
+    }
 }

@@ -70,16 +70,12 @@ const Chap1s5 = () => {
                         </motion.div>
                     }
                 </div >
-
-
-
-
-
             }
 
             {
                 lockerOpened &&
                 <div className="relative overflow-hidden flex justify-center w-screen h-screen my-auto ">
+                    <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-8/12" />
                     <div className="flex flex-col justify-center pr-[35%]">
                         <motion.div
                             initial={{ x: -50, opacity: 0 }}

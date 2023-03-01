@@ -11,7 +11,7 @@ const Sequence = () => {
     const hour = "8:00 pm"
 
     return (
-        <div className="relative flex flex-col justify-center h-screen py-[5%]">
+        <div className="relative flex flex-col justify-center h-full py-[5%]">
             <motion.div
                 className="flex pr-[35%]"
                 initial={{ x: -100, opacity: 0 }}
