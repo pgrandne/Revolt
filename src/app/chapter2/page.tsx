@@ -41,7 +41,7 @@ const Chap2 = () => {
 
 
     return (
-        <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
+        <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto overflow-hidden`}>
             <motion.div
                 className="absolute top-3 right-3"
                 initial={{ opacity: 0 }}
@@ -94,24 +94,26 @@ const Chap2 = () => {
                             transition={{ delay: 3, duration: 2 }}
                         >
                             {!isConnected &&
-                                <p>Please click on Connect button at the top right of the page</p>
+                                <p>Click on Connect Wallet on the top right and select Mematask</p>
                             }
-                            {chain?.id !== 420 &&
+                            {isConnected && chain?.id !== 420 &&
                                 <p>We use a specific network for our adventure, please click on Wrong Network to switch on it</p>}
                             {chain?.id === 420 &&
                                 <p>Please sign-in to save your progression</p>}
                         </ motion.div>
-                        <motion.div
-                            className="text-center"
-                            initial={{ opacity: 0, y: 250 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ type: 'spring', delay: 3, duration: 3 }}
-                        >
-                            <SignInButton
-                                onSuccess={({ address }) => setState((x) => ({ ...x, address }))}
-                                onError={({ error }) => setState((x) => ({ ...x, error }))}
-                            />
-                        </motion.div>
+                        {chain?.id === 420 &&
+                            <motion.div
+                                className="text-center"
+                                initial={{ opacity: 0, y: 250 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ type: 'spring', delay: 3, duration: 3 }}
+                            >
+                                <SignInButton
+                                    onSuccess={({ address }) => setState((x) => ({ ...x, address }))}
+                                    onError={({ error }) => setState((x) => ({ ...x, error }))}
+                                />
+                            </motion.div>
+                        }
 
                     </>
                 }
