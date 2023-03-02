@@ -47,7 +47,7 @@ const ExternalDiscussion = ({ text, name, delay, telegramWindow }: {
                         transition={{ delay: delay, duration: 3, times: [0, 0.2, 0.9, 1] }}
                     >
                         <div className="animate-bounce text-teal-500 w-6 h-6 ...">
-                            writing...
+                            typing...
                         </div>
                     </motion.div>
                     <motion.div

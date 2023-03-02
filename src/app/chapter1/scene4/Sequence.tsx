@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import AnimatedText from '@/components/AnimatedText';
-import redactionPic from "@/img/redaction.jpg"
+import redactionPic from "@/img/newsroom1.png"
 import azadPic from "@/img/azad-desk.png"
 import skylerPic from "@/img/skylerDesk.png"
 import notifPic from "@/img/notif.png"
