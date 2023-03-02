@@ -2,14 +2,14 @@ export const scene2 = [
     "Hey Azad, did you watch the news?",
     "Billions of fake money discovered!!! It's 15% of our GDP!",
     "Everyone will work on it during the next weeks! I have meetings all day, we'll talk tonight.",
-    "Hello Mr Azad, a trusted person gave me your contact.",
+    "Hello Azad, a trusted person gave me your contact.",
     "I have some documents about a very sensitive case",
     "Are you interested?",
     "I can't say more at the moment, I'll get back to you very soon.",
 ]
 
 export const scene3 = [
-    "Hey Azad, can you please buy some food? Rob is coming with Jessy and I didn't count him...",
+    "Hey Azad, can you please buy some food? Finally Rob is coming with Jessy...",
     "What can I get you, sir ?",
     "That will be 12 LIS, sir",
     "Your card has been declined, sir",
@@ -85,14 +85,14 @@ export const scene2Choices = [
         choice2: "(say nothing)"
     },
     {
-        choice1: "Maybe but you need to tell me more",
+        choice1: "Maybe! But first tell me more",
         choice2: "Yes, I am"
     },
 ]
 
 export const scene3Choices = [
     {
-        choice1: "No problem, I'm just close to the lebanese food truck",
+        choice1: "No problem, I’m walking towards the Lebanese food truck you like.",
         choice2: "Yes, sure"
     },
     {
@@ -100,23 +100,23 @@ export const scene3Choices = [
         choice2: "A medium meze"
     },
     {
-        choice1: "By card, please",
+        choice1: "By card, please.",
         choice2: "Do you have contactless?"
     },
     {
-        choice1: "Let me try with the PIN",
-        choice2: "I'm going to insert it"
+        choice1: "Let me try with the PIN.",
+        choice2: "I'm going to insert it."
     },
     {
         choice1: "I have 20 LIS in cash...",
-        choice2: "Let me check"
+        choice2: "Let me check."
     },
     {
         choice1: "People might lose all confidence in our currency.",
         choice2: "I don't see how the government could solve the problem."
     },
     {
-        choice1: "Having issues with my bank card couldn't have happened at a worse time.",
+        choice1: "Of all the times for my card to stop working, it had to choose now...",
         choice2: "(say nothing)"
     },
 ]
@@ -136,7 +136,7 @@ export const scene4Choices = [
     },
     {
         choice1: "Count on me",
-        choice2: "It's worthy of a spy movie!"
+        choice2: "Sounds like a spy thriller!"
     },
     {
         choice1: "Not really, but I have some doubts about a source who just contacted me.",
@@ -177,8 +177,8 @@ export const scene6Choices = [
         choice2: "(say nothing)"
     },
     {
-        choice1: "Do you know something else? My bank card is blocked so it's a terrible situation for me",
-        choice2: "The ironic part of this story is that by bank card doesn't work anymore"
+        choice1: "Do you know something else? My credit card is blocked so it's a terrible situation for me",
+        choice2: "The ironic part of this story is that my card doesn't work anymore"
     },
     {
         choice1: "Why would you do this?",
@@ -202,7 +202,7 @@ export const scene7Choices = [
         choice2: "Please don't be paranoid, it doesn't help..."
     },
     {
-        choice1: "You're right! And with the new events, my issue will be not the priority of the bank.",
+        choice1: "You're right! And with the new events, my issue will not be the priority of the bank.",
         choice2: "I should have fixed the problem last week."
     },
     {
@@ -222,7 +222,7 @@ export const scene7Choices = [
         choice2: "Thanks a lot!"
     },
     {
-        choice1: "What happen if I lose it?",
+        choice1: "What happens if I lose it?",
         choice2: "OK"
     },
     {

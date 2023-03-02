@@ -32,7 +32,7 @@
     }
 
     .Skyler {
-        @apply text-slate-600 text-xs;
+        @apply text-red-500 text-xs;
     }
 
     .Rob {
@@ -44,7 +44,7 @@
     }
 
     .Cashier {
-        @apply text-purple-600 text-xs;
+        @apply text-blue-500 text-xs;
     }
 
     .bar-of-progress:after {
