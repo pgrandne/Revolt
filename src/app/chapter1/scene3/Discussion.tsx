@@ -33,23 +33,23 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                                 <ExternalDiscussion text={scene3[0]} name="Skyler" delay={2} telegramWindow={false} />
                                 {stage > 0 && <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={scene3[1]} name="Cashier" delay={2} telegramWindow={false} />
+                                    <ExternalDiscussion text={scene3[1]} name="Cook" delay={2} telegramWindow={false} />
                                 </>}
                                 {stage > 1 && <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={scene3[2]} name="Cashier" delay={2} telegramWindow={false} />
+                                    <ExternalDiscussion text={scene3[2]} name="Cook" delay={2} telegramWindow={false} />
                                 </>}
                                 {stage > 2 && <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={scene3[3]} name="Cashier" delay={2} telegramWindow={false} />
+                                    <ExternalDiscussion text={scene3[3]} name="Cook" delay={2} telegramWindow={false} />
                                 </>}
                                 {stage > 3 && <>
                                     <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={scene3[4]} name="Cashier" delay={2} telegramWindow={false} />
+                                    <ExternalDiscussion text={scene3[4]} name="Cook" delay={2} telegramWindow={false} />
                                 </>}
                                 {stage > 4 && <>
                                     <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={scene3[5]} name="Cashier" delay={2} telegramWindow={false} />
+                                    <ExternalDiscussion text={scene3[5]} name="Cook" delay={2} telegramWindow={false} />
                                 </>}
                             </>
                         }
