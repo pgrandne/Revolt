@@ -18,7 +18,7 @@ const Construction = () => {
                     transition={{ duration: 5 }}
                 >
                     <div className={`${perm_marker.className} absolute transform rounded-sm rotate-[-5deg] -mt-5 -ml-7 bg-red-800 p-2 text-3xl`}>
-                        Chapter 2 under construction
+                        To be continued...
                     </div>
                     <Image
                         className="bgCase -z-10"
