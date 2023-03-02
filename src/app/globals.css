@@ -48,6 +48,6 @@
     }
 
     .bar-of-progress:after {
-        @apply content-[""] block absolute right-0 w-[100px] h-full shadow rotate-3 translate-y-1;
+        @apply content-[""] block fixed top-0 left-0 h-1 bg-red-800 w-2/12;
     }
 }

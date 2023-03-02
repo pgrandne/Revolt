@@ -3,8 +3,6 @@
 import { motion } from "framer-motion"
 import Link from "next/link";
 import { useState } from 'react'
-import Discussion from './Discussion'
-import Sequence from './Sequence'
 import Image from "next/image";
 import lockerPic from "@/img/locker.png"
 import pickupPic from "@/img/pickup2.png"
