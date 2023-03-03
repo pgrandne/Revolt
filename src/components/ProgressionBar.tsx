@@ -3,3 +3,5 @@ const ProgressionBar = () => {
         <div className="bar-of-progress" />
     )
 }
+
+export default ProgressionBar

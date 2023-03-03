@@ -9,6 +9,10 @@ import { useEffect, useState } from "react";
 import Modal from "./Modal";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "./checkWallet";
+import github from '@/img/github-white.svg'
+
+
+
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
@@ -77,13 +81,20 @@ const Hero = () => {
                 </div>
             </div>
             <motion.div
+                className="bg-green-500"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
                 onClick={() => { setModal(true) }}
             >
                 <div className="fixed bottom-3 left-3 flex">
-
+                    <Image
+                        src={github}
+                        alt="github"
+                        width={500}
+                        height={500}
+                        className="w-[24px] h-[24px] object-contain cursor-pointer"
+                    />
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="fixed bottom-3 right-3 w-6 h-6 cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
