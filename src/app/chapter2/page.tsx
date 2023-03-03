@@ -27,7 +27,7 @@ const Chap2 = () => {
     useEffect(() => {
         const handler = async () => {
             try {
-                const res = await fetch('/api/me')
+                const res = await fetch('/api/siwe/me')
                 const json = await res.json()
                 setState((x) => ({ ...x, address: json.address }))
             } catch (_error) { }

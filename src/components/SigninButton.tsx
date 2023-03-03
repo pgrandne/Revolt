@@ -20,7 +20,7 @@ const SignInButton = ({
 
     const fetchNonce = async () => {
         try {
-            const nonceRes = await fetch('/api/nonce')
+            const nonceRes = await fetch('/api/siwe/nonce')
             const nonce = await nonceRes.text()
             setState((x) => ({ ...x, nonce }))
         } catch (error) {
@@ -60,7 +60,7 @@ const SignInButton = ({
             })
 
             // Verify signature
-            const verifyRes = await fetch('/api/verify', {
+            const verifyRes = await fetch('/api/siwe/verify', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
