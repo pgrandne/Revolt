@@ -9,7 +9,7 @@ export const scene2 = [
 ]
 
 export const scene3 = [
-    "Hey Azad, can you please buy some food? Finally Rob is coming with Jessy...",
+    "Hey Azad, can you please buy some food? Rob is coming with Jessy after all...",
     "What can I get you, sir ?",
     "That will be 12 LIS, sir",
     "Your card has been declined, sir",
@@ -23,8 +23,8 @@ export const scene3 = [
 
 export const scene4 = [
     "Hello Azad",
-    "I contacted you last week about a sensitive matter",
-    "Before I tell you, I need to make sure that our discussions remain private. The matter is extremely touchy",
+    "I contacted you last week about a touchy matter",
+    "Before I tell you, I need to make sure that our discussions remain private. The matter is extremely sensitive",
     "At this stage, I can only give you its code name: ClearPath",
     "Do not speak to anyone about our exchanges, I will never contact you anywhere other than on this encrypted app",
     "There is a locker, number 29, at Central Street Station. The code is 103109. I have put a first sample of documents, you will realize the extent of the matter",
