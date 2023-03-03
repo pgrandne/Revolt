@@ -38,7 +38,6 @@ const Chap1s6 = () => {
                         </div>
                     </div>
                     <div className="absolute flex flex-col right-0">
-
                         < motion.div
                             className="flex h-full pb-[5%]"
                             initial={{ y: 0, opacity: 0 }}
@@ -56,7 +55,7 @@ const Chap1s6 = () => {
                         transition={{ delay: 10, duration: 1 }}
                     >
                         <button
-                            className="absolute bottom-8 right-8 animate-pulse"
+                            className="absolute bottom-8 right-[33%] animate-pulse"
                             onClick={() => setStage(1)}
                         >
                             <ArrowButton />

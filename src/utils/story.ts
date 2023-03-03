@@ -33,8 +33,6 @@ export const scene4 = [
     "What is it?",
 ]
 
-export const scene5 = []
-
 export const scene6 = [
     "This is insane. Are we in an Orwellian novel or what? They've banned cash!",
     "Really? Who is he? An inside man?",
@@ -152,9 +150,6 @@ export const scene4Choices = [
     },
 ]
 
-export const scene5Choices = [
-]
-
 export const scene6Choices = [
     {
         choice1: "Remember the source I mentioned yesterday? He knew about it.",
@@ -233,6 +228,4 @@ export const scene7Choices = [
         choice1: "Okay, I'm done.",
         choice2: "It gave me hard time but I finally made it"
     },
-
-
 ]

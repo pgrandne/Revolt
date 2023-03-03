@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/img/cincinnatus.jpg"
-import { scene2, scene2Choices } from "@/utils/story"
+import { scene2, scene2Choices } from '@/utils/story'
 import ExternalDiscussion from "@/components/ExternalDiscussion";
 import TelegramChoices from "@/components/TelegramChoices";
 import AzadDiscussion from "@/components/AzadDiscussion";

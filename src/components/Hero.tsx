@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { isMobile } from 'mobile-device-detect';
+import { isMobile, isSafari, isIE } from 'react-device-detect';
 import Link from "next/link";
 import Image from "next/image";
 import bgPic from "@/img/equipment.jpg"
@@ -20,6 +20,11 @@ const Hero = () => {
 
     return (
         <section className="flex justify-center h-screen w-screen">
+            {/* <select className="absolute top-3 left-3 appearance-none">
+                <option>Yes</option>
+                <option>No</option>
+                <option>Maybe</option>
+            </select> */}
             {wallet &&
                 <div className="absolute top-3 right-3">
                     <ConnectButton chainStatus="none" showBalance={false} />
@@ -55,7 +60,7 @@ const Hero = () => {
                     >
                         Story of a whistleblower
                     </ motion.p>
-                    <Link href={isMobile ? "/mobile" : "/chapter1/scene1"} className="grid mx-auto place-content-center">
+                    <Link href={isMobile ? "/mobile" : (isSafari || isIE ? "/browser" : "/chapter1/scene1")} className="grid mx-auto place-content-center">
                         <motion.div
                             initial={{ opacity: 0, y: 250 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -72,17 +77,21 @@ const Hero = () => {
                 </div>
             </div>
             <motion.div
-                className="absolute bottom-3 right-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
                 onClick={() => { setModal(true) }}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 cursor-pointer">
+                <div className="fixed bottom-3 left-3 flex">
+
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="fixed bottom-3 right-3 w-6 h-6 cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
                 </svg>
+
             </motion.div>
-            {modal &&
+            {
+                modal &&
                 <Modal setModal={setModal} />
             }
         </section >
@@ -90,7 +99,3 @@ const Hero = () => {
 }
 
 export default Hero;
-
-function useeffect(arg0: () => void) {
-    throw new Error("Function not implemented.");
-}

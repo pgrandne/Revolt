@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { child, textAnimation } from "@/utils/animatedText"
-import { scene2 } from "@/utils/story"
+import { scene2 } from '@/utils/story'
 
 const AzadDiscussion = ({ azadText, delay, duration }: {
     azadText: string,

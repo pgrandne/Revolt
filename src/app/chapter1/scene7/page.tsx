@@ -6,7 +6,6 @@ import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
 import ArrowButton from "@/components/ArrowButton";
-import { handleEthereum } from "@/components/checkWallet";
 
 const Chap1s7 = () => {
     const [stage, setStage] = useState(0)
@@ -25,18 +24,9 @@ const Chap1s7 = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 2, duration: 1 }}
                     >
-                        {handleEthereum() &&
-                            <Link href="/chapter2" className="absolute bottom-8 right-8 animate-pulse">
-                                <ArrowButton />
-                            </Link>
-                        }
-                        {!handleEthereum() &&
-                            <span className="absolute bottom-8 right-8 animate-pulse"
-                                onClick={() => alert('Metamask is not detected')}>
-                                <ArrowButton />
-                            </span>
-                        }
-
+                        <Link href="/chapter2" className="absolute bottom-8 right-8 animate-pulse">
+                            <ArrowButton />
+                        </Link>
                     </motion.div>
                 }
             </div>

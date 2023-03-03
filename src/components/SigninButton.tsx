@@ -49,7 +49,7 @@ const SignInButton = ({
             const message = new SiweMessage({
                 domain: window.location.host,
                 address,
-                statement: 'Sign in to Revolte.app',
+                statement: 'Sign in to Revolte.app for saving your progression',
                 uri: window.location.origin,
                 version: '1',
                 chainId,

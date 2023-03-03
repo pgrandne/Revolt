@@ -39,7 +39,7 @@ export default function Home() {
           <Hero />
         </main>
       </RainbowKitProvider>
-    </WagmiConfig>
+    </WagmiConfig >
 
   )
 }
