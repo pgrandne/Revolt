@@ -1,17 +1,30 @@
 'use client'
 
-import { handleEthereum } from '@/components/checkWallet';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useNetwork, useAccount } from 'wagmi'
-
+import { useState } from 'react';
+import { useNetwork, useAccount, useBalance } from 'wagmi'
 
 const Chap2s1 = () => {
     const { chain } = useNetwork()
     const tokenAddress = '0xcbce2891F86b69b3eF61dF8CE69e3522a0483FB3'
-
     const tokenSymbol = 'USDC'
     const tokenDecimals = 6
     const tokenImage = 'https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389'
+
+    const { address } = useAccount()
+    const [playerAddress, setPlayerAddress] = useState(address)
+    const { data: balanceUSDC } = useBalance({
+        address: playerAddress,
+        token: tokenAddress,
+        chainId: 420,
+        watch: true
+    })
+
+    const { data: balanceEther } = useBalance({
+        address: playerAddress,
+        chainId: 420,
+        watch: true
+    })
 
     const addTokenFunction = async () => {
         try {
@@ -44,20 +57,48 @@ const Chap2s1 = () => {
         event.preventDefault()
         const target = event.currentTarget
         const data = { address: target.address.value }
-        console.log(data)
+        setPlayerAddress(data.address)
         const JSONdata = JSON.stringify(data)
-        const response = await fetch('/api/game/faucet', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
+        if (typeof balanceUSDC !== 'undefined') {
+            if (parseInt(balanceUSDC.formatted) > 1000)
+                console.log("Vous n'avez pas besoin d'USDC")
+            else {
+                const response = await fetch('/api/game/faucet', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                if (response.ok)
+                    console.log("Je viens de t'envoyer des USDC, tu as dû les recevoir")
+                else
+                    console.log("Je rencontre un problème pour te les envoyer, reviens plus tard")
+            }
+        }
+        else {
+            console.log("problem with your balance")
+        }
+
     }
 
-
-
-
+    const askGas = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+        if (typeof balanceEther !== 'undefined') {
+            if (parseFloat(balanceEther.formatted) >= 0.001)
+                console.log("Vous n'avez pas besoin de gas")
+            else {
+                const data = { address: playerAddress }
+                const response = await fetch('/api/game/gas', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+            }
+        }
+    }
 
     return (
         <div className="flex flex-col align-middle">
@@ -92,11 +133,7 @@ const Chap2s1 = () => {
                     </button>
                 </div>
             </form>
-
         </div>
-
-
-
     )
 }
 

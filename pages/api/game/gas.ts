@@ -1,8 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { ethers } from 'ethers'
-import { erc20ABI } from 'wagmi'
-
-
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { method } = req
@@ -13,10 +10,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
                 if (typeof process.env.PRIVATE_KEY !== "undefined" && typeof process.env.USDC_CONTRACT !== "undefined") {
                     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
-                    const contract = new ethers.Contract(process.env.USDC_CONTRACT, erc20ABI, wallet);
-                    const amount = ethers.utils.parseUnits('1000', 6)
-                    const result = await contract.transfer(address, amount)
-                    console.log(`Sent ${ethers.utils.formatUnits(amount, 6)} USDC to address ${address}`)
+                    const result = wallet.sendTransaction({ to: address, value: ethers.utils.parseEther("0.001") })
+                    console.log(`Sent 0.001 eth to address ${address}`)
                 }
                 else {
                     console.log('No .env variable')
