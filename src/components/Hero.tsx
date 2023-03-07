@@ -108,7 +108,7 @@ const Hero = () => {
                         />
                     </a>
                 </div>
-                <p className="hidden sm:block fixed bottom-2 left-0 w-screen text-center -z-10">An adventure game to start exploring Web3</p>
+                <p className="hidden sm:block fixed top-2 left-2 -z-10">An adventure game to start exploring Web3</p>
                 <div
                     className="fixed bottom-3 right-3 flex gap-1"
                     onClick={() => { setModal(true) }}>

@@ -232,14 +232,16 @@ export const scene7Choices = [
 
 export const chap2 = [
     "Hey Azad, did you install a wallet?",
-    "Good, I will send you some USDC. It is a stablecoin based on dollar, for 1 USDC on the network, there is 1 USDC in the bank account of the issuer. So, no variation or speculation, 1 USDC = 1$",
-    "Now if you click on your metamask wallet, you will see in Asset tab the USDC token",
-    "Let me send you some USDC, share your address with me. You can just click on your address at the top left of this window and copy it",
-    `Or you can click on metamask icon on your browser bar and click on "Account 1" to copy your address in the clipboard`,
-    "Paste your address and send it to me",
-    "For using this cryptocurrency you need gas. The network is decentralized, it means there is no centralized entity who manage your transaction but more than 500,000 entities. You have to pay them for each transaction",
-    "But you know when you use your bankcard you pay a fee too! The difference is just than you don't care about it because the merchant pays the fee for you",
-    "I have to go"
+    "Alright, I will send you some funds now, in USDC currency. It's what we call a stablecoin, its value is pegged to dollars (1USDC = $1)",
+    "Have a look and click on the wallet extension on your browser. You should now be able to see USDC in Assets tab",
+    "I need your adress to send you the funds now",
+    "Your adress is the unique sequence of letters and numbers that starts with 0x……",
+    "Once you clicked on the wallet extension you'll find it written just below the account name (which should be 'Account 1' in your case, as you've just installed it)",
+    "Just click on it to copy your address in the clipboard and paste it here",
+    "In order to do transactions on this network, you will also need some “gas”. It's like the gasoline for your car, if you want to run it, you'll need to fill the tank with the appropriate fuel",
+    "Basically this “gas” is a specific currency, used to paid your own transactions. On this network this currency is called ETH",
+    "But you know when you use your bankcard you pay a fee too! The difference is just that you don't care about it because the merchant pays it for you!",
+    "Sorry i need to go, I'll contact you very soon."
 
 ]
 
@@ -250,10 +252,10 @@ export const chap2Choices = [
     },
     {
         choice1: "Yes I see it",
-        choice2: "I see 0 USDC"
+        choice2: "I can only see “0 USDC“"
     },
     {
-        choice1: "You have to pay for each transaction?",
+        choice1: "You mean it's required to pay for each transaction? ",
         choice2: "(say nothing)"
     },
 
