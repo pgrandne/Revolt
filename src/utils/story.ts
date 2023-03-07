@@ -240,7 +240,7 @@ export const chap2 = [
     "In order to do transactions on this network, you will also need some “gas”. It's like the gasoline for your car, if you want to run it, you'll need to fill the tank with the appropriate fuel",
     "Basically this “gas” is a specific currency, used to paid your own transactions. On this network this currency is called ETH",
     "But you know when you use your bankcard you pay a fee too! The difference is just that you don't care about it because the merchant pays it for you!",
-    "Sorry I need to go, I'll contact you very soon."
+    "Sorry I need to go, I'll contact you very soon"
 
 ]
 
