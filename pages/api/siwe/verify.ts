@@ -19,7 +19,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 await req.session.save()
                 const user = await getUserByAddress(message.address)
                 if (user) {
-                    const updatedUser = await updateUser(message.address)
+                    const updatedUser = await updateUser(message.address, message.uri)
                     console.log('user updated')
                 } else {
                     const newUser = await createUser(message.address, 200)

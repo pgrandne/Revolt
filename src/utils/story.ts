@@ -229,3 +229,32 @@ export const scene7Choices = [
         choice2: "It gave me hard time but I finally made it"
     },
 ]
+
+export const chap2 = [
+    "Hey Azad, did you install a wallet?",
+    "Good, I will send you some USDC. It is a stablecoin based on dollar, for 1 USDC on the network, there is 1 USDC in the bank account of the issuer. So, no variation or speculation, 1 USDC = 1$",
+    "Now if you click on your metamask wallet, you will see in Asset tab the USDC token",
+    "Let me send you some USDC, share your address with me. You can just click on your address at the top left of this window and copy it",
+    `Or you can click on metamask icon on your browser bar and click on "Account 1" to copy your address in the clipboard`,
+    "Paste your address and send it to me",
+    "For using this cryptocurrency you need gas. The network is decentralized, it means there is no centralized entity who manage your transaction but more than 500,000 entities. You have to pay them for each transaction",
+    "But you know when you use your bankcard you pay a fee too! The difference is just than you don't care about it because the merchant pays the fee for you",
+    "I have to go"
+
+]
+
+export const chap2Choices = [
+    {
+        choice1: "Yes",
+        choice2: "I installed Metamask as you said"
+    },
+    {
+        choice1: "Yes I see it",
+        choice2: "I see 0 USDC"
+    },
+    {
+        choice1: "You have to pay for each transaction?",
+        choice2: "(say nothing)"
+    },
+
+]

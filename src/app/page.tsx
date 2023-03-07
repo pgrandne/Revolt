@@ -5,7 +5,6 @@ import { perm_marker } from '@/utils/font';
 import { getDefaultWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, goerli, arbitrum, arbitrumGoerli, aurora, auroraTestnet, avalanche, avalancheFuji, bsc, bscTestnet, celo, celoAlfajores, fantom, fantomTestnet, gnosis, gnosisChiado, metis, metisGoerli, optimism, optimismGoerli, polygon, polygonMumbai, polygonZkEvmTestnet, sepolia, zkSync, zkSyncTestnet } from 'wagmi/chains';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, provider } = configureChains(

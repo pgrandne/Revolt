@@ -41,15 +41,24 @@ export async function createUser(address: string, progression: number) {
     }
 }
 
-export async function updateUser(address: string) {
+export async function updateUser(address: string, uri: string) {
     try {
         const updateDate = new Date()
+        let prog = 0
+        if (uri.slice(-8) === "chapter2") {
+            prog = 200
+            console.log('chapter2')
+        }
+        else {
+            prog = 201
+            console.log('scene1')
+        }
         await prisma.$connect()
         const userFromDB = await prisma.user.update({
             where: { address: address },
             data: {
                 lastUpdate: updateDate,
-                progression: 200
+                progression: prog
             }
         })
         await prisma.$disconnect()

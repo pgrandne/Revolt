@@ -36,11 +36,7 @@ export default function Chapter2Layout({
                 chains={chains}
                 initialChain={optimismGoerli}
             >
-                <section>
-                    {/* Include shared UI here e.g. a header or sidebar */}
-                    <nav></nav>
-                    {children}
-                </section>
+                {children}
             </RainbowKitProvider>
         </WagmiConfig>
     );

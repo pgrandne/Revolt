@@ -50,7 +50,7 @@ const SignInButton = ({
                 domain: window.location.host,
                 address,
                 statement: 'Sign in to Revolte.app for saving your progression',
-                uri: window.location.origin,
+                uri: window.location.href,
                 version: '1',
                 chainId,
                 nonce: state.nonce,
@@ -70,8 +70,12 @@ const SignInButton = ({
             if (!verifyRes.ok) throw new Error('Error verifying message')
 
             setState((x) => ({ ...x, loading: false }))
-            alert("Progression saved!")
-            router.push('/construction')
+            alert("Progression saved! We are redirecting you to the next episode")
+            if (window.location.href.slice(-8) === "chapter2")
+                router.push('/chapter2/scene1')
+            else
+                router.push('/construction')
+
 
         } catch (error) {
             setState((x) => ({ ...x, loading: false, nonce: undefined }))
