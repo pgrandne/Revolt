@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion"
-import { perm_marker } from '@/utils/font';
+import { perm_marker, roboto } from '@/utils/font';
 import Link from "next/link";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useNetwork, useAccount } from 'wagmi'
@@ -68,20 +68,27 @@ const Chap2 = () => {
                     Paradigm shift
                 </ motion.p>
                 {!wallet &&
-                    <div className="my-10 text-center text-xl">
+                    <div className={`${roboto.className} my-10 text-center text-xl`}>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 3, duration: 2 }}
                         >
-                            A Metamask is required for chapter 2 and it looks like you don&apos;t have it installed
+                            A Metamask is required for chapter 2 and it looks like you don&apos;t have it
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 5, duration: 2 }}
                         >
-                            You can go to <Link className="underline" href="/chapter1"> chapter 1</Link> to learn how to install it
+                            You can click on this <a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">link</a> for installing it
+                        </ motion.p>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 6, duration: 2 }}
+                        >
+                            Or you can go to <Link className="underline" href="/chapter1"> chapter 1</Link> to learn
                         </ motion.p>
                     </div>
                 }
@@ -94,12 +101,10 @@ const Chap2 = () => {
                             transition={{ delay: 3, duration: 2 }}
                         >
                             {!isConnected &&
-                                <p>Click on Connect Wallet on the top right and select Mematask</p>
+                                <p >Click on Connect Wallet on the top right and select Mematask</p>
                             }
                             {isConnected && chain?.id !== 420 &&
                                 <p>We use a specific network for our adventure, please click on Wrong Network to switch on it</p>}
-                            {chain?.id === 420 &&
-                                <p>Please sign-in to save your progression</p>}
                         </ motion.div>
                         {chain?.id === 420 &&
                             <motion.div

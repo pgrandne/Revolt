@@ -108,7 +108,7 @@ const Hero = () => {
                         />
                     </a>
                 </div>
-                <p className="hidden sm:block fixed bottom-2 left-0 w-screen text-center">An adventure game for Web3 onboarding</p>
+                <p className="hidden sm:block fixed bottom-2 left-0 w-screen text-center -z-10">An adventure game to start exploring Web3</p>
                 <div
                     className="fixed bottom-3 right-3 flex gap-1"
                     onClick={() => { setModal(true) }}>
@@ -121,7 +121,6 @@ const Hero = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
                     </svg>
                 </div>
-
             </motion.div>
             {
                 modal &&
