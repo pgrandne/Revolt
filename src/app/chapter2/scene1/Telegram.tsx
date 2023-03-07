@@ -66,9 +66,12 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
 
     useEffect(() => {
         scrollToBottom()
-        console.log(stage)
-        if (stage === 4)
+        if (stage === 5) {
             askGas()
+            console.log('gas requested')
+            setStage(6)
+        }
+
     }, [stage]);
 
 
@@ -128,7 +131,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
                                     <ExternalDiscussion text={chap2[1]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussionLink delay={8} setStage={setStage} />
+                                    <ExternalDiscussionLink delay={7.5} setStage={setStage} />
                                 </>
                             }
                             {stage > 1 &&
@@ -142,22 +145,26 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     <ExternalDiscussion text={chap2[3]} name="Cincinnatus" delay={2} telegramWindow={true} />
                                     <ExternalDiscussion text={chap2[4]} name="Cincinnatus" delay={6} telegramWindow={true} />
                                     <ExternalDiscussion text={chap2[5]} name="Cincinnatus" delay={11} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={13} telegramWindow={true} />
                                 </>
                             }
                             {stage > 3 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
                                     <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[7]} name="Cincinnatus" delay={6} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={6} telegramWindow={true} />
                                 </>
                             }
                             {stage > 4 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={chap2[8]} name="Cincinnatus" delay={0.2} telegramWindow={true} />
-                                    <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={5} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[9]} name="Cincinnatus" delay={7} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[7]} name="Cincinnatus" delay={0.2} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[8]} name="Cincinnatus" delay={7} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 5 &&
+                                <>
+                                    <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={11} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[9]} name="Cincinnatus" delay={15} telegramWindow={true} />
                                 </>
                             }
                             <div id="end" />

@@ -54,7 +54,7 @@ const ExternalDiscussion = ({ delay, setStage }: {
             >
                 <div className="text-sm text-black">
                     You can click on
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.6 318.6" className="inline h-3 mx-1 cursor-pointer"
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.6 318.6" className="inline h-5 mx-1 cursor-pointer animate-pulse"
                         onClick={() => {
                             chain?.id === 420 ? addTokenFunction() : alert('wrong network')
                         }}>

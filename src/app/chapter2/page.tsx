@@ -43,7 +43,7 @@ const Chap2 = () => {
     return (
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto overflow-hidden`}>
             <motion.div
-                className="absolute top-3 right-3"
+                className="absolute top-3 left-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 3, duration: 2 }}
@@ -68,7 +68,7 @@ const Chap2 = () => {
                     Paradigm shift
                 </ motion.p>
                 {!wallet &&
-                    <div className={`${roboto.className} my-10 text-center text-xl`}>
+                    <div className={`${roboto.className} font-bold my-10 text-center text-xl`}>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -95,7 +95,7 @@ const Chap2 = () => {
                 {wallet &&
                     <>
                         <motion.div
-                            className="my-10 text-center text-xl"
+                            className={`${roboto.className} font-bold my-10 text-center text-xl`}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 3, duration: 2 }}
@@ -104,7 +104,7 @@ const Chap2 = () => {
                                 <p >Click on Connect Wallet on the top right and select Mematask</p>
                             }
                             {isConnected && chain?.id !== 420 &&
-                                <p>We use a specific network for our adventure, please click on Wrong Network to switch on it</p>}
+                                <p>Please click on Wrong Network to switch on Optimism Goerli</p>}
                         </ motion.div>
                         {chain?.id === 420 &&
                             <motion.div

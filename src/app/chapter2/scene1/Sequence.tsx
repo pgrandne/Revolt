@@ -7,7 +7,6 @@ import redactionPic from "@/img/newsroom1.png"
 import notifPic from "@/img/notif.png"
 import manPic from "@/img/azad-desk.png"
 import { Dispatch, SetStateAction } from "react";
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Sequence = ({ setTelegramWindow, telegramWindow }: {
     setTelegramWindow: Dispatch<SetStateAction<boolean>>
@@ -18,9 +17,6 @@ const Sequence = ({ setTelegramWindow, telegramWindow }: {
 
     return (
         <div className="relative flex flex-col justify-center h-full py-[5%]">
-            <div className="absolute top-3 right-3 z-30">
-                <ConnectButton />
-            </div>
             <motion.div
                 className="flex pr-[35%]"
                 initial={{ x: -100, opacity: 0 }}

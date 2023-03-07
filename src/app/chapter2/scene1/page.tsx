@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Sequence from './Sequence'
 import Telegram from "./Telegram";
 import SignInButton from "@/components/SigninButton";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Chap2s1 = () => {
     const [telegramWindow, setTelegramWindow] = useState(false)
@@ -18,6 +19,9 @@ const Chap2s1 = () => {
     return (
         <div className="flex flex-row">
             <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-1/6" />
+            <div className="absolute top-4 left-3 z-30">
+                <ConnectButton />
+            </div>
             <div className="relative basis-2/3 w-full overflow-hidden">
                 <Sequence setTelegramWindow={setTelegramWindow} telegramWindow={telegramWindow} />
             </div>
@@ -27,16 +31,17 @@ const Chap2s1 = () => {
                 }
             </div>
             {
-                stage === 5 &&
+                stage === 6 &&
                 <motion.div
                     className="fixed bottom-8 right-[33%] animate-pulse"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1, duration: 1 }}
+                    transition={{ delay: 19, duration: 1 }}
                 >
                     <SignInButton
                         onSuccess={({ address }) => setState((x) => ({ ...x, address }))}
                         onError={({ error }) => setState((x) => ({ ...x, error }))}
+                        arrow={true}
                     />
                 </motion.div>
             }

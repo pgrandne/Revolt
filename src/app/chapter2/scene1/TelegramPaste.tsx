@@ -31,7 +31,7 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, playerAddress, 
             setPlayerAddress(data.address)
         const JSONdata = JSON.stringify(data)
         if (typeof balanceUSDC !== 'undefined') {
-            if (parseInt(balanceUSDC.formatted) > 1000) {
+            if (parseInt(balanceUSDC.formatted) >= 1000) {
                 const text = "You have more than 1000 USDC, you don't need my money"
                 setAzadText([...azadText, `...${data.address.slice(15)}`, text])
                 console.log(azadText)
@@ -47,19 +47,19 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, playerAddress, 
                 })
                 if (response.ok) {
                     const text = "I just sent you some USDC, you should received it"
-                    setAzadText([...azadText, text])
+                    setAzadText([...azadText, `...${data.address.slice(15)}`, text])
                     setStage(stage + 1)
                 }
                 else {
                     const text = "I have some issues to send it, come back later"
-                    setAzadText([...azadText, text])
+                    setAzadText([...azadText, `...${data.address.slice(15)}`, text])
                     setStage(99)
                 }
             }
         }
         else {
             const text = "I have some issues to send it, come back later"
-            setAzadText([...azadText, text])
+            setAzadText([...azadText, `...${data.address.slice(15)}`, text])
             setStage(99)
         }
 
