@@ -6,10 +6,12 @@ import Sequence from './Sequence'
 import Telegram from "./Telegram";
 import SignInButton from "@/components/SigninButton";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import Modal from "@/components/Modal";
 
 const Chap2s1 = () => {
     const [telegramWindow, setTelegramWindow] = useState(false)
     const [stage, setStage] = useState(0)
+    const [modal, setModal] = useState(false)
     const [state, setState] = useState<{
         address?: string
         error?: Error
@@ -41,10 +43,12 @@ const Chap2s1 = () => {
                     <SignInButton
                         onSuccess={({ address }) => setState((x) => ({ ...x, address }))}
                         onError={({ error }) => setState((x) => ({ ...x, error }))}
+                        setModal={setModal}
                         arrow={true}
                     />
                 </motion.div>
             }
+            {modal && <Modal route='/construction' />}
         </div>
     )
 }

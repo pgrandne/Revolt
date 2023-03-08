@@ -2,17 +2,19 @@
 
 import { useAccount, useNetwork, useSignMessage } from 'wagmi'
 import { SiweMessage } from 'siwe'
-import { useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import ArrowButton from './ArrowButton'
 
 const SignInButton = ({
     onSuccess,
     onError,
+    setModal,
     arrow
 }: {
     onSuccess: (args: { address: string }) => void
     onError: (args: { error: Error }) => void
+    setModal: Dispatch<SetStateAction<boolean>>
     arrow?: boolean
 }) => {
     const router = useRouter()
@@ -71,15 +73,8 @@ const SignInButton = ({
                 body: JSON.stringify({ message, signature }),
             })
             if (!verifyRes.ok) throw new Error('Error verifying message')
-
+            setModal(true)
             setState((x) => ({ ...x, loading: false }))
-            alert("Progression saved! We are redirecting you to the next episode")
-            if (window.location.href.slice(-8) === "chapter2")
-                router.push('/chapter2/scene1')
-            else
-                router.push('/construction')
-
-
         } catch (error) {
             setState((x) => ({ ...x, loading: false, nonce: undefined }))
             fetchNonce()

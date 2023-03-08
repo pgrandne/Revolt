@@ -8,11 +8,13 @@ import { useNetwork, useAccount } from 'wagmi'
 import SignInButton from "@/components/SigninButton";
 import { useEffect, useState } from "react";
 import { handleEthereum } from "@/components/checkWallet";
+import Modal from "@/components/Modal";
 
 const Chap2 = () => {
     const { chain } = useNetwork()
     const { isConnected } = useAccount()
     const [wallet, setWallet] = useState(false)
+    const [modal, setModal] = useState(false)
 
     useEffect(() => {
         setWallet(handleEthereum());
@@ -116,14 +118,14 @@ const Chap2 = () => {
                                 <SignInButton
                                     onSuccess={({ address }) => setState((x) => ({ ...x, address }))}
                                     onError={({ error }) => setState((x) => ({ ...x, error }))}
+                                    setModal={setModal}
                                 />
                             </motion.div>
                         }
-
                     </>
                 }
-
             </div>
+            {modal && <Modal route='/chapter2/scene1' />}
         </div >
     )
 }
