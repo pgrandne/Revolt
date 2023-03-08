@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import bgPic from "@/img/equipment.jpg"
 import { useEffect, useState } from "react";
-import Modal from "./Modal";
+import ModalHome from "./ModalHome";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "./checkWallet";
 import github from "@/img/github-white.svg";
@@ -138,7 +138,7 @@ const Hero = () => {
             </motion.div>
             {
                 modal &&
-                <Modal setModal={setModal} />
+                <ModalHome setModal={setModal} />
             }
         </section >
     )

@@ -233,7 +233,7 @@ export const scene7Choices = [
 export const chap2 = [
     "Hey Azad, did you install a wallet?",
     "Alright, I will send you some funds now, in USDC currency. It's what we call a stablecoin, its value is pegged to dollars (1USDC = $1)",
-    "Have a look and click on the wallet extension on your browser. You should now be able to see USDC",
+    "Have a look and click on the wallet extension on your browser. You should now be able to see USDC in the 'Assets' tab",
     "I need your address to send you the funds now. It is the unique sequence of letters and numbers that starts with 0x……",
     "Once you clicked on the wallet extension you'll find it written just below the account name (which should be 'Account 1' in your case, as you've just installed it)",
     "Just click on it to copy your address in the clipboard and paste it here",

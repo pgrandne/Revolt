@@ -16,6 +16,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 }
                 else {
                     console.log('No .env variable')
+                    throw new TypeError('No env variable')
                 }
                 res.json({ ok: true })
             } catch (_error) {
