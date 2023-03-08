@@ -1,6 +1,6 @@
 import { withIronSessionApiRoute } from 'iron-session/next'
 import { NextApiRequest, NextApiResponse } from 'next'
-import { ironOptions } from './iron.config'
+import { ironOptions } from '../siwe/iron.config'
 import { SiweMessage } from 'siwe'
 import { createUser, getUserByAddress, updateUser } from '@/lib/prisma/users'
 
@@ -35,6 +35,5 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             res.status(405).end(`Method ${method} Not Allowed`)
     }
 }
-
 
 export default withIronSessionApiRoute(handler, ironOptions)
