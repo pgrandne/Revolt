@@ -18,8 +18,8 @@ import info from "@/img/info.svg"
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
-    const [modaldonation, setModalDonation] = useState(false)
-    const [modaldeck, setModalDeck] = useState(false)
+    const [modalDonation, setModalDonation] = useState(false)
+    const [modalDeck, setModalDeck] = useState(false)
 
     useEffect(() => {
         setWallet(handleEthereum());
@@ -142,11 +142,11 @@ const Hero = () => {
                 </div>
             </motion.div>
             {
-                modaldonation &&
+                modalDonation &&
                 <ModalDonation setModalDonation={setModalDonation} />
             }
             {
-                modaldeck &&
+                modalDeck &&
                 <ModalDeck setModalDeck={setModalDeck} />
             }
 
