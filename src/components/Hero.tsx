@@ -86,48 +86,48 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
             >
-                <div className="fixed bottom-3 left-3 flex gap-1 opacity-60">
+                <div className="fixed bottom-3 left-3 flex gap-1">
                     <a className="" href="https://github.com/pgrandne/revolte" target="_blank">
                         <Image
-                            className="h-8 object-contain cursor-pointer"
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={github}
                             alt="github"
                         />
                     </a>
                     <a href="https://www.linkedin.com/company/irruption-lab/" target="_blank">
                         <Image
-                            className="h-8 object-contain cursor-pointer"
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={linkedin}
                             alt="linkedin"
                         />
                     </a>
                     <a href="https://twitter.com/IrruptionLab" target="_blank">
                         <Image
-                            className="h-8 object-contain cursor-pointer"
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={twitter}
                             alt="twitter"
                         />
                     </a>
                 </div>
-                        <motion.div
-                            className="hidden sm:block fixed top-5 left-5 -z-10"
-                            initial={{ opacity: 0, x: -100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 6, duration: 1 }}
-                        >
-                            <p className="text-white text-opacity-60"> &gt;&gt; an adventure game to start exploring Web3</p>
-                        </motion.div>
-                
+                <motion.div
+                    className="hidden sm:block fixed top-5 left-5 -z-10"
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 6, duration: 1 }}
+                >
+                    <p className="text-white text-opacity-60">an adventure game to start exploring Web3</p>
+                </motion.div>
+
                 <div
-                    className="fixed bottom-3 right-3 flex gap-1 opacity-60"
+                    className="fixed bottom-3 right-3 flex gap-1"
                     onClick={() => { setModal(true) }}>
                     <Image
-                        className="h-8 object-contain cursor-pointer"
+                        className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                         src={donation}
                         alt="Donation"
                     />
                     <Image
-                        className="h-8 object-contain cursor-pointer"
+                        className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                         src={info}
                         alt="Info"
                     />
