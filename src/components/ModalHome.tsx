@@ -5,7 +5,7 @@ import Image from "next/image";
 import { perm_marker } from '@/utils/font'
 import roadmap from "@/img/roadmap.png"
 
-const Modal = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) => {
+const ModalHome = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) => {
     return (
         <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
             <div className={` bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 rounded-md text-center w-4/5`}>
@@ -27,4 +27,4 @@ const Modal = ({ setModal }: { setModal: Dispatch<SetStateAction<boolean>> }) =>
     )
 }
 
-export default Modal;
+export default ModalHome;
