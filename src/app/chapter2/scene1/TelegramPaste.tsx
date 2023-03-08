@@ -34,7 +34,6 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, playerAddress, 
             if (parseInt(balanceUSDC.formatted) >= 1000) {
                 const text = "You have more than 1000 USDC, you don't need my money"
                 setAzadText([...azadText, `${data.address}`, text])
-                console.log(azadText)
                 setStage(stage + 1)
             }
             else {

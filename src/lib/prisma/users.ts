@@ -1,12 +1,5 @@
 import prisma from '.'
-
-interface IUser {
-    id: string
-    address: string
-    createdAt: Date
-    lastUpdate: Date
-    progression: number
-}
+import { IProgression } from '../interface'
 
 export async function getUsers() {
     try {
@@ -21,7 +14,7 @@ export async function getUsers() {
     }
 }
 
-export async function createUser(address: string, progression: number) {
+export async function createUser(address: string, progression: IProgression) {
     try {
         const creationDate = new Date()
         await prisma.$connect()
@@ -30,7 +23,9 @@ export async function createUser(address: string, progression: number) {
                 address: address,
                 createdAt: creationDate,
                 lastUpdate: creationDate,
-                progression: progression
+                chapter: progression.chapter,
+                episode: progression.episode,
+                scene: progression.scene
             }
         })
         await prisma.$disconnect()
@@ -41,24 +36,17 @@ export async function createUser(address: string, progression: number) {
     }
 }
 
-export async function updateUser(address: string, uri: string) {
+export async function updateUser(address: string, progression: IProgression) {
     try {
         const updateDate = new Date()
-        let prog = 0
-        if (uri.slice(-8) === "chapter2") {
-            prog = 200
-            console.log('chapter2')
-        }
-        else {
-            prog = 201
-            console.log('scene1')
-        }
         await prisma.$connect()
         const userFromDB = await prisma.user.update({
             where: { address: address },
             data: {
                 lastUpdate: updateDate,
-                progression: prog
+                chapter: progression.chapter,
+                episode: progression.episode,
+                scene: progression.scene
             }
         })
         await prisma.$disconnect()

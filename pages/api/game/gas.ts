@@ -6,7 +6,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     switch (method) {
         case 'POST':
             try {
-                console.log('request')
                 const { address } = req.body
                 const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
                 if (typeof process.env.PRIVATE_KEY !== "undefined") {

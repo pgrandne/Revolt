@@ -5,7 +5,7 @@ import { perm_marker, roboto } from '@/utils/font';
 import Link from "next/link";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useNetwork, useAccount } from 'wagmi'
-import SignInButton from "@/components/SaveButton";
+import SaveButton from "@/components/SaveButton";
 import { useEffect, useState } from "react";
 import { handleEthereum } from "@/components/checkWallet";
 import Modal from "@/components/Modal";
@@ -15,30 +15,13 @@ const Chap2 = () => {
     const { isConnected } = useAccount()
     const [wallet, setWallet] = useState(false)
     const [modal, setModal] = useState(false)
-
+    const progression = {
+        chapter: 2,
+        episode: 0,
+        scene: 0
+    }
     useEffect(() => {
         setWallet(handleEthereum());
-    }, [])
-
-    const [state, setState] = useState<{
-        address?: string
-        error?: Error
-        loading?: boolean
-    }>({})
-
-    useEffect(() => {
-        const handler = async () => {
-            try {
-                const res = await fetch('/api/siwe/me')
-                const json = await res.json()
-                setState((x) => ({ ...x, address: json.address }))
-            } catch (_error) { }
-        }
-        // 1. page loads
-        handler()
-        // 2. window is focused (in case user logs out of another window)
-        window.addEventListener('focus', handler)
-        return () => window.removeEventListener('focus', handler)
     }, [])
 
 
@@ -115,9 +98,8 @@ const Chap2 = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ type: 'spring', delay: 1, duration: 3 }}
                             >
-                                <SignInButton
-                                    onSuccess={({ address }) => setState((x) => ({ ...x, address }))}
-                                    onError={({ error }) => setState((x) => ({ ...x, error }))}
+                                <SaveButton
+                                    progression={progression}
                                     setModal={setModal}
                                 />
                             </motion.div>

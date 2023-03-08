@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useState } from 'react'
 import Sequence from './Sequence'
 import Telegram from "./Telegram";
-import SignInButton from "@/components/SigninButton";
+import SaveButton from "@/components/SaveButton";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Modal from "@/components/Modal";
 
@@ -12,11 +12,11 @@ const Chap2s1 = () => {
     const [telegramWindow, setTelegramWindow] = useState(false)
     const [stage, setStage] = useState(0)
     const [modal, setModal] = useState(false)
-    const [state, setState] = useState<{
-        address?: string
-        error?: Error
-        loading?: boolean
-    }>({})
+    const progression = {
+        chapter: 2,
+        episode: 1,
+        scene: 1
+    }
 
     return (
         <div className="flex flex-row">
@@ -40,10 +40,9 @@ const Chap2s1 = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 19, duration: 1 }}
                 >
-                    <SignInButton
-                        onSuccess={({ address }) => setState((x) => ({ ...x, address }))}
-                        onError={({ error }) => setState((x) => ({ ...x, error }))}
+                    <SaveButton
                         setModal={setModal}
+                        progression={progression}
                         arrow={true}
                     />
                 </motion.div>
