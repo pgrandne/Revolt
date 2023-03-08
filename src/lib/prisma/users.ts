@@ -18,18 +18,18 @@ export async function createUser(address: string, progression: IProgression) {
     try {
         const creationDate = new Date()
         await prisma.$connect()
-        // const userFromDB = await prisma.user.create({
-        //     data: {
-        //         address: address,
-        //         createdAt: creationDate,
-        //         lastUpdate: creationDate,
-        //         chapter: progression.chapter,
-        //         episode: progression.episode,
-        //         scene: progression.scene
-        //     }
-        // })
+        const userFromDB = await prisma.user.create({
+            data: {
+                address: address,
+                createdAt: creationDate,
+                lastUpdate: creationDate,
+                chapter: 666,
+                episode: 666,
+                scene: 666
+            }
+        })
         await prisma.$disconnect()
-        // return { user: userFromDB }
+        return { user: userFromDB }
     } catch (error) {
         await prisma.$disconnect()
         return { error }
@@ -40,17 +40,17 @@ export async function updateUser(address: string, progression: IProgression) {
     try {
         const updateDate = new Date()
         await prisma.$connect()
-        // const userFromDB = await prisma.user.update({
-        //     where: { address: address },
-        //     data: {
-        //         lastUpdate: updateDate,
-        //         chapter: progression.chapter,
-        //         episode: progression.episode,
-        //         scene: progression.scene
-        //     }
-        // })
+        const userFromDB = await prisma.user.update({
+            where: { address: address },
+            data: {
+                lastUpdate: updateDate,
+                chapter: 666,
+                episode: 666,
+                scene: 666
+            }
+        })
         await prisma.$disconnect()
-        // return { user: userFromDB }
+        return { user: userFromDB }
     } catch (error) {
         await prisma.$disconnect()
         return { error }
