@@ -23,9 +23,9 @@ export async function createUser(address: string, progression: IProgression) {
                 address: address,
                 createdAt: creationDate,
                 lastUpdate: creationDate,
-                chapter: 666,
-                episode: 666,
-                scene: 666
+                chapter: progression.chapter,
+                episode: progression.episode,
+                scene: progression.scene
             }
         })
         await prisma.$disconnect()
@@ -44,9 +44,9 @@ export async function updateUser(address: string, progression: IProgression) {
             where: { address: address },
             data: {
                 lastUpdate: updateDate,
-                chapter: 666,
-                episode: 666,
-                scene: 666
+                chapter: progression.chapter,
+                episode: progression.episode,
+                scene: progression.scene
             }
         })
         await prisma.$disconnect()
