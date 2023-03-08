@@ -5,7 +5,7 @@ import { perm_marker, roboto } from '@/utils/font';
 import Link from "next/link";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useNetwork, useAccount } from 'wagmi'
-import SignInButton from "@/components/SigninButton";
+import SignInButton from "@/components/SaveButton";
 import { useEffect, useState } from "react";
 import { handleEthereum } from "@/components/checkWallet";
 import Modal from "@/components/Modal";
