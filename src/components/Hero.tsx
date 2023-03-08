@@ -87,21 +87,21 @@ const Hero = () => {
                 transition={{ delay: 4, duration: 1 }}
             >
                 <div className="fixed bottom-3 left-3 flex gap-1">
-                    <a className="" href="https://github.com/pgrandne/revolte" target="_blank">
+                    <a className="" href="https://github.com/pgrandne/revolte" target="_blank" rel="noreferrer">
                         <Image
                             className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={github}
                             alt="github"
                         />
                     </a>
-                    <a href="https://www.linkedin.com/company/irruption-lab/" target="_blank">
+                    <a href="https://www.linkedin.com/company/irruption-lab/" target="_blank" rel="noreferrer">
                         <Image
                             className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={linkedin}
                             alt="linkedin"
                         />
                     </a>
-                    <a href="https://twitter.com/IrruptionLab" target="_blank">
+                    <a href="https://twitter.com/IrruptionLab" target="_blank" rel="noreferrer">
                         <Image
                             className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={twitter}

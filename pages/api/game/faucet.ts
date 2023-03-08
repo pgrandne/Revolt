@@ -11,6 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             try {
                 const { address } = req.body
                 const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
+                console.log('USDC_CONTRACT')
                 if (typeof process.env.PRIVATE_KEY !== "undefined" && typeof process.env.USDC_CONTRACT !== "undefined") {
                     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
                     const contract = new ethers.Contract(process.env.USDC_CONTRACT, erc20ABI, wallet);
