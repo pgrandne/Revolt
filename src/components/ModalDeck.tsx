@@ -13,7 +13,7 @@ const ModalDeck = ({ setModalDeck }: { setModalDeck: Dispatch<SetStateAction<boo
                 <div className="flex justify-center">
                     <p className="inline font-sans sm:block text-sm md:text-xl my-4 font-bold"><span className={`${perm_marker.className} md:text-3xl`}>Revolte </span> an interactive novel to onboard Web2 users to Web3</p>
                 </div>
-                <p className="font-sans sm:block justify-center text-xs md:text-base mb-4 font-bold ">Download our Pitch Deck</p>
+                <p className="font-sans sm:block justify-center text-sm md:text-xl mb-4 font-bold ">Discover our Pitch Deck ( <a className="underline" target="_blank" href="https://www.canva.com/design/DAFaoOaGU3A/Jj8ILlofzMJ5_gv8nlivKg/view?utm_content=DAFaoOaGU3A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Online</a> / <a className="underline" target="_blank" href="https://drive.google.com/uc?id=1heBnCKRaljTbxGf0CcZR3-e65KASU53A&export=download">Download</a> )</p>
                 <Image
                     className="object-contain transform md:scale-75"
                     src={roadmap}

@@ -11,7 +11,7 @@ const ModalDonation = ({ setModalDonation }: { setModalDonation: Dispatch<SetSta
         <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0">
             <div className={` bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 rounded-md text-center w-4/5`}>
                 <div className="flex justify-center">
-                    <p className="inline font-sans sm:block text-sm md:text-xl my-4 font-bold"><span className={`${perm_marker.className} md:text-3xl`}>Revolte </span>     is an open source project, is you want to support us, you can make a donation at:</p>
+                    <p className="inline font-sans sm:block text-sm md:text-xl my-4 font-bold"><span className={`${perm_marker.className} md:text-3xl`}>Revolte </span>     is an open source project. If you want to support us, you can make a donation at:</p>
                 </div>
                 <p className="font-sans sm:block justify-center text-xs md:text-base mb-4 font-bold ">0x94b9420F65fB3ec966d96BB034b35AF86487D929</p>
                 <Image
