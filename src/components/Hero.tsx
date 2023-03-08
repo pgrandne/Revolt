@@ -6,7 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import bgPic from "@/img/equipment.jpg"
 import { useEffect, useState } from "react";
-import ModalHome from "./ModalHome";
+import ModalDonation from "./ModalDonation";
+import ModalDeck from "./ModalDeck";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "./checkWallet";
 import github from "@/img/github-white.svg";
@@ -17,7 +18,8 @@ import info from "@/img/info.svg"
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
-    const [modal, setModal] = useState(false)
+    const [modaldonation, setModalDonation] = useState(false)
+    const [modaldeck, setModalDeck] = useState(false)
 
     useEffect(() => {
         setWallet(handleEthereum());
@@ -118,28 +120,36 @@ const Hero = () => {
                     <p className="text-white text-opacity-60">an adventure game to start exploring Web3</p>
                 </motion.div>
 
+                <div className="fixed bottom-3 right-3 flex gap-1">                
                 <div
-                    className="fixed bottom-3 right-3 flex gap-1"
-                    onClick={() => { setModal(true) }}>
+                    className=""
+                    onClick={() => { setModalDonation(true) }}>
                     <Image
                         className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                         src={donation}
                         alt="Donation"
-                    />
+                    />                                        
+                </div>
+                <div
+                    className=""
+                    onClick={() => { setModalDeck(true) }}>                    
                     <Image
                         className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                         src={info}
                         alt="Info"
-                    />
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-8 cursor-pointer">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-                    </svg> */}
+                    />                    
+                </div>
                 </div>
             </motion.div>
             {
-                modal &&
-                <ModalHome setModal={setModal} />
+                modaldonation &&
+                <ModalDonation setModalDonation={setModalDonation} />
             }
+            {
+                modaldeck &&
+                <ModalDeck setModalDeck={setModalDeck} />
+            }
+
         </section >
     )
 }
