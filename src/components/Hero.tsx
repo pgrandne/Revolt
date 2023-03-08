@@ -13,6 +13,7 @@ import github from "@/img/github-white.svg";
 import linkedin from "@/img/linkedin-white.svg";
 import twitter from "@/img/twitter-white.svg";
 import donation from "@/img/donation2.svg"
+import info from "@/img/info.svg"
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
@@ -85,22 +86,22 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
             >
-                <div className="fixed bottom-3 left-3 flex gap-1">
-                    <a className="" href="https://github.com/pgrandne/revolte">
+                <div className="fixed bottom-3 left-3 flex gap-1 opacity-60">
+                    <a className="" href="https://github.com/pgrandne/revolte" target="_blank">
                         <Image
                             className="h-8 object-contain cursor-pointer"
                             src={github}
                             alt="github"
                         />
                     </a>
-                    <a href="https://www.linkedin.com/company/irruption-lab/">
+                    <a href="https://www.linkedin.com/company/irruption-lab/" target="_blank">
                         <Image
                             className="h-8 object-contain cursor-pointer"
                             src={linkedin}
                             alt="linkedin"
                         />
                     </a>
-                    <a href="https://twitter.com/IrruptionLab">
+                    <a href="https://twitter.com/IrruptionLab" target="_blank">
                         <Image
                             className="h-8 object-contain cursor-pointer"
                             src={twitter}
@@ -108,18 +109,31 @@ const Hero = () => {
                         />
                     </a>
                 </div>
-                <p className="hidden sm:block fixed top-2 left-2 -z-10">An adventure game to start exploring Web3</p>
+                        <motion.div
+                            className="hidden sm:block fixed top-5 left-5 -z-10"
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 6, duration: 1 }}
+                        >
+                            <p className="text-white text-opacity-60"> &gt;&gt; an adventure game to start exploring Web3</p>
+                        </motion.div>
+                
                 <div
-                    className="fixed bottom-3 right-3 flex gap-1"
+                    className="fixed bottom-3 right-3 flex gap-1 opacity-60"
                     onClick={() => { setModal(true) }}>
                     <Image
                         className="h-8 object-contain cursor-pointer"
                         src={donation}
-                        alt="donation"
+                        alt="Donation"
                     />
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-8 cursor-pointer">
+                    <Image
+                        className="h-8 object-contain cursor-pointer"
+                        src={info}
+                        alt="Info"
+                    />
+                    {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-8 cursor-pointer">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-                    </svg>
+                    </svg> */}
                 </div>
             </motion.div>
             {
