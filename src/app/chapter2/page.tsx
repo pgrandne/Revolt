@@ -59,21 +59,21 @@ const Chap2 = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 3, duration: 2 }}
                         >
-                            A Metamask is required for chapter 2 and it looks like you don&apos;t have it
+                            Metamask is required for Chapter 2 and it looks like you don&apos;t have it installed.
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 5, duration: 2 }}
                         >
-                            You can click on this <a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">link</a> for installing it
+                            You can click on this <a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">link</a> to install it.
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 6, duration: 2 }}
                         >
-                            Or you can go to <Link className="underline" href="/chapter1"> chapter 1</Link> to learn
+                            Or you can go to <Link className="underline" href="/chapter1/scene1"> Chapter 1</Link> to rediscover the whole story, and understand how Metamask works.
                         </ motion.p>
                     </div>
                 }
