@@ -6,17 +6,20 @@ import Link from "next/link";
 import Image from "next/image";
 import bgPic from "@/img/equipment.jpg"
 import { useEffect, useState } from "react";
-import Modal from "./Modal";
+import ModalDonation from "./ModalDonation";
+import ModalDeck from "./ModalDeck";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "./checkWallet";
-import github from '@/img/github-white.svg'
-
-
-
+import github from "@/img/github-white.svg";
+import linkedin from "@/img/linkedin-white.svg";
+import twitter from "@/img/twitter-white.svg";
+import donation from "@/img/donation2.svg"
+import info from "@/img/info.svg"
 
 const Hero = () => {
     const [wallet, setWallet] = useState(false)
-    const [modal, setModal] = useState(false)
+    const [modalDonation, setModalDonation] = useState(false)
+    const [modalDeck, setModalDeck] = useState(false)
 
     useEffect(() => {
         setWallet(handleEthereum());
@@ -81,21 +84,72 @@ const Hero = () => {
                 </div>
             </div>
             <motion.div
-                className="bg-green-500"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
-                onClick={() => { setModal(true) }}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="fixed bottom-3 right-3 w-6 h-6 cursor-pointer">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-                </svg>
+                <div className="fixed bottom-3 left-3 flex gap-1">
+                    <a className="" href="https://github.com/pgrandne/revolte" target="_blank" rel="noreferrer">
+                        <Image
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            src={github}
+                            alt="github"
+                        />
+                    </a>
+                    <a href="https://www.linkedin.com/company/irruption-lab/" target="_blank" rel="noreferrer">
+                        <Image
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            src={linkedin}
+                            alt="linkedin"
+                        />
+                    </a>
+                    <a href="https://twitter.com/IrruptionLab" target="_blank" rel="noreferrer">
+                        <Image
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            src={twitter}
+                            alt="twitter"
+                        />
+                    </a>
+                </div>
+                <motion.div
+                    className="hidden sm:block fixed top-5 left-5 -z-10"
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 6, duration: 1 }}
+                >
+                    <p className="text-white text-opacity-60">an adventure game to start exploring Web3</p>
+                </motion.div>
 
+                <div className="fixed bottom-3 right-3 flex gap-1">                
+                <div
+                    className=""
+                    onClick={() => { setModalDonation(true) }}>
+                    <Image
+                        className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                        src={donation}
+                        alt="Donation"
+                    />                                        
+                </div>
+                <div
+                    className=""
+                    onClick={() => { setModalDeck(true) }}>                    
+                    <Image
+                        className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                        src={info}
+                        alt="Info"
+                    />                    
+                </div>
+                </div>
             </motion.div>
             {
-                modal &&
-                <Modal setModal={setModal} />
+                modalDonation &&
+                <ModalDonation setModalDonation={setModalDonation} />
             }
+            {
+                modalDeck &&
+                <ModalDeck setModalDeck={setModalDeck} />
+            }
+
         </section >
     )
 }

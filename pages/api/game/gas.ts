@@ -8,13 +8,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             try {
                 const { address } = req.body
                 const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
-                if (typeof process.env.PRIVATE_KEY !== "undefined" && typeof process.env.USDC_CONTRACT !== "undefined") {
+                if (typeof process.env.PRIVATE_KEY !== "undefined") {
                     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
                     const result = wallet.sendTransaction({ to: address, value: ethers.utils.parseEther("0.001") })
                     console.log(`Sent 0.001 eth to address ${address}`)
                 }
                 else {
                     console.log('No .env variable')
+                    throw new TypeError('No env variable')
                 }
                 res.json({ ok: true })
             } catch (_error) {
@@ -27,6 +28,5 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             res.status(405).end(`Method ${method} Not Allowed`)
     }
 }
-
 
 export default handler

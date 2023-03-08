@@ -229,3 +229,33 @@ export const scene7Choices = [
         choice2: "It gave me hard time but I finally made it"
     },
 ]
+
+export const chap2 = [
+    "Hey Azad, did you install a wallet?",
+    "Alright, I will send you some funds now, in USDC currency. It's what we call a stablecoin, its value is pegged to dollars (1USDC = $1)",
+    "Have a look and click on the wallet extension on your browser. You should now be able to see USDC in the 'Assets' tab",
+    "I need your address to send you the funds now. It is the unique sequence of letters and numbers that starts with 0x……",
+    "Once you clicked on the wallet extension you'll find it written just below the account name (which should be 'Account 1' in your case, as you've just installed it)",
+    "Just click on it to copy your address in the clipboard and paste it here",
+    "In order to do transactions on this network, you will also need some “gas”. It's like the gasoline for your car, if you want to run it, you'll need to fill the tank with the appropriate fuel",
+    "Basically this “gas” is a specific currency, used to paid your own transactions. On this network this currency is called ETH",
+    "But you know when you use your bankcard you pay a fee too! The difference is just that you don't care about it because the merchant pays it for you!",
+    "Sorry I need to go, I'll contact you very soon"
+
+]
+
+export const chap2Choices = [
+    {
+        choice1: "Yes",
+        choice2: "I installed Metamask as you said"
+    },
+    {
+        choice1: "Yes I see it",
+        choice2: "I can only see “0 USDC“"
+    },
+    {
+        choice1: "You mean it's required to pay for each transaction? ",
+        choice2: "(say nothing)"
+    },
+
+]
