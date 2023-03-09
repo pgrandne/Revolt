@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import ModalDonation from "./ModalDonation";
 import ModalDeck from "./ModalDeck";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { handleEthereum } from "./checkWallet";
+import { handleEthereum } from "../lib/checkWallet";
 import github from "@/img/github-white.svg";
 import linkedin from "@/img/linkedin-white.svg";
 import twitter from "@/img/twitter-white.svg";
@@ -120,25 +120,25 @@ const Hero = () => {
                     <p className="text-white text-opacity-60">an adventure game to start exploring Web3</p>
                 </motion.div>
 
-                <div className="fixed bottom-3 right-3 flex gap-1">                
-                <div
-                    className=""
-                    onClick={() => { setModalDonation(true) }}>
-                    <Image
-                        className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
-                        src={donation}
-                        alt="Donation"
-                    />                                        
-                </div>
-                <div
-                    className=""
-                    onClick={() => { setModalDeck(true) }}>                    
-                    <Image
-                        className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
-                        src={info}
-                        alt="Info"
-                    />                    
-                </div>
+                <div className="fixed bottom-3 right-3 flex gap-1">
+                    <div
+                        className=""
+                        onClick={() => { setModalDonation(true) }}>
+                        <Image
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            src={donation}
+                            alt="Donation"
+                        />
+                    </div>
+                    <div
+                        className=""
+                        onClick={() => { setModalDeck(true) }}>
+                        <Image
+                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            src={info}
+                            alt="Info"
+                        />
+                    </div>
                 </div>
             </motion.div>
             {

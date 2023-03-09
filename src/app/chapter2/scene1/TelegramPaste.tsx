@@ -46,19 +46,19 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, playerAddress, 
                 })
                 if (response.ok) {
                     const text = "I just sent you some USDC, you should received it"
-                    setAzadText([...azadText, `...${data.address}`, text])
+                    setAzadText([...azadText, `${data.address}`, text])
                     setStage(stage + 1)
                 }
                 else {
                     const text = "I have some issues to send it, come back later"
-                    setAzadText([...azadText, `...${data.address}`, text])
+                    setAzadText([...azadText, `${data.address}`, text])
                     setStage(99)
                 }
             }
         }
         else {
             const text = "I have some issues to send it, come back later"
-            setAzadText([...azadText, `...${data.address}`, text])
+            setAzadText([...azadText, `${data.address}`, text])
             setStage(99)
         }
     }

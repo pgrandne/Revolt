@@ -7,6 +7,7 @@ import Telegram from "./Telegram";
 import SaveButton from "@/components/SaveButton";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Modal from "@/components/Modal";
+import Recover from "@/components/Recover";
 
 const Chap2s1 = () => {
     const [telegramWindow, setTelegramWindow] = useState(false)
@@ -24,6 +25,9 @@ const Chap2s1 = () => {
             <div className="absolute top-4 left-3 z-30">
                 <ConnectButton />
             </div>
+            {/* <div className="absolute top-4 left-80 z-30">
+                <Recover />
+            </div> */}
             <div className="relative basis-2/3 w-full overflow-hidden">
                 <Sequence setTelegramWindow={setTelegramWindow} telegramWindow={telegramWindow} />
             </div>

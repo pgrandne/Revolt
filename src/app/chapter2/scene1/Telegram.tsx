@@ -74,7 +74,6 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
 
     }, [stage]);
 
-
     return (
         <motion.div
             className="flex w-full h-full overflow-hidden antialiased rounded-md"
