@@ -10,8 +10,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
                 if (typeof process.env.PRIVATE_KEY !== "undefined") {
                     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
-                    const result = (await wallet.sendTransaction({ to: address, value: ethers.utils.parseEther("0.001") })).wait()
-                    console.log(result)
+                    const result = wallet.sendTransaction({ to: address, value: ethers.utils.parseEther("0.001") })
+                        .then()
                     console.log(`Sent 0.001 eth to address ${address}`)
                 }
                 else {
