@@ -11,6 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 if (typeof process.env.PRIVATE_KEY !== "undefined") {
                     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
                     const result = wallet.sendTransaction({ to: address, value: ethers.utils.parseEther("0.001") })
+                    console.log(result)
                     console.log(`Sent 0.001 eth to address ${address}`)
                 }
                 else {
