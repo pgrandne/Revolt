@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import ModalDonation from "./ModalDonation";
 import ModalDeck from "./ModalDeck";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { handleEthereum } from "../lib/checkWallet";
+import { handleEthereum } from "../utils/checkWallet";
 import github from "@/img/github-white.svg";
 import linkedin from "@/img/linkedin-white.svg";
 import twitter from "@/img/twitter-white.svg";

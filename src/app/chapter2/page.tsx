@@ -7,7 +7,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useNetwork, useAccount } from 'wagmi'
 import SaveButton from "@/components/SaveButton";
 import { useEffect, useState } from "react";
-import { handleEthereum } from "@/lib/checkWallet";
+import { handleEthereum } from "@/utils/checkWallet";
 import Modal from "@/components/Modal";
 
 const Chap2 = () => {
