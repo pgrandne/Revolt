@@ -10,12 +10,10 @@ import ExternalDiscussionLink from "./ExternalDiscussionLink";
 import TelegramPaste from "./TelegramPaste";
 import TelegramChoices from "@/components/TelegramChoices";
 import AzadDiscussion from "@/components/AzadDiscussion";
-import { useAccount, useBalance } from 'wagmi'
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
-    const { address } = useAccount()
     const [azadText, setAzadText] = useState<string[]>([])
-    const [playerAddress, setPlayerAddress] = useState(address)
+    const [playerAddress, setPlayerAddress] = useState('')
     const [externalAnswer, setExternalAnswer] = useState('')
     const messageEnd = document.getElementById("end");
     const scrollToBottom = () => {
@@ -23,56 +21,40 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
             messageEnd.scrollIntoView({ behavior: "smooth" })
     };
 
-    const { data: balanceEther } = useBalance({
-        address: playerAddress,
-        chainId: 420,
-        watch: true
-    })
-
-    const askGas = async () => {
-        if (typeof balanceEther !== 'undefined') {
-            if (parseFloat(balanceEther.formatted) >= 0.001) {
-                const text = "you have already some gas, don't need mine"
-                setExternalAnswer(text)
-            }
-
-            else {
-                const data = { address: playerAddress }
-                const response = await fetch('/api/game/gas', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                })
-                if (response.ok) {
-                    const text = "I just sent you some gas : eth, you should received it"
-                    setExternalAnswer(text)
-                }
-                else {
-                    const text = "I have some issues to send it, come back later"
-                    setExternalAnswer(text)
-                    setStage(99)
-                }
-            }
-        }
-        else {
-            const text = "I have some issues to send it, come back later"
-            setExternalAnswer(text)
-            setStage(99)
-        }
-
-    }
-
     useEffect(() => {
         scrollToBottom()
-        if (stage === 5) {
+        if (stage === 6) {
             askGas()
             console.log('gas requested')
-            setStage(6)
+            setStage(7)
         }
 
     }, [stage]);
+
+    const askGas = async () => {
+        let text
+        const data = { address: playerAddress }
+        const response = await fetch('/api/game/gas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        if (response.ok) {
+            text = "I just sent you some gas : eth, you should received it"
+        }
+        else {
+            if (response.status === 423) {
+                text = "you have already some gas, don't need mine"
+            }
+            else {
+                text = "I have some issues to send it, come back later"
+                setStage(98)
+            }
+        }
+        setExternalAnswer(text)
+    }
 
     return (
         <motion.div
@@ -150,20 +132,30 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
                                     <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                </>
+                            }
+                            {stage > 4 && stage < 99 &&
+                                <>
                                     <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={6} telegramWindow={true} />
                                 </>
                             }
-                            {stage > 4 &&
+                            {stage > 5 && stage < 99 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={chap2[7]} name="Cincinnatus" delay={0.2} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[8]} name="Cincinnatus" delay={7} telegramWindow={true} />
+                                    {stage < 98 &&
+                                        <>
+                                            <ExternalDiscussion text={chap2[7]} name="Cincinnatus" delay={0.2} telegramWindow={true} />
+                                            <ExternalDiscussion text={chap2[8]} name="Cincinnatus" delay={7} telegramWindow={true} />
+                                        </>
+                                    }
                                 </>
                             }
-                            {stage > 5 &&
+                            {stage > 6 && stage < 99 &&
                                 <>
-                                    <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={11} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[9]} name="Cincinnatus" delay={15} telegramWindow={true} />
+                                    <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    {stage < 98 &&
+                                        <ExternalDiscussion text={chap2[9]} name="Cincinnatus" delay={15} telegramWindow={true} />
+                                    }
                                 </>
                             }
                             <div id="end" />
@@ -176,9 +168,9 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                         <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={chap2Choices[1]} />
                     }
                     {stage === 3 &&
-                        <TelegramPaste stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} playerAddress={playerAddress} setPlayerAddress={setPlayerAddress} />
+                        <TelegramPaste stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} setPlayerAddress={setPlayerAddress} />
                     }
-                    {stage === 4 &&
+                    {stage === 5 &&
                         <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={chap2Choices[2]} />
                     }
                 </div>

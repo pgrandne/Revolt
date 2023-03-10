@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { ethers } from 'ethers'
+import { erc20ABI } from 'wagmi'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { method } = req
@@ -8,20 +9,43 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             try {
                 const { address } = req.body
                 const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
-                if (typeof process.env.PRIVATE_KEY !== "undefined") {
+                if (typeof process.env.PRIVATE_KEY !== "undefined" && typeof process.env.USDC_CONTRACT !== "undefined") {
                     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
-                    const result = wallet.sendTransaction({ to: address, value: ethers.utils.parseEther("0.001") })
-                        .then()
-                    console.log(`Sent 0.001 eth to address ${address}`)
+                    const contract = new ethers.Contract(process.env.USDC_CONTRACT, erc20ABI, wallet);
+                    const balanceUSDC = (await contract.balanceOf(address) / 10 ** 6).toString()
+                    console.log(`balance USDC: ${balanceUSDC}`)
+                    const amount = ethers.utils.parseEther("0.001")
+                    const balanceETH = (await provider.getBalance(address)).toString()
+                    if (parseInt(balanceETH) >= amount.toNumber()) {
+                        const error = new Error('Cannot use faucet because already have ETH')
+                        error.name = 'balance'
+                        throw error
+
+                    }
+                    else {
+                        const transaction = {
+                            to: address,
+                            value: amount,
+                        }
+                        const result = await wallet.sendTransaction(transaction)
+                        const receipt = await result.wait()
+                        console.log(receipt)
+                        console.log(`Sent 0.001 eth to address ${address}`)
+                    }
                 }
                 else {
-                    console.log('No .env variable')
-                    throw new TypeError('No env variable')
+                    const error = new Error('No env variable')
+                    error.name = 'env'
+                    throw error
                 }
                 res.json({ ok: true })
             } catch (_error) {
                 console.error(_error)
-                res.json({ ok: false })
+                switch (_error.name) {
+                    case 'env': res.status(422).end(_error.message)
+                    case 'balance': res.status(423).end(_error.message)
+                    default: res.status(500).end('Unknown error')
+                }
             }
             break
         default:

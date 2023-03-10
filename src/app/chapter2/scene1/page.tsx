@@ -37,7 +37,7 @@ const Chap2s1 = () => {
                 }
             </div>
             {
-                stage === 6 &&
+                stage === 7 &&
                 <motion.div
                     className="fixed bottom-8 right-[33%] animate-pulse"
                     initial={{ opacity: 0 }}

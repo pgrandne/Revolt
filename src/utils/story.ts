@@ -241,7 +241,6 @@ export const chap2 = [
     "Basically this “gas” is a specific currency, used to paid your own transactions. On this network this currency is called ETH",
     "But you know when you use your bankcard you pay a fee too! The difference is just that you don't care about it because the merchant pays it for you!",
     "Sorry I need to go, I'll contact you very soon"
-
 ]
 
 export const chap2Choices = [

@@ -1,65 +1,46 @@
-import { Dispatch, SetStateAction, useState } from "react"
-import { useBalance } from 'wagmi'
+'use client'
 
-const TelegramPaste = ({ stage, setStage, azadText, setAzadText, playerAddress, setPlayerAddress }: {
+import { Dispatch, SetStateAction } from "react"
+
+const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddress }: {
     stage: number,
     setStage: Dispatch<SetStateAction<number>>,
     azadText: string[],
     setAzadText: Dispatch<SetStateAction<string[]>>,
-    playerAddress?: `0x${string}`,
-    setPlayerAddress: Dispatch<SetStateAction<`0x${string}` | undefined>>
+    setPlayerAddress: Dispatch<SetStateAction<string>>,
 }) => {
-    const usdcAddress = '0xcbce2891F86b69b3eF61dF8CE69e3522a0483FB3'
-    const { data: balanceUSDC } = useBalance({
-        address: playerAddress,
-        token: usdcAddress,
-        chainId: 420,
-        watch: true
-    })
-
-    const { data: balanceEther } = useBalance({
-        address: playerAddress,
-        chainId: 420,
-        watch: true
-    })
-
     const sendAddress = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const target = event.currentTarget
         const data = { address: target.address.value }
-        if (typeof setPlayerAddress !== 'undefined')
-            setPlayerAddress(data.address)
         const JSONdata = JSON.stringify(data)
-        if (typeof balanceUSDC !== 'undefined') {
-            if (parseInt(balanceUSDC.formatted) >= 1000) {
-                const text = "You have more than 1000 USDC, you don't need my money"
-                setAzadText([...azadText, `${data.address}`, text])
-                setStage(stage + 1)
-            }
-            else {
-                const response = await fetch('/api/game/faucet', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                })
-                if (response.ok) {
-                    const text = "I just sent you some USDC, you should received it"
-                    setAzadText([...azadText, `${data.address}`, text])
-                    setStage(stage + 1)
-                }
-                else {
-                    const text = "I have some issues to send it, come back later"
-                    setAzadText([...azadText, `${data.address}`, text])
-                    setStage(99)
-                }
-            }
+        setAzadText([...azadText, `${data.address}`])
+        setStage(stage + 1)
+        setPlayerAddress(data.address)
+        const response = await fetch('/api/game/faucet', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        if (response.ok) {
+            const text = "I just sent you some USDC, you should received it"
+            setAzadText([...azadText, `${data.address}`, text])
+            setStage(5)
+
         }
         else {
-            const text = "I have some issues to send it, come back later"
-            setAzadText([...azadText, `${data.address}`, text])
-            setStage(99)
+            if (response.status === 423) {
+                const text = "You have more than 1000 USDC, you don't need my money"
+                setAzadText([...azadText, `${data.address}`, text])
+                setStage(5)
+            }
+            else {
+                const text = "I have some issues to send it, come back later"
+                setAzadText([...azadText, `${data.address}`, text])
+                setStage(99)
+            }
         }
     }
 
@@ -80,6 +61,7 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, playerAddress, 
                                 required
                                 minLength={42}
                                 maxLength={42}
+                                autoComplete="off"
                                 className="w-full py-2 px-10 text-clip text-sm bg-white border border-transparent appearance-none rounded-tg placeholder-gray-800 focus:bg-white focus:outline-none focus:border-blue-500 focus:text-gray-900 focus:shadow-outline-blue"
                                 placeholder="Message..." />
                             <button type="submit" className="absolute inset-y-0 right-0 flex items-center pr-6">
