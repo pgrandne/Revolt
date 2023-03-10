@@ -46,8 +46,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             } catch (_error) {
                 console.error(_error)
                 switch (_error.name) {
-                    case 'env': res.status(422).end(_error.message)
+                    case 'env':
+                        res.status(422).end(_error.message)
+                        break
                     case 'balance': res.status(423).end(_error.message)
+                        break
                     default: res.status(500).end('Unknown error')
                 }
             }
