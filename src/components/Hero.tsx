@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { isMobile, isSafari, isIE } from 'react-device-detect';
-import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import bgPic from "@/img/equipment.jpg"
 import { useEffect, useState } from "react";
-import ModalDonation from "./ModalDonation";
-import ModalDeck from "./ModalDeck";
+import ModalInfo from "./ModalInfo";
+import ModalProgression from "./ModalProgression";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useAccount } from 'wagmi'
 import { handleEthereum } from "../utils/checkWallet";
 import github from "@/img/github-white.svg";
 import linkedin from "@/img/linkedin-white.svg";
@@ -17,13 +18,21 @@ import donation from "@/img/donation2.svg"
 import info from "@/img/info.svg"
 
 const Hero = () => {
+    const router = useRouter();
     const [wallet, setWallet] = useState(false)
-    const [modalDonation, setModalDonation] = useState(false)
-    const [modalDeck, setModalDeck] = useState(false)
+    const [modalInfo, setModalInfo] = useState(false)
+    const [deck, setDeck] = useState(false)
+    const [modalProgression, setModalProgression] = useState(false)
+    const { isConnected, address } = useAccount()
 
     useEffect(() => {
         setWallet(handleEthereum());
     }, [])
+
+    const launchRevolte = () => {
+        if (wallet && isConnected) setModalProgression(true)
+        else router.push(isMobile ? "/mobile" : (isSafari || isIE ? "/browser" : "/chapter1/scene1"))
+    }
 
     return (
         <section className="flex justify-center h-screen w-screen">
@@ -67,20 +76,20 @@ const Hero = () => {
                     >
                         Story of a whistleblower
                     </ motion.p>
-                    <Link href={isMobile ? "/mobile" : (isSafari || isIE ? "/browser" : "/chapter1/scene1")} className="grid mx-auto place-content-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 250 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ type: 'spring', delay: 3, duration: 3 }}
+                    <motion.div
+                        className="flex mx-auto place-content-center"
+                        initial={{ opacity: 0, y: 250 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ type: 'spring', delay: 3, duration: 3 }}
+                    >
+                        <motion.button
+                            className="btnHero"
+                            whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
+                            onClick={launchRevolte}
                         >
-                            <motion.button
-                                className="btnHero"
-                                whileHover={{ rotate: 7, scale: 1.5, transition: { duration: 0.1 } }}
-                            >
-                                Enter the adventure
-                            </motion.button>
-                        </motion.div>
-                    </Link>
+                            Enter the adventure
+                        </motion.button>
+                    </motion.div>
                 </div>
             </div>
             <motion.div
@@ -119,11 +128,13 @@ const Hero = () => {
                 >
                     <p className="text-white text-opacity-60">an adventure game to start exploring Web3</p>
                 </motion.div>
-
                 <div className="fixed bottom-3 right-3 flex gap-1">
                     <div
                         className=""
-                        onClick={() => { setModalDonation(true) }}>
+                        onClick={() => {
+                            setDeck(false)
+                            setModalInfo(true)
+                        }}>
                         <Image
                             className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={donation}
@@ -132,7 +143,10 @@ const Hero = () => {
                     </div>
                     <div
                         className=""
-                        onClick={() => { setModalDeck(true) }}>
+                        onClick={() => {
+                            setDeck(true)
+                            setModalInfo(true)
+                        }}>
                         <Image
                             className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
                             src={info}
@@ -141,15 +155,12 @@ const Hero = () => {
                     </div>
                 </div>
             </motion.div>
-            {
-                modalDonation &&
-                <ModalDonation setModalDonation={setModalDonation} />
+            {modalInfo &&
+                <ModalInfo setModalInfo={setModalInfo} deck={deck} />
             }
-            {
-                modalDeck &&
-                <ModalDeck setModalDeck={setModalDeck} />
+            {modalProgression && address &&
+                <ModalProgression setModalProgression={setModalProgression} address={address} />
             }
-
         </section >
     )
 }

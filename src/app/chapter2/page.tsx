@@ -15,9 +15,10 @@ const Chap2 = () => {
     const { isConnected } = useAccount()
     const [wallet, setWallet] = useState(false)
     const [modal, setModal] = useState(false)
+    const [loading, setLoading] = useState(false)
     const progression = {
         chapter: 2,
-        episode: 0,
+        episode: 1,
         scene: 0
     }
     useEffect(() => {
@@ -93,7 +94,7 @@ const Chap2 = () => {
                         </ motion.div>
                         {chain?.id === 420 &&
                             <motion.div
-                                className="flex justify-center"
+                                className="flex flex-col gap-2 mx-auto place-content-center"
                                 initial={{ opacity: 0, y: 250 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ type: 'spring', delay: 1, duration: 3 }}
@@ -102,6 +103,30 @@ const Chap2 = () => {
                                     progression={progression}
                                     setModal={setModal}
                                 />
+                                <motion.span
+                                    className="mx-auto"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 4, duration: 2 }}
+                                >or</motion.span>
+                                <motion.div
+                                    className="mx-auto"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 4, duration: 2 }}
+                                >
+                                    <Link className="btnHero"
+                                        href="/chapter2/scene1"
+                                    >
+                                        {loading &&
+                                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="black" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                        }
+                                        {loading ? "Processing..." : "Next episode withous saving"}
+                                    </Link>
+                                </motion.div>
                             </motion.div>
                         }
                     </>

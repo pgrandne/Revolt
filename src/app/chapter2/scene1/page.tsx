@@ -15,8 +15,8 @@ const Chap2s1 = () => {
     const [modal, setModal] = useState(false)
     const progression = {
         chapter: 2,
-        episode: 1,
-        scene: 1
+        episode: 2,
+        scene: 0
     }
 
     return (
