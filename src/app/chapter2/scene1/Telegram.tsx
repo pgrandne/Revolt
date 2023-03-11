@@ -42,14 +42,14 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
             body: JSON.stringify(data),
         })
         if (response.ok) {
-            text = "I just sent you some gas : eth, you should received it"
+            text = "I just sent you some gas: ETH, you should received it pretty soon"
         }
         else {
             if (response.status === 423) {
-                text = "you have already some gas, don't need mine"
+                text = "Apparently you already have some gas, I don't need to send you any"
             }
             else {
-                text = "I have some issues to send it, come back later"
+                text = "The network seems to have some issues, come back later please"
                 setStage(98)
             }
         }
@@ -111,8 +111,8 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             {stage > 0 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={chap2[1]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussionLink delay={7.5} setStage={setStage} />
+                                    <ExternalDiscussion text={chap2[1]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                    <ExternalDiscussionLink delay={5.2} setStage={setStage} />
                                 </>
                             }
                             {stage > 1 &&
@@ -123,20 +123,20 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             {stage > 2 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={chap2[3]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[4]} name="Cincinnatus" delay={6} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[5]} name="Cincinnatus" delay={11} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[3]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[4]} name="Cincinnatus" delay={4.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[5]} name="Cincinnatus" delay={8.7} telegramWindow={true} />
                                 </>
                             }
                             {stage > 3 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
                                 </>
                             }
                             {stage > 4 && stage < 99 &&
                                 <>
-                                    <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={6} telegramWindow={true} />
+                                    <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={3.5} telegramWindow={true} />
                                 </>
                             }
                             {stage > 5 && stage < 99 &&
@@ -144,17 +144,17 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
                                     {stage < 98 &&
                                         <>
-                                            <ExternalDiscussion text={chap2[7]} name="Cincinnatus" delay={0.2} telegramWindow={true} />
-                                            <ExternalDiscussion text={chap2[8]} name="Cincinnatus" delay={7} telegramWindow={true} />
+                                            <ExternalDiscussion text={chap2[7]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                            <ExternalDiscussion text={chap2[8]} name="Cincinnatus" delay={4.5} telegramWindow={true} />
                                         </>
                                     }
                                 </>
                             }
                             {stage > 6 && stage < 99 &&
                                 <>
-                                    <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={7.9} telegramWindow={true} />
                                     {stage < 98 &&
-                                        <ExternalDiscussion text={chap2[9]} name="Cincinnatus" delay={15} telegramWindow={true} />
+                                        <ExternalDiscussion text={chap2[9]} name="Cincinnatus" delay={11.6} telegramWindow={true} />
                                     }
                                 </>
                             }
