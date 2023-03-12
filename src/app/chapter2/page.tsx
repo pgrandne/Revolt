@@ -34,45 +34,28 @@ const Chap2 = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 3, duration: 2 }}
             >
-                <ConnectButton />
             </motion.div>
             <div className="my-auto">
-                <motion.h1
-                    className="text-center text-7xl"
-                    initial={{ opacity: 0, x: -200 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ type: 'spring', delay: 0.8, duration: 1 }}
-                >
-                    Chapter 2
-                </motion.h1>
-                <motion.p
-                    className="text-center text-xl"
-                    initial={{ opacity: 0, x: -200 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ type: 'spring', delay: 1.5, duration: 1 }}
-                >
-                    Paradigm shift
-                </ motion.p>
                 {!wallet &&
                     <div className={`${roboto.className} font-bold my-10 text-center text-xl`}>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 3, duration: 2 }}
+                            transition={{ delay: 1, duration: 2 }}
                         >
                             Metamask is required for Chapter 2 and it looks like you don&apos;t have it installed.
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 5, duration: 2 }}
+                            transition={{ delay: 3, duration: 2 }}
                         >
                             You can click on this <a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">link</a> to install it.
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 6, duration: 2 }}
+                            transition={{ delay: 5, duration: 2 }}
                         >
                             Or you can go to <Link className="underline" href="/chapter1/scene1"> Chapter 1</Link> to rediscover the whole story, and understand how Metamask works.
                         </ motion.p>
