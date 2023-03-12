@@ -32,12 +32,12 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddres
         }
         else {
             if (response.status === 423) {
-                const text = "You have more than 1000 USDC, you don't need my money"
+                const text = "You already have enough USDC, I don't need to send you any "
                 setAzadText([...azadText, `${data.address}`, text])
                 setStage(5)
             }
             else {
-                const text = "I have some issues to send it, come back later"
+                const text = "The network seems to have some issues, come back later please"
                 setAzadText([...azadText, `${data.address}`, text])
                 setStage(99)
             }

@@ -36,9 +36,9 @@ const ModalProgression = ({ setModalProgression, address }: {
                 <Link className="btnProgression" href="/chapter1/scene1">Chapter 1</Link>
                 <Link className="btnProgression" href="/chapter2">Chapter 2</Link>
                 <button
-                    className="btnProgression"
+                    className="btnProgression text-3xl"
                     onClick={getProgression}
-                >Last save</button>
+                >Resume last session</button>
                 <button
                     disabled={loading}
                     className="btnClose mx-auto w-36"
