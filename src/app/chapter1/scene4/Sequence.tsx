@@ -40,7 +40,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 16, duration: 1.5 }}>
-                        <div className="flex justify-end pl-[45%] pt-[15%] pb-[5%]">
+                        <div className="flex justify-end pl-[40%] pt-[20%] pb-[0%]">
                             <Image className="object-contain" src={azadPic} alt="Azad" />
                         </div>
                     </motion.div>
@@ -50,7 +50,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                             initial={{ y: -10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 18, duration: 1.5 }}>
-                            <div className="flex pl-[70%] pt-[11%] pb-[51%]">
+                            <div className="flex pl-[70%] pt-[15%] pb-[47%]">
                                 <Image
                                     className="object-contain cursor-pointer animate-pulse"
                                     src={notifPic}

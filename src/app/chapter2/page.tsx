@@ -90,7 +90,7 @@ const Chap2 = () => {
                                 <p >Click on <span className="font-extrabold">“Connect Walet“</span> and select Mematask</p>
                             }
                             {isConnected && chain?.id !== 420 &&
-                                <p>Please click on <span className="font-extrabold">“Wrong Network“</span> to switch on Optimism Goerli</p>}
+                                <p>Please click on <span className="font-extrabold">“Wrong Network“</span> and switch to Optimism Goerli</p>}
                         </ motion.div>
                         {chain?.id === 420 &&
                             <motion.div

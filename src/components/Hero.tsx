@@ -100,21 +100,21 @@ const Hero = () => {
                 <div className="fixed bottom-3 left-3 flex gap-1">
                     <a className="" href="https://github.com/pgrandne/revolte" target="_blank" rel="noreferrer">
                         <Image
-                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            className="h-8 object-contain cursor-pointer opacity-70 hover:opacity-100"
                             src={github}
                             alt="github"
                         />
                     </a>
                     <a href="https://www.linkedin.com/company/irruption-lab/" target="_blank" rel="noreferrer">
                         <Image
-                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            className="h-8 object-contain cursor-pointer opacity-70 hover:opacity-100"
                             src={linkedin}
                             alt="linkedin"
                         />
                     </a>
                     <a href="https://twitter.com/IrruptionLab" target="_blank" rel="noreferrer">
                         <Image
-                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            className="h-8 object-contain cursor-pointer opacity-70 hover:opacity-100"
                             src={twitter}
                             alt="twitter"
                         />
@@ -126,7 +126,7 @@ const Hero = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 6, duration: 1 }}
                 >
-                    <p className="text-white text-opacity-60">an adventure game to start exploring Web3</p>
+                    <p className="text-white text-opacity-70 text-xl">an adventure game to start exploring Web3</p>
                 </motion.div>
                 <div className="fixed bottom-3 right-3 flex gap-1">
                     <div
@@ -136,7 +136,7 @@ const Hero = () => {
                             setModalInfo(true)
                         }}>
                         <Image
-                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            className="h-8 object-contain cursor-pointer opacity-70 hover:opacity-100"
                             src={donation}
                             alt="Donation"
                         />
@@ -148,7 +148,7 @@ const Hero = () => {
                             setModalInfo(true)
                         }}>
                         <Image
-                            className="h-8 object-contain cursor-pointer opacity-60 hover:opacity-100"
+                            className="h-8 object-contain cursor-pointer opacity-70 hover:opacity-100"
                             src={info}
                             alt="Info"
                         />
