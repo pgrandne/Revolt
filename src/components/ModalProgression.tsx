@@ -1,15 +1,26 @@
 'use client'
 
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
+import { useAccount } from 'wagmi'
 
-const ModalProgression = ({ setModalProgression, address }: {
+const ModalProgression = ({ setModalProgression, wallet }: {
     setModalProgression: Dispatch<SetStateAction<boolean>>
-    address: `0x${string}`
+    wallet: boolean
 }) => {
     const [loading, setLoading] = useState(false)
+    const [resumeButton, setResumeButton] = useState('Resume last session')
     const router = useRouter()
+    const { address } = useAccount()
+
+    useEffect(() => {
+        if (typeof address !== 'undefined')
+            setResumeButton('Resume last session')
+
+    }, [address])
+
+
     const getProgression = async () => {
         setLoading(true)
         try {
@@ -35,10 +46,12 @@ const ModalProgression = ({ setModalProgression, address }: {
                 <p className="mb-4 text-xl">Select where you want to go</p>
                 <Link className="btnProgression" href="/chapter1/scene1">Chapter 1</Link>
                 <Link className="btnProgression" href="/chapter2">Chapter 2</Link>
-                <button
+                {wallet && <button
                     className="btnProgression text-3xl"
-                    onClick={getProgression}
-                >Resume last session</button>
+                    onClick={() => { typeof address === 'undefined' ? setResumeButton('Please connect wallet') : getProgression() }}
+                >{resumeButton}
+                </button>
+                }
                 <button
                     disabled={loading}
                     className="btnClose mx-auto w-36"

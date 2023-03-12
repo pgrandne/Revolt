@@ -4,6 +4,7 @@ import { getDefaultWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/ra
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { optimismGoerli } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const { chains, provider } = configureChains(
     [optimismGoerli],
@@ -36,6 +37,9 @@ export default function Chapter2Layout({
                 chains={chains}
                 initialChain={optimismGoerli}
             >
+                <div className="absolute top-4 left-3 z-30">
+                    <ConnectButton showBalance={false} />
+                </div>
                 {children}
             </RainbowKitProvider>
         </WagmiConfig>

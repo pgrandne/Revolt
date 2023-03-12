@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import ModalInfo from "./ModalInfo";
 import ModalProgression from "./ModalProgression";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount } from 'wagmi'
 import { handleEthereum } from "../utils/checkWallet";
 import github from "@/img/github-white.svg";
 import linkedin from "@/img/linkedin-white.svg";
@@ -23,14 +22,14 @@ const Hero = () => {
     const [modalInfo, setModalInfo] = useState(false)
     const [deck, setDeck] = useState(false)
     const [modalProgression, setModalProgression] = useState(false)
-    const { isConnected, address } = useAccount()
 
     useEffect(() => {
         setWallet(handleEthereum());
     }, [])
 
     const launchRevolte = () => {
-        if (wallet && isConnected) setModalProgression(true)
+        if (wallet)
+            setModalProgression(true)
         else router.push(isMobile ? "/mobile" : (isSafari || isIE ? "/browser" : "/chapter1/scene1"))
     }
 
@@ -42,7 +41,7 @@ const Hero = () => {
                 <option>Maybe</option>
             </select> */}
             {wallet &&
-                <div className="absolute top-3 right-3">
+                <div className="absolute top-3 right-3 z-40">
                     <ConnectButton chainStatus="none" showBalance={false} />
                 </div>
             }
@@ -158,8 +157,8 @@ const Hero = () => {
             {modalInfo &&
                 <ModalInfo setModalInfo={setModalInfo} deck={deck} />
             }
-            {modalProgression && address &&
-                <ModalProgression setModalProgression={setModalProgression} address={address} />
+            {modalProgression &&
+                <ModalProgression setModalProgression={setModalProgression} wallet={wallet} />
             }
         </section >
     )

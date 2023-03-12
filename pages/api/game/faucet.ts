@@ -16,12 +16,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
                     const contract = new ethers.Contract(process.env.USDC_CONTRACT, erc20ABI, wallet);
                     const amount = ethers.utils.parseUnits('1000', 6)
-                    // const nonce = await provider.getTransactionCount(sender)
-                    // const transaction = {
-                    //     gasLimit: 100000,
-                    //     nonce: nonce || undefined,
-                    // }
-                    // throw new Error('No env variable')
                     const balance = (await contract.balanceOf(address) / 10 ** 6).toString()
                     console.log(`balance : ${balance}`)
                     if (parseInt(balance) >= 1000) {

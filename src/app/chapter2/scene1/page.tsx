@@ -5,7 +5,6 @@ import { useState } from 'react'
 import Sequence from './Sequence'
 import Telegram from "./Telegram";
 import SaveButton from "@/components/SaveButton";
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Modal from "@/components/Modal";
 import Recover from "@/components/Recover";
 
@@ -22,12 +21,9 @@ const Chap2s1 = () => {
     return (
         <div className="flex flex-row">
             <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-1/6" />
-            <div className="absolute top-4 left-3 z-30">
-                <ConnectButton />
-            </div>
-            {/* <div className="absolute top-4 left-80 z-30">
+            <div className="absolute top-4 left-80 z-30">
                 <Recover />
-            </div> */}
+            </div>
             <div className="relative basis-2/3 w-full overflow-hidden">
                 <Sequence setTelegramWindow={setTelegramWindow} telegramWindow={telegramWindow} />
             </div>

@@ -23,6 +23,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
 
     useEffect(() => {
         scrollToBottom()
+        console.log(stage)
         if (stage === 6) {
             askGas()
             console.log('gas requested')
@@ -131,12 +132,14 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             {stage > 3 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
                                 </>
                             }
-                            {stage > 4 && stage < 99 &&
+                            {stage > 4 &&
                                 <>
-                                    <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={3.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                    {stage < 99 &&
+                                        <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={3.5} telegramWindow={true} />
+                                    }
                                 </>
                             }
                             {stage > 5 && stage < 99 &&
@@ -167,7 +170,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                     {stage === 2 &&
                         <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={chap2Choices[1]} />
                     }
-                    {stage === 3 &&
+                    {(stage === 3 || stage === 4) &&
                         <TelegramPaste stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} setPlayerAddress={setPlayerAddress} />
                     }
                     {stage === 5 &&
