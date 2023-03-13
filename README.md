@@ -11,7 +11,7 @@ As you assume the role of Azad, an intrepid journalist from the Lurenberg Post, 
 
 Are you up for the challenge? Brace yourself for an adventure that will keep you on the edge of your seat. Don't hesitate - join Azad and discover what lies ahead!
 
-## Project Test Instructions:
+## Description
 
 With this adventure game we’re trying to help people get into web3 without scaring them off with all the complicated technical stuff.
 
@@ -38,3 +38,44 @@ Inspirations: Cryptozombie (https://cryptozombies.io/) to learn Solidity langage
 - Public Good Funding / Grants
 - Partnerships with protocols, affiliate links, comissions
 - Donations
+
+## Roadmap
+[X] Chapter 1
+[X] Chapter 2 episode 1
+[ ] French language
+[ ] Spanish language
+[ ] Chapter 2 episode 2
+
+## Intructions
+##### Clone the project
+Clone the repository on your local machine
+```bash
+$ git clone https://github.com/pgrandne/revolte.git
+```
+
+### Front End ###
+We use NextJS 13. The Front End scripts are in "src" folder.
+If you want to launch the Front End locally:
+
+1. Go to "revolte" folder
+```bash
+$ cd revolte
+```
+
+2. Install the dependencies
+```bash
+$ npm install
+```
+
+3. Launch the server locally
+```bash
+$ npm run dev
+```
+### Front End ###
+We use .env for environment variables. Change the name of env.example to .env and fill in the 3 variables :
+
+   - We use DATABASE_URL for our MongoDB database
+   - We use PRIVATE KEY for interacting with the blockchain and send ERC-20 and eth (on Optimism Goerli)
+   - We use ALCHEMY_ID for the provider
+   - We use USDC_CONTRACT for the contract address of USDC on Optimism Goerli
+   - We use ETHERSCAN_API for contracts verification
