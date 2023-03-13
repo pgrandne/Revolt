@@ -11,7 +11,7 @@ As you assume the role of Azad, an intrepid journalist from the Lurenberg Post, 
 
 Are you up for the challenge? Brace yourself for an adventure that will keep you on the edge of your seat. Don't hesitate - join Azad and discover what lies ahead!
 
-# Project Test Instructions:
+## Project Test Instructions:
 
 With this adventure game we’re trying to help people get into web3 without scaring them off with all the complicated technical stuff.
 
@@ -32,7 +32,7 @@ With our adventure game Revolte, we are trying to help people get into web3 with
 
 Inspirations: Cryptozombie (https://cryptozombies.io/) to learn Solidity langage, and Ethereumhacker (https://ethereumhacker.com/) to learn about smart contracts vulnerabilities.
 
-### Fundings
+## Fundings
 
 - Custom built adventures for protocols. Starting from Chapter 3 each episode will showcase a new protocol, and it will be fully integrated in the story.
 - Public Good Funding / Grants
