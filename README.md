@@ -40,13 +40,13 @@ Inspirations: Cryptozombie (https://cryptozombies.io/) to learn Solidity langage
 - Donations
 
 ## Roadmap
-[X] Chapter 1
-[X] Chapter 2 episode 1
-[ ] French language
-[ ] Spanish language
-[ ] Chapter 2 episode 2
+- [X] Chapter 1
+- [X] Chapter 2 episode 1
+- [ ] French language
+- [ ] Spanish language
+- [ ] Chapter 2 episode 2
 
-## Intructions
+## Instructions
 ##### Clone the project
 Clone the repository on your local machine
 ```bash
@@ -71,7 +71,7 @@ $ npm install
 ```bash
 $ npm run dev
 ```
-### Front End ###
+### Back End ###
 We use .env for environment variables. Change the name of env.example to .env and fill in the 3 variables :
 
    - We use DATABASE_URL for our MongoDB database
