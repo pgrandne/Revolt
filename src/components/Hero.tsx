@@ -28,7 +28,7 @@ const Hero = () => {
     }, [])
 
     const launchRevolte = () => {
-        if (wallet)
+        if (!isMobile && !isSafari && !isIE)
             setModalProgression(true)
         else router.push(isMobile ? "/mobile" : (isSafari || isIE ? "/browser" : "/chapter1/scene1"))
     }
