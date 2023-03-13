@@ -11,7 +11,7 @@ As you assume the role of Azad, an intrepid journalist from the Lurenberg Post, 
 
 Are you up for the challenge? Brace yourself for an adventure that will keep you on the edge of your seat. Don't hesitate - join Azad and discover what lies ahead!
 
-## Project Test Instructions:
+## Description
 
 With this adventure game we’re trying to help people get into web3 without scaring them off with all the complicated technical stuff.
 
