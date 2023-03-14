@@ -1,6 +1,6 @@
 export const scene2 = [
     "Hey Azad, tu as vu les infos ?",
-    "Des milliards de fausses monnaies ont été découverts !!! C'est 15% de notre PIB !",
+    "Plusieurs milliards en fausse monnaie découverts... ça représente 15% de notre PIB !",
     "Tout le monde va travailler dessus pendant les prochaines semaines ! J'ai des réunions toute la journée, on en parle ce soir.",
     "Bonjour M. Azad, une personne de confiance m'a donné votre contact.",
     "J'ai des documents concernant une affaire très sensible.",
