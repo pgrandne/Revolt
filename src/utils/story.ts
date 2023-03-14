@@ -27,7 +27,7 @@ export const scene4 = [
     "Before I tell you, I need to make sure that our discussions remain private. The matter is extremely sensitive",
     "At this stage, I can only give you its code name: ClearPath",
     "Do not speak to anyone about our exchanges, I will never contact you anywhere other than on this encrypted app",
-    "There is a locker, number 29, at Central Street Station. The code is 103109. I have put a first sample of documents, you will realize the extent of the matter",
+    "There is a locker, number 29, at Central Street Station. The code is 091031. I have put a first sample of documents, you will realize the extent of the matter",
     "It sounded urgent, is there a problem?",
     "It costs nothing to see where it takes you",
     "What is it?",
