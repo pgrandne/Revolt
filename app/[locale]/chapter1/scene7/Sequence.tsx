@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import AnimatedText from '@/app/components/AnimatedText';
+import { AnimatedText } from '@/app/components';
 import azadPic from "@/public/img/back.png"
 import skylerhomePic from "@/public/img/skyler-place.png"
 

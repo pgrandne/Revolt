@@ -12,8 +12,6 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
     const [azadText, setAzadText] = useState<string[]>([])
     const t = useTranslations('Chap1s2');
 
-
-
     return (
         <div className="flex w-full h-full">
             <div className="relative flex flex-col flex-1">

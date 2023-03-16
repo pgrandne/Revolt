@@ -4,7 +4,8 @@ import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/public/img/cincinnatus.jpg"
-import { scene4, scene4Choices } from '@/lib/utils/story'
+import { scene4Choices } from '@/lib/utils/story'
+import { useTranslations } from 'next-intl';
 import ExternalDiscussion from "@/app/components/ExternalDiscussion";
 import TelegramChoices from "@/app/components/TelegramChoices";
 import AzadDiscussion from "@/app/components/AzadDiscussion";
@@ -13,6 +14,7 @@ let messageEnd: HTMLElement | null
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
+    const t = useTranslations('Chap1s4');
     useEffect(() => {
         if (typeof document !== "undefined") {
             messageEnd = document.getElementById("end")
@@ -71,29 +73,29 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <div className="w-3/4 my-1">
                                 <div className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow">
                                     <div className="text-sm text-black">
-                                        {scene4[0]}
+                                        {t('dialogue.d1')}
                                     </div>
                                 </div>
                             </div>
-                            <ExternalDiscussion text={scene4[1]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                            <ExternalDiscussion text={t('dialogue.d2')} name="Cincinnatus" delay={2} telegramWindow={true} />
 
                             {stage > 0 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene4[2]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d3')} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                             {stage > 1 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene4[3]} name="Cincinnatus" delay={1.5} telegramWindow={true} />
-                                    <ExternalDiscussion text={scene4[4]} name="Cincinnatus" delay={5.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d4')} name="Cincinnatus" delay={1.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={5.5} telegramWindow={true} />
                                 </>
                             }
                             {stage > 2 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene4[5]} name="Cincinnatus" delay={1.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={1.5} telegramWindow={true} />
                                 </>
                             }
                             {stage > 3 &&

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import AnimatedText from '@/app/components/AnimatedText';
+import { AnimatedText, ArrowButton } from '@/app/components';
 import phonePic from "@/public/img/onthephone.png"
 import takeawayPic from "@/public/img/takeaway2.png"
 import paymentPic from "@/public/img/payment.png"
@@ -10,7 +10,6 @@ import refusedPic from "@/public/img/refused.png"
 import cashPic from "@/public/img/cash2.png"
 import decorPic from "@/public/img/decor2.png"
 import friendsPic from "@/public/img/friends3.png"
-import ArrowButton from "@/app/components/ArrowButton";
 import { Dispatch, SetStateAction } from "react";
 
 const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>> }) => {

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion"
-import Link from "next/link";
 import { useState } from 'react'
 import Image from "next/image";
 import lockerPic from "@/public/img/locker.png"
@@ -9,8 +8,7 @@ import pickupPic from "@/public/img/pickup2.png"
 import classifiedPic from "@/public/img/classified.png"
 import documentPic from "@/public/img/classified-document.png"
 import backPic from '@/public/img/azadback.png'
-import AnimatedText from '@/app/components/AnimatedText';
-import ArrowButton from "@/app/components/ArrowButton";
+import { AnimatedText, ArrowButton, Link } from "@/app/components";
 
 const Chap1s5 = () => {
     const [lockerOpened, setLockerOpened] = useState(false)

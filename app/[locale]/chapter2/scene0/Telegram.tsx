@@ -49,6 +49,8 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
                                     <ExternalDiscussion scene={scene} index={2} firstText={true} telegramWindow={true} />
+                                    <ExternalDiscussion scene={scene} index={3} firstText={true} telegramWindow={true} />
+
                                 </>
                             }
                             {stage > 1 &&

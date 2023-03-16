@@ -12,8 +12,9 @@ const ExternalDiscussion = ({ scene, index, name, firstText, telegramWindow }: {
     telegramWindow: boolean,
 }) => {
     const text = scene[index]
-    const a = 0.08
-    const b = 3
+    // const a = 0.08
+    const a = 1
+    const b = 1
 
     const calculateDelay = (index: number) => {
         let delay
@@ -59,7 +60,7 @@ const ExternalDiscussion = ({ scene, index, name, firstText, telegramWindow }: {
                     <motion.div
                         className="absolute p-2 w-20 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black"
                         animate={{ opacity: [0, 1, 1, 0] }}
-                        transition={{ delay: calculateDelay(index), duration: 3, times: [0, 0.2, 0.9, 1] }}
+                        transition={{ delay: calculateDelay(index), duration: 10, times: [0, 0.2, 0.9, 1] }}
                     >
                         <div className="animate-bounce text-teal-500 w-6 h-6 ...">
                             typing...

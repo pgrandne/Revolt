@@ -8,8 +8,7 @@ import Telegram from './Telegram'
 import Discussion from './Discussion'
 import Image from "next/image";
 import journalPic from "@/public/img/journal30oct.png"
-import AnimatedText from '@/app/components/AnimatedText';
-import ArrowButton from "@/app/components/ArrowButton";
+import { AnimatedText, ArrowButton } from "@/app/components";
 
 const Chap1s4 = () => {
     const [stage, setStage] = useState(0)

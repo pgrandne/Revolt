@@ -4,7 +4,8 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/public/img/cincinnatus.jpg"
-import { scene6, scene6Choices } from '@/lib/utils/story'
+import { scene6Choices } from '@/lib/utils/story'
+import { useTranslations } from 'next-intl';
 import ExternalDiscussion from "@/app/components/ExternalDiscussion";
 import TelegramChoices from "@/app/components/TelegramChoices";
 import AzadDiscussion from "@/app/components/AzadDiscussion";
@@ -12,6 +13,7 @@ import AzadDiscussion from "@/app/components/AzadDiscussion";
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [write, setWrite] = useState(false)
     const [azadText, setAzadText] = useState<string[]>([])
+    const t = useTranslations('Chap1s6');
     const messageEnd = document.getElementById("end");
     const scrollToBottom = () => {
         if (messageEnd !== null)
@@ -67,45 +69,45 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <div className="w-3/4 my-1">
                                 <div className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow">
                                     <div className="text-sm text-black">
-                                        {scene6[3]}
+                                        {t('dialogue.d4')}
                                     </div>
                                 </div>
                             </div>
                             {stage > 4 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene6[4]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                             {stage > 5 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene6[5]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                             {stage > 6 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene6[6]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d7')} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                             {stage > 7 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene6[7]} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussion text={scene6[8]} name="Cincinnatus" delay={6} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d8')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d9')} name="Cincinnatus" delay={6} telegramWindow={true} />
                                 </>
                             }
                             {stage > 8 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene6[9]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d10')} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                             {stage > 9 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[5]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene6[10]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d11')} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                             <div id="end" />
