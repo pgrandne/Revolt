@@ -3,11 +3,11 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import AnimatedText from '@/app/components/AnimatedText';
-import redactionPic from "@/img/newsroom1.png"
-import azadPic from "@/img/azad-desk.png"
-import skylerPic from "@/img/skylerDesk.png"
-import notifPic from "@/img/notif.png"
-import chatPic from "@/img/chat.png"
+import redactionPic from "@/public/img/newsroom1.png"
+import azadPic from "@/public/img/azad-desk.png"
+import skylerPic from "@/public/img/skylerDesk.png"
+import notifPic from "@/public/img/notif.png"
+import chatPic from "@/public/img/chat.png"
 import { Dispatch, SetStateAction } from "react";
 
 const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
