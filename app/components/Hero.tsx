@@ -16,6 +16,7 @@ import twitter from "@/public/svg/twitter-white.svg";
 import donation from "@/public/svg/donation2.svg"
 import info from "@/public/svg/info.svg"
 import { useTranslations } from 'next-intl';
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 const Hero = () => {
     const t = useTranslations('Home')
@@ -38,8 +39,10 @@ const Hero = () => {
     return (
         <section className="flex justify-center h-screen w-screen">
             {wallet &&
-                <div className="absolute top-3 right-3 z-40">
+                <div className="absolute top-3 right-3 z-40 flex gap-2">
+                    <LocaleSwitcher />
                     <ConnectButton chainStatus="none" showBalance={false} />
+
                 </div>
             }
             <div className="my-auto relative">
