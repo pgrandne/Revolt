@@ -1,8 +1,8 @@
 'use client';
 
-import { perm_marker } from '@/utils/font';
+import { perm_marker } from '@/lib/utils/font';
 
-import equipmentPic from "@/img/equipment.jpg"
+import equipmentPic from "@/public/img/equipment.jpg"
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import cincinnatus from "@/img/cincinnatus.jpg"
+import cincinnatus from "@/public/img/cincinnatus.jpg"
 
 
 const TelegramSkeleton = () => {
