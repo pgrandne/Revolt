@@ -2,7 +2,7 @@
 
 import { useAccount, useNetwork, useSignMessage } from 'wagmi'
 import { Dispatch, SetStateAction, useState } from 'react'
-import ArrowButton from './ArrowButton'
+import { ArrowButton } from './'
 import { IProgression } from '@/lib/interface'
 
 const SaveButton = ({
