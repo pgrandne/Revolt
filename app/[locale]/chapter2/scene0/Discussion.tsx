@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from "react"
-import ExternalDiscussion from '@/components/ExternalDiscussion';
-import AzadDiscussion from '@/components/AzadDiscussion';
-import AzadChoices from '@/components/AzadChoices';
-import { scene4, scene4Choices } from '@/utils/story'
+import ExternalDiscussion from '@/app/components/ExternalDiscussion';
+import AzadDiscussion from '@/app/components/AzadDiscussion';
+import AzadChoices from '@/app/components/AzadChoices';
+import { scene4, scene4Choices } from '@/lib/utils/story'
 import { Dispatch, SetStateAction } from "react";
 
 const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {

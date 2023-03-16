@@ -7,7 +7,7 @@ import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Image from "next/image";
 import tvPic from "@/public/img/tv.png"
-import journalPic from "@/img/manreadjournal.png"
+import journalPic from "@/public/img/manreadjournal.png"
 import AnimatedText from '@/app/components/AnimatedText';
 import ArrowButton from "@/app/components/ArrowButton";
 import Telegram from "./Telegram";

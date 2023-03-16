@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from "framer-motion"
-import { child, textAnimation } from "@/utils/animatedText"
-import { scene4, scene4Choices } from '@/utils/story'
+import { child, textAnimation } from "@/lib/utils/animatedText"
+import { scene4, scene4Choices } from '@/lib/utils/story'
 
 const ExternalDiscussion = ({ scene, index, name, firstText, telegramWindow }: {
     scene: string[],

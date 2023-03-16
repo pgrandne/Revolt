@@ -7,9 +7,9 @@ import Sequence from './Sequence'
 import Telegram from './Telegram'
 import Discussion from './Discussion'
 import Image from "next/image";
-import journalPic from "@/img/journal30oct.png"
-import AnimatedText from '@/components/AnimatedText';
-import ArrowButton from "@/components/ArrowButton";
+import journalPic from "@/public/img/journal30oct.png"
+import AnimatedText from '@/app/components/AnimatedText';
+import ArrowButton from "@/app/components/ArrowButton";
 
 const Chap1s4 = () => {
     const [stage, setStage] = useState(0)

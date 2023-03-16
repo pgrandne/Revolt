@@ -3,7 +3,7 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import cincinnatus from "@/img/cincinnatus.jpg"
+import cincinnatus from "@/public/img/cincinnatus.jpg"
 import { scene4, scene4Choices } from '@/lib/utils/story'
 import ExternalDiscussion from "@/app/components/ExternalDiscussion";
 import TelegramChoices from "@/app/components/TelegramChoices";
