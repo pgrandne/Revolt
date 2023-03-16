@@ -36,7 +36,7 @@ const Hero = () => {
     return (
         <section className="flex justify-center h-screen w-screen">
             {wallet &&
-                <div className="absolute top-3 right-3 z-40 flex gap-2">
+                <div className="absolute top-3 right-3 z-20 flex gap-2">
                     <LocaleSwitcher />
                     <ConnectButton chainStatus="none" showBalance={false} />
 
