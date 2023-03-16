@@ -24,5 +24,34 @@
         "day": "October 18, 2023",
         "title": "Chapter 1",
         "subtitle": "Nothing can be taken for granted"
+    },
+    "Chap1s2": {
+        "dialogue": {
+            "d1": "Hey Azad, did you watch the news?",
+            "d2": "Billions of fake money discovered!!! It's 15% of our GDP!",
+            "d3": "Everyone will work on it during the next weeks! I have meetings all day, we'll talk tonight.",
+            "d4": "Hello Azad, a trusted person gave me your contact",
+            "d5": "I have some documents about a very sensitive case",
+            "d6": "Are you interested?",
+            "d7": "I can't say more at the moment, I'll get back to you very soon"
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Yes it's insane!",
+                "choice2": "About what?"
+            },
+            "c2": {
+                "choice1": "No one could have imagined that",
+                "choice2": "Hard to believe"
+            },
+            "c3": {
+                "choice1": "Sure",
+                "choice2": "(say nothing)"
+            },
+            "c4": {
+                "choice1": "Maybe! But first tell me more",
+                "choice2": "Yes, I am"
+            }
+        }
     }
 }

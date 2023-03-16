@@ -1,12 +1,11 @@
 'use client';
 
 import { motion } from "framer-motion"
-import Link from "next/link";
 import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Telegram from './Telegram'
-import { ArrowButton } from '@/app/components';
+import { ArrowButton, Link } from '@/app/components';
 
 const Chap1s2 = () => {
     const [stage, setStage] = useState(0)

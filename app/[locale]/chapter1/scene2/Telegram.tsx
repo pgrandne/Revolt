@@ -4,14 +4,15 @@ import { Dispatch, SetStateAction, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/public/img/cincinnatus.jpg"
-import { scene2, scene2Choices } from '@/lib/utils/story'
+import { scene2Choices } from '@/lib/utils/story'
 import ExternalDiscussion from "@/app/components/ExternalDiscussion";
 import TelegramChoices from "@/app/components/TelegramChoices";
 import AzadDiscussion from "@/app/components/AzadDiscussion";
+import { useTranslations } from 'next-intl';
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
-    const [write, setWrite] = useState(false)
     const [azadText, setAzadText] = useState<string[]>([])
+    const t = useTranslations('Chap1s2');
 
     return (
         <motion.div
@@ -62,17 +63,17 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <div className="w-3/4 my-1">
                                 <div className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow">
                                     <div className="text-sm text-black">
-                                        {scene2[3]}
+                                        {t('dialogue.d4')}
                                     </div>
                                 </div>
                             </div>
-                            <ExternalDiscussion text={scene2[4]} name="Cincinnatus" delay={3} telegramWindow={true} />
-                            <ExternalDiscussion text={scene2[5]} name="Cincinnatus" delay={7} telegramWindow={true} />
+                            <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={3} telegramWindow={true} />
+                            <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={7} telegramWindow={true} />
 
                             {stage > 3 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={scene2[6]} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d7')} name="Cincinnatus" delay={2} telegramWindow={true} />
                                 </>
                             }
                         </div>

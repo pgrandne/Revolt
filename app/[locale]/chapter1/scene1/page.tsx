@@ -3,9 +3,8 @@
 import { perm_marker } from '@/lib/utils/font';
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Link from "@/app/components/Link";
 import { lurembergPic, tassePic, kiosquePic, journalPic } from "@/public/img"
-import { AnimatedText, ArrowButton } from '@/app/components'
+import { AnimatedText, ArrowButton, Link } from '@/app/components'
 import { useTranslations } from 'next-intl';
 
 const Chap1s1 = () => {
