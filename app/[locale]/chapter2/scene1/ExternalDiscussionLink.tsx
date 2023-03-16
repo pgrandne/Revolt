@@ -40,6 +40,7 @@ const ExternalDiscussion = ({ delay, setStage }: {
 
         }
         catch (error) {
+            console.log(error.message)
 
         }
     }

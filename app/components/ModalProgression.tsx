@@ -38,8 +38,7 @@ const ModalProgression = ({ setModalProgression, wallet }: {
             const path = await progRes.text()
             router.push(path)
         } catch (error) {
-            if (error instanceof Error)
-                alert(error.message)
+            alert(error.message)
             setModalProgression(false)
         }
     }

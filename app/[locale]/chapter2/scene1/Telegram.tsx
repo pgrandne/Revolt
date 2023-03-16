@@ -29,7 +29,6 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
             console.log('gas requested')
             setStage(7)
         }
-
     }, [stage]);
 
     const askGas = async () => {

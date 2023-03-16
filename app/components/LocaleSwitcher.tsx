@@ -15,7 +15,7 @@ export const LocaleSwitcher = () => {
     useEffect(() => {
         if (!locale || locale === 'en') setLang('gb')
         else setLang(locale)
-    }, [])
+    }, [locale])
 
     return (
         <div className="flex gap-1">
