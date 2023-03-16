@@ -1,5 +1,7 @@
 'use client'
 
+import '@rainbow-me/rainbowkit/styles.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { getDefaultWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { optimismGoerli } from 'wagmi/chains';

@@ -1,9 +1,10 @@
 'use client';
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import { motion } from "framer-motion"
 import { perm_marker, roboto } from '@/lib/utils/font';
 import Link from "next/link";
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useNetwork, useAccount } from 'wagmi'
 import SaveButton from "@/app/components/SaveButton";
 import { useEffect, useState } from "react";
@@ -11,6 +12,26 @@ import { handleEthereum } from "@/lib/utils/checkWallet";
 import Modal from "@/app/components/Modal";
 
 const Chap2 = () => {
+
+    const Msg = () => (
+        <p>Please we need your feedback 🦄. Click on this <a className="underline" href="https://msprr0gajgn.typeform.com/to/DSl54TqJ">link</a>
+        </p>
+    )
+
+
+    const notify = () => toast(<Msg />, {
+        delay: 2000,
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    })
+
+
     const { chain } = useNetwork()
     const { isConnected } = useAccount()
     const [wallet, setWallet] = useState(false)
@@ -23,6 +44,7 @@ const Chap2 = () => {
     }
     useEffect(() => {
         setWallet(handleEthereum());
+        notify();
     }, [])
 
 
@@ -116,6 +138,7 @@ const Chap2 = () => {
                 }
             </div>
             {modal && <Modal route='/chapter2/scene1' />}
+            <ToastContainer />
         </div >
     )
 }
