@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { perm_marker } from '@/lib/utils/font';
 
-const AnimatedText = (
+export const AnimatedText = (
     { size, content, speed, delay }: {
         size: string,
         content: string,
@@ -51,5 +51,3 @@ const AnimatedText = (
         </motion.div>
     )
 }
-
-export default AnimatedText;

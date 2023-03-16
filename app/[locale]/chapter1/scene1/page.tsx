@@ -3,17 +3,13 @@
 import { perm_marker } from '@/lib/utils/font';
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link";
-import lurembergPic from "@/public/img/luremberg2.jpg"
-import tassePic from "@/public/img/tasse.png"
-import kiosquePic from "@/public/img/kiosque.png"
-import journalPic from "@/public/img/journal18oct.png"
-import AnimatedText from '@/app/components/AnimatedText';
-import ArrowButton from '@/app/components/ArrowButton';
+import Link from "@/app/components/Link";
+import { lurembergPic, tassePic, kiosquePic, journalPic } from "@/public/img"
+import { AnimatedText, ArrowButton } from '@/app/components'
+import { useTranslations } from 'next-intl';
 
 const Chap1s1 = () => {
-    const narration = "Lurenberg, Listenbourg"
-    const day = "October 18, 2023"
+    const t = useTranslations('Chap1s1');
 
     return (
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto`}>
@@ -24,7 +20,7 @@ const Chap1s1 = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ type: 'spring', delay: 0.8, duration: 1 }}
                 >
-                    Chapter 1
+                    {t('title')}
                 </motion.h1>
                 <motion.p
                     className="text-center text-xl"
@@ -32,7 +28,7 @@ const Chap1s1 = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ type: 'spring', delay: 1.5, duration: 1 }}
                 >
-                    Nothing can be taken for granted
+                    {t('subtitle')}
                 </ motion.p>
             </div>
             <motion.div
@@ -48,8 +44,8 @@ const Chap1s1 = () => {
                 />
             </motion.div>
             <div className="p-1 absolute bottom-20 left-20 flex flex-col">
-                <AnimatedText size="text-4xl" content={narration} speed={0.1} delay={5} />
-                <AnimatedText size="text-2xl" content={day} speed={0.1} delay={8} />
+                <AnimatedText size="text-4xl" content={t('narration')} speed={0.1} delay={5} />
+                <AnimatedText size="text-2xl" content={t('day')} speed={0.1} delay={8} />
             </div>
             <motion.div
                 className="absolute top-[21%] left-[7%]"

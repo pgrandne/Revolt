@@ -18,5 +18,11 @@
         "resume": "reprendre la dernière session",
         "connect": "Connectez votre wallet",
         "close": "fermer"
+    },
+    "Chap1s1": {
+        "narration": "",
+        "day": "",
+        "title": "",
+        "subtitle": ""
     }
 }

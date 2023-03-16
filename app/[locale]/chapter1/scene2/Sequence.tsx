@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import AnimatedText from '@/app/components/AnimatedText';
+import { AnimatedText } from '@/app/components';
 import { Dispatch, SetStateAction } from "react";
 import redactionPic from "@/public/img/newsroom1.png"
 import chatPic from "@/public/img/chat.png"

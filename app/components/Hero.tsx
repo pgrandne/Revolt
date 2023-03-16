@@ -10,10 +10,7 @@ import ModalInfo from "./ModalInfo";
 import ModalProgression from "./ModalProgression";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "@/lib/utils/checkWallet";
-import github from "@/public/svg/github-white.svg";
-import linkedin from "@/public/svg/linkedin-white.svg";
-import twitter from "@/public/svg/twitter-white.svg";
-import donation from "@/public/svg/donation2.svg"
+import { github, linkedin, twitter, donation } from "@/public/svg";
 import info from "@/public/svg/info.svg"
 import { useTranslations } from 'next-intl';
 import { LocaleSwitcher } from "./LocaleSwitcher";

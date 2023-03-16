@@ -16,5 +16,11 @@
         "title": "Select where you want to go",
         "chapter": "chapter",
         "close": "close"
+    },
+    "Chap1s1": {
+        "narration": "",
+        "day": "",
+        "title": "",
+        "subtitle": ""
     }
 }

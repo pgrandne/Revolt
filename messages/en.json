@@ -18,5 +18,11 @@
         "resume": "resume last session",
         "connect": "Please connect wallet",
         "close": "close"
+    },
+    "Chap1s1": {
+        "narration": "Lurenberg, Listenbourg",
+        "day": "October 18, 2023",
+        "title": "Chapter 1",
+        "subtitle": "Nothing can be taken for granted"
     }
 }

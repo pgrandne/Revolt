@@ -6,7 +6,7 @@ import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Telegram from './Telegram'
-import ArrowButton from '@/app/components/ArrowButton';
+import { ArrowButton } from '@/app/components';
 
 const Chap1s2 = () => {
     const [stage, setStage] = useState(0)
