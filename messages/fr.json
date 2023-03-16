@@ -7,7 +7,7 @@
     "Info": {
         "title": "une fiction interactive pour embarquer les utilisateurs du Web2 vers le Web3",
         "subtitle": "est un projet opensource. Vous pouvez nous aider en faisant une donation à :",
-        "deck": "Découvrez notre présentation",
+        "deck": "Découvrez notre deck",
         "online": "En ligne",
         "download": "Télécharger",
         "close": "fermer"
@@ -20,9 +20,38 @@
         "close": "fermer"
     },
     "Chap1s1": {
-        "narration": "",
-        "day": "",
-        "title": "",
-        "subtitle": ""
+        "narration": "Lurenberg, Listenbourg",
+        "day": "18 Octobre, 2023",
+        "title": "Chapitre 1",
+        "subtitle": "Rien n'est jamais acquis"
+    },
+     "Chap1s2": {
+        "dialogue": {
+            "d1": "Hey Azad, tu as vu les infos ?",
+            "d2": "Plusieurs milliards en fausse monnaie découverts... ça représente 15% de notre PIB !",
+            "d3": "Tout le monde va travailler dessus pendant les prochaines semaines ! J'ai des réunions toute la journée, on en parle ce soir.",
+            "d4": "Bonjour M. Azad, une personne de confiance m'a donné votre contact.",
+            "d5": "J'ai des documents concernant une affaire très sensible.",
+            "d6": "Êtes-vous intéressé ?",
+            "d7": "Je ne peux pas en dire plus pour le moment, je reviendrai vers vous très bientôt."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Oui c’est fou !",
+                "choice2": "De quoi s'agit-il ?"
+            },
+            "c2": {
+                "choice1": "Personne n'aurait pu l'imaginer.",
+                "choice2": "C'est dur à croire."
+            },
+            "c3": {
+                "choice1": "Ça marche.",
+                "choice2": "(ne rien dire)"
+            },
+            "c4": {
+                "choice1": "Peut-être, mais vous devez m'en dire d’avantage…",
+                "choice2": "Oui, bien sûr"
+            }
+        }
     }
-}
+}   
