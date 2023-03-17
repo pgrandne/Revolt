@@ -2,17 +2,20 @@
 
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { scene4, scene4Choices } from '@/lib/utils/story'
+import { scene4 } from '@/lib/utils/story'
 import ExternalDiscussion from "./ExternalDiscussion";
 import TelegramChoices from "@/app/components/TelegramChoices";
 import AzadDiscussion from "@/app/components/AzadDiscussion";
 import TelegramSkeleton from "./TelegramSkeleton";
+import { useTranslations } from 'next-intl';
 
 let messageEnd: HTMLElement | null
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const scene = scene4
     const [azadText, setAzadText] = useState<string[]>([])
+    const t = useTranslations('Chap1s4');
+
     useEffect(() => {
         if (typeof document !== "undefined") {
             messageEnd = document.getElementById("end")
@@ -75,16 +78,16 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                         </div>
                     </div>
                     {stage === 0 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[0]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c1.choice1')} choice2={t('choices.c1.choice2')} />
                     }
                     {stage === 1 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[1]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c2.choice1')} choice2={t('choices.c2.choice2')} />
                     }
                     {stage === 2 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[2]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c3.choice1')} choice2={t('choices.c3.choice2')} />
                     }
                     {stage === 3 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene4Choices[3]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c4.choice1')} choice2={t('choices.c4.choice2')} />
                     }
                 </div>
             </div>
