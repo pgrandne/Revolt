@@ -10,14 +10,15 @@ import SaveButton from "@/app/components/SaveButton";
 import { useEffect, useState } from "react";
 import { handleEthereum } from "@/lib/utils/checkWallet";
 import Modal from "@/app/components/Modal";
+import { useTranslations } from 'next-intl';
 
 const Chap2 = () => {
 
+    const t = useTranslations('Chap2');
     const Msg = () => (
-        <p>Please we need your feedback 🦄. Click on this <a className="underline" href="https://msprr0gajgn.typeform.com/to/DSl54TqJ">link</a>
+        <p>{t('feedback')} <a className="underline" href="https://msprr0gajgn.typeform.com/to/DSl54TqJ">{t('link')}</a>
         </p>
     )
-
 
     const notify = () => toast(<Msg />, {
         delay: 2000,
@@ -65,21 +66,21 @@ const Chap2 = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 1, duration: 2 }}
                         >
-                            Metamask is required for Chapter 2 and it looks like you don&apos;t have it installed.
+                            {t('metamask')}
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 3, duration: 2 }}
                         >
-                            You can click on this <a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">link</a> to install it.
+                            {t('metamaskLink1')}<a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">link</a>{t('metamaskLink2')}
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 5, duration: 2 }}
                         >
-                            Or you can go to <Link className="underline" href="/chapter1/scene1"> Chapter 1</Link> to rediscover the whole story, and understand how Metamask works.
+                            {t('gotochapter1')}<Link className="underline" href="/chapter1/scene1">{t('chapter1')}</Link> {t('gotochapter1end')}
                         </ motion.p>
                     </div>
                 }
@@ -92,10 +93,10 @@ const Chap2 = () => {
                             transition={{ delay: 3, duration: 2 }}
                         >
                             {!isConnected &&
-                                <p >Click on <span className="font-extrabold">“Connect Walet“</span> and select Mematask</p>
+                                <p >{t('click')} <span className="font-extrabold">“Connect Walet“</span> {t('select')}</p>
                             }
                             {isConnected && chain?.id !== 420 &&
-                                <p>Please click on <span className="font-extrabold">“Wrong Network“</span> and switch to Optimism Goerli</p>}
+                                <p>{t('click')} <span className="font-extrabold">“Wrong Network“</span> {t('switch')}</p>}
                         </ motion.div>
                         {chain?.id === 420 &&
                             <motion.div

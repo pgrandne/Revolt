@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Dispatch, SetStateAction } from "react";
 
-const AzadChoices = ({ stage, setStage, azadText, setAzadText, choice1, choice2, delay, duration }: {
+export const AzadChoices = ({ stage, setStage, azadText, setAzadText, choice1, choice2, delay, duration }: {
     stage: number
     setStage: Dispatch<SetStateAction<number>>
     azadText: string[]
@@ -41,5 +41,3 @@ const AzadChoices = ({ stage, setStage, azadText, setAzadText, choice1, choice2,
         </motion.div>
     )
 }
-
-export default AzadChoices;

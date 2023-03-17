@@ -5,9 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { cincinnatusPic } from "@/public/img"
 import { useTranslations } from 'next-intl';
-import ExternalDiscussion from "@/app/components/ExternalDiscussion";
-import TelegramChoices from "@/app/components/TelegramChoices";
-import AzadDiscussion from "@/app/components/AzadDiscussion";
+import { AzadDiscussion, ExternalDiscussion, TelegramChoices } from '@/app/components'
 
 let messageEnd: HTMLElement | null
 

@@ -5,9 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/public/img/cincinnatus.jpg"
 import { useTranslations } from 'next-intl';
-import ExternalDiscussion from "@/app/components/ExternalDiscussion";
-import TelegramChoices from "@/app/components/TelegramChoices";
-import AzadDiscussion from "@/app/components/AzadDiscussion";
+import { AzadDiscussion, ExternalDiscussion, TelegramChoices } from '@/app/components'
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [write, setWrite] = useState(false)

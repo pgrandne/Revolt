@@ -1,9 +1,7 @@
 'use client';
 
 import { useState } from "react"
-import ExternalDiscussion from '@/app/components/ExternalDiscussion';
-import AzadDiscussion from '@/app/components/AzadDiscussion';
-import AzadChoices from '@/app/components/AzadChoices';
+import { AzadChoices, AzadDiscussion, ExternalDiscussion } from '@/app/components'
 import { useTranslations } from 'next-intl';
 import { Dispatch, SetStateAction } from "react";
 

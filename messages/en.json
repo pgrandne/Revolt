@@ -253,9 +253,23 @@
                 "choice1": "Okay, I'm done.",
                 "choice2": "It gave me hard time but I finally made it"
             }
-        }
+        },
+        "text1": "Go to",
+        "text2": "and download the extension."
     },
-    "Chap2": {},
+    "Chap2": {
+        "feedback": "Please we need your feedback 🦄. Click on this ",
+        "link": "link",
+        "metamask": "Metamask is required for Chapter 2 and it looks like you don't have it installed.",
+        "metamaskLink1": "You can click on this ",
+        "metamaskLink2": " to install it",
+        "gotochapter1": "Or you can go to ",
+        "gotochapter1end": "to rediscover the whole story, and understand how Metamask works.",
+        "chapter1": "Chapter 1",
+        "click": "Click on",
+        "select": "and select Mematask",
+        "switch": "and switch to Optimism Goerli"
+    },
     "Chap2s1": {
         "dialogue": {
             "d1": "Hey Azad, did you install a wallet?",

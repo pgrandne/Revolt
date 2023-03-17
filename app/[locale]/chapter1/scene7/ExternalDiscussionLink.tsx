@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion"
 
-const ExternalDiscussion = ({ name, delay }: {
-    name: string,
-    delay: number,
+const ExternalDiscussion = ({ name, delay, text1, text2 }: {
+    name: string
+    delay: number
+    text1: string
+    text2: string
 }) => {
 
     return (
@@ -17,7 +19,7 @@ const ExternalDiscussion = ({ name, delay }: {
             >
                 <div className={name}>{name}</div>
                 <div className="text-sm text-slate-900">
-                    Go to <a className="underline" href="https://metamask.io/" target="_blank" rel="noreferrer">metamask.io</a> and download the extension.
+                    {text1} <a className="underline" href="https://metamask.io/" target="_blank" rel="noreferrer">metamask.io</a> {text2}
                 </div>
             </motion.div>
         </div >

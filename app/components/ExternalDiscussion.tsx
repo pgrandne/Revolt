@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { child, textAnimation } from "@/lib/utils/animatedText"
 
-const ExternalDiscussion = ({ text, name, delay, telegramWindow = false }: {
+export const ExternalDiscussion = ({ text, name, delay, telegramWindow = false }: {
     text: string,
     name: string,
     delay: number,
@@ -65,5 +65,3 @@ const ExternalDiscussion = ({ text, name, delay, telegramWindow = false }: {
         </div >
     )
 }
-
-export default ExternalDiscussion;

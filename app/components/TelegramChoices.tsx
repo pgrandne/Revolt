@@ -1,13 +1,14 @@
 import { Dispatch, SetStateAction, useState } from "react"
 
-const TelegramChoices = ({ stage, setStage, azadText, setAzadText, choice1, choice2 }: {
-    stage: number,
-    setStage: Dispatch<SetStateAction<number>>
-    azadText: string[]
-    setAzadText: Dispatch<SetStateAction<string[]>>
-    choice1: string
-    choice2: string
-}) => {
+export const TelegramChoices = ({ stage, setStage, azadText, setAzadText, choice1, choice2 }:
+    {
+        stage: number,
+        setStage: Dispatch<SetStateAction<number>>
+        azadText: string[]
+        setAzadText: Dispatch<SetStateAction<string[]>>
+        choice1: string
+        choice2: string
+    }) => {
 
     const [write, setWrite] = useState(false)
 
@@ -60,5 +61,3 @@ const TelegramChoices = ({ stage, setStage, azadText, setAzadText, choice1, choi
         </>
     )
 }
-
-export default TelegramChoices

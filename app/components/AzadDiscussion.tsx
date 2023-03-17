@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 
-const AzadDiscussion = ({ azadText, delay, duration }: {
+export const AzadDiscussion = ({ azadText, delay, duration }: {
     azadText: string,
     delay: number,
     duration: number,
@@ -22,5 +22,3 @@ const AzadDiscussion = ({ azadText, delay, duration }: {
         </div>
     )
 }
-
-export default AzadDiscussion;

@@ -1,9 +1,7 @@
 'use client';
 
 import { Dispatch, SetStateAction, useEffect, useState } from "react"
-import ExternalDiscussion from '@/app/components/ExternalDiscussion';
-import AzadDiscussion from '@/app/components/AzadDiscussion';
-import AzadChoices from '@/app/components/AzadChoices';
+import { AzadChoices, AzadDiscussion, ExternalDiscussion } from '@/app/components';
 import { useTranslations } from 'next-intl';
 import ExternalDiscussionLink from "./ExternalDiscussionLink";
 
@@ -70,7 +68,7 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                         </>}
                         {stage > 7 && <>
                             <AzadDiscussion azadText={azadText[7]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussionLink name="Skyler" delay={1.2} />
+                            <ExternalDiscussionLink name="Skyler" delay={1.2} text1={t('text1')} text2={t('text2')} />
                             <ExternalDiscussion text={t('dialogue.d19')} name="Skyler" delay={3} telegramWindow={false} />
                         </>}
                         {stage > 8 && <>

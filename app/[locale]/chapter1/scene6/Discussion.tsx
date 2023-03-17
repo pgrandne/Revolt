@@ -1,9 +1,7 @@
 'use client';
 
 import { useEffect, useState, Dispatch, SetStateAction } from "react"
-import ExternalDiscussion from '@/app/components/ExternalDiscussion';
-import AzadDiscussion from '@/app/components/AzadDiscussion';
-import AzadChoices from '@/app/components/AzadChoices';
+import { AzadChoices, AzadDiscussion, ExternalDiscussion } from '@/app/components';
 import { useTranslations } from 'next-intl';
 
 let messageEnd: HTMLElement | null

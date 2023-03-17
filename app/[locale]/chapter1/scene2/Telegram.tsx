@@ -4,9 +4,7 @@ import { Dispatch, SetStateAction, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { cincinnatusPic } from "@/public/img"
-import ExternalDiscussion from "@/app/components/ExternalDiscussion";
-import TelegramChoices from "@/app/components/TelegramChoices";
-import AzadDiscussion from "@/app/components/AzadDiscussion";
+import { AzadDiscussion, ExternalDiscussion, TelegramChoices } from '@/app/components'
 import { useTranslations } from 'next-intl';
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
