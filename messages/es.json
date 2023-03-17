@@ -53,5 +53,94 @@
                 "choice2": "Sí, por supuesto."
             }
         }
+    },
+    "Chap1s3": {
+        "dialogue": {
+            "d1": "Hey Azad, ¿podrías comprar algo de comida, por favor? Rob está llegando con Jessy y no lo conté...",
+            "d2": "¿Qué le gustaría, señor?",
+            "d3": "Serán 12 LIS, señor.",
+            "d4": "Su tarjeta ha sido rechazada.",
+            "d5": "Todavía no funciona. ¿Tiene otro medio de pago?",
+            "d6": "Espero que no sea moneda falsa...",
+            "d7": "¡Esta historia de moneda falsa es terrible!",
+            "d8": "Desde esta mañana, cada vez que un cliente paga en efectivo en el restaurante, tengo miedo de que sean billetes falsos...",
+            "d9": "Sí, es una catástrofe para nuestro país...",
+            "d10": "Aparentemente, hay miles de millones en circulación en este momento."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Yes it's insane!",
+                "choice2": "About what?"
+            }
+        }
+    },
+    "Chap1s4": {
+        "dialogue": {
+            "d1": "Hola Azad",
+            "d2": "Te contacté la semana pasada sobre un asunto delicado",
+            "d3": "Antes de hablarte de eso, debo asegurarme de que nuestros intercambios sean privados. El asunto es extremadamente delicado.",
+            "d4": "En este punto, solo puedo darte su nombre en clave: ClearPath",
+            "d5": "No hables con nadie sobre nuestros intercambios, nunca te contactaré en otra aplicación que no sea esta aplicación cifrada.",
+            "d6": "Hay un casillero, el número 29, en la estación de Central Street. El código es 311009. Puse una muestra inicial de documentos allí, te darás cuenta de la magnitud de la situación.",
+            "d7": "Parecía urgente, ¿hay un problema?",
+            "d8": "No cuesta nada ver a dónde nos lleva.",
+            "d9": "¿Qué es eso?"
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Yes it's insane!",
+                "choice2": "About what?"
+            }
+        }
+    },
+    "Chap1s6": {
+        "dialogue": {
+            "d1": "Es absurdo. ¿Estamos en una novela de Orwell o qué? ¡Han prohibido el efectivo!",
+            "d2": "¿De verdad? ¿Quién es? ¿Un informante interno?",
+            "d3": "¿Por qué tomaría un riesgo así justo antes de que se haga público? No tiene sentido...",
+            "d4": "Hola Azad, supongo que estás siguiendo las noticias en vivo.",
+            "d5": "Todo se ha acelerado. No pensé que actuarían tan rápido.",
+            "d6": "No tienes idea de lo que vamos a revelar. Esto es solo la punta del iceberg...",
+            "d7": "¡Vaya! Mal momento... Escucha, estoy dispuesto a enviarte dinero para ayudarte y seguir con la investigación.",
+            "d8": "No tienes idea en lo que nos estamos metiendo. Tenemos que llegar hasta el final ahora.",
+            "d9": "Digamos simplemente que el dinero no es un problema, y realmente necesito que saques a la luz esta historia.",
+            "d10": "Tienes que instalar un wallet.",
+            "d11": "Es como tu monedero físico, pero digital. No está controlada por un banco o una autoridad central, y nadie puede impedir que la uses. Es dinero digital. Tengo que irme ahora. Instala Metamask y envíame tu dirección y te enviaré dinero."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Yes it's insane!",
+                "choice2": "About what?"
+            }
+        }
+    },
+    "Chap1s7": {
+        "dialogue": {
+            "d1": "Tu informante probablemente tenga razón. Si quieres llevar a cabo esta investigación, necesitas dinero. El bloqueo de tu cuenta por “actividad sospechosa“ probablemente es un intento de intimidación.",
+            "d2": "Es una extraña coincidencia.",
+            "d3": "De todas formas, también necesitas dinero para vivir, no puedes seguir pidiendo prestado dinero a todo el mundo como lo has estado haciendo durante una semana.",
+            "d4": "¿Recuerdas la investigación SBFTX a principios de año? Aprendí bastantes cosas... Un wallet no es una mala idea para resolver tu problema, especialmente si te permite recibir dinero.",
+            "d5": "En realidad, es bastante sencillo. Es como una caja fuerte digital, o un buzón digital si lo prefieres, donde cualquiera puede depositar dinero, pero nadie puede abrirlo excepto tú.",
+            "d6": "Y sobre todo, nadie nunca podrá impedirte acceder a él. Nunca.",
+            "d7": "¿Dinero real, quieres decir el que tienes en tu cuenta bancaria que no puedes usar desde que fue bloqueada?",
+            "d8": "Incluso si se trata de divisas digitales, son bien reales, muchas tiendas aceptan criptomonedas.",
+            "d9": "Bueno, primero tienes que instalar un monedero digital. Metamask es el más utilizado.",
+            "d10": "Cerca de 30 millones de personas lo utilizan. Es simplemente una extensión del navegador.",
+            "d11": "Te guiaré, lo haremos juntos.",
+            "d12": "Cuando la extensión de Metamask esté descargada en tu navegador, se abrirá una nueva ventana y te pedirá que crees un nuevo monedero.",
+            "d13": "Primero, deberás elegir una contraseña que te permita acceder a la extensión desde tu dispositivo.",
+            "d14": "Luego viene el paso más importante. Metamask generará aleatoriamente 12 palabras. Esto es lo que se llama la master key.",
+            "d15": "Es la única y exclusiva clave que permite abrir tu buzón si retomamos la metáfora anterior.",
+            "d16": "Si la pierdes, tu monedero quedará bloqueado para siempre.",
+            "d17": "Y si alguien puede acceder a estas palabras, tendrá acceso a todo lo que se almacena en el interior.",
+            "d18": "Por eso es esencial guardar estas 12 palabras en un lugar seguro.",
+            "d19": "Vuelve a verme cuando hayas terminado todas las etapas que te acabo de describir."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Yes it's insane!",
+                "choice2": "About what?"
+            }
+        }
     }
-}   
+}
