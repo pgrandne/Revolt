@@ -4,8 +4,7 @@ import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { scene4 } from '@/lib/utils/story'
 import ExternalDiscussion from "./ExternalDiscussion";
-import TelegramChoices from "@/app/components/TelegramChoices";
-import AzadDiscussion from "@/app/components/AzadDiscussion";
+import { AzadDiscussion, TelegramChoices } from '@/app/components'
 import TelegramSkeleton from "./TelegramSkeleton";
 import { useTranslations } from 'next-intl';
 
