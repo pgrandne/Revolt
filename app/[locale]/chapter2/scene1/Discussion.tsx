@@ -4,13 +4,15 @@ import { useEffect, useState, Dispatch, SetStateAction } from "react"
 import ExternalDiscussion from '@/app/components/ExternalDiscussion';
 import AzadDiscussion from '@/app/components/AzadDiscussion';
 import AzadChoices from '@/app/components/AzadChoices';
-import { scene6, scene6Choices } from '@/lib/utils/story'
+import { scene6 } from '@/lib/utils/story'
+import { useTranslations } from 'next-intl';
 
 let messageEnd: HTMLElement | null
 
 
 const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
+    const t = useTranslations('Chap2s1');
     useEffect(() => {
         if (typeof document !== "undefined") {
             messageEnd = document.getElementById("end")
@@ -45,13 +47,13 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                 <div className="my-1 w-full"
                 >
                     {stage === 1 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[0]} delay={12} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c1.choice1')} choice2={t('choices.c1.choice2')} delay={12} duration={.5} />
                     }
                     {stage === 2 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[1]} delay={4.5} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c2.choice1')} choice2={t('choices.c2.choice2')} delay={4.5} duration={.5} />
                     }
                     {stage === 3 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene6Choices[2]} delay={5.8} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c3.choice1')} choice2={t('choices.c3.choice2')} delay={5.8} duration={.5} />
                     }
                 </div>
             </div>

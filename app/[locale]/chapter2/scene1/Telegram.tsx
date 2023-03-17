@@ -4,18 +4,20 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import cincinnatus from "@/public/img/cincinnatus.jpg"
-import { chap2, chap2Choices } from '@/lib/utils/story'
 import ExternalDiscussion from "@/app/components/ExternalDiscussion";
 import ExternalDiscussionLink from "./ExternalDiscussionLink";
 import TelegramPaste from "./TelegramPaste";
 import TelegramChoices from "@/app/components/TelegramChoices";
 import AzadDiscussion from "@/app/components/AzadDiscussion";
+import { useTranslations } from 'next-intl';
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
     const [playerAddress, setPlayerAddress] = useState('')
     const [externalAnswer, setExternalAnswer] = useState('')
     const messageEnd = document.getElementById("end");
+    const t = useTranslations('Chap2s1');
+
     const scrollToBottom = () => {
         if (messageEnd !== null)
             messageEnd.scrollIntoView({ behavior: "smooth" })
@@ -104,28 +106,28 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <div className="w-3/4 my-1">
                                 <div className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow">
                                     <div className="text-sm text-black">
-                                        {chap2[0]}
+                                        {t('dialogue.d1')}
                                     </div>
                                 </div>
                             </div>
                             {stage > 0 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={chap2[1]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d2')} name="Cincinnatus" delay={0.8} telegramWindow={true} />
                                     <ExternalDiscussionLink delay={5.2} setStage={setStage} />
                                 </>
                             }
                             {stage > 1 &&
                                 <>
-                                    <ExternalDiscussion text={chap2[2]} name="Cincinnatus" delay={0.2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d3')} name="Cincinnatus" delay={0.2} telegramWindow={true} />
                                 </>
                             }
                             {stage > 2 &&
                                 <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={chap2[3]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[4]} name="Cincinnatus" delay={4.5} telegramWindow={true} />
-                                    <ExternalDiscussion text={chap2[5]} name="Cincinnatus" delay={8.7} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d4')} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={4.5} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={8.7} telegramWindow={true} />
                                 </>
                             }
                             {stage > 3 &&
@@ -137,7 +139,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 <>
                                     <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
                                     {stage < 99 &&
-                                        <ExternalDiscussion text={chap2[6]} name="Cincinnatus" delay={3.5} telegramWindow={true} />
+                                        <ExternalDiscussion text={t('dialogue.d7')} name="Cincinnatus" delay={3.5} telegramWindow={true} />
                                     }
                                 </>
                             }
@@ -146,8 +148,8 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
                                     {stage < 98 &&
                                         <>
-                                            <ExternalDiscussion text={chap2[7]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
-                                            <ExternalDiscussion text={chap2[8]} name="Cincinnatus" delay={4.5} telegramWindow={true} />
+                                            <ExternalDiscussion text={t('dialogue.d8')} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                            <ExternalDiscussion text={t('dialogue.d9')} name="Cincinnatus" delay={4.5} telegramWindow={true} />
                                         </>
                                     }
                                 </>
@@ -156,7 +158,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 <>
                                     <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={7.9} telegramWindow={true} />
                                     {stage < 98 &&
-                                        <ExternalDiscussion text={chap2[9]} name="Cincinnatus" delay={11.6} telegramWindow={true} />
+                                        <ExternalDiscussion text={t('dialogue.d10')} name="Cincinnatus" delay={11.6} telegramWindow={true} />
                                     }
                                 </>
                             }
@@ -164,16 +166,16 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                         </div>
                     </div>
                     {stage === 0 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={chap2Choices[0]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c1.choice1')} choice2={t('choices.c1.choice2')} />
                     }
                     {stage === 2 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={chap2Choices[1]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c2.choice1')} choice2={t('choices.c2.choice2')} />
                     }
                     {(stage === 3 || stage === 4) &&
                         <TelegramPaste stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} setPlayerAddress={setPlayerAddress} />
                     }
                     {stage === 5 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={chap2Choices[2]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c3.choice1')} choice2={t('choices.c3.choice2')} />
                     }
                 </div>
             </div>
