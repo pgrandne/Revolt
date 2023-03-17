@@ -3,11 +3,7 @@
 import { motion } from "framer-motion"
 import { useState } from 'react'
 import Image from "next/image";
-import lockerPic from "@/public/img/locker.png"
-import pickupPic from "@/public/img/pickup2.png"
-import classifiedPic from "@/public/img/classified.png"
-import documentPic from "@/public/img/classified-document.png"
-import backPic from '@/public/img/azadback.png'
+import { azadConfusedPic, classifiedPic, documentPic, lockerPic, pickupPic } from '@/public/img'
 import { AnimatedText, ArrowButton, Link } from "@/app/components";
 
 const Chap1s5 = () => {
@@ -91,7 +87,7 @@ const Chap1s5 = () => {
                         animate={{ y: [30, 0, 0, 0], opacity: [0, 1, 1, 0] }}
                         transition={{ delay: 4.5, duration: 4, times: [0, 0.2, 0.7, 1] }}>
                         <div className="flex justify-end pl-[20%] pb-[10%] pt-[20%] ">
-                            <Image className="object-contain" src={backPic} alt="Azad" />
+                            <Image className="object-contain" src={azadConfusedPic} alt="Azad" />
                         </div>
                     </motion.div>
                     < motion.div
@@ -117,8 +113,5 @@ const Chap1s5 = () => {
         </>
     )
 }
-
-
-
 
 export default Chap1s5

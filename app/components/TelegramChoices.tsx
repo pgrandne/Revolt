@@ -1,16 +1,12 @@
 import { Dispatch, SetStateAction, useState } from "react"
-interface IChoices {
-    choice1: string,
-    choice2: string
-}
 
-
-const TelegramChoices = ({ stage, setStage, azadText, setAzadText, choices }: {
+const TelegramChoices = ({ stage, setStage, azadText, setAzadText, choice1, choice2 }: {
     stage: number,
-    setStage: Dispatch<SetStateAction<number>>,
-    azadText: string[],
-    setAzadText: Dispatch<SetStateAction<string[]>>,
-    choices: IChoices
+    setStage: Dispatch<SetStateAction<number>>
+    azadText: string[]
+    setAzadText: Dispatch<SetStateAction<string[]>>
+    choice1: string
+    choice2: string
 }) => {
 
     const [write, setWrite] = useState(false)
@@ -46,17 +42,17 @@ const TelegramChoices = ({ stage, setStage, azadText, setAzadText, choices }: {
                             <button
                                 className="pl-2 py-1 text-left"
                                 onClick={() => {
-                                    setAzadText([...azadText, choices.choice1])
+                                    setAzadText([...azadText, choice1])
                                     setStage(stage + 1)
                                 }}
-                            >{choices.choice1}</button>
+                            >{choice1}</button>
                             <button
                                 className="pl-2 py-1 text-left"
                                 onClick={() => {
-                                    setAzadText([...azadText, choices.choice2])
+                                    setAzadText([...azadText, choice2])
                                     setStage(stage + 1)
                                 }}
-                            >{choices.choice2}</button>
+                            >{choice2}</button>
                         </div>
                     </div>
                 </div>

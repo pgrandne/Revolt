@@ -3,8 +3,7 @@
 import { Dispatch, SetStateAction, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import cincinnatus from "@/public/img/cincinnatus.jpg"
-import { scene2Choices } from '@/lib/utils/story'
+import { cincinnatusPic } from "@/public/img"
 import ExternalDiscussion from "@/app/components/ExternalDiscussion";
 import TelegramChoices from "@/app/components/TelegramChoices";
 import AzadDiscussion from "@/app/components/AzadDiscussion";
@@ -26,7 +25,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                     <div className="w-12 h-12 mx-4 my-2 bg-blue-500 bg-center bg-no-repeat bg-cover rounded-full cursor-pointer">
                         <Image
                             className="rounded-full"
-                            src={cincinnatus}
+                            src={cincinnatusPic}
                             alt="Cincinnatus"
                         />
                     </div>
@@ -79,7 +78,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                         </div>
                     </div>
                     {stage === 3 &&
-                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choices={scene2Choices[3]} />
+                        <TelegramChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c4.choice1')} choice2={t('choices.c4.choice2')} />
                     }
                 </div>
             </div>

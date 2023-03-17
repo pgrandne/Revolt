@@ -27,7 +27,7 @@ const ModalProgression = ({ setModalProgression, wallet }: {
     const getProgression = async () => {
         setLoading(true)
         try {
-            const progRes = await fetch('/api/game/progression', {
+            const progRes = await fetch('/app/api/game/progression', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

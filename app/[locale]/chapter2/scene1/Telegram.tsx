@@ -34,7 +34,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
     const askGas = async () => {
         let text
         const data = { address: playerAddress }
-        const response = await fetch('/api/game/gas', {
+        const response = await fetch('/app/api/game/gas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

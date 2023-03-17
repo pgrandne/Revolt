@@ -3,19 +3,15 @@
 import { motion } from "framer-motion"
 import { Dispatch, SetStateAction } from "react";
 
-interface IChoices {
-    choice1: string,
+const AzadChoices = ({ stage, setStage, azadText, setAzadText, choice1, choice2, delay, duration }: {
+    stage: number
+    setStage: Dispatch<SetStateAction<number>>
+    azadText: string[]
+    setAzadText: Dispatch<SetStateAction<string[]>>
+    choice1: string
     choice2: string
-}
-
-const AzadChoices = ({ stage, setStage, azadText, setAzadText, choices, delay, duration }: {
-    stage: number,
-    setStage: Dispatch<SetStateAction<number>>,
-    azadText: string[],
-    setAzadText: Dispatch<SetStateAction<string[]>>,
-    choices: IChoices,
-    delay: number,
-    duration: number,
+    delay: number
+    duration: number
 }) => {
     return (
         <motion.div
@@ -28,19 +24,19 @@ const AzadChoices = ({ stage, setStage, azadText, setAzadText, choices, delay, d
                 className="p-2 text-sm bg-lime-200 hover:bg-lime-300 rounded-lg text-slate-900 border-4 border-lime-300"
                 onClick={() => {
                     setStage(stage + 1)
-                    setAzadText([...azadText, choices.choice1])
+                    setAzadText([...azadText, choice1])
                 }}
             >
-                {choices.choice1}
+                {choice1}
             </button>
             <button
                 className="p-2 text-sm bg-lime-200 hover:bg-lime-300 rounded-lg text-slate-900 border-4 border-lime-300"
                 onClick={() => {
                     setStage(stage + 1)
-                    setAzadText([...azadText, choices.choice2])
+                    setAzadText([...azadText, choice2])
                 }}
             >
-                {choices.choice2}
+                {choice2}
             </button>
         </motion.div>
     )

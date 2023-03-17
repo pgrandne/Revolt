@@ -5,7 +5,7 @@ import Image from "next/image"
 import { AnimatedText } from '@/app/components';
 import redactionPic from "@/public/img/newsroom1.png"
 import notifPic from "@/public/img/notif.png"
-import manPic from "@/public/img/azad-desk.png"
+import { azadDeskPic } from "@/public/img"
 import { Dispatch, SetStateAction } from "react";
 
 const Sequence = ({ setTelegramWindow, telegramWindow }: {
@@ -36,7 +36,7 @@ const Sequence = ({ setTelegramWindow, telegramWindow }: {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 6.3, duration: 1.5 }}>
                     <div className="flex justify-end pl-[40%] pt-[20%] pb-[0%]">
-                        <Image className="object-contain" src={manPic} alt="Azad" />
+                        <Image className="object-contain" src={azadDeskPic} alt="Azad" />
                     </div>
                 </motion.div>
                 {!telegramWindow &&

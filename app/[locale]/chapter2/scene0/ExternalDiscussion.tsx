@@ -4,17 +4,16 @@ import { motion } from "framer-motion"
 import { child, textAnimation } from "@/lib/utils/animatedText"
 import { scene4, scene4Choices } from '@/lib/utils/story'
 
-const ExternalDiscussion = ({ scene, index, name, firstText, telegramWindow }: {
+const ExternalDiscussion = ({ scene, index, name, firstText = false, telegramWindow = false }: {
     scene: string[],
     index: number,
     name?: string,
     firstText?: boolean,
-    telegramWindow: boolean,
+    telegramWindow?: boolean,
 }) => {
     const text = scene[index]
-    // const a = 0.08
-    const a = 1
-    const b = 1
+    const a = 0.08
+    const b = 2
 
     const calculateDelay = (index: number) => {
         let delay
@@ -60,7 +59,7 @@ const ExternalDiscussion = ({ scene, index, name, firstText, telegramWindow }: {
                     <motion.div
                         className="absolute p-2 w-20 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black"
                         animate={{ opacity: [0, 1, 1, 0] }}
-                        transition={{ delay: calculateDelay(index), duration: 10, times: [0, 0.2, 0.9, 1] }}
+                        transition={{ delay: calculateDelay(index), duration: b, times: [0, 0.2, 0.9, 1] }}
                     >
                         <div className="animate-bounce text-teal-500 w-6 h-6 ...">
                             typing...

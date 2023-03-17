@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { AnimatedText } from '@/app/components'
 import redactionPic from "@/public/img/newsroom1.png"
-import azadPic from "@/public/img/azad-desk.png"
+import { azadDeskPic } from "@/public/img"
 import skylerPic from "@/public/img/skylerDesk.png"
 import notifPic from "@/public/img/notif.png"
 import chatPic from "@/public/img/chat.png"
@@ -41,7 +41,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 2, duration: 1.5 }}>
                         <div className="flex justify-end pl-[40%] pt-[20%] pb-[0%]">
-                            <Image className="object-contain" src={azadPic} alt="Azad" />
+                            <Image className="object-contain" src={azadDeskPic} alt="Azad" />
                         </div>
                     </motion.div>
                     {!telegramWindow &&

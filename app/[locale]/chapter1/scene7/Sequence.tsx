@@ -3,8 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { AnimatedText } from '@/app/components';
-import azadPic from "@/public/img/back.png"
-import skylerhomePic from "@/public/img/skyler-place.png"
+import { azadBackPic, skylerHomePic } from "@/public/img"
 
 const Sequence = () => {
     const narration = "Azad's place"
@@ -17,7 +16,7 @@ const Sequence = () => {
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 1 }}>
-                <Image className="object-contain" src={skylerhomePic} alt="Skyler Home" />
+                <Image className="object-contain" src={skylerHomePic} alt="Skyler Home" />
             </motion.div>
             <div className="pl-6 pt-2 z-10">
                 <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={2} />
@@ -29,7 +28,7 @@ const Sequence = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 3, duration: 1.5 }}>
                 <div className="flex justify-end pl-[30%] pt-[15%] pb-[5%]">
-                    <Image className="object-contain" src={azadPic} alt="Azad" />
+                    <Image className="object-contain" src={azadBackPic} alt="Azad" />
                 </div>
             </motion.div>
         </div >

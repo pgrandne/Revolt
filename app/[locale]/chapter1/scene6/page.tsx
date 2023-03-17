@@ -5,8 +5,7 @@ import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Image from "next/image";
-import tvPic from "@/public/img/tv.png"
-import journalPic from "@/public/img/manreadjournal.png"
+import { manReadJournalPic, tvPic } from "@/public/img"
 import { AnimatedText, ArrowButton, Link } from "@/app/components";
 import Telegram from "./Telegram";
 
@@ -42,7 +41,7 @@ const Chap1s6 = () => {
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 2, duration: 2 }}>
                             <div className="flex justify-end pl-[0%] pb-[0%] pt-[30%]">
-                                <Image className="object-contain" src={journalPic} alt="Journal" />
+                                <Image className="object-contain" src={manReadJournalPic} alt="Journal" />
                             </div>
                         </motion.div>
                     </div>
