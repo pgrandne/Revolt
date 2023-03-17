@@ -69,8 +69,32 @@
         },
         "choices": {
             "c1": {
-                "choice1": "Yes it's insane!",
-                "choice2": "About what?"
+                "choice1": "No hay problema, estoy justo al lado del camión de comida libanesa.",
+                "choice2": "Sí, por supuesto."
+            },
+            "c2": {
+                "choice1": "Tomaré 5 falafels, por favor.",
+                "choice2": "Un mezze mediano."
+            },
+            "c3": {
+                "choice1": "Por favor, con tarjeta.",
+                "choice2": "¿Tienes pago sin contacto?"
+            },
+            "c4": {
+                "choice1": "Voy a intentar con el código.",
+                "choice2": "Lo insertaré."
+            },
+            "c5": {
+                "choice1": "Tengo 20 LIS en efectivo...",
+                "choice2": "Dejame ver."
+            },
+            "c6": {
+                "choice1": "La gente podría perder toda confianza en nuestra moneda.",
+                "choice2": "No veo cómo el gobierno podría resolver el problema."
+            },
+            "c7": {
+                "choice1": "Los problemas con mi tarjeta bancaria no podrían haber llegado en peor momento.",
+                "choice2": "(say nothing)"
             }
         }
     },
@@ -88,8 +112,32 @@
         },
         "choices": {
             "c1": {
-                "choice1": "Yes it's insane!",
-                "choice2": "About what?"
+                "choice1": "Hola. Sí, lo recuerdo muy bien.",
+                "choice2": "Hola “Cincinnatus”, todavía no tengo idea de lo que estás hablando..."
+            },
+            "c2": {
+                "choice1": "Entiendo, ¿puedes al menos decirme de qué se trata?",
+                "choice2": "Por supuesto"
+            },
+            "c3": {
+                "choice1": "¿Qué quieres que haga?",
+                "choice2": "De acuerdo, entendido"
+            },
+            "c4": {
+                "choice1": "Cuenta conmigo",
+                "choice2": "¡Es como una película de espías!"
+            },
+            "c5": {
+                "choice1": "No realmente, pero tengo dudas sobre un informante que me contactó.",
+                "choice2": "Alguien me contactó, no sé si puedo confiar en él."
+            },
+            "c6": {
+                "choice1": "ClearPath, ¿te suena de algo?",
+                "choice2": "Mencionó la operación ClearPath."
+            },
+            "c7": {
+                "choice1": "Todavía no estoy seguro, tengo que irme.",
+                "choice2": "Olvídalo, te mantendré informado."
             }
         }
     },
@@ -109,8 +157,40 @@
         },
         "choices": {
             "c1": {
-                "choice1": "Yes it's insane!",
-                "choice2": "About what?"
+                "choice1": "¿Recuerdas el informante del que hablé ayer? Sabía sobre esto.",
+                "choice2": "Mi informante me advirtió ayer."
+            },
+            "c2": {
+                "choice1": "Todavía no lo sé. Me envió documentos clasificados que recopilé anoche.",
+                "choice2": "Recibí documentos sobre la operación ClearPath."
+            },
+            "c3": {
+                "choice1": "Tienes razón. Tengo que investigar.",
+                "choice2": "Tengo que contactar a mi informante."
+            },
+            "c4": {
+                "choice1": "¿Cómo te enteraste?",
+                "choice2": "Sí, estamos viendo la televisión."
+            },
+            "c5": {
+                "choice1": "Me costó creerlo cuando examiné los documentos ayer.",
+                "choice2": "(no decir nada)"
+            },
+            "c6": {
+                "choice1": "¿Sabes algo más? Mi tarjeta bancaria está bloqueada, así que esto es terrible para mí.",
+                "choice2": "Lo irónico de esto es que mi tarjeta bancaria está bloqueada."
+            },
+            "c7": {
+                "choice1": "¿Por qué harías eso?",
+                "choice2": "(no decir nada)"
+            },
+            "c8": {
+                "choice1": "Eres afortunado.",
+                "choice2": "(no decir nada)"
+            },
+            "c9": {
+                "choice1": "¿Instalar un wallet?",
+                "choice2": "¿Qué es eso?"
             }
         }
     },
@@ -138,8 +218,83 @@
         },
         "choices": {
             "c1": {
-                "choice1": "Yes it's insane!",
-                "choice2": "About what?"
+                "choice1": "¿Qué estás diciendo? No he empezado nada.",
+                "choice2": "Por favor, no seas paranoica, eso no ayuda..."
+            },
+            "c2": {
+                "choice1": "Tienes razón. Y con los nuevos acontecimientos, mi problema no será la prioridad del banco.",
+                "choice2": "Debería haber resuelto el problema la semana pasada."
+            },
+            "c3": {
+                "choice1": "No entendí eso del monedero digital...",
+                "choice2": "¿Está relacionado con Bitcoin y las criptomonedas?"
+            },
+            "c4": {
+                "choice1": "Pero sigue siendo dinero “virtual“ en comparación con el que tengo en mi cuenta bancaria real.",
+                "choice2": "Preferiría dinero real."
+            },
+            "c5": {
+                "choice1": "Eso es lo que Cincinnatus me dijo que instalara.",
+                "choice2": "(no decir nada)"
+            },
+            "c6": {
+                "choice1": "Sí, por favor.",
+                "choice2": "Muchas gracias."
+            },
+            "c7": {
+                "choice1": "¿Qué pasa si la pierdo?",
+                "choice2": "De acuerdo."
+            },
+            "c8": {
+                "choice1": "De acuerdo.",
+                "choice2": "(say nothing)"
+            },
+            "c9": {
+                "choice1": "¡Listo, he terminado!",
+                "choice2": "Me costó un poco, pero finalmente lo logré."
+            }
+        },
+        "text1": "Ve a",
+        "text2": "y descarga la extensión."
+    },
+    "Chap2": {
+        "feedback": "Ayúdanos a mejorar la experiencia y danos tu opinión 🦄. Haz clic ",
+        "link": "aquí",
+        "metamask": "Se requiere Metamask para el Capítulo 2 y parece que no lo tienes instalado.",
+        "metamaskLink1": "Puedes hacer clic aquí ",
+        "metamaskLink2": " para instalarlo",
+        "gotochapter1": "O puedes ir al ",
+        "gotochapter1end": "para redescubrir toda la historia y entender cómo funciona Metamask.",
+        "chapter1": "Capítulo 1",
+        "click": "Haz clic en",
+        "select": "y selecciona Metamask",
+        "switch": "y cambia a Optimism Goerli"
+    },
+    "Chap2s1": {
+        "dialogue": {
+            "d1": "Hola Azad, ¿instalaste una wallet?",
+            "d2": "Muy bien, ahora te enviaré algunos fondos en USDC, una criptomoneda estable cuyo valor está indexado al dólar (1 USDC = 1 $).",
+            "d3": "Haz clic en la extensión de Metamask en tu navegador. Ahora deberías ver los USDC en la pestaña 'Activos'.",
+            "d4": "Necesito tu dirección para enviarte los fondos ahora. Es una secuencia única de letras y números que comienza con 0x ......",
+            "d5": "Cuando hagas clic en la extensión, verás la dirección justo debajo del nombre de la cuenta ('Cuenta 1' en tu caso porque acabas de instalarla).",
+            "d6": "Simplemente haz clic en ella para copiar tu dirección en el portapapeles y pégala aquí.",
+            "d7": "Para realizar transacciones en esta red, también necesitarás “gas”. Es un poco como la gasolina para tu coche, si quieres que funcione, debes llenar el tanque con el combustible adecuado.",
+            "d8": "Basicamente, este “gas” es una moneda específica utilizada para pagar tus propias transacciones. En esta red, esta moneda se llama ETH.",
+            "d9": "Pero sabes, cuando usas tu tarjeta bancaria, ¡también pagas una tarifa! La diferencia es simplemente que no eres consciente de ello porque el comerciante lo paga por ti.",
+            "d10": "Lo siento, tengo que irme, te contactaré muy pronto."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Sí",
+                "choice2": "Descargué Metamask como dijiste."
+            },
+            "c2": {
+                "choice1": "Sí, los veo",
+                "choice2": "Solo veo “0 USDC“"
+            },
+            "c3": {
+                "choice1": "¿Significa que hay que pagar por cada transacción?",
+                "choice2": "(no decir nada)"
             }
         }
     }
