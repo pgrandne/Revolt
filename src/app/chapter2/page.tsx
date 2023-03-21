@@ -25,7 +25,6 @@ const Chap2 = () => {
     }
     useEffect(() => {
         setWallet(handleEthereum());
-        setModalFeedback(true);
     }, [])
 
 
