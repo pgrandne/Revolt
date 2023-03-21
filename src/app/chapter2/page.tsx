@@ -9,6 +9,7 @@ import SaveButton from "@/components/SaveButton";
 import { useEffect, useState } from "react";
 import { handleEthereum } from "@/utils/checkWallet";
 import Modal from "@/components/Modal";
+import ModalFeedback from "@/components/ModalFeedback";
 
 const Chap2 = () => {
     const { chain } = useNetwork()
@@ -16,6 +17,7 @@ const Chap2 = () => {
     const [wallet, setWallet] = useState(false)
     const [modal, setModal] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [modalFeedback, setModalFeedback] = useState(true)
     const progression = {
         chapter: 2,
         episode: 1,
@@ -26,8 +28,12 @@ const Chap2 = () => {
     }, [])
 
 
-    return (
+    return (        
+        
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto overflow-hidden`}>
+           {modalFeedback &&
+            <ModalFeedback setModalFeedback={setModalFeedback} /> 
+            } 
             <motion.div
                 className="absolute top-3 left-3"
                 initial={{ opacity: 0 }}
