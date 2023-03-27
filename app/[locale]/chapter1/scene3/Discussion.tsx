@@ -29,34 +29,34 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                     <div className="relative flex flex-col px-3 py-2 m-auto">
                         {stage < 6 &&
                             <>
-                                <ExternalDiscussion text={t('dialogue.d1')} name="Skyler" delay={2} />
+                                <ExternalDiscussion text={t('dialogue.d1')} delay={2} />
                                 {stage > 0 && <>
                                     <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={t('dialogue.d2')} name="Cook" delay={2} />
+                                    <ExternalDiscussion text={t('dialogue.d2')} name="Cook" />
                                 </>}
                                 {stage > 1 && <>
                                     <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={t('dialogue.d3')} name="Cook" delay={2} />
+                                    <ExternalDiscussion text={t('dialogue.d3')} name="Cook" />
                                 </>}
                                 {stage > 2 && <>
                                     <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={t('dialogue.d4')} name="Cook" delay={2} />
+                                    <ExternalDiscussion text={t('dialogue.d4')} name="Cook" />
                                 </>}
                                 {stage > 3 && <>
                                     <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cook" delay={2} />
+                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cook" />
                                 </>}
                                 {stage > 4 && <>
                                     <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.7} />
-                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cook" delay={2} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cook" />
                                 </>}
                             </>
                         }
                         {stage > 5 &&
                             <>
-                                <ExternalDiscussion text={t('dialogue.d7')} name="Skyler" delay={7.2} />
-                                <ExternalDiscussion text={t('dialogue.d8')} name="Rob" delay={10.5} />
-                                <ExternalDiscussion text={t('dialogue.d9')} name="Jessy" delay={17.5} />
+                                <ExternalDiscussion text={t('dialogue.d7')} delay={7} />
+                                <ExternalDiscussion text={t('dialogue.d8')} name="Rob" nbCharPrevDisc={t('dialogue.d7').length} delay={7} />
+                                <ExternalDiscussion text={t('dialogue.d9')} name="Jessy" nbCharPrevDisc={t('dialogue.d8').length} delay={7 + 0.05 * t('dialogue.d7').length} />
                                 {stage > 6 && <>
                                     <AzadDiscussion azadText={azadText[5]} delay={1} duration={0.7} />
                                     <ExternalDiscussion text={t('dialogue.d10')} name="Skyler" delay={2.5} />

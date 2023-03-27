@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@prisma/client": "^4.11.0",
-    "@rainbow-me/rainbowkit": "^0.12.1",
+    "@rainbow-me/rainbowkit": "^0.12.4",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
@@ -20,15 +20,15 @@
     "eslint-config-next": "13.2.4",
     "ethers": "5.7.2",
     "flag-icons": "^6.6.6",
-    "framer-motion": "^10.3.4",
+    "framer-motion": "^10.9.1",
     "next": "13.2.4",
-    "next-intl": "^2.11.0",
+    "next-intl": "^2.12.0",
     "react": "18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
-    "react-toastify": "^9.1.1",
-    "typescript": "4.9.5",
-    "wagmi": "^0.12.1"
+    "react-toastify": "^9.1.2",
+    "typescript": "5.0.2",
+    "wagmi": "^0.12.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

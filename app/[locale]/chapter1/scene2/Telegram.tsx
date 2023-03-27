@@ -64,13 +64,13 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     </div>
                                 </div>
                             </div>
-                            <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={3} telegramWindow={true} />
-                            <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={7} telegramWindow={true} />
+                            <ExternalDiscussion text={t('dialogue.d5')} telegramWindow={true} />
+                            <ExternalDiscussion text={t('dialogue.d6')} nbCharPrevDisc={t('dialogue.d5').length} telegramWindow={true} />
 
                             {stage > 3 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d7')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[0]} />
+                                    <ExternalDiscussion text={t('dialogue.d7')} telegramWindow={true} />
                                 </>
                             }
                         </div>

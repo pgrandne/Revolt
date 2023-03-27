@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion"
 
-export const AzadDiscussion = ({ azadText, delay, duration }: {
+export const AzadDiscussion = ({ azadText, delay = 0.2, duration = 0.2 }: {
     azadText: string,
-    delay: number,
-    duration: number,
+    delay?: number,
+    duration?: number,
 }) => {
     return (
         <div className="w-3/4 my-1 self-end">

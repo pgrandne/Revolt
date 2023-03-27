@@ -26,53 +26,53 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                 <div className="self-center flex-1 w-full max-w-xl overflow-auto">
                     <div className="relative flex flex-col px-3 py-2 m-auto">
                         <div>
-                            <ExternalDiscussion text={t('dialogue.d1')} name="Skyler" delay={8} telegramWindow={false} />
+                            <ExternalDiscussion text={t('dialogue.d1')} delay={8} />
                         </div>
                         {stage > 0 && <>
-                            <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d2')} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d3')} name="Skyler" delay={5} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[0]} />
+                            <ExternalDiscussion text={t('dialogue.d2')} />
+                            <ExternalDiscussion text={t('dialogue.d3')} nbCharPrevDisc={t('dialogue.d2').length} />
                         </>}
                         {stage > 1 && <>
-                            <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d4')} name="Skyler" delay={4.5} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[1]} />
+                            <ExternalDiscussion text={t('dialogue.d4')} />
                         </>}
                         {stage > 2 && <>
-                            <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d5')} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d6')} name="Skyler" delay={10.6} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[2]} />
+                            <ExternalDiscussion text={t('dialogue.d5')} />
+                            <ExternalDiscussion text={t('dialogue.d6')} nbCharPrevDisc={t('dialogue.d5').length} />
                         </>}
                         {stage > 3 && <>
-                            <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d7')} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d8')} name="Skyler" delay={8} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d9')} name="Skyler" delay={13} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[3]} />
+                            <ExternalDiscussion text={t('dialogue.d7')} />
+                            <ExternalDiscussion text={t('dialogue.d8')} nbCharPrevDisc={t('dialogue.d7').length} />
+                            <ExternalDiscussion text={t('dialogue.d9')} nbCharPrevDisc={t('dialogue.d7').length + t('dialogue.d8').length} />
                         </>}
                         {stage > 4 && <>
-                            <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d10')} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d11')} name="Skyler" delay={7} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[4]} />
+                            <ExternalDiscussion text={t('dialogue.d10')} />
+                            <ExternalDiscussion text={t('dialogue.d11')} nbCharPrevDisc={t('dialogue.d10').length} />
                         </>}
                         {stage > 5 && <>
-                            <AzadDiscussion azadText={azadText[5]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d12')} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d13')} name="Skyler" delay={8} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d14')} name="Skyler" delay={12} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d15')} name="Skyler" delay={18} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[5]} />
+                            <ExternalDiscussion text={t('dialogue.d12')} />
+                            <ExternalDiscussion text={t('dialogue.d13')} nbCharPrevDisc={t('dialogue.d12').length} />
+                            <ExternalDiscussion text={t('dialogue.d14')} nbCharPrevDisc={t('dialogue.d12').length + t('dialogue.d13').length} />
+                            <ExternalDiscussion text={t('dialogue.d15')} nbCharPrevDisc={t('dialogue.d12').length + t('dialogue.d13').length + t('dialogue.d14').length} />
                         </>}
                         {stage > 6 && <>
-                            <AzadDiscussion azadText={azadText[6]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d16')} name="Skyler" delay={2} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d17')} name="Skyler" delay={5} telegramWindow={false} />
-                            <ExternalDiscussion text={t('dialogue.d18')} name="Skyler" delay={10} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[6]} />
+                            <ExternalDiscussion text={t('dialogue.d16')} />
+                            <ExternalDiscussion text={t('dialogue.d17')} nbCharPrevDisc={t('dialogue.d16').length} />
+                            <ExternalDiscussion text={t('dialogue.d18')} nbCharPrevDisc={t('dialogue.d16').length + t('dialogue.d17').length} />
                         </>}
                         {stage > 7 && <>
-                            <AzadDiscussion azadText={azadText[7]} delay={0.2} duration={0.7} />
+                            <AzadDiscussion azadText={azadText[7]} />
                             <ExternalDiscussionLink name="Skyler" delay={1.2} text1={t('text1')} text2={t('text2')} />
                             <ExternalDiscussion text={t('dialogue.d19')} name="Skyler" delay={3} telegramWindow={false} />
                         </>}
                         {stage > 8 && <>
-                            <AzadDiscussion azadText={azadText[8]} delay={0.2} duration={0.7} />
+                            <AzadDiscussion azadText={azadText[8]} />
                         </>}
                         <div id="end" />
                     </div>

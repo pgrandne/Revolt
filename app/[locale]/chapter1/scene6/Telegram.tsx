@@ -72,39 +72,39 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             </div>
                             {stage > 4 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[0]} />
+                                    <ExternalDiscussion text={t('dialogue.d5')} delay={2} telegramWindow={true} />
                                 </>
                             }
                             {stage > 5 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[1]} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} telegramWindow={true} />
                                 </>
                             }
                             {stage > 6 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d7')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[2]} />
+                                    <ExternalDiscussion text={t('dialogue.d7')} telegramWindow={true} />
                                 </>
                             }
                             {stage > 7 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d8')} name="Cincinnatus" delay={2} telegramWindow={true} />
-                                    <ExternalDiscussion text={t('dialogue.d9')} name="Cincinnatus" delay={6} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[3]} />
+                                    <ExternalDiscussion text={t('dialogue.d8')} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d9')} nbCharPrevDisc={t('dialogue.d8').length} telegramWindow={true} />
                                 </>
                             }
                             {stage > 8 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d10')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[4]} />
+                                    <ExternalDiscussion text={t('dialogue.d10')} telegramWindow={true} />
                                 </>
                             }
                             {stage > 9 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[5]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d11')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[5]} />
+                                    <ExternalDiscussion text={t('dialogue.d11')} telegramWindow={true} />
                                 </>
                             }
                             <div id="end" />

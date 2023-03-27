@@ -3,12 +3,21 @@
 import { motion } from "framer-motion"
 import { child, textAnimation } from "@/lib/utils/animatedText"
 
-export const ExternalDiscussion = ({ text, name, delay, telegramWindow = false }: {
-    text: string,
-    name: string,
-    delay: number,
-    telegramWindow?: boolean,
+
+export const ExternalDiscussion = ({ text, name = "Skyler", nbCharPrevDisc = 0, delay = 0, telegramWindow = false }: {
+    text: string
+    name?: string
+    nbCharPrevDisc?: number
+    delay?: number
+    telegramWindow?: boolean
 }) => {
+    const factor = 0.05
+    const fixedDelay = 0.5
+
+    const calculateDelay = () => {
+        const calculatedDelay = factor * nbCharPrevDisc + fixedDelay + delay
+        return calculatedDelay
+    }
 
     return (
 
@@ -18,12 +27,12 @@ export const ExternalDiscussion = ({ text, name, delay, telegramWindow = false }
                     className="my-2 p-2 bg-slate-100 rounded-t-lg rounded-r-lg shadow shadow-slate-100"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: delay, duration: 1 }}
+                    transition={{ delay: calculateDelay(), duration: 1 }}
                 >
                     <div className={name}>{name}</div>
                     <motion.div
                         className="text-sm text-slate-900"
-                        variants={textAnimation(0.05, delay)}
+                        variants={textAnimation(factor, delay)}
                         initial="hidden"
                         animate="visible"
                     >
@@ -44,7 +53,7 @@ export const ExternalDiscussion = ({ text, name, delay, telegramWindow = false }
                     <motion.div
                         className="absolute p-2 w-20 text-sm bg-white rounded-t-lg rounded-r-lg shadow text-black"
                         animate={{ opacity: [0, 1, 1, 0] }}
-                        transition={{ delay: delay, duration: 3, times: [0, 0.2, 0.9, 1] }}
+                        transition={{ delay: calculateDelay(), duration: 2, times: [0, 0.2, 0.9, 1] }}
                     >
                         <div className="animate-bounce text-teal-500 w-6 h-6 ...">
                             typing...
@@ -54,7 +63,7 @@ export const ExternalDiscussion = ({ text, name, delay, telegramWindow = false }
                         className="my-1 p-2 bg-white rounded-t-lg rounded-r-lg shadow"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: delay + 3, duration: 1 }}
+                        transition={{ delay: calculateDelay() + 2, duration: 1 }}
                     >
                         <div className="text-sm text-black">
                             {text}

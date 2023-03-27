@@ -24,18 +24,18 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                 <div className="self-center flex-1 w-full max-w-xl overflow-auto">
                     <div className="relative flex flex-col px-3 py-2 m-auto">
                         <div>
-                            <ExternalDiscussion text={t('dialogue.d1')} name="Skyler" delay={8} telegramWindow={false} />
+                            <ExternalDiscussion text={t('dialogue.d1')} delay={8} />
                         </div>
                         {stage > 1 && <>
-                            <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d2')} name="Skyler" delay={2} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[0]} />
+                            <ExternalDiscussion text={t('dialogue.d2')} />
                         </>}
                         {stage > 2 && <>
-                            <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.7} />
-                            <ExternalDiscussion text={t('dialogue.d3')} name="Skyler" delay={1.8} telegramWindow={false} />
+                            <AzadDiscussion azadText={azadText[1]} />
+                            <ExternalDiscussion text={t('dialogue.d3')} />
                         </>}
                         {stage > 3 && <>
-                            <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.7} />
+                            <AzadDiscussion azadText={azadText[2]} />
                         </>}
                         <div id="end" />
                     </div>

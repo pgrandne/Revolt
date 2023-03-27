@@ -74,30 +74,30 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     </div>
                                 </div>
                             </div>
-                            <ExternalDiscussion text={t('dialogue.d2')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                            <ExternalDiscussion text={t('dialogue.d2')} telegramWindow={true} />
 
                             {stage > 0 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d3')} name="Cincinnatus" delay={2} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[0]} />
+                                    <ExternalDiscussion text={t('dialogue.d3')} telegramWindow={true} />
                                 </>
                             }
                             {stage > 1 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d4')} name="Cincinnatus" delay={1.5} telegramWindow={true} />
-                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={5.5} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[1]} />
+                                    <ExternalDiscussion text={t('dialogue.d4')} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d5')} telegramWindow={true} />
                                 </>
                             }
                             {stage > 2 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={1.5} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[2]} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} telegramWindow={true} />
                                 </>
                             }
                             {stage > 3 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[3]} delay={0.2} duration={0.2} />
+                                    <AzadDiscussion azadText={azadText[3]} />
                                 </>
                             }
                             <div id="end" />
