@@ -12,7 +12,7 @@ const Sequence = ({ setTelegramWindow, telegramWindow }: {
     setTelegramWindow: Dispatch<SetStateAction<boolean>>
     telegramWindow: boolean,
 }) => {
-    const narration = "The Lerenberg Post, Newsroom"
+    const narration = "The Lurenberg Post, Newsroom"
     const hour1 = "10:00 am"
 
     return (

@@ -126,7 +126,7 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 1.7, duration: 1 }}>
                             <div className="flex justify-end pl-[32%] pt-[13%] pb-[0%]">
-                                <Image className="object-contain" src={groupfriendsPic} alt="friends" />
+                                <Image className="object-contain" src={friendsPic} alt="friends" />
                             </div>
                         </motion.div>
                     </>
