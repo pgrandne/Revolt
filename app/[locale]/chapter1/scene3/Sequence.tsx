@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { AnimatedText, ArrowButton } from '@/app/components';
-import { cashPic, decorPic, friendsPic, paymentPic, phonePic, takeawayPic, refusedPic } from "@/public/img"
+import { cashPic, decorPic, friendsPic, groupfriendsPic, pubPic, paymentPic, phonePic, takeawayPic, refusedPic } from "@/public/img"
 import { Dispatch, SetStateAction } from "react";
 
 const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>> }) => {
@@ -110,23 +110,23 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                     stage < 3 &&
                     <>
                         <motion.div
-                            className="flex pr-[48%]"
+                            className="flex pr-[47%]"
                             initial={{ x: -100, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ delay: 0.2, duration: 1 }}>
-                            <Image className="object-contain" src={decorPic} alt="decor" priority={true} />
+                            <Image className="object-contain" src={pubPic} alt="decor" priority={true} />
                         </motion.div>
                         <div className="pl-6 pt-2 z-10">
-                            <AnimatedText size={"text-xl"} content={narration2} speed={0.08} delay={3.5} />
-                            <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5.2} />
+                            <AnimatedText size={"text-xl"} content={narration2} speed={0.06} delay={3} />
+                            <AnimatedText size={"text-base"} content={hour2} speed={0.06} delay={4.7} />
                         </div>
                         <motion.div
                             className="absolute bottom-0 right-0 flex h-full"
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 1.7, duration: 1.5 }}>
+                            transition={{ delay: 1.7, duration: 1 }}>
                             <div className="flex justify-end pl-[32%] pt-[13%] pb-[0%]">
-                                <Image className="object-contain" src={friendsPic} alt="friends" />
+                                <Image className="object-contain" src={groupfriendsPic} alt="friends" />
                             </div>
                         </motion.div>
                     </>

@@ -8,6 +8,7 @@ export { default as classifiedPic } from "./classified.png"
 export { default as decorPic } from "./decor2.png"
 export { default as documentPic } from "./classified-document.png"
 export { default as friendsPic } from "./friends3.png"
+export { default as groupfriendsPic } from "./friends4.png"
 export { default as journalPic } from './journal18oct.png'
 export { default as kiosquePic } from './kiosque.png'
 export { default as lockerPic } from "./locker.png"
@@ -24,4 +25,4 @@ export { default as skylerPic } from "./skylerDesk.png"
 export { default as takeawayPic } from "./takeaway2.png"
 export { default as tassePic } from './tasse.png'
 export { default as tvPic } from './tv.png'
-
+export { default as pubPic } from './pub.png'
