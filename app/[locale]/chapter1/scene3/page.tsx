@@ -11,10 +11,10 @@ const Chap1s3 = () => {
 
     return (
         <div className="flex flex-row">
-            {stage < 6 &&
+            {/* {stage < 6 &&
                 <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-4/12" />
-            }
-            {stage > 5 &&
+            } */}
+            {stage < 2 &&
                 <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-5/12" />
             }
 
@@ -25,7 +25,7 @@ const Chap1s3 = () => {
                 <Discussion stage={stage} setStage={setStage} />
             </div>
             {
-                stage === 8 &&
+                stage === 2 &&
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

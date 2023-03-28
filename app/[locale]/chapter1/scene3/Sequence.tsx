@@ -9,12 +9,12 @@ import { Dispatch, SetStateAction } from "react";
 const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>> }) => {
     const narration = "Powell Boulevard"
     const hour = "7:50 pm"
-    const narration2 = "Skyler's place"
-    const hour2 = "8:24 pm"
+    const narration2 = "The Optimistic Brewery"
+    const hour2 = "In the evening"
 
     return (
         <div className="relative flex justify-center h-screen py-[5%]">
-            {stage < 4 &&
+            {/* {stage < 4 &&
                 <>
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"
@@ -25,10 +25,10 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <Image className="object-contain" src={phonePic} alt="Azad" />
                         </div>
                     </motion.div>
-                    {/* <div className="absolute bottom-20 pl-6 pt-2 z-10">
+                        <div className="absolute bottom-20 pl-6 pt-2 z-10">
                         <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={3} />
                         <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={3.5} />
-                    </div> */}
+                    </div> 
                     {stage > 0 &&
                         <motion.div
                             className="flex pr-[35%] pb-[5%] -z-10"
@@ -104,10 +104,10 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                         </button>
                     </motion.div>
                 </>
-            }
+            } */}
             <div className="relative flex justify-center flex-col">
                 {
-                    stage > 5 &&
+                    stage < 3 &&
                     <>
                         <motion.div
                             className="flex pr-[48%]"

@@ -27,7 +27,7 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
             <div className="relative flex flex-col flex-1">
                 <div className="self-center flex-1 w-full max-w-xl overflow-auto">
                     <div className="relative flex flex-col px-3 py-2 m-auto">
-                        {stage < 6 &&
+                        {/* {stage < 6 &&
                             <>
                                 <ExternalDiscussion text={t('dialogue.d1')} delay={2} />
                                 {stage > 0 && <>
@@ -51,17 +51,17 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                                     <ExternalDiscussion text={t('dialogue.d6')} name="Cook" />
                                 </>}
                             </>
-                        }
-                        {stage > 5 &&
+                        } */}
+                        {stage < 3 &&
                             <>
-                                <ExternalDiscussion text={t('dialogue.d7')} delay={7} />
+                                <ExternalDiscussion text={t('dialogue.d7')} delay={6.5} />
                                 <ExternalDiscussion text={t('dialogue.d8')} name="Rob" nbCharPrevDisc={t('dialogue.d7').length} delay={7} />
-                                <ExternalDiscussion text={t('dialogue.d9')} name="Jessy" nbCharPrevDisc={t('dialogue.d8').length} delay={7 + 0.05 * t('dialogue.d7').length} />
-                                {stage > 6 && <>
+                                <ExternalDiscussion text={t('dialogue.d9')} name="Jessy" nbCharPrevDisc={t('dialogue.d7').length + t('dialogue.d8').length} delay={7.5} />
+                                {stage > 0 && <>
                                     <AzadDiscussion azadText={azadText[5]} delay={1} duration={0.7} />
                                     <ExternalDiscussion text={t('dialogue.d10')} name="Skyler" delay={2.5} />
                                 </>}
-                                {stage > 7 &&
+                                {stage > 1 &&
                                     <AzadDiscussion azadText={azadText[6]} delay={1} duration={0.7} />
                                 }
                             </>
@@ -71,7 +71,7 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                 </div>
                 <div className="my-1 w-full"
                 >
-                    {stage === 0 &&
+                    {/* {stage === 0 &&
                         <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c1.choice1')} choice2={t('choices.c1.choice2')} delay={7} duration={.5} />
                     }
                     {stage === 1 &&
@@ -85,11 +85,11 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                     }
                     {stage === 4 &&
                         <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c5.choice1')} choice2={t('choices.c5.choice2')} delay={6} duration={.5} />
-                    }
-                    {stage === 6 &&
+                    } */}
+                    {stage === 0 &&
                         <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c6.choice1')} choice2={t('choices.c6.choice2')} delay={19} duration={.5} />
                     }
-                    {stage === 7 &&
+                    {stage === 1 &&
                         <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c7.choice1')} choice2={t('choices.c7.choice2')} delay={4} duration={.5} />
                     }
 

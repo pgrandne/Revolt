@@ -32,7 +32,7 @@ export const ExternalDiscussion = ({ text, name = "Skyler", nbCharPrevDisc = 0, 
                     <div className={name}>{name}</div>
                     <motion.div
                         className="text-sm text-slate-900"
-                        variants={textAnimation(factor, delay)}
+                        variants={textAnimation(factor, calculateDelay())}
                         initial="hidden"
                         animate="visible"
                     >
