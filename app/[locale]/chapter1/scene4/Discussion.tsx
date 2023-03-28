@@ -33,13 +33,13 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                 <div className="my-1 w-full"
                 >
                     {stage === 6 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c5.choice1')} choice2={t('choices.c5.choice2')} delay={9} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c5.choice1')} choice2={t('choices.c5.choice2')} nbCharPrevDisc={t('dialogue.d7').length} delay={7} />
                     }
                     {stage === 7 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c6.choice1')} choice2={t('choices.c6.choice2')} delay={6} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c6.choice1')} choice2={t('choices.c6.choice2')} nbCharPrevDisc={t('dialogue.d8').length} />
                     }
                     {stage === 8 &&
-                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c7.choice1')} choice2={t('choices.c7.choice2')} delay={3} duration={.5} />
+                        <AzadChoices stage={stage} setStage={setStage} azadText={azadText} setAzadText={setAzadText} choice1={t('choices.c7.choice1')} choice2={t('choices.c7.choice2')} nbCharPrevDisc={t('dialogue.d9').length} />
                     }
                 </div>
             </div>
