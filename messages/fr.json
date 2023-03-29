@@ -93,7 +93,7 @@
                 "choice2": "Je ne vois pas comment le gouvernement pourrait résoudre le problème."
             },
             "c7": {
-                "choice1": "Les problèmes avec ma carte bancaire ne pouvait pas arriver à un pire moment.",
+                "choice1": "Les problèmes avec ma carte bancaire ne pouvaient pas arriver à un pire moment.",
                 "choice2": "(ne rien dire)"
             }
         }
@@ -143,7 +143,7 @@
     },
     "Chap1s6": {
         "dialogue": {
-            "d1": "C'est insensé. Sommes-nous dans un roman d'Orwell ou quoi ? Ils ont interdit l'argent liquide !",
+            "d1": "C'est insensé. On est dans un roman d'Orwell ou quoi ? Ils ont interdit l'argent liquide !",
             "d2": "Vraiment ? Qui est-ce ? Un informateur interne ?",
             "d3": "Pourquoi prendrait-il un tel risque juste avant que ce soit rendu public? Ça n'a pas de sens…",
             "d4": "Salut Azad, je suppose que tu suis les nouvelles en direct",
@@ -153,7 +153,8 @@
             "d8": "Tu n'as aucune idée dans quoi nous nous embarquons. Nous devons aller jusqu'au bout maintenant.",
             "d9": "Disons simplement que l'argent n'est pas un problème, et j'ai vraiment besoin que tu mettes au grand jour cette histoire.",
             "d10": "Tu dois installer un wallet.",
-            "d11": "C'est comme ton portefeuille physique, mais numérique. Ce n'est pas géré par une banque ou une autorité centrale, et personne ne peut t'empêcher de l'utiliser. C'est de l'argent numérique. Je dois y aller maintenant. Installe Metamask et envoie-moi ton adresse et je t'enverrai de l'argent."
+            "d11": "C'est comme ton portefeuille physique, mais numérique. Ce n'est pas géré par une banque ou une autorité centrale, et personne ne peut t'empêcher de l'utiliser. C'est de l'argent numérique.",
+            "d12": "Je dois te laisser. Installe Metamask et envoie-moi ton adresse et je t'enverrai de l'argent."
         },
         "choices": {
             "c1": {
@@ -254,8 +255,8 @@
                 "choice2": "Ça m'a donné du fil à retordre, mais j'y suis finalement arrivé."
             }
         },
-        "text1": "Allez sur",
-        "text2": "et téléchargez l'extension."
+        "text1": "Va sur",
+        "text2": "et télécharge l'extension."
     },
     "Chap2": {
         "feedback": "Aidez-nous à améliorer l'expérience et donnez-nous votre avis 🦄. Cliquez ",

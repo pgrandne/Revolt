@@ -28,12 +28,12 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                 <Image className="object-contain" src={redactionPic} alt="redaction" />
             </motion.div>
             <div className="pl-6 pt-2 z-10">
-                <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={2} />
+                <AnimatedText size={"text-xl"} content={narration} speed={0.05} delay={1.5} />
                 {discussionWindow &&
-                    <AnimatedText size={"text-base"} content={hour1} speed={0.08} delay={5} />
+                    <AnimatedText size={"text-base"} content={hour1} speed={0.05} delay={3.5} />
                 }
                 {!discussionWindow &&
-                    <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={1} />
+                    <AnimatedText size={"text-base"} content={hour2} speed={0.05} delay={1} />
                 }
             </div>
             {discussionWindow &&
@@ -41,7 +41,7 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                     className="absolute bottom-0 right-0 flex h-full"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 6, duration: 1.5 }}>
+                    transition={{ delay: 4.5, duration: 1 }}>
                     <div className="flex justify-end pl-[10%] pt-[25%] pb-[15%]">
                         <Image className="object-contain" src={chatPic} alt="chat" />
                     </div>
@@ -53,7 +53,7 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                         className="absolute bottom-0 right-0 flex h-full"
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 2.5, duration: 1.5 }}>
+                        transition={{ delay: 2, duration: 1 }}>
                         <div className="flex justify-end pl-[40%] pt-[20%] pb-[0%]">
                             <Image className="object-contain" src={azadDeskPic} alt="Azad" />
                         </div>
@@ -63,7 +63,7 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                             className="absolute top-0 right-0 flex h-full"
                             initial={{ y: -10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 5, duration: 1.5 }}>
+                            transition={{ delay: 4, duration: 1.5 }}>
                             <div className="flex pl-[70%] pt-[15%] pb-[47%]">
                                 <Image
                                     className="object-contain cursor-pointer animate-pulse"

@@ -11,7 +11,7 @@ export const ExternalDiscussion = ({ text, name = "Skyler", nbCharPrevDisc = 0, 
     delay?: number
     telegramWindow?: boolean
 }) => {
-    const factor = 0.05
+    const factor = 0.04
     const fixedDelay = 0.5
 
     const calculateDelay = () => {

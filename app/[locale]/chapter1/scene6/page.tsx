@@ -29,9 +29,9 @@ const Chap1s6 = () => {
                         <Image className="object-contain" src={tvPic} alt="TV" />
                     </motion.div>
                     <div className="pt-10 pl-6 z-10">
-                        <AnimatedText size="text-2xl" content={narration} speed={0.05} delay={5} />
+                        <AnimatedText size="text-2xl" content={narration} speed={0.05} delay={4} />
                         <div className="pt-3">
-                            <AnimatedText size="text-3xl" content={narration2} speed={0.05} delay={7} />
+                            <AnimatedText size="text-3xl" content={narration2} speed={0.05} delay={5.5} />
                         </div>
                     </div>
                     <div className="absolute flex flex-col right-0">
@@ -49,7 +49,7 @@ const Chap1s6 = () => {
                         className="z-10"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 10, duration: 1 }}
+                        transition={{ delay: 8, duration: 1 }}
                     >
                         <button
                             className="absolute bottom-8 right-[33%] animate-pulse"

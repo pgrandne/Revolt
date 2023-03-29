@@ -15,7 +15,7 @@ const Discussion = ({ stage, setStage }: { stage: number, setStage: Dispatch<Set
                 <div className="self-center flex-1 w-full max-w-xl overflow-auto">
                     <div className="relative flex flex-col px-3 py-2 m-auto">
                         <div>
-                            <ExternalDiscussion text={t('dialogue.d7')} delay={7} />
+                            <ExternalDiscussion text={t('dialogue.d7')} delay={6} />
                         </div>
                         {stage > 6 && <>
                             <AzadDiscussion azadText={azadText[0]} />

@@ -153,7 +153,8 @@
             "d8": "You have no idea what we're getting into. We need to see this through now",
             "d9": "Let's just say money is not an issue, and I really need you to bring this story to light",
             "d10": "You need to install a wallet",
-            "d11": "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash. I have to go now. Just install Metamask and send me your address and I'll send you money"
+            "d11": "It's like your physical wallet, but digital. It's not managed by a bank or central authority, and no one can stop you from using it. It's digital cash.",
+            "d12": "I have to go now. Just install Metamask and send me your address and I'll send you money"
         },
         "choices": {
             "c1": {

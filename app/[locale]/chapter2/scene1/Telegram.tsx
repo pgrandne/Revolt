@@ -110,53 +110,53 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             </div>
                             {stage > 0 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[0]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d2')} name="Cincinnatus" delay={0.8} telegramWindow={true} />
-                                    <ExternalDiscussionLink delay={5.2} setStage={setStage} />
+                                    <AzadDiscussion azadText={azadText[0]} />
+                                    <ExternalDiscussion text={t('dialogue.d2')} telegramWindow={true} />
+                                    <ExternalDiscussionLink delay={4} setStage={setStage} />
                                 </>
                             }
                             {stage > 1 &&
                                 <>
-                                    <ExternalDiscussion text={t('dialogue.d3')} name="Cincinnatus" delay={0.2} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d3')} telegramWindow={true} />
                                 </>
                             }
                             {stage > 2 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[1]} delay={0.2} duration={0.2} />
-                                    <ExternalDiscussion text={t('dialogue.d4')} name="Cincinnatus" delay={0.8} telegramWindow={true} />
-                                    <ExternalDiscussion text={t('dialogue.d5')} name="Cincinnatus" delay={4.5} telegramWindow={true} />
-                                    <ExternalDiscussion text={t('dialogue.d6')} name="Cincinnatus" delay={8.7} telegramWindow={true} />
+                                    <AzadDiscussion azadText={azadText[1]} />
+                                    <ExternalDiscussion text={t('dialogue.d4')} telegramWindow={true} />
+                                    <ExternalDiscussion text={t('dialogue.d5')} telegramWindow={true} delay={2.5}/>
+                                    <ExternalDiscussion text={t('dialogue.d6')} telegramWindow={true} delay={5}/>
                                 </>
                             }
                             {stage > 3 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[2]} delay={0.2} duration={0.2} />
+                                    <AzadDiscussion azadText={azadText[2]} />
                                 </>
                             }
                             {stage > 4 &&
                                 <>
-                                    <ExternalDiscussion text={azadText[3]} name="Cincinnatus" delay={0.8} telegramWindow={true} />
+                                    <ExternalDiscussion text={azadText[3]} telegramWindow={true} />
                                     {stage < 99 &&
-                                        <ExternalDiscussion text={t('dialogue.d7')} name="Cincinnatus" delay={3.5} telegramWindow={true} />
+                                        <ExternalDiscussion text={t('dialogue.d7')} telegramWindow={true} />
                                     }
                                 </>
                             }
                             {stage > 5 && stage < 99 &&
                                 <>
-                                    <AzadDiscussion azadText={azadText[4]} delay={0.2} duration={0.2} />
+                                    <AzadDiscussion azadText={azadText[4]} />
                                     {stage < 98 &&
                                         <>
-                                            <ExternalDiscussion text={t('dialogue.d8')} name="Cincinnatus" delay={0.8} telegramWindow={true} />
-                                            <ExternalDiscussion text={t('dialogue.d9')} name="Cincinnatus" delay={4.5} telegramWindow={true} />
+                                            <ExternalDiscussion text={t('dialogue.d8')} telegramWindow={true} />
+                                            <ExternalDiscussion text={t('dialogue.d9')} telegramWindow={true} delay={2.5}/>
                                         </>
                                     }
                                 </>
                             }
                             {stage > 6 && stage < 99 &&
                                 <>
-                                    <ExternalDiscussion text={externalAnswer} name="Cincinnatus" delay={7.9} telegramWindow={true} />
+                                    <ExternalDiscussion text={externalAnswer} telegramWindow={true} />
                                     {stage < 98 &&
-                                        <ExternalDiscussion text={t('dialogue.d10')} name="Cincinnatus" delay={11.6} telegramWindow={true} />
+                                        <ExternalDiscussion text={t('dialogue.d10')} telegramWindow={true} />
                                     }
                                 </>
                             }

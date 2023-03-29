@@ -20,7 +20,7 @@ const Chap1s4 = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0, 1, 1, 0] }}
-                    transition={{ delay: 1, duration: 8, times: [0, 0.2, 0.8, 1] }}
+                    transition={{ delay: 1, duration: 7, times: [0, 0.2, 0.8, 1] }}
                 >
                     <div className=" transform rotate-[-10deg] w-[62%] m-auto">
                         <Image
@@ -30,7 +30,7 @@ const Chap1s4 = () => {
                         />
                     </div>
                     <div className="absolute bottom-10 left-6 ">
-                        <AnimatedText size={"text-2xl"} content={narration} speed={0.08} delay={2.5} />
+                        <AnimatedText size={"text-2xl"} content={narration} speed={0.06} delay={2.5} />
                     </div>
                 </motion.div>
             </div>

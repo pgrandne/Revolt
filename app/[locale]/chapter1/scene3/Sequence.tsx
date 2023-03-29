@@ -117,8 +117,8 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <Image className="object-contain" src={pubPic} alt="decor" priority={true} />
                         </motion.div>
                         <div className="pl-6 pt-2 z-10">
-                            <AnimatedText size={"text-xl"} content={narration2} speed={0.06} delay={3} />
-                            <AnimatedText size={"text-base"} content={hour2} speed={0.06} delay={4.7} />
+                            <AnimatedText size={"text-xl"} content={narration2} speed={0.05} delay={3} />
+                            <AnimatedText size={"text-base"} content={hour2} speed={0.05} delay={4.7} />
                         </div>
                         <motion.div
                             className="absolute bottom-0 right-0 flex h-full"

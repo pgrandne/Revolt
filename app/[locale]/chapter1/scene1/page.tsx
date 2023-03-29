@@ -43,14 +43,14 @@ const Chap1s1 = () => {
                 />
             </motion.div>
             <div className="p-1 absolute bottom-20 left-20 flex flex-col">
-                <AnimatedText size="text-4xl" content={t('narration')} speed={0.1} delay={5} />
-                <AnimatedText size="text-2xl" content={t('day')} speed={0.1} delay={8} />
+                <AnimatedText size="text-4xl" content={t('narration')} speed={0.08} delay={4.5} />
+                <AnimatedText size="text-2xl" content={t('day')} speed={0.08} delay={7} />
             </div>
             <motion.div
                 className="absolute top-[21%] left-[7%]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 10.2, duration: 0.8 }}
+                transition={{ delay: 9.2, duration: 0.8 }}
             >
                 <Image
                     className="h-[240px] w-full border-8 border-[#dac8bc]"
@@ -62,7 +62,7 @@ const Chap1s1 = () => {
                 className="absolute bottom-[17%] right-[7%]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1] }}
-                transition={{ delay: 12, duration: 0.8 }}
+                transition={{ delay: 11, duration: 0.8 }}
             >
                 <Image
                     className="object-contain h-[360px] w-full border-8 border-[#dac8bc]"
@@ -74,7 +74,7 @@ const Chap1s1 = () => {
                 className="absolute h-screen w-screen bg-[#0f1216]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 15, duration: 1 }}
+                transition={{ delay: 14, duration: 1 }}
             >
                 <Image
                     src={journalPic}

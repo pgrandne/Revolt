@@ -153,7 +153,8 @@
             "d8": "No tienes idea en lo que nos estamos metiendo. Tenemos que llegar hasta el final ahora.",
             "d9": "Digamos simplemente que el dinero no es un problema, y realmente necesito que saques a la luz esta historia.",
             "d10": "Tienes que instalar un wallet.",
-            "d11": "Es como tu monedero físico, pero digital. No está controlada por un banco o una autoridad central, y nadie puede impedir que la uses. Es dinero digital. Tengo que irme ahora. Instala Metamask y envíame tu dirección y te enviaré dinero."
+            "d11": "Es como tu monedero físico, pero digital. No está controlada por un banco o una autoridad central, y nadie puede impedir que la uses. Es dinero digital.",
+            "d12": "Tengo que irme ahora. Instala Metamask y envíame tu dirección y te enviaré dinero."
         },
         "choices": {
             "c1": {

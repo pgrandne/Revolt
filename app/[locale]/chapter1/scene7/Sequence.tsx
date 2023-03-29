@@ -19,14 +19,14 @@ const Sequence = () => {
                 <Image className="object-contain" src={skylerHomePic} alt="Skyler Home" />
             </motion.div>
             <div className="pl-6 pt-2 z-10">
-                <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={2} />
-                <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={5} />
+                <AnimatedText size={"text-xl"} content={narration} speed={0.05} delay={2.5} />
+                <AnimatedText size={"text-base"} content={hour} speed={0.05} delay={3.8} />
             </div>
             < motion.div
                 className="absolute bottom-0 right-0 flex h-full"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 3, duration: 1.5 }}>
+                transition={{ delay: 1, duration: 1 }}>
                 <div className="flex justify-end pl-[30%] pt-[15%] pb-[5%]">
                     <Image className="object-contain" src={azadBackPic} alt="Azad" />
                 </div>
