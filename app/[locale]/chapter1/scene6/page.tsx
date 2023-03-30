@@ -6,15 +6,15 @@ import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Image from "next/image";
 import { manReadJournalPic, tvPic } from "@/public/img"
-import { AnimatedText, ArrowButton, Link } from "@/app/components";
+import { AnimatedText, ArrowButton, LinkLocale } from "@/app/components";
 import Telegram from "./Telegram";
 import { useTranslations } from 'next-intl';
 
 const Chap1s6 = () => {
     const [telegramWindow, setTelegramWindow] = useState(false)
-    const [stage, setStage] = useState(0)       
+    const [stage, setStage] = useState(0)
     const [discussionWindow, setDiscussionWindow] = useState(true)
-    const t = useTranslations('Chap1s6');  
+    const t = useTranslations('Chap1s6');
 
     return (
         <>
@@ -71,17 +71,6 @@ const Chap1s6 = () => {
                     }
                     <div className="relative basis-2/3 w-full overflow-hidden">
                         <Sequence discussionWindow={discussionWindow} setTelegramWindow={setTelegramWindow} telegramWindow={telegramWindow} />
-                        {stage === 12 &&
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 3, duration: 1 }}
-                            >
-                                <Link href="/chapter1/scene7" className="absolute bottom-8 right-8 animate-pulse">
-                                    <ArrowButton />
-                                </Link>
-                            </motion.div>
-                        }
                         {
                             stage === 10 &&
                             <motion.div
@@ -89,9 +78,9 @@ const Chap1s6 = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 5, duration: 1 }}
                             >
-                                <Link href="/chapter1/scene7" className="absolute bottom-8 right-8 animate-pulse">
+                                <LinkLocale href="/chapter1/scene7" className="absolute bottom-8 right-8 animate-pulse">
                                     <ArrowButton />
-                                </Link>
+                                </LinkLocale>
                             </motion.div>
                         }
                     </div>

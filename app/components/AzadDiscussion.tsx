@@ -9,7 +9,7 @@ export const AzadDiscussion = ({ azadText, delay = 0.2, duration = 0.2 }: {
 }) => {
     return (
         <div className="w-3/4 my-1 self-end">
-            {azadText !== "(say nothing)" &&
+            {azadText.charAt(0) !== "(" &&
                 <motion.div
                     className="my-2 p-2 text-sm bg-lime-200 rounded-t-lg rounded-l-lg shadow shadow-lime-200 text-slate-900 overflow-x-auto"
                     initial={{ opacity: 0 }}

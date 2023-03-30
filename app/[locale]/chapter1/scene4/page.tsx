@@ -7,7 +7,7 @@ import Sequence from './Sequence'
 import Telegram from './Telegram'
 import Image from "next/image";
 import journalPic from "@/public/img/journal30oct.png"
-import { AnimatedText, ArrowButton, Link } from '@/app/components';
+import { AnimatedText, ArrowButton, LinkLocale } from '@/app/components';
 import { useTranslations } from 'next-intl';
 
 const Chap1s4 = () => {
@@ -74,9 +74,9 @@ const Chap1s4 = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
                 >
-                    <Link href="/chapter1/scene5" className="absolute bottom-8 right-8 animate-pulse">
+                    <LinkLocale href="/chapter1/scene5" className="absolute bottom-8 right-8 animate-pulse">
                         <ArrowButton />
-                    </Link>
+                    </LinkLocale>
                 </motion.div>
             }
         </div >

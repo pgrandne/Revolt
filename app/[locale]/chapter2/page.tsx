@@ -1,38 +1,19 @@
 'use client';
 
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 import { motion } from "framer-motion"
 import { perm_marker, roboto } from '@/lib/utils/font';
-import Link from "next/link";
+import Link from "@/app/components/LinkLocale"
 import { useNetwork, useAccount } from 'wagmi'
 import SaveButton from "@/app/components/SaveButton";
 import { useEffect, useState } from "react";
 import { handleEthereum } from "@/lib/utils/checkWallet";
 import Modal from "@/app/components/Modal";
 import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 
 const Chap2 = () => {
-
+    const locale = useLocale()
     const t = useTranslations('Chap2');
-    const Msg = () => (
-        <p>{t('feedback')} <a className="underline" href="https://msprr0gajgn.typeform.com/to/DSl54TqJ">{t('link')}</a>
-        </p>
-    )
-
-    const notify = () => toast(<Msg />, {
-        delay: 2000,
-        position: "bottom-right",
-        autoClose: 7000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-    })
-
-
     const { chain } = useNetwork()
     const { isConnected } = useAccount()
     const [wallet, setWallet] = useState(false)
@@ -44,8 +25,7 @@ const Chap2 = () => {
         scene: 0
     }
     useEffect(() => {
-        setWallet(handleEthereum());
-        notify();
+        setWallet(handleEthereum())
     }, [])
 
 
@@ -138,8 +118,7 @@ const Chap2 = () => {
                     </>
                 }
             </div>
-            {modal && <Modal route='/chapter2/scene1' />}
-            <ToastContainer />
+            {modal && <Modal route={`${locale}/chapter2/scene1`} />}
         </div >
     )
 }

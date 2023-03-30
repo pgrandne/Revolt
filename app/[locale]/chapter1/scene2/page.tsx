@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
 import Telegram from './Telegram'
-import { ArrowButton, Link } from '@/app/components';
+import { ArrowButton, LinkLocale } from '@/app/components';
 
 const Chap1s2 = () => {
     const [stage, setStage] = useState(0)
@@ -28,9 +28,9 @@ const Chap1s2 = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 4, duration: 1 }}
                     >
-                        <Link href="/chapter1/scene3" className="absolute bottom-8 right-8 animate-pulse">
+                        <LinkLocale href="/chapter1/scene3" className="absolute bottom-8 right-8 animate-pulse">
                             <ArrowButton />
-                        </Link>
+                        </LinkLocale>
                     </motion.div>
                 }
             </div>

@@ -15,7 +15,7 @@ export const ExternalDiscussion = ({ text, name = "Skyler", nbCharPrevDisc = 0, 
     const fixedDelay = 0.5
 
     const calculateDelay = () => {
-        const calculatedDelay = factor * nbCharPrevDisc + fixedDelay + delay
+        const calculatedDelay = factor * nbCharPrevDisc + delay + fixedDelay
         return calculatedDelay
     }
 

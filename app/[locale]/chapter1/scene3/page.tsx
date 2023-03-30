@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
-import { ArrowButton, Link } from '@/app/components';
+import { ArrowButton, LinkLocale } from '@/app/components';
 
 const Chap1s3 = () => {
     const [stage, setStage] = useState(0)
@@ -31,9 +31,9 @@ const Chap1s3 = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
                 >
-                    <Link href="/chapter1/scene4" className="absolute bottom-8 right-8 animate-pulse">
+                    <LinkLocale href="/chapter1/scene4" className="absolute bottom-8 right-8 animate-pulse">
                         <ArrowButton />
-                    </Link>
+                    </LinkLocale>
                 </motion.div>
             }
         </div >

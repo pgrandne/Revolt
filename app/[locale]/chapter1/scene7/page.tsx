@@ -1,13 +1,19 @@
 'use client';
 
 import { motion } from "framer-motion"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Discussion from './Discussion'
 import Sequence from './Sequence'
-import { ArrowButton, Link } from "@/app/components";
+import { ArrowButton, LinkLocale, ModalFeedback } from "@/app/components";
 
 const Chap1s7 = () => {
     const [stage, setStage] = useState(0)
+    const [modalFeedback, setModalFeedback] = useState(false)
+
+    useEffect(() => {
+        if (stage === 9)
+            setModalFeedback(true)
+    }, [stage])
 
     return (
         <div className="flex flex-row">
@@ -23,15 +29,13 @@ const Chap1s7 = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.5, duration: 1 }}
                     >
-                        <Link href="/chapter2" className="absolute bottom-8 right-8 animate-pulse">
-                            <ArrowButton />
-                        </Link>
                     </motion.div>
                 }
             </div>
             <div className="basis-1/3 p-6 h-screen flex-grow-0">
                 <Discussion stage={stage} setStage={setStage} />
             </div>
+            {modalFeedback && < ModalFeedback setModalFeedback={setModalFeedback} />}
         </div >
     )
 }

@@ -6,8 +6,7 @@ import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import bgPic from "@/public/img/equipment.jpg"
 import { useEffect, useState } from "react";
-import ModalInfo from "./ModalInfo";
-import ModalProgression from "./ModalProgression";
+import { ModalInfo, ModalSelectChapter } from "@/app/components";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "@/lib/utils/checkWallet";
 import { github, linkedin, twitter, donation } from "@/public/svg";
@@ -21,7 +20,7 @@ const Hero = () => {
     const [wallet, setWallet] = useState(false)
     const [modalInfo, setModalInfo] = useState(false)
     const [deck, setDeck] = useState(false)
-    const [modalProgression, setModalProgression] = useState(false)
+    const [modalSelectChapter, setModalSelectChapter] = useState(false)
 
     useEffect(() => {
         setWallet(handleEthereum());
@@ -29,7 +28,7 @@ const Hero = () => {
 
     const launchRevolte = () => {
         if (!isMobile && !isSafari && !isIE)
-            setModalProgression(true)
+            setModalSelectChapter(true)
         else router.push(isMobile ? "/mobile" : (isSafari || isIE ? "/browser" : "/chapter1/scene1"))
     }
 
@@ -152,8 +151,8 @@ const Hero = () => {
             {modalInfo &&
                 <ModalInfo setModalInfo={setModalInfo} deck={deck} />
             }
-            {modalProgression &&
-                <ModalProgression setModalProgression={setModalProgression} wallet={wallet} />
+            {modalSelectChapter &&
+                <ModalSelectChapter setModalSelectChapter={setModalSelectChapter} wallet={wallet} />
             }
         </section >
     )

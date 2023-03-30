@@ -4,13 +4,13 @@ import { motion } from "framer-motion"
 import { useState } from 'react'
 import Image from "next/image";
 import { azadConfusedPic, classifiedPic, documentPic, lockerPic, pickupPic } from '@/public/img'
-import { AnimatedText, ArrowButton, Link } from "@/app/components";
+import { AnimatedText, ArrowButton, LinkLocale } from "@/app/components";
 import { useTranslations } from 'next-intl';
 
 const Chap1s5 = () => {
     const [lockerOpened, setLockerOpened] = useState(false)
     const [stage, setStage] = useState(0)
-    const t = useTranslations('Chap1s5');       
+    const t = useTranslations('Chap1s5');
 
     return (
         <>
@@ -75,7 +75,7 @@ const Chap1s5 = () => {
                             <Image className="object-contain" src={classifiedPic} alt="Classified" />
                         </motion.div>
                         <div className="pl-20 pt-2 z-10">
-                            <AnimatedText size={"text-4xl"} content={t('narration2')} speed={0.06} delay={1} />                            
+                            <AnimatedText size={"text-4xl"} content={t('narration2')} speed={0.06} delay={1} />
                         </div>
                     </div>
                     < motion.div
@@ -101,9 +101,9 @@ const Chap1s5 = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 8, duration: 1 }}
                     >
-                        <Link href="/chapter1/scene6" className="absolute bottom-8 right-8 animate-pulse">
+                        <LinkLocale href="/chapter1/scene6" className="absolute bottom-8 right-8 animate-pulse">
                             <ArrowButton />
-                        </Link>
+                        </LinkLocale>
                     </motion.div>
                 </div>
             }

@@ -4,7 +4,7 @@ import { ComponentProps, forwardRef } from 'react';
 
 type Props = ComponentProps<typeof NextLink>;
 
-function Link({ href, ...rest }: Props, ref: Props['ref']) {
+const LinkLocale = ({ href, ...rest }: Props, ref: Props['ref']) => {
     const locale = useLocale();
 
     function getLocalizedHref(originalHref: string) {
@@ -21,4 +21,4 @@ function Link({ href, ...rest }: Props, ref: Props['ref']) {
     return <NextLink ref={ref} href={localizedHref} {...rest} />;
 }
 
-export default forwardRef(Link);
+export default forwardRef(LinkLocale);

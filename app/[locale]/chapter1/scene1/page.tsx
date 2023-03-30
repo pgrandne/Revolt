@@ -4,7 +4,7 @@ import { perm_marker } from '@/lib/utils/font';
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { lurembergPic, tassePic, kiosquePic, journalPic } from "@/public/img"
-import { AnimatedText, ArrowButton, Link } from '@/app/components'
+import { AnimatedText, ArrowButton, LinkLocale } from '@/app/components'
 import { useTranslations } from 'next-intl';
 
 const Chap1s1 = () => {
@@ -82,9 +82,9 @@ const Chap1s1 = () => {
                     style={{ objectFit: "contain" }}
                     alt="Journal"
                 />
-                <Link href="/chapter1/scene2" className="absolute bottom-8 right-8 animate-pulse">
+                <LinkLocale href="/chapter1/scene2" className="absolute bottom-8 right-8 animate-pulse">
                     <ArrowButton />
-                </Link>
+                </LinkLocale>
             </motion.div>
 
         </div >
