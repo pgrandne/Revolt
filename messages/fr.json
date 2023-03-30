@@ -1,0 +1,331 @@
+{
+    "Home": {
+        "title": "Histoire d'un lanceur d'alerte",
+        "subtitle": "Une fiction interactive pour explorer le Web3",
+        "buttonName": "Entrer dans l'aventure"
+    },
+    "Info": {
+        "title": "une fiction interactive pour embarquer les utilisateurs du Web2 vers le Web3",
+        "subtitle": "est un projet opensource. Vous pouvez nous aider en faisant une donation à :",
+        "deck": "Découvrez notre deck",
+        "online": "En ligne",
+        "download": "Télécharger",
+        "close": "fermer"
+    },
+    "Progression": {
+        "title": "Sélectionner où vous souhaitez aller",
+        "chapter": "chapitre",
+        "resume": "Dernière sauvegarde",
+        "connect": "Connectez votre wallet",
+        "close": "fermer"
+    },
+    "Chap1s1": {
+        "narration": "Lurenberg, Listenbourg",
+        "day": "18 Octobre, 2023",
+        "title": "Chapitre 1",
+        "subtitle": "Rien n'est jamais acquis"
+    },
+     "Chap1s2": {
+        "narration": "The Lurenberg Post, Rédaction",
+        "hour1": "8h50",
+        "hour2": "14h45",
+
+        "dialogue": {
+            "d1": "Hey Azad, tu as vu les infos ?",
+            "d2": "Plusieurs milliards en fausse monnaie découverts... ça représente 15% de notre PIB !",
+            "d3": "Tout le monde va travailler dessus pendant les prochaines semaines ! J'ai des réunions toute la journée, on en parle ce soir.",
+            "d4": "Bonjour Azad, une personne de confiance m'a donné votre contact.",
+            "d5": "J'ai des documents concernant une affaire très sensible.",
+            "d6": "Êtes-vous intéressé ?",
+            "d7": "Je ne peux pas en dire plus pour le moment, je reviendrai vers vous très bientôt."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Oui c’est fou !",
+                "choice2": "De quoi s'agit-il ?"
+            },
+            "c2": {
+                "choice1": "Personne n'aurait pu l'imaginer.",
+                "choice2": "C'est dur à croire."
+            },
+            "c3": {
+                "choice1": "Ça marche.",
+                "choice2": "(ne rien dire)"
+            },
+            "c4": {
+                "choice1": "Peut-être, mais vous devez m'en dire d’avantage…",
+                "choice2": "Oui, bien sûr"
+            }
+        }
+    },
+    "Chap1s3": {
+        "narration": "The Optimistic Brewery",
+        "hour": "Dans la soirée",
+
+        "dialogue": {
+            "d1": "Hey Azad, peux-tu acheter quelque chose à manger s'il te plaît ? Rob arrive avec Jessy et je ne l'ai pas compté...",
+            "d2": "Qu’est-ce que vous prendrez, monsieur ?",
+            "d3": "Ça fera 12 LIS, monsieur.",
+            "d4": "Votre carte a été refusée.",
+            "d5": "Ça ne fonctionne toujours pas. Vous avez un autre moyen de paiement ?",
+            "d6": "J'espère que ce n'est pas de la fausse monnaie...",
+            "d7": "Cette histoire de fausse monnaie c’est terrible !",
+            "d8": "Depuis ce matin, à chaque fois qu'un client paie en espèces au restaurant, j'ai peur que ce soit des faux billets...",
+            "d9": "Oui, c'est une catastrophe pour notre pays...",
+            "d10": "Apparemment, plusieurs milliards sont en circulation en ce moment même."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Pas de problème, je suis juste à côté du food truck libanais.",
+                "choice2": "Oui, bien sûr."
+            },
+            "c2": {
+                "choice1": "Je vais vous prendre 5 falafels, s'il vous plaît.",
+                "choice2": "Un mezzé moyen."
+            },
+            "c3": {
+                "choice1": "Par carte, s'il vous plaît.",
+                "choice2": "Vous avez le sans contact ?"
+            },
+            "c4": {
+                "choice1": "Je vais essayer avec le code.",
+                "choice2": "Je vais l'insérer."
+            },
+            "c5": {
+                "choice1": "J'ai 20 LIS en espèces...",
+                "choice2": "Je vais regarder."
+            },
+            "c6": {
+                "choice1": "Les gens pourraient perdre toute confiance dans notre monnaie.",
+                "choice2": "Je ne vois pas comment le gouvernement pourrait résoudre le problème."
+            },
+            "c7": {
+                "choice1": "Les problèmes avec ma carte bancaire ne pouvaient pas arriver à un pire moment.",
+                "choice2": "Je n'arrive pas à croire que ça arrive juste au moment où j'ai des soucis avec ma banque."
+            }
+        }
+    },
+    "Chap1s4": {
+        "narration": "30 Octobre, 2023",
+        "narration1": "The Lurenberg Post, Rédaction",
+        "narration2": "The Lurenberg Post, Bureau de Skyler",
+        "hour": "11h10",
+
+        "dialogue": {
+            "d1": "Bonjour Azad",
+            "d2": "Je t'ai contacté la semaine dernière au sujet d'une affaire sensible",
+            "d3": "Avant de t'en parler, je dois m'assurer que nos échanges restent privés. L’affaire est extrêmement délicate",
+            "d4": "À ce stade, je ne peux te donner que son nom de code : ClearPath",
+            "d5": "Ne parle à personne de nos échanges, je ne te contacterai jamais ailleurs que sur cette application cryptée",
+            "d6": "Il y a un casier, le numéro 29, à la gare de Central Street. Le code est 311009. J'y ai mis un premier échantillon de documents, tu te rendras compte de l'ampleur de la situation",
+            "d7": "Ça avait l'air urgent, il y a un problème ?",
+            "d8": "Ça ne coûte rien de voir où ça nous mène.",
+            "d9": "Qu'est-ce que c'est ?"
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Bonjour. Oui, je m'en souviens très bien.",
+                "choice2": "Bonjour “Cincinnatus”, je n'ai toujours aucune idée de ce dont tu parles…"
+            },
+            "c2": {
+                "choice1": "Je comprends, peux-tu au moins me dire de quoi il s'agit ?",
+                "choice2": "Bien sûr"
+            },
+            "c3": {
+                "choice1": "Que veux-tu que je fasse ?",
+                "choice2": "Ok, d'accord"
+            },
+            "c4": {
+                "choice1": "Compte sur moi",
+                "choice2": "C'est digne d'un film d'espionnage !"
+            },
+            "c5": {
+                "choice1": "Pas vraiment, mais j'ai des doutes sur une source qui vient de me contacter.",
+                "choice2": "Quelqu'un m'a contacté, je ne sais pas si je peux lui faire confiance."
+            },
+            "c6": {
+                "choice1": "ClearPath, ça te dit quelque chose ?",
+                "choice2": "Il a mentionné l’opération ClearPath."
+            },
+            "c7": {
+                "choice1": "Je ne suis pas encore sûr, je dois y aller.",
+                "choice2": "Oublie ça, je te tiendrai au courant."
+            }
+        }
+    },
+
+    "Chap1s5": {
+        "narration": "Central Street Station",        
+        "narration2": "Chez Azad",
+        "hour": "17h40"
+    },
+
+    "Chap1s6": {
+        "hour": "31 Octobre, 2023",        
+        "narration": "Le gouvernement annonce la fin de l'argent liquide",
+        "hour1": "8h55", 
+        "hour2": "9h30", 
+        "narration2": "The Lurenberg Post, Rédaction ",
+
+        "dialogue": {
+            "d1": "C'est insensé ! On est dans un roman d'Orwell ou quoi ? Ils ont interdit l'argent liquide !",
+            "d2": "Vraiment ? Qui est-ce ? Un informateur interne ?",
+            "d3": "Pourquoi prendrait-il un tel risque juste avant que ce soit rendu public? Ça n'a pas de sens…",
+            "d4": "Salut Azad, je suppose que tu suis les nouvelles en direct",
+            "d5": "Tout s’est accéléré. Je ne pensais pas qu'ils agiraient si rapidement.",
+            "d6": "Tu n'as aucune idée de ce que nous allons révéler. Ce n'est que la partie émergée de l'iceberg...",
+            "d7": "Merde ! Mauvais timing... Écoute, je suis prêt à t'envoyer de l'argent pour t'aider et poursuivre l'enquête.",
+            "d8": "Tu n'as aucune idée dans quoi nous nous embarquons. Nous devons aller jusqu'au bout maintenant.",
+            "d9": "Disons simplement que l'argent n'est pas un problème, et j'ai vraiment besoin que tu mettes au grand jour cette histoire.",
+            "d10": "Tu dois installer un wallet.",
+            "d11": "C'est comme ton portefeuille physique, mais numérique. Ce n'est pas géré par une banque ou une autorité centrale, et personne ne peut t'empêcher de l'utiliser. C'est de l'argent numérique.",
+            "d12": "Je dois te laisser. Installe Metamask et envoie-moi ton adresse et je t'enverrai de l'argent."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Tu te souviens de la source dont j'ai parlé hier? Il était au courant.",
+                "choice2": "Ma source m'a prévenu hier."
+            },
+            "c2": {
+                "choice1": "Je ne sais pas encore. Il m'a envoyé des documents classifiés que j'ai collectés hier soir.",
+                "choice2": "J’ai reçu des documents sur l'opération ClearPath."
+            },
+            "c3": {
+                "choice1": "Tu as raison. Je dois creuser.",
+                "choice2": "Je dois entrer en contact avec ma source."
+            },
+            "c4": {
+                "choice1": "Comment as-tu découvert ça ?",
+                "choice2": "Oui, nous sommes devant la télé"
+            },
+            "c5": {
+                "choice1": "J'ai eu du mal à y croire lorsque j'ai examiné les documents hier.",
+                "choice2": "(ne rien dire)"
+            },
+            "c6": {
+                "choice1": "Tu sais quelque chose d'autre ? Ma carte bancaire est bloquée, donc c'est une situation terrible pour moi",
+                "choice2": "Ce qui est ironique dans cette histoire, c’est que ma carte bancaire est bloquée."
+            },
+            "c7": {
+                "choice1": "Pourquoi tu ferais ça ?",
+                "choice2": "(ne rien dire)"
+            },
+            "c8": {
+                "choice1": "Tu as de la chance",
+                "choice2": "(ne rien dire)"
+            },
+            "c9": {
+                "choice1": "Installer un wallet ?",
+                "choice2": "Qu'est-ce que c'est ?"
+            }
+        }
+    },
+    "Chap1s7": {
+        "narration": "Chez Azad",  
+        "hour": "20h00", 
+
+        "dialogue": {
+            "d1": "Ta source a probablement raison. Si tu veux mener à bien cette enquête, tu as besoin de fonds. Le blocage de ton compte pour “activité suspecte“ est probablement une tentative d'intimidation.",
+            "d2": "C'est une étrange coïncidence.",
+            "d3": "Quoi qu'il en soit, tu as aussi besoin d'argent pour vivre, tu ne peux pas continuer à emprunter de l'argent à tout le monde comme tu le fais depuis une semaine.",
+            "d4": "Tu te souviens de l'enquête SBFTX en début année ? J'ai appris pas mal de choses… Un wallet n'est pas une mauvaise idée pour résoudre ton problème, surtout s'il te permet de recevoir de l'argent.",
+            "d5": "En fait, c'est assez simple. C'est comme un coffre-fort numérique, ou une boîte aux lettres numérique si tu préfères, où n'importe qui peut déposer de l'argent, mais personne ne peut l'ouvrir à part toi.",
+            "d6": "Et surtout, personne ne pourra jamais t'empêcher d'y accéder. Jamais.",
+            "d7": "De l'argent réel, tu veux dire celui dans ton compte bancaire que tu ne peux plus utiliser depuis qu'il a été gelé ?",
+            "d8": "Même s'il s'agit de devises numériques, elles sont bien réelles, de nombreux magasins acceptent les cryptomonnaies.",
+            "d9": "Bon, d'abord tu dois installer un portefeuille numérique. Metamask est le plus utilisé.",
+            "d10": "Environ 30 millions de personnes l'utilisent. C'est simplement une extension de navigateur.",
+            "d11": "Je vais te guider, nous allons le faire ensemble.",
+            "d12": "Quand l’extension Metamask sera téléchargée sur ton navigateur, une nouvelle fenêtre s'ouvrira et te demandera de créer un nouveau portefeuille.",
+            "d13": "D'abord, tu devras choisir un mot de passe qui te permettra d’accéder à l'extension depuis ton appareil.",
+            "d14": "Ensuite, vient l'étape la plus importante. Metamask générera aléatoirement 12 mots. C'est ce qu'on appelle la master key.",
+            "d15": "C'est la seule et unique clé qui permet d’ouvrir ta boîte aux lettres si on reprend la métaphore précédente.",
+            "d16": "Si tu la perds, ton portefeuille sera verrouillé pour toujours.",
+            "d17": "Et si quelqu'un peut accéder à ces mots, il aura accès à tout ce qui est stocké à l'intérieur.",
+            "d18": "C'est pourquoi il est essentiel de garder ces 12 mots dans un endroit sûr.",
+            "d19": "Reviens me voir quand tu auras finis l’ensemble des étapes que je viens de te décrire."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Qu’est-ce que tu dis ? Je n'ai rien commencé.",
+                "choice2": "S'il te plaît, ne sois pas parano, ça n'aide pas…"
+            },
+            "c2": {
+                "choice1": "Tu as raison. Et avec les nouveaux événements, mon problème ne sera pas la priorité de la banque.",
+                "choice2": "J'aurais dû régler le problème la semaine dernière."
+            },
+            "c3": {
+                "choice1": "Je n'ai pas compris ce truc de portefeuille numérique…",
+                "choice2": "C’est lié à Bitcoin et aux cryptomonnaies ?"
+            },
+            "c4": {
+                "choice1": "Mais c'est toujours de l'argent “virtuel“ par rapport à celui bien réel sur mon compte bancaire.",
+                "choice2": "Je préférerais de l'argent réel."
+            },
+            "c5": {
+                "choice1": "C'est ce que Cincinnatus m'a dit d'installer.",
+                "choice2": "(ne rien dire)"
+            },
+            "c6": {
+                "choice1": "Oui, s'il te plaît.",
+                "choice2": "Merci beaucoup."
+            },
+            "c7": {
+                "choice1": "Que se passe-t-il si je la perds ?",
+                "choice2": "OK"
+            },
+            "c8": {
+                "choice1": "D'accord.",
+                "choice2": "(ne rien dire)"
+            },
+            "c9": {
+                "choice1": "C’est bon j’ai fini.",
+                "choice2": "Ça m'a donné du fil à retordre, mais j'y suis finalement arrivé."
+            }
+        },
+        "text1": "Va sur",
+        "text2": "et télécharge l'extension."
+    },
+    "Chap2": {
+        "feedback": "Aidez-nous à améliorer l'expérience et donnez-nous votre avis 🦄. Cliquez ",
+        "link": "ici",
+        "metamask": "Metamask est requis pour le Chapitre 2 et il semble que vous ne l'ayez pas installé.",
+        "metamaskLink1": "Vous pouvez cliquer ici ",
+        "metamaskLink2": " pour l'installer",
+        "gotochapter1": "Ou vous pouvez vous rendre au ",
+        "gotochapter1end": "to rediscover the whole story, and understand how Metamask works.",
+        "chapter1": "Chapitre 1",
+        "click": "Cliquez sur",
+        "select": "et sélectionnez Metamask",
+        "switch": "et passez à Optimism Goerli"
+    },
+    "Chap2s1": {
+        "narration": "The Lurenberg Post, Rédaction",
+        "dialogue": {
+            "d1": "Hey Azad, as-tu installé un wallet ?",
+            "d2": "Très bien, je vais maintenant t'envoyer des fonds en USDC, une crypto-monnaie stable dont la valeur est indexée sur le dollar (1 USDC = 1 $).",
+            "d3": "Clique sur l'extension Metamask de ton navigateur. Tu devrais maintenant voir les USDC dans l'onglet 'Actifs'.",
+            "d4": "J'ai besoin de ton adresse pour t'envoyer les fonds maintenant. C'est une séquence unique de lettres et de chiffres qui commence par 0x......",
+            "d5": "Lorsque tu cliques sur l'extension, tu verras l'adresse juste en dessous de l’intitulé du compte ('Compte 1' dans ton cas car tu viens juste de l'installer).",
+            "d6": "Clique simplement dessus pour copier ton adresse dans le presse-papier et colle-la ici.",
+            "d7": "Pour effectuer des transactions sur ce réseau, tu auras également besoin de ”gas”. C'est un peu comme l'essence pour ta voiture, si tu veux la faire avancer, tu dois remplir le réservoir avec le carburant approprié.",
+            "d8": "En gros ce ”gas” est une monnaie spécifique, utilisée pour payer tes propres transactions. Sur ce réseau, cette monnaie s'appelle ETH.",
+            "d9": "Mais tu sais, lorsque tu utilises ta carte bancaire, tu paies également des frais ! La différence est simplement que tu n'en as pas conscience parce que le commerçant les paie pour toi !",
+            "d10": "Désolé, je dois y aller, je te contacterai très bientôt."
+        },
+        "choices": {
+            "c1": {
+                "choice1": "Oui",
+                "choice2": "J’ai téléchargé Metamask comme tu m'as dit."
+            },
+            "c2": {
+                "choice1": "Oui, je les vois",
+                "choice2": "Je ne vois que “0 USDC“"
+            },
+            "c3": {
+                "choice1": "Ca veut dire qu'il faut payer pour chaque transaction ? ",
+                "choice2": "(ne rien dire)"
+            }
+        }
+    }
+}
