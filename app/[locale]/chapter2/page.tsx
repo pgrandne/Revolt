@@ -19,6 +19,7 @@ const Chap2 = () => {
     const [wallet, setWallet] = useState(false)
     const [modal, setModal] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [modalFeedback, setModalFeedback] = useState(true)
     const progression = {
         chapter: 2,
         episode: 1,
@@ -30,6 +31,7 @@ const Chap2 = () => {
 
 
     return (
+
         <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto overflow-hidden`}>
             <motion.div
                 className="absolute top-3 left-3"
