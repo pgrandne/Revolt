@@ -5,11 +5,13 @@ import { useState } from 'react'
 import Sequence from './Sequence'
 import Telegram from "./Telegram";
 import SaveButton from "@/app/components/SaveButton";
-import Modal from "@/app/components/Modal";
+import { ModalProgression } from "@/app/components/Modal";
 import Recover from "@/app/components/Recover";
 import { perm_marker } from "@/lib/utils/font";
+import { useLocale } from "next-intl";
 
 const Chap2s1 = () => {
+    const locale = useLocale()
     const [telegramWindow, setTelegramWindow] = useState(false)
     const [stage, setStage] = useState(0)
     const [modal, setModal] = useState(false)
@@ -74,7 +76,7 @@ const Chap2s1 = () => {
                         />
                     </motion.div>
                 }
-                {modal && <Modal route='/construction' />}
+                {modal && <ModalProgression route={`${locale}/construction`} />}
             </div>
         </>
     )

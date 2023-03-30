@@ -7,7 +7,7 @@ import { useNetwork, useAccount } from 'wagmi'
 import SaveButton from "@/app/components/SaveButton";
 import { useEffect, useState } from "react";
 import { handleEthereum } from "@/lib/utils/checkWallet";
-import Modal from "@/app/components/Modal";
+import { ModalProgression } from "@/app/components/Modal";
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 
@@ -118,7 +118,7 @@ const Chap2 = () => {
                     </>
                 }
             </div>
-            {modal && <Modal route={`${locale}/chapter2/scene1`} />}
+            {modal && <ModalProgression route={`${locale}/chapter2/scene1`} />}
         </div >
     )
 }
