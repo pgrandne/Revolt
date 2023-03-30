@@ -15,7 +15,7 @@
     "Progression": {
         "title": "Select where you want to go",
         "chapter": "chapter",
-        "resume": "resume last session",
+        "resume": "Resume last session",
         "connect": "Please connect wallet",
         "close": "close"
     },
@@ -26,6 +26,10 @@
         "subtitle": "Nothing can be taken for granted"
     },
     "Chap1s2": {
+        "narration": "The Lurenberg Post, Newsroom",
+        "hour1": "8:50 am",
+        "hour2": "2:45 pm",
+
         "dialogue": {
             "d1": "Hey Azad, did you watch the news?",
             "d2": "Billions of fake money discovered!!! It's 15% of our GDP!",
@@ -55,6 +59,9 @@
         }
     },
     "Chap1s3": {
+        "narration": "The Optimistic Brewery",
+        "hour": "In the evening",
+
         "dialogue": {
             "d1": "Hey Azad, can you please buy some food? Rob is coming with Jessy after all...",
             "d2": "What can I get you, sir ?",
@@ -94,11 +101,16 @@
             },
             "c7": {
                 "choice1": "Of all the times for my card to stop working, it had to choose now...",
-                "choice2": "I can't believe this is happening just when i'm having issues with my plastic."
+                "choice2": "I can't believe this is happening just when i'm having issues with my bank."
             }
         }
     },
     "Chap1s4": {
+        "narration": "October 30, 2023",
+        "narration1": "The Lurenberg Post, Newsroom",
+        "narration2": "The Lurenberg Post, Skyler's office",
+        "hour": "11:10 am",
+
         "dialogue": {
             "d1": "Hello Azad",
             "d2": "I contacted you last week about a touchy matter",
@@ -141,7 +153,20 @@
             }
         }
     },
+
+    "Chap1s5": {
+        "narration": "Central Street Station",        
+        "narration2": "Azad's place",
+        "hour": "5:40 pm"
+    },
+
     "Chap1s6": {
+        "hour": "October 31, 2023",        
+        "narration": "Government announces the end of cash",       
+        "hour1": "8:55 am", 
+        "hour2": "9:30 am", 
+        "narration2": "The Lurenberg Post, Newsroom",
+
         "dialogue": {
             "d1": "This is insane. Are we in an Orwellian novel or what? They've banned cash!",
             "d2": "Really? Who is he? An inside man?",
@@ -195,7 +220,10 @@
             }
         }
     },
-    "Chap1s7": {
+    "Chap1s7": {               
+        "narration": "Azad's place",  
+        "hour": "8:00 pm", 
+
         "dialogue": {
             "d1": "Your source is probably right. If you want to follow through with this investigation, you need funds. Your account being frozen for “suspicious activity“ is likely an attempt to intimidate you.",
             "d2": "It is a strange coincidence.",
@@ -258,9 +286,9 @@
         "text1": "Go to",
         "text2": "and download the extension."
     },
-    "Chap2": {
-        "feedback": "Please we need your feedback 🦄. Click on this ",
-        "link": "link",
+    "Chap2": {        
+        "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
+        "link": "here",
         "metamask": "Metamask is required for Chapter 2 and it looks like you don't have it installed.",
         "metamaskLink1": "You can click on this ",
         "metamaskLink2": " to install it",
@@ -272,6 +300,7 @@
         "switch": "and switch to Optimism Goerli"
     },
     "Chap2s1": {
+        "narration": "The Lurenberg Post, Newsroom",
         "dialogue": {
             "d1": "Hey Azad, did you install a wallet?",
             "d2": "Alright, I will send you some funds now, in USDC currency. It's what we call a stablecoin, its value is pegged to dollars (1USDC = $1)",

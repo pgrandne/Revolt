@@ -8,13 +8,13 @@ import Image from "next/image";
 import { manReadJournalPic, tvPic } from "@/public/img"
 import { AnimatedText, ArrowButton, Link } from "@/app/components";
 import Telegram from "./Telegram";
+import { useTranslations } from 'next-intl';
 
 const Chap1s6 = () => {
     const [telegramWindow, setTelegramWindow] = useState(false)
-    const [stage, setStage] = useState(0)
-    const narration = "October 31, 2023"
-    const narration2 = "Government announces the end of cash"
+    const [stage, setStage] = useState(0)       
     const [discussionWindow, setDiscussionWindow] = useState(true)
+    const t = useTranslations('Chap1s6');  
 
     return (
         <>
@@ -29,9 +29,9 @@ const Chap1s6 = () => {
                         <Image className="object-contain" src={tvPic} alt="TV" />
                     </motion.div>
                     <div className="pt-10 pl-6 z-10">
-                        <AnimatedText size="text-2xl" content={narration} speed={0.05} delay={4} />
+                        <AnimatedText size="text-2xl" content={t('hour')} speed={0.05} delay={4} />
                         <div className="pt-3">
-                            <AnimatedText size="text-3xl" content={narration2} speed={0.05} delay={5.5} />
+                            <AnimatedText size="text-3xl" content={t('narration')} speed={0.05} delay={5.5} />
                         </div>
                     </div>
                     <div className="absolute flex flex-col right-0">

@@ -5,15 +5,14 @@ import Image from "next/image"
 import { AnimatedText } from '@/app/components';
 import { Dispatch, SetStateAction } from "react";
 import { azadDeskPic, chatPic, notifPic, redactionPic } from "@/public/img"
+import { useTranslations } from 'next-intl';
 
 const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
     discussionWindow: boolean,
     setTelegramWindow: Dispatch<SetStateAction<boolean>>
     telegramWindow: boolean,
 }) => {
-    const narration = "The Lurenberg Post, Newsroom"
-    const hour1 = "8:50 am"
-    const hour2 = "2:45 pm"
+    const t = useTranslations('Chap1s2');
 
     return (
         <div className="relative flex flex-col justify-center h-screen py-[5%]">
@@ -25,12 +24,12 @@ const Sequence = ({ discussionWindow, setTelegramWindow, telegramWindow }: {
                 <Image className="object-contain" src={redactionPic} alt="redaction" />
             </motion.div>
             <div className="pl-6 pt-2 z-10">
-                <AnimatedText size={"text-xl"} content={narration} speed={0.06} delay={1.5} />
+                <AnimatedText size={"text-xl"} content={t('narration')} speed={0.06} delay={1.5} />
                 {discussionWindow &&
-                    <AnimatedText size={"text-base"} content={hour1} speed={0.06} delay={4} />
+                    <AnimatedText size={"text-base"} content={t('hour1')} speed={0.06} delay={4} />
                 }
                 {!discussionWindow &&
-                    <AnimatedText size={"text-base"} content={hour2} speed={0.06} delay={1} />
+                    <AnimatedText size={"text-base"} content={t('hour2')} speed={0.06} delay={1} />
                 }
             </div>
             {discussionWindow &&

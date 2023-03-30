@@ -15,7 +15,7 @@
     "Progression": {
         "title": "Sélectionner où vous souhaitez aller",
         "chapter": "chapitre",
-        "resume": "reprendre la dernière session",
+        "resume": "Dernière sauvegarde",
         "connect": "Connectez votre wallet",
         "close": "fermer"
     },
@@ -26,6 +26,10 @@
         "subtitle": "Rien n'est jamais acquis"
     },
      "Chap1s2": {
+        "narration": "The Lurenberg Post, Rédaction",
+        "hour1": "8h50",
+        "hour2": "14h45",
+
         "dialogue": {
             "d1": "Hey Azad, tu as vu les infos ?",
             "d2": "Plusieurs milliards en fausse monnaie découverts... ça représente 15% de notre PIB !",
@@ -55,6 +59,9 @@
         }
     },
     "Chap1s3": {
+        "narration": "The Optimistic Brewery",
+        "hour": "Dans la soirée",
+
         "dialogue": {
             "d1": "Hey Azad, peux-tu acheter quelque chose à manger s'il te plaît ? Rob arrive avec Jessy et je ne l'ai pas compté...",
             "d2": "Qu’est-ce que vous prendrez, monsieur ?",
@@ -94,11 +101,16 @@
             },
             "c7": {
                 "choice1": "Les problèmes avec ma carte bancaire ne pouvaient pas arriver à un pire moment.",
-                "choice2": "(ne rien dire)"
+                "choice2": "Je n'arrive pas à croire que ça arrive juste au moment où j'ai des soucis avec ma banque."
             }
         }
     },
     "Chap1s4": {
+        "narration": "30 Octobre, 2023",
+        "narration1": "The Lurenberg Post, Rédaction",
+        "narration2": "The Lurenberg Post, Bureau de Skyler",
+        "hour": "11h10",
+
         "dialogue": {
             "d1": "Bonjour Azad",
             "d2": "Je t'ai contacté la semaine dernière au sujet d'une affaire sensible",
@@ -141,9 +153,22 @@
             }
         }
     },
+
+    "Chap1s5": {
+        "narration": "Central Street Station",        
+        "narration2": "Chez Azad",
+        "hour": "17h40"
+    },
+
     "Chap1s6": {
+        "hour": "31 Octobre, 2023",        
+        "narration": "Le gouvernement annonce la fin de l'argent liquide",
+        "hour1": "8h55", 
+        "hour2": "9h30", 
+        "narration2": "The Lurenberg Post, Rédaction ",
+
         "dialogue": {
-            "d1": "C'est insensé. On est dans un roman d'Orwell ou quoi ? Ils ont interdit l'argent liquide !",
+            "d1": "C'est insensé ! On est dans un roman d'Orwell ou quoi ? Ils ont interdit l'argent liquide !",
             "d2": "Vraiment ? Qui est-ce ? Un informateur interne ?",
             "d3": "Pourquoi prendrait-il un tel risque juste avant que ce soit rendu public? Ça n'a pas de sens…",
             "d4": "Salut Azad, je suppose que tu suis les nouvelles en direct",
@@ -196,6 +221,9 @@
         }
     },
     "Chap1s7": {
+        "narration": "Chez Azad",  
+        "hour": "20h00", 
+
         "dialogue": {
             "d1": "Ta source a probablement raison. Si tu veux mener à bien cette enquête, tu as besoin de fonds. Le blocage de ton compte pour “activité suspecte“ est probablement une tentative d'intimidation.",
             "d2": "C'est une étrange coïncidence.",
@@ -272,6 +300,7 @@
         "switch": "et passez à Optimism Goerli"
     },
     "Chap2s1": {
+        "narration": "The Lurenberg Post, Rédaction",
         "dialogue": {
             "d1": "Hey Azad, as-tu installé un wallet ?",
             "d2": "Très bien, je vais maintenant t'envoyer des fonds en USDC, une crypto-monnaie stable dont la valeur est indexée sur le dollar (1 USDC = 1 $).",

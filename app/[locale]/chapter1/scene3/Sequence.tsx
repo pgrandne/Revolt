@@ -2,109 +2,16 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { AnimatedText, ArrowButton } from '@/app/components';
-import { cashPic, decorPic, friendsPic, groupfriendsPic, pubPic, paymentPic, phonePic, takeawayPic, refusedPic } from "@/public/img"
+import { AnimatedText } from '@/app/components';
+import { friendsPic, pubPic } from "@/public/img"
 import { Dispatch, SetStateAction } from "react";
+import { useTranslations } from 'next-intl';
 
 const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>> }) => {
-    const narration = "Powell Boulevard"
-    const hour = "7:50 pm"
-    const narration2 = "The Optimistic Brewery"
-    const hour2 = "In the evening"
+    const t = useTranslations('Chap1s3');
 
     return (
         <div className="relative flex justify-center h-screen py-[5%]">
-            {/* {stage < 4 &&
-                <>
-                    < motion.div
-                        className="absolute bottom-0 right-0 flex h-full"
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 1, duration: 1 }}>
-                        <div className="flex justify-end pl-[28%] pt-[5%] pb-[5%]">
-                            <Image className="object-contain" src={phonePic} alt="Azad" />
-                        </div>
-                    </motion.div>
-                        <div className="absolute bottom-20 pl-6 pt-2 z-10">
-                        <AnimatedText size={"text-xl"} content={narration} speed={0.08} delay={3} />
-                        <AnimatedText size={"text-base"} content={hour} speed={0.08} delay={3.5} />
-                    </div> 
-                    {stage > 0 &&
-                        <motion.div
-                            className="flex pr-[35%] pb-[5%] -z-10"
-                            initial={{ x: -50, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 2, duration: 1 }}>
-                            <Image className="object-contain" src={takeawayPic} alt="Takeaway" />
-                        </motion.div>
-                    }
-                </>
-            }
-            {stage > 2 && stage < 5 &&
-                <>
-                    <motion.div
-                        className="absolute h-screen w-screen bg-[#0f1216]"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1, duration: 1 }}
-                    >
-                        < motion.div
-                            className="absolute flex h-full "
-                            initial={{ x: 0, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 2, duration: 2 }}>
-                            <div className="flex justify-end pr-[0%] pt-[0%] pb-[0%]">
-                                <Image className="object-contain" src={paymentPic} alt="Payment" />
-                            </div>
-                        </motion.div>
-                        < motion.div
-                            className="absolute flex h-full"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 3.5, duration: 0.5 }}>
-                            <div className="flex justify-end pl-[0%] pt-[0%] pb-[53%]">
-                                <Image className="object-contain" src={refusedPic} alt="Rejected" />
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                </>
-            }
-            {stage === 4 &&
-                < motion.div
-                    className="absolute flex h-full"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 0.5 }}>
-                    <div className="flex justify-end pl-[50%] pt-[0%] pb-[57%]">
-                        <Image className="object-contain" src={refusedPic} alt="Rejected" />
-                    </div>
-                </motion.div>
-            }
-            {stage === 5 &&
-                <>
-                    < motion.div
-                        className="absolute bottom-0 right-0 flex h-full"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1, duration: 0.5 }}>
-                        <div className="flex justify-end pl-[0%] pt-[10%] pb-[10%]">
-                            <Image className="object-contain" src={cashPic} alt="Cash" />
-                        </div>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 4.5, duration: 1 }}
-                    >
-                        <button
-                            className="absolute bottom-8 right-8 animate-pulse"
-                            onClick={() => setStage(6)}
-                        >
-                            <ArrowButton />
-                        </button>
-                    </motion.div>
-                </>
-            } */}
             <div className="relative flex justify-center flex-col">
                 {
                     stage < 3 &&
@@ -117,8 +24,8 @@ const Sequence = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             <Image className="object-contain" src={pubPic} alt="decor" priority={true} />
                         </motion.div>
                         <div className="pl-6 pt-2 z-10">
-                            <AnimatedText size={"text-xl"} content={narration2} speed={0.05} delay={3} />
-                            <AnimatedText size={"text-base"} content={hour2} speed={0.05} delay={4.7} />
+                            <AnimatedText size={"text-xl"} content={t('narration')} speed={0.05} delay={3} />
+                            <AnimatedText size={"text-base"} content={t('hour')} speed={0.05} delay={4.7} />
                         </div>
                         <motion.div
                             className="absolute bottom-0 right-0 flex h-full"

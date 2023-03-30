@@ -5,14 +5,12 @@ import { useState } from 'react'
 import Image from "next/image";
 import { azadConfusedPic, classifiedPic, documentPic, lockerPic, pickupPic } from '@/public/img'
 import { AnimatedText, ArrowButton, Link } from "@/app/components";
+import { useTranslations } from 'next-intl';
 
 const Chap1s5 = () => {
     const [lockerOpened, setLockerOpened] = useState(false)
     const [stage, setStage] = useState(0)
-    const narration = "Central Street Station"
-    const hour = "5:40 pm"
-    const narration2 = "Azad's place"
-    const hour2 = "7:56 pm"
+    const t = useTranslations('Chap1s5');       
 
     return (
         <>
@@ -32,8 +30,8 @@ const Chap1s5 = () => {
                     </motion.div>
 
                     <div className="p-1 absolute bottom-14 left-20 flex flex-col">
-                        <AnimatedText size="text-4xl" content={narration} speed={0.05} delay={0.5} />
-                        <AnimatedText size="text-2xl" content={hour} speed={0.05} delay={2.3} />
+                        <AnimatedText size="text-4xl" content={t('narration')} speed={0.05} delay={0.5} />
+                        <AnimatedText size="text-2xl" content={t('hour')} speed={0.05} delay={2.3} />
 
                     </div>
                     <motion.div
@@ -77,8 +75,7 @@ const Chap1s5 = () => {
                             <Image className="object-contain" src={classifiedPic} alt="Classified" />
                         </motion.div>
                         <div className="pl-20 pt-2 z-10">
-                            <AnimatedText size={"text-4xl"} content={narration2} speed={0.06} delay={1} />
-                            {/* <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} /> */}
+                            <AnimatedText size={"text-4xl"} content={t('narration2')} speed={0.06} delay={1} />                            
                         </div>
                     </div>
                     < motion.div

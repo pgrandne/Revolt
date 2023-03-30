@@ -8,11 +8,12 @@ import Telegram from './Telegram'
 import Image from "next/image";
 import journalPic from "@/public/img/journal30oct.png"
 import { AnimatedText, ArrowButton, Link } from '@/app/components';
+import { useTranslations } from 'next-intl';
 
 const Chap1s4 = () => {
     const [stage, setStage] = useState(0)
     const [telegramWindow, setTelegramWindow] = useState(false)
-    const narration = "October 30, 2023"
+    const t = useTranslations('Chap1s4');
 
     return (
         <div className="flex flex-row">
@@ -30,7 +31,7 @@ const Chap1s4 = () => {
                         />
                     </div>
                     <div className="absolute bottom-10 left-6 ">
-                        <AnimatedText size={"text-2xl"} content={narration} speed={0.06} delay={2.5} />
+                        <AnimatedText size={"text-2xl"} content={t('narration')} speed={0.06} delay={2.5} />
                     </div>
                 </motion.div>
             </div>

@@ -23,7 +23,7 @@ const Chap2 = () => {
     const notify = () => toast(<Msg />, {
         delay: 2000,
         position: "bottom-right",
-        autoClose: 5000,
+        autoClose: 7000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

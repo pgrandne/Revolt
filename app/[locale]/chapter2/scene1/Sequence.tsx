@@ -7,13 +7,13 @@ import redactionPic from "@/public/img/newsroom1.png"
 import notifPic from "@/public/img/notif.png"
 import { azadDeskPic } from "@/public/img"
 import { Dispatch, SetStateAction } from "react";
+import { useTranslations } from 'next-intl';
 
 const Sequence = ({ setTelegramWindow, telegramWindow }: {
     setTelegramWindow: Dispatch<SetStateAction<boolean>>
     telegramWindow: boolean,
 }) => {
-    const narration = "The Lurenberg Post, Newsroom"
-    const hour1 = "10:00 am"
+    const t = useTranslations('Chap2s1');  
 
     return (
         <div className="relative flex flex-col justify-center h-full py-[5%]">
@@ -25,9 +25,7 @@ const Sequence = ({ setTelegramWindow, telegramWindow }: {
                 <Image className="object-contain" src={redactionPic} alt="redaction" />
             </motion.div>
             <div className="pl-6 pt-2 z-10">
-                <AnimatedText size={"text-xl"} content={narration} speed={0.05} delay={7} />
-                {/* <AnimatedText size={"text-base"} content={hour1} speed={0.08} delay={5} /> */}
-
+                <AnimatedText size={"text-xl"} content={t('narration')} speed={0.05} delay={7} />    
             </div>
             <>
                 < motion.div

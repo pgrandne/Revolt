@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { AnimatedText } from '@/app/components';
 import { azadDeskPic, chatPic, notifPic, redactionPic, skylerPic } from "@/public/img"
+import { useTranslations } from 'next-intl';
 
 
 import { Dispatch, SetStateAction } from "react";
@@ -13,10 +14,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
     telegramWindow: boolean
     setTelegramWindow: Dispatch<SetStateAction<boolean>>
 }) => {
-    const narration = "The Lurenberg Post, Newsroom"
-    const narration2 = "The Lurenberg Post, Skyler's office"
-    const hour = "11:10 am"
-    const hour2 = "4:55 pm"
+    const t = useTranslations('Chap1s4');
 
     return (
         <div className="relative flex flex-col justify-center h-screen py-[5%]">
@@ -30,8 +28,8 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                         <Image className="object-contain" src={redactionPic} alt="redaction" />
                     </motion.div>
                     <div className="pl-6 pt-2 z-10">
-                        <AnimatedText size={"text-xl"} content={narration} speed={0.05} delay={10} />
-                        <AnimatedText size={"text-base"} content={hour} speed={0.05} delay={12} />
+                        <AnimatedText size={"text-xl"} content={t('narration1')} speed={0.05} delay={10} />
+                        <AnimatedText size={"text-base"} content={t('hour')} speed={0.05} delay={12} />
                     </div>
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"
@@ -72,8 +70,7 @@ const Sequence = ({ stage, telegramWindow, setTelegramWindow }: {
                         <Image className="object-contain" src={skylerPic} alt="skyler office" />
                     </motion.div>
                     <div className="pl-6 pt-2 z-10">
-                        <AnimatedText size={"text-xl"} content={narration2} speed={0.04} delay={3} />
-                        {/* <AnimatedText size={"text-base"} content={hour2} speed={0.08} delay={5} /> */}
+                        <AnimatedText size={"text-xl"} content={t('narration2')} speed={0.04} delay={3} />                    
                     </div>
                     < motion.div
                         className="absolute bottom-0 right-0 flex h-full"
