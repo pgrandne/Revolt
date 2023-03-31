@@ -1,7 +1,7 @@
 {
     "Home": {
         "title": "Historia de un denunciante",
-        "subtitle": "una aventura para empezar a explorar el Web3",
+        "subtitle": "Una aventura para empezar a explorar el Web3",
         "buttonName": "Empezar la aventura"
     },
     "Info": {
@@ -10,14 +10,14 @@
         "deck": "Descubre nuestro Deck",
         "online": "En línea",
         "download": "Descargar",
-        "close": "cerrar"
+        "close": "Cerrar"
     },
     "Progression": {       
         "title": "Selecciona a dónde quieres ir",
-        "chapter": "capítulo",
+        "chapter": "Capítulo",
         "resume": "Continuar la última sesión",
         "connect": "Conectar su wallet",
-        "close": "cerrar"
+        "close": "Cerrar"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -300,6 +300,16 @@
         "switch": "y cambia a Optimism Goerli"
     },
     "Chap2s1": {
+        "chapter": "Capítulo 2",
+        "title": "Cambio de paradigma",
+        "sentgas": "Acabo de enviarte gas: ETH, deberías recibirlo pronto.",
+        "havegas": "Al parecer ya tienes gas, no necesito enviarte más.",
+        "sentusdc": "Acabo de enviarte USDC, deberías recibirlo.",
+        "haveusdc": "Ya tienes suficiente USDC, no necesito enviarte más.",
+        "networkissues": "La red parece tener problemas, por favor vuelve más tarde.",
+        "clickon1": "Puedes hacer clic en",
+        "clickon2": "para mostrar el saldo de USDC en tu wallet",
+
         "narration": "The Lurenberg Post, Redacción",
         "dialogue": {
             "d1": "Hola Azad, ¿instalaste una wallet?",

@@ -1,7 +1,7 @@
 {
     "Home": {
         "title": "Story of a whistleblower",
-        "subtitle": "an adventure game to start exploring Web3",
+        "subtitle": "An adventure game to start exploring Web3",
         "buttonName": "Enter the adventure"
     },
     "Info": {
@@ -10,14 +10,14 @@
         "deck": "Discover our Pitch Deck",
         "online": "Online",
         "download": "Download",
-        "close": "close"
+        "close": "Close"
     },
     "Progression": {
         "title": "Select where you want to go",
-        "chapter": "chapter",
+        "chapter": "Chapter",
         "resume": "Resume last session",
         "connect": "Please connect wallet",
-        "close": "close"
+        "close": "Close"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -300,6 +300,16 @@
         "switch": "and switch to Optimism Goerli"
     },
     "Chap2s1": {
+        "chapter": "Chapter 2",
+        "title": "Paradigm shift",
+        "sentgas": "I just sent you some gas: ETH, you should received it pretty soon",
+        "havegas": "Apparently you already have some gas, I don't need to send you any",
+        "sentusdc": "I just sent you some USDC, you should received it",
+        "haveusdc": "You already have enough USDC, I don't need to send you any ",
+        "networkissues": "The network seems to have some issues, come back later please",
+        "clickon1": "You can click on",
+        "clickon2": "to display the USDC balance in your wallet",
+
         "narration": "The Lurenberg Post, Newsroom",
         "dialogue": {
             "d1": "Hey Azad, did you install a wallet?",

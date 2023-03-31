@@ -154,7 +154,7 @@ export const ModalFeedback = ({ setModalFeedback }: {
     const locale = useLocale()
 
     return (
-        <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
+        <div className="bg-slate-800 bg-opacity-90 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
             <div className={`flex flex-col bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 gap-2 rounded-md text-center w-2/5`}>
                 <p className="mb-4 text-2xl">Help us to enhance the experience and give us <a className="underline"> your feedback </a> </p>
                 <p className="mb-4 text-sm">It only takes 1 minute</p>

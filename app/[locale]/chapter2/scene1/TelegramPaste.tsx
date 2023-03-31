@@ -1,6 +1,7 @@
 'use client'
 
 import { Dispatch, SetStateAction } from "react"
+import { useTranslations } from 'next-intl';
 
 const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddress }: {
     stage: number,
@@ -14,6 +15,7 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddres
         const target = event.currentTarget
         const data = { address: target.address.value }
         const JSONdata = JSON.stringify(data)
+        const t = useTranslations('Chap2s1')
         setAzadText([...azadText, `${data.address}`])
         setPlayerAddress(data.address)
         setStage(stage + 1)
@@ -25,19 +27,19 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddres
             body: JSON.stringify(data),
         })
         if (response.ok) {
-            const text = "I just sent you some USDC, you should received it"
+            const text = t('sentusdc') 
             setAzadText([...azadText, `${data.address}`, text])
             setStage(5)
 
         }
         else {
             if (response.status === 423) {
-                const text = "You already have enough USDC, I don't need to send you any "
+                const text = t('haveusdc') 
                 setAzadText([...azadText, `${data.address}`, text])
                 setStage(5)
             }
             else {
-                const text = "The network seems to have some issues, come back later please"
+                const text = t('networkissues') 
                 setAzadText([...azadText, `${data.address}`, text])
                 setStage(99)
             }
