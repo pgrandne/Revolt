@@ -10,12 +10,12 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddres
     setAzadText: Dispatch<SetStateAction<string[]>>,
     setPlayerAddress: Dispatch<SetStateAction<string>>,
 }) => {
+    const t = useTranslations('Chap2s1')
     const sendAddress = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const target = event.currentTarget
         const data = { address: target.address.value }
-        const JSONdata = JSON.stringify(data)
-        const t = useTranslations('Chap2s1')
+        const JSONdata = JSON.stringify(data)        
         setAzadText([...azadText, `${data.address}`])
         setPlayerAddress(data.address)
         setStage(stage + 1)
