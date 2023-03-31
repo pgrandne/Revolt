@@ -29,7 +29,7 @@ const SaveButton = ({
             })
 
             // Verify signature
-            const verifyRes = await fetch('/app/api/game/save', {
+            const verifyRes = await fetch('/api/save', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

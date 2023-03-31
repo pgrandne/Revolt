@@ -15,31 +15,31 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddres
         event.preventDefault()
         const target = event.currentTarget
         const data = { address: target.address.value }
-        const JSONdata = JSON.stringify(data)        
+        const JSONdata = JSON.stringify(data)
         setAzadText([...azadText, `${data.address}`])
         setPlayerAddress(data.address)
         setStage(stage + 1)
-        const response = await fetch('/app/api/game/faucet', {
+        const response = await fetch('/api/faucet', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
         })
-        if (response.ok) {
-            const text = t('sentusdc') 
+        if (response.status === 200) {
+            const text = t('sentusdc')
             setAzadText([...azadText, `${data.address}`, text])
             setStage(5)
 
         }
         else {
             if (response.status === 423) {
-                const text = t('haveusdc') 
+                const text = t('haveusdc')
                 setAzadText([...azadText, `${data.address}`, text])
                 setStage(5)
             }
             else {
-                const text = t('networkissues') 
+                const text = t('networkissues')
                 setAzadText([...azadText, `${data.address}`, text])
                 setStage(99)
             }

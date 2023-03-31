@@ -34,13 +34,13 @@ const Hero = () => {
 
     return (
         <section className="flex justify-center h-screen w-screen">
-            {wallet &&
-                <div className="absolute top-3 right-3 z-20 flex gap-2">
-                    <LocaleSwitcher />
+            <div className="absolute top-3 right-3 z-40 flex gap-2">
+                <LocaleSwitcher />
+                {wallet &&
                     <ConnectButton chainStatus="none" showBalance={false} />
+                }
 
-                </div>
-            }
+            </div>
             <div className="my-auto relative">
                 <motion.div
                     className="p-2"

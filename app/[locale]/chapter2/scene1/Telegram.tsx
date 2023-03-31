@@ -34,7 +34,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
     const askGas = async () => {
         let text
         const data = { address: playerAddress }
-        const response = await fetch('/app/api/game/gas', {
+        const response = await fetch('/api/gas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -124,8 +124,8 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 <>
                                     <AzadDiscussion azadText={azadText[1]} />
                                     <ExternalDiscussion text={t('dialogue.d4')} telegramWindow={true} />
-                                    <ExternalDiscussion text={t('dialogue.d5')} telegramWindow={true} delay={2.5}/>
-                                    <ExternalDiscussion text={t('dialogue.d6')} telegramWindow={true} delay={5}/>
+                                    <ExternalDiscussion text={t('dialogue.d5')} telegramWindow={true} delay={2.5} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} telegramWindow={true} delay={5} />
                                 </>
                             }
                             {stage > 3 &&
@@ -147,7 +147,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     {stage < 98 &&
                                         <>
                                             <ExternalDiscussion text={t('dialogue.d8')} telegramWindow={true} />
-                                            <ExternalDiscussion text={t('dialogue.d9')} telegramWindow={true} delay={2.5}/>
+                                            <ExternalDiscussion text={t('dialogue.d9')} telegramWindow={true} delay={2.5} />
                                         </>
                                     }
                                 </>

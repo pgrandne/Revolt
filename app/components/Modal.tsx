@@ -49,7 +49,8 @@ export const ModalSelectChapter = ({ setModalSelectChapter, wallet }: {
     const [loading, setLoading] = useState(false)
     const [resumeButton, setResumeButton] = useState(t('resume'))
     const router = useRouter()
-    const { address } = useAccount()
+    const { address, isConnected } = useAccount()
+    const locale = useLocale()
 
     useEffect(() => {
         if (typeof address !== 'undefined')
@@ -61,16 +62,16 @@ export const ModalSelectChapter = ({ setModalSelectChapter, wallet }: {
     const getProgression = async () => {
         setLoading(true)
         try {
-            const progRes = await fetch('/app/api/game/progression', {
+            const progRes = await fetch('/api/progression', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ address }),
+                body: JSON.stringify({ address, locale }),
             })
             if (progRes.status !== 200) throw new Error('Error loading progression')
-            const path = await progRes.text()
-            router.push(path)
+            const path = await progRes.json()
+            router.push(path.path)
         } catch (error) {
             alert(error.message)
             setModalSelectChapter(false)
@@ -82,8 +83,8 @@ export const ModalSelectChapter = ({ setModalSelectChapter, wallet }: {
             <div className={`flex flex-col bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 gap-2 rounded-md text-center w-2/5`}>
                 <p className="mb-4 text-xl">{t('title')}</p>
                 <LinkLocale className="btnProgression" href="/chapter1/scene1">{t('chapter')} 1</LinkLocale>
-                {wallet && <LinkLocale className="btnProgression" href="/chapter2/scene1">{t('chapter')} 2</LinkLocale>}
-                {!wallet && <LinkLocale className="btnProgression" href="/chapter2">{t('chapter')} 2</LinkLocale>}
+                {wallet && isConnected && <LinkLocale className="btnProgression" href="/chapter2/scene1">{t('chapter')} 2</LinkLocale>}
+                {(!wallet || !isConnected) && <LinkLocale className="btnProgression" href="/chapter2">{t('chapter')} 2</LinkLocale>}
                 {wallet && <button
                     className="btnProgression text-3xl"
                     onClick={() => { typeof address === 'undefined' ? setResumeButton(t('connect')) : getProgression() }}
@@ -117,7 +118,7 @@ export const ModalInfo = ({ setModalInfo, deck }:
     const t = useTranslations('Info')
 
     return (
-        <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
+        <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-50">
             <div className={` bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 rounded-md text-center w-4/5`}>
                 <div className="flex justify-center">
                     {deck &&
@@ -155,7 +156,7 @@ export const ModalFeedback = ({ setModalFeedback }: {
 
     return (
         <div className="bg-slate-800 bg-opacity-90 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
-            <div className={`flex flex-col bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 gap-2 rounded-md text-center w-2/5`}>
+            <div className={`${perm_marker.className} flex flex-col bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 gap-2 rounded-md text-center w-2/5`}>
                 <p className="mb-4 text-2xl">Help us to enhance the experience and give us <a className="underline"> your feedback </a> </p>
                 <p className="mb-4 text-sm">It only takes 1 minute</p>
                 <a className="bg-red-500 hover:bg-red-700 px-7 py-2 ml-2 rounded-md text-2xl text-white font-semibold" target="_blank" href="https://msprr0gajgn.typeform.com/to/DSl54TqJ#url=xxxxx"
