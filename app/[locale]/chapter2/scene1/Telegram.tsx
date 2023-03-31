@@ -42,14 +42,14 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
             body: JSON.stringify(data),
         })
         if (response.ok) {
-            text = "I just sent you some gas: ETH, you should received it pretty soon"
+            text = t('sentgas')
         }
         else {
             if (response.status === 423) {
-                text = "Apparently you already have some gas, I don't need to send you any"
+                text = t('havegas')
             }
             else {
-                text = "The network seems to have some issues, come back later please"
+                text = t('networkissues')
                 setStage(98)
             }
         }

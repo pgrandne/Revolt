@@ -9,12 +9,14 @@ import { ModalProgression } from "@/app/components/Modal";
 import Recover from "@/app/components/Recover";
 import { perm_marker } from "@/lib/utils/font";
 import { useLocale } from "next-intl";
+import { useTranslations } from 'next-intl';
 
 const Chap2s1 = () => {
     const locale = useLocale()
     const [telegramWindow, setTelegramWindow] = useState(false)
     const [stage, setStage] = useState(0)
     const [modal, setModal] = useState(false)
+    const t = useTranslations('Chap2s1');
     const progression = {
         chapter: 2,
         episode: 2,
@@ -36,7 +38,7 @@ const Chap2s1 = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ type: 'spring', delay: 0.8, duration: 1 }}
                     >
-                        Chapter 2
+                        {t('chapter')}
                     </motion.h1>
                     <motion.p
                         className="text-center text-xl"
@@ -44,7 +46,7 @@ const Chap2s1 = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ type: 'spring', delay: 1.5, duration: 1 }}
                     >
-                        Paradigm shift
+                        {t('title')}
                     </ motion.p>
                 </motion.div>
             </div>

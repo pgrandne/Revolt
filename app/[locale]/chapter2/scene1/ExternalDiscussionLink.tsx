@@ -5,6 +5,7 @@ import Image from "next/image"
 import metamask from "@/img/metamask.svg"
 import { useNetwork } from 'wagmi'
 import { Dispatch, SetStateAction } from "react";
+import { useTranslations } from 'next-intl';
 
 const ExternalDiscussion = ({ delay, setStage }: {
     delay: number,
@@ -15,6 +16,7 @@ const ExternalDiscussion = ({ delay, setStage }: {
     const tokenSymbol = 'USDC'
     const tokenDecimals = 6
     const tokenImage = 'https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389'
+    const t = useTranslations('Chap2s1');
 
     const addTokenFunction = async () => {
         try {
@@ -54,7 +56,7 @@ const ExternalDiscussion = ({ delay, setStage }: {
                 transition={{ delay: delay, duration: 1 }}
             >
                 <div className="text-sm text-black">
-                    You can click on
+                    {t('clickon1')} 
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.6 318.6" className="inline h-5 mx-1 cursor-pointer animate-pulse"
                         onClick={() => {
                             chain?.id === 420 ? addTokenFunction() : alert('wrong network')
@@ -99,7 +101,7 @@ const ExternalDiscussion = ({ delay, setStage }: {
                         <polygon className="st6" points="103.6,138.2 51.3,153.5 33.9,207.7 80.3,207.7 111.4,208.1 87.8,162.1 " />
                         <polygon className="st6" points="174.6,164.6 177.9,106.9 193.1,65.8 125.6,65.8 140.6,106.9 144.1,164.6 145.3,182.8 145.4,227.6   173.1,227.6 173.3,182.8 " />
                     </svg>
-                    to display the USDC balance in your wallet
+                    {t('clickon2')}
                 </div>
             </motion.div>
         </div >
