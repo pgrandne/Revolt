@@ -11,10 +11,11 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "@/lib/utils/checkWallet";
 import { github, linkedin, twitter, donation } from "@/public/svg";
 import info from "@/public/svg/info.svg"
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitcher } from "./LocaleSwitcher";
 
 const Hero = () => {
+    const locale = useLocale()
     const t = useTranslations('Home')
     const router = useRouter();
     const [wallet, setWallet] = useState(false)
@@ -29,7 +30,7 @@ const Hero = () => {
     const launchRevolte = () => {
         if (!isMobile && !isSafari && !isIE)
             setModalSelectChapter(true)
-        else router.push(isMobile ? "/mobile" : (isSafari || isIE ? "/browser" : "/chapter1/scene1"))
+        else router.push(isMobile ? `${locale}/mobile` : (isSafari || isIE ? `${locale} / browser` : `${locale}/chapter1/scene1`))
     }
 
     return (

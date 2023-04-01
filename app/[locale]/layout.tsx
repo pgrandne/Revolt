@@ -5,9 +5,6 @@ import { notFound } from 'next/navigation';
 export const metadata = {
   title: 'Revolte',
   description: 'Adventure game for Web3 onboarding',
-  icons: {
-    icon: './favicon.ico'
-  }
 }
 
 export function generateStaticParams() {

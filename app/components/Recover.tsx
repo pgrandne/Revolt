@@ -2,7 +2,7 @@ import { useSendTransaction, usePrepareSendTransaction, useContractWrite, usePre
 import { BigNumber } from 'ethers'
 import { erc20ABI } from 'wagmi'
 
-const Recover = () => {
+export const Recover = () => {
     const { config: configGas } = usePrepareSendTransaction({
         request: { to: '0xD9464d0F4Bd1Da4DdA0Dd998Bc73aE2EC42418de', value: BigNumber.from('800000000000000') }
     })
@@ -28,5 +28,3 @@ const Recover = () => {
         </div>
     )
 }
-
-export default Recover

@@ -15,10 +15,10 @@ const TelegramPaste = ({ stage, setStage, azadText, setAzadText, setPlayerAddres
         event.preventDefault()
         const target = event.currentTarget
         const data = { address: target.address.value }
-        const JSONdata = JSON.stringify(data)
         setAzadText([...azadText, `${data.address}`])
         setPlayerAddress(data.address)
         setStage(stage + 1)
+        console.log(data)
         const response = await fetch('/api/faucet', {
             method: 'POST',
             headers: {
