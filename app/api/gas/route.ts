@@ -1,42 +1,42 @@
 
-import { erc20ABI } from 'wagmi'
 import { NextResponse } from 'next/server';
 import { ethers } from 'ethers'
+import { ERC20 } from '@/lib/erc20'
 
 export async function POST(request: Request) {
     try {
         console.log('step 1')
-        // const { address } = await request.json()
-        // const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
-        // if (typeof process.env.PRIVATE_KEY !== "undefined" && typeof process.env.USDC_CONTRACT !== "undefined") {
-        //     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
-        //     const contract = new ethers.Contract(process.env.USDC_CONTRACT, erc20ABI, wallet);
-        //     const balanceUSDC = (await contract.balanceOf(address) / 10 ** 6).toString()
-        //     console.log(`balance USDC: ${balanceUSDC}`)
-        //     const amount = ethers.utils.parseEther("0.001")
-        //     const balanceETH = (await provider.getBalance(address)).toString()
-        //     if (parseInt(balanceETH) >= amount.toNumber()) {
-        //         const error = new Error('Cannot use faucet because already have ETH')
-        //         error.name = 'balance'
-        //         throw error
+        const { address } = await request.json()
+        const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
+        if (typeof process.env.PRIVATE_KEY !== "undefined" && typeof process.env.USDC_CONTRACT !== "undefined") {
+            const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
+            const contract = new ethers.Contract(process.env.USDC_CONTRACT, ERC20, wallet);
+            const balanceUSDC = (await contract.balanceOf(address) / 10 ** 6).toString()
+            console.log(`balance USDC: ${balanceUSDC}`)
+            const amount = ethers.utils.parseEther("0.001")
+            const balanceETH = (await provider.getBalance(address)).toString()
+            if (parseInt(balanceETH) >= amount.toNumber()) {
+                const error = new Error('Cannot use faucet because already have ETH')
+                error.name = 'balance'
+                throw error
 
-        //     }
-        //     else {
-        //         const transaction = {
-        //             to: address,
-        //             value: amount,
-        //         }
-        //         const result = await wallet.sendTransaction(transaction)
-        //         const receipt = await result.wait()
-        //         console.log(receipt)
-        //         console.log(`Sent 0.001 eth to address ${address}`)
-        //     }
-        // }
-        // else {
-        //     const error = new Error('No env variable')
-        //     error.name = 'env'
-        //     throw error
-        // }
+            }
+            else {
+                const transaction = {
+                    to: address,
+                    value: amount,
+                }
+                const result = await wallet.sendTransaction(transaction)
+                const receipt = await result.wait()
+                console.log(receipt)
+                console.log(`Sent 0.001 eth to address ${address}`)
+            }
+        }
+        else {
+            const error = new Error('No env variable')
+            error.name = 'env'
+            throw error
+        }
         return NextResponse.json({ status: 200, ok: true })
     } catch (_error) {
         console.error(_error)

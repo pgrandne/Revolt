@@ -6,7 +6,7 @@ import Sequence from './Sequence'
 import Telegram from "./Telegram";
 import SaveButton from "@/app/components/SaveButton";
 import { ModalProgression } from "@/app/components/Modal";
-// import Recover from "@/app/components/Recover";
+import { Recover } from "@/app/components";
 import { perm_marker } from "@/lib/utils/font";
 import { useLocale } from "next-intl";
 import { useTranslations } from 'next-intl';
@@ -52,9 +52,9 @@ const Chap2s1 = () => {
             </div>
             <div className="flex flex-row">
                 <div className="bar-of-progress fixed top-0 left-0 h-1 bg-red-800 w-1/6" />
-                {/* <div className="absolute top-4 left-80 z-30">
+                <div className="absolute top-4 left-80 z-30">
                     <Recover />
-                </div> */}
+                </div>
                 <div className="relative basis-2/3 w-full overflow-hidden">
                     <Sequence setTelegramWindow={setTelegramWindow} telegramWindow={telegramWindow} />
                 </div>
