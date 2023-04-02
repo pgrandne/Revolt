@@ -2,7 +2,7 @@ import Image from "next/image"
 import cincinnatus from "@/public/img/cincinnatus.jpg"
 
 
-const TelegramSkeleton = () => {
+export const TelegramSkeleton = () => {
     return (
         <div className="z-20 flex flex-grow-0 flex-shrink-0 w-full pr-3 bg-white border-b">
             <div className="w-12 h-12 mx-4 my-2 bg-blue-500 bg-center bg-no-repeat bg-cover rounded-full cursor-pointer">
@@ -39,5 +39,3 @@ const TelegramSkeleton = () => {
         </div>
     )
 }
-
-export default TelegramSkeleton

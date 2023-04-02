@@ -4,9 +4,7 @@ import { ERC20 } from '@/lib/erc20'
 
 export async function POST(request: Request) {
     try {
-        console.log('step 1')
         const { address } = await request.json()
-        console.log(address)
         const provider = new ethers.providers.AlchemyProvider("optimism-goerli", process.env.ALCHEMY_ID)
         if (typeof process.env.PRIVATE_KEY !== "undefined" && typeof process.env.USDC_CONTRACT !== "undefined") {
             const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
