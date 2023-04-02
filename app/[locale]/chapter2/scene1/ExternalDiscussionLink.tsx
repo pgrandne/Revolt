@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion"
-import Image from "next/image"
-import metamask from "@/img/metamask.svg"
 import { useNetwork } from 'wagmi'
 import { Dispatch, SetStateAction } from "react";
 import { useTranslations } from 'next-intl';
@@ -56,7 +54,7 @@ const ExternalDiscussion = ({ delay, setStage }: {
                 transition={{ delay: delay, duration: 1 }}
             >
                 <div className="text-sm text-black">
-                    {t('clickon1')} 
+                    {t('clickon1')}
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.6 318.6" className="inline h-5 mx-1 cursor-pointer animate-pulse"
                         onClick={() => {
                             chain?.id === 420 ? addTokenFunction() : alert('wrong network')
