@@ -15,14 +15,14 @@ export const ModalProgression = ({ route }: { route: string }) => {
     const t = useTranslations('Save')
 
     return (
-        <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-20">
+        <div className="bg-slate-900 bg-opacity-90 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-20">
             <div className={` bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 rounded-md text-center w-2/5`}>
                 <div className="flex flex-col justify-center">
                     <p className="mb-4 font-bold ">{t('saved')}</p>
                     <p className="mb-4 font-bold ">{t('next')}</p>
                 </div>
                 <button
-                    className="flex bg-red-500 px-7 py-2 mx-auto rounded-md text-md text-white font-semibold"
+                    className="flex bg-red-500  hover:bg-red-700 px-7 py-2 mx-auto rounded-md text-md text-white font-semibold"
                     onClick={() => {
                         setLoading(true)
                         router.push(route)
@@ -80,7 +80,7 @@ export const ModalSelectChapter = ({ setModalSelectChapter, wallet }: {
     }
 
     return (
-        <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
+        <div className="bg-slate-900 bg-opacity-60 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
             <div className={`flex flex-col bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 gap-2 rounded-md text-center w-2/5`}>
                 <p className="mb-4 text-xl">{t('title')}</p>
                 <LinkLocale className="btnProgression" href="/chapter1/scene1">{t('chapter')} 1</LinkLocale>
@@ -119,7 +119,7 @@ export const ModalInfo = ({ setModalInfo, deck }:
     const t = useTranslations('Info')
 
     return (
-        <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-50">
+        <div className="bg-slate-900 bg-opacity-60 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-50">
             <div className={` bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 rounded-md text-center w-4/5`}>
                 <div className="flex justify-center">
                     {deck &&
@@ -141,7 +141,7 @@ export const ModalInfo = ({ setModalInfo, deck }:
                     alt="roadmap"
                 />
                 <button
-                    className="bg-red-500 px-7 py-2 ml-2 rounded-md text-md text-white font-semibold"
+                    className="bg-red-500  hover:bg-red-700 px-7 py-2 ml-2 rounded-md text-md text-white font-semibold"
                     onClick={() => setModalInfo(false)}
                 >{t('close')} </button>
             </div>
@@ -157,7 +157,7 @@ export const ModalFeedback = ({ setModalFeedback }: {
     const t = useTranslations('Feedback');
 
     return (
-        <div className="bg-slate-800 bg-opacity-90 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
+        <div className="bg-slate-900 bg-opacity-90 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
             <div className={`${perm_marker.className} flex flex-col bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 gap-2 rounded-md text-center w-2/5`}>
                 <p className="mb-4 text-2xl"> {t('text1')} <a className="underline"> {t('text2')} </a> </p>
                 <p className="mb-4 text-sm"> {t('duration')} </p>
