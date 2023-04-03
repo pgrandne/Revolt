@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { perm_marker } from "@/lib/utils/font";
+import { useTranslations } from 'next-intl';
 
 const Mobile = () => {
-    const text = "The first version of Revolte is only accessible on Desktop. The mobile version will be available soon"
+    const t = useTranslations('Mobile');
+    const text = t('text') 
     const words = text.split("")
 
     const container = {

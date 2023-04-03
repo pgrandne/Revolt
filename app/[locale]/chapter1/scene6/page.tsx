@@ -28,7 +28,7 @@ const Chap1s6 = () => {
                     >
                         <Image className="object-contain" src={tvPic} alt="TV" />
                     </motion.div>
-                    <div className="pt-10 pl-6 z-10">
+                    <div className="pt-10 pl-6 z-10 max-w-[38%]">
                         <AnimatedText size="text-2xl" content={t('hour')} speed={0.05} delay={4} />
                         <div className="pt-3">
                             <AnimatedText size="text-3xl" content={t('narration')} speed={0.05} delay={5.5} />

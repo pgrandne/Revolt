@@ -5,8 +5,10 @@ import { perm_marker } from '@/lib/utils/font';
 import equipmentPic from "@/public/img/equipment.jpg"
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const Construction = () => {
+    const t = useTranslations('Construction');
 
 
     return (
@@ -18,7 +20,7 @@ const Construction = () => {
                     transition={{ duration: 5 }}
                 >
                     <div className={`${perm_marker.className} absolute transform rounded-sm rotate-[-5deg] -mt-5 -ml-7 bg-red-800 p-2 text-3xl`}>
-                        To be continued...
+                        {t('text')}
                     </div>
                     <Image
                         className="bgCase -z-10"

@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { perm_marker } from "@/lib/utils/font";
+import { useTranslations } from 'next-intl';
 
 const Browser = () => {
-    const text = "The first version of Revolte is not accessible  with Internet Explorer or Safari. Please use another browser (Brave, Chrome, Edge, Firefox)"
+    const t = useTranslations('Browser');
+    const text = t('text') 
     const words = text.split("")
 
     const container = {

@@ -4,6 +4,7 @@ import { useAccount, useNetwork, useSignMessage } from 'wagmi'
 import { Dispatch, SetStateAction, useState } from 'react'
 import { ArrowButton } from './'
 import { IProgression } from '@/lib/interface'
+import { useTranslations } from 'next-intl';
 
 const SaveButton = ({
     progression,
@@ -14,6 +15,7 @@ const SaveButton = ({
     setModal: Dispatch<SetStateAction<boolean>>
     arrow?: boolean
 }) => {
+    const t = useTranslations('Chap2');
     const { address } = useAccount()
     const { chain } = useNetwork()
     const { signMessageAsync } = useSignMessage()
@@ -23,7 +25,7 @@ const SaveButton = ({
             const chainId = chain?.id
             if (!address || !chainId) return
             setLoading(true)
-            const message = `Sign in to Revolte.app for saving your progression: \n - chapter: ${progression.chapter} \n - episode: ${progression.episode}`
+            const message = `${t('signin')} \n ${t('chapter')} ${progression.chapter} \n ${t('episode')} ${progression.episode}`
             const signature = await signMessageAsync({
                 message: message,
             })
@@ -36,7 +38,7 @@ const SaveButton = ({
                 },
                 body: JSON.stringify({ message, address, signature, progression }),
             })
-            if (verifyRes.status !== 200) throw new Error('Error verifying message')
+            if (verifyRes.status !== 200) throw new Error(t('error'))
             setLoading(false)
             setModal(true)
         } catch (error) {
@@ -59,7 +61,7 @@ const SaveButton = ({
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                     }
-                    {loading ? "Processing..." : "Save your progression"}
+                    {loading ? t('processing') : t('save')}
                 </button>
             }
             {arrow &&

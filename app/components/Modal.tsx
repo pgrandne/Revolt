@@ -12,13 +12,14 @@ import roadmap from "@/public/img/roadmap.png"
 export const ModalProgression = ({ route }: { route: string }) => {
     const router = useRouter()
     const [loading, setLoading] = useState(false)
+    const t = useTranslations('Save')
 
     return (
         <div className="bg-slate-800 bg-opacity-50 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-20">
             <div className={` bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 rounded-md text-center w-2/5`}>
                 <div className="flex flex-col justify-center">
-                    <p className="mb-4 font-bold ">Progression saved!</p>
-                    <p className="mb-4 font-bold "> You can go to the next episode</p>
+                    <p className="mb-4 font-bold ">{t('saved')}</p>
+                    <p className="mb-4 font-bold ">{t('next')}</p>
                 </div>
                 <button
                     className="flex bg-red-500 px-7 py-2 mx-auto rounded-md text-md text-white font-semibold"
@@ -34,7 +35,7 @@ export const ModalProgression = ({ route }: { route: string }) => {
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                     }
-                    {loading ? "Processing..." : "Next episode"}
+                    {loading ? t('processing') : t('nextbutton')}
                 </button>
             </div>
         </div>
@@ -69,7 +70,7 @@ export const ModalSelectChapter = ({ setModalSelectChapter, wallet }: {
                 },
                 body: JSON.stringify({ address, locale }),
             })
-            if (progRes.status !== 200) throw new Error('Error loading progression')
+            if (progRes.status !== 200) throw new Error(t('error'))
             const path = await progRes.json()
             router.push(path.path)
         } catch (error) {
@@ -102,7 +103,7 @@ export const ModalSelectChapter = ({ setModalSelectChapter, wallet }: {
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                     }
-                    <span className="mx-auto">{loading ? "Wait.." : t('close')}</span>
+                    <span className="mx-auto">{loading ? t('wait') : t('close')}</span>
                 </button>
             </div>
         </div>
@@ -153,19 +154,20 @@ export const ModalFeedback = ({ setModalFeedback }: {
 }) => {
     const router = useRouter()
     const locale = useLocale()
+    const t = useTranslations('Feedback');
 
     return (
         <div className="bg-slate-800 bg-opacity-90 flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-30">
             <div className={`${perm_marker.className} flex flex-col bg-[#0f1216] px-2 sm:px-16 py-2 sm:py-14 gap-2 rounded-md text-center w-2/5`}>
-                <p className="mb-4 text-2xl">Help us to enhance the experience and give us <a className="underline"> your feedback </a> </p>
-                <p className="mb-4 text-sm">It only takes 1 minute</p>
-                <a className="bg-red-500 hover:bg-red-700 px-7 py-2 ml-2 rounded-md text-2xl text-white font-semibold" target="_blank" href="https://msprr0gajgn.typeform.com/to/DSl54TqJ#url=xxxxx"
+                <p className="mb-4 text-2xl"> {t('text1')} <a className="underline"> {t('text2')} </a> </p>
+                <p className="mb-4 text-sm"> {t('duration')} </p>
+                <a className="bg-red-500 hover:bg-red-700 px-7 py-2 ml-2 rounded-md text-2xl text-white font-semibold" target="_blank" href="https://msprr0gajgn.typeform.com/to/DSl54TqJ#url=chap1scene7"
                     onClick={() => {
                         setModalFeedback(false)
                         router.push(`${locale}/chapter2`)
                     }}
 
-                >Sure!</a>
+                >{t('sure')}</a>
 
                 <button
                     className="border-2 border-white opacity-70 hover:opacity-100 mt-2 px-7 py-2 ml-2 rounded-md text-2xl text-white font-semibold"
@@ -173,7 +175,7 @@ export const ModalFeedback = ({ setModalFeedback }: {
                         setModalFeedback(false)
                         router.push(`${locale}/chapter2`)
                     }}
-                >Close</button>
+                >{t('close')}</button>
             </div>
         </div >
     )

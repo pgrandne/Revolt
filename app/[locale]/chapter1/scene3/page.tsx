@@ -31,7 +31,7 @@ const Chap1s3 = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
                 >
-                    <LinkLocale href="/chapter1/scene4" className="absolute bottom-8 right-8 animate-pulse">
+                    <LinkLocale href="/chapter1/scene4" className="absolute bottom-8 right-[30%] animate-pulse">
                         <ArrowButton />
                     </LinkLocale>
                 </motion.div>

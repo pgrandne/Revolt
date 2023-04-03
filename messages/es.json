@@ -12,11 +12,37 @@
         "download": "Descargar",
         "close": "Cerrar"
     },
+
+    "Browser": { 
+        "text": "La primera versión de Revolte no es accesible con Internet Explorer o Safari. Por favor, usa otro navegador (Brave, Chrome, Edge, Firefox)"
+    },
+    "Mobile": { 
+        "text": "La primera versión de Revolte solo es accesible en escritorio. La versión móvil estará disponible pronto"
+    },
+    "Construction": {
+        "text": "Continuará..."
+    }, 
+
     "Progression": {       
         "title": "Selecciona a dónde quieres ir",
         "chapter": "Capítulo",
         "resume": "Continuar la última sesión",
         "connect": "Conectar su wallet",
+        "close": "Cerrar",
+        "error": "Error al cargar la última sesión.",
+        "wait": "Procesando..."
+    },
+    "Save": {
+        "saved": "¡Progreso guardado!",
+        "next": "Puedes ir al siguiente episodio",
+        "processing": "Procesando...",
+        "nextbutton": "Siguiente episodio"
+    },
+    "Feedback": {
+        "text1": "Ayúdanos a mejorar la experiencia y danos",
+        "text2": "tu opinión",
+        "duration": "Sólo lleva 1 minuto",
+        "sure": "¡Seguro!",
         "close": "Cerrar"
     },
     "Chap1s1": {
@@ -109,7 +135,7 @@
         "narration": "30 de Octubre, 2023",        
         "narration1": "The Lurenberg Post, Redacción",
         "narration2": "The Lurenberg Post, Oficina de Skyler",
-        "hour": "11:10 am",
+        "hour": "10:20 am",
 
         "dialogue": {
             "d1": "Hola Azad",
@@ -297,7 +323,15 @@
         "chapter1": "Capítulo 1",
         "click": "Haz clic en",
         "select": "y selecciona Metamask",
-        "switch": "y cambia a Optimism Goerli"
+        "switch": "y cambia a Optimism Goerli",
+        "processing": "Procesando...",
+        "next": "Próximo episodio sin guardar",
+        "save": "Guardar tu progreso",
+        "or": "o",
+        "signin": "Firma para guardar tu progreso:",
+        "chapter": "- capítulo:",
+        "episode": "- episodio:",
+        "error": "Error verificando el mensaje"
     },
     "Chap2s1": {
         "chapter": "Capítulo 2",

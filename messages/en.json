@@ -12,11 +12,37 @@
         "download": "Download",
         "close": "Close"
     },
+
+    "Browser": { 
+        "text": "The first version of Revolte is not accessible  with Internet Explorer or Safari. Please use another browser (Brave, Chrome, Edge, Firefox)"
+    },
+    "Mobile": { 
+        "text": "The first version of Revolte is only accessible on Desktop. The mobile version will be available soon"
+    },
+    "Construction": {
+        "text": "To be continued..."
+    }, 
+
     "Progression": {
         "title": "Select where you want to go",
         "chapter": "Chapter",
         "resume": "Resume last session",
         "connect": "Please connect wallet",
+        "close": "Close",
+        "error": "Error loading progression.",
+        "wait": "Wait..."
+    },
+    "Save": {
+        "saved": "Progression saved!",
+        "next": "You can go to the next episode",
+        "processing": "Processing...",
+        "nextbutton": "Next episode"
+    },
+    "Feedback": {
+        "text1": "Help us to enhance the experience and give us",
+        "text2": "your feedback",
+        "duration": "It only takes 1 minute",
+        "sure": "Sure!",
         "close": "Close"
     },
     "Chap1s1": {
@@ -109,7 +135,7 @@
         "narration": "October 30, 2023",
         "narration1": "The Lurenberg Post, Newsroom",
         "narration2": "The Lurenberg Post, Skyler's office",
-        "hour": "11:10 am",
+        "hour": "10:20 am",
 
         "dialogue": {
             "d1": "Hello Azad",
@@ -296,8 +322,16 @@
         "gotochapter1end": "to rediscover the whole story, and understand how Metamask works.",
         "chapter1": "Chapter 1",
         "click": "Click on",
-        "select": "and select Mematask",
-        "switch": "and switch to Optimism Goerli"
+        "select": "and select Metamask",
+        "switch": "and switch to Optimism Goerli",
+        "processing": "Processing...",
+        "next": "Next episode without saving",
+        "save": "Save your progression",
+        "or": "or",
+        "signin": "Sign to save your progression:",
+        "chapter": "- chapter:",
+        "episode": "- episode:",
+        "error": "Error verifying message"
     },
     "Chap2s1": {
         "chapter": "Chapter 2",
