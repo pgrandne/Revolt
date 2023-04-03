@@ -90,7 +90,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                     <AzadDiscussion azadText={azadText[1]} />
                                     <ExternalDiscussion text={t('dialogue.d4')} telegramWindow={true} />
                                     <ExternalDiscussion text={t('dialogue.d5')} telegramWindow={true} delay={2.5} />
-                                    <ExternalDiscussion text={t('dialogue.d6')} telegramWindow={true} delay={5} />
+                                    <ExternalDiscussion text={t('dialogue.d6')} telegramWindow={true} delay={6} />
                                 </>
                             }
                             {stage > 3 &&
@@ -119,9 +119,9 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                             }
                             {stage > 6 && stage < 99 &&
                                 <>
-                                    <ExternalDiscussion text={externalAnswer} telegramWindow={true} delay={5} />
+                                    <ExternalDiscussion text={externalAnswer} telegramWindow={true} delay={6} />
                                     {stage < 98 &&
-                                        <ExternalDiscussion text={t('dialogue.d10')} telegramWindow={true} delay={7.5}/>
+                                        <ExternalDiscussion text={t('dialogue.d10')} telegramWindow={true} delay={9.5}/>
                                     }
                                 </>
                             }

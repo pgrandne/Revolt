@@ -69,7 +69,7 @@ const Chap2s1 = () => {
                         className="fixed bottom-8 right-[33%] animate-pulse"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 19, duration: 1 }}
+                        transition={{ delay: 14, duration: 1 }}
                     >
                         <SaveButton
                             setModal={setModal}
