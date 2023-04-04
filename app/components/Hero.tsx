@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { ModalInfo, ModalSelectChapter } from "@/app/components";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "@/lib/utils/checkWallet";
-import { github, linkedin, twitter, donation } from "@/public/svg";
+import { github, linkedin, twitter, donation, irruptionlab } from "@/public/svg";
 import info from "@/public/svg/info.svg"
 import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitcher } from "./LocaleSwitcher";
@@ -113,6 +113,13 @@ const Hero = () => {
                             className="footerIcon"
                             src={twitter}
                             alt="twitter"
+                        />
+                    </a>
+                    <a href="https://www.irruptionlab.com/" target="_blank" rel="noreferrer">
+                        <Image
+                            className="footerIcon"
+                            src={irruptionlab}
+                            alt="irruptionlab"
                         />
                     </a>
                 </div>
