@@ -41,10 +41,14 @@ Inspirations: Cryptozombie (https://cryptozombies.io/) to learn Solidity langage
 
 ## Roadmap
 - [X] Chapter 1
-- [X] Chapter 2 episode 1
-- [ ] French language
-- [ ] Spanish language
-- [ ] Chapter 2 episode 2
+- [X] Chapter 2 episode 1 (Testnet)
+- [X] French language
+- [X] Spanish language
+- [ ] Chapter 2 episode 2 (Testnet)
+- [ ] Chapter 2 episode 3 (Testnet)
+- [ ] Chapter 2 episode 4 (Testnet)
+- [ ] Smart contract - Deposit and lock 
+- [ ] Chapter 3 episode 1 (Mainnet)
 
 ## Instructions
 ##### Clone the project
