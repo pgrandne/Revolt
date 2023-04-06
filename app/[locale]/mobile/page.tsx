@@ -1,12 +1,11 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { perm_marker } from "@/lib/utils/font";
 import { useTranslations } from 'next-intl';
 
 const Mobile = () => {
     const t = useTranslations('Mobile');
-    const text = t('text') 
+    const text = t('text')
     const words = text.split("")
 
     const container = {
@@ -48,7 +47,7 @@ const Mobile = () => {
             >
                 {words.map((word, index) =>
                     <motion.span
-                        className={perm_marker.className}
+                        className="font-permarker"
                         key={index}
                         variants={child}
                     >

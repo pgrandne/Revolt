@@ -2,7 +2,6 @@
 
 import '@rainbow-me/rainbowkit/styles.css';
 import Hero from '@/app/components/Hero';
-import { perm_marker } from '@/lib/utils/font';
 import { getDefaultWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, goerli, arbitrum, arbitrumGoerli, aurora, auroraTestnet, avalanche, avalancheFuji, bsc, bscTestnet, celo, celoAlfajores, fantom, fantomTestnet, gnosis, gnosisChiado, metis, metisGoerli, optimism, optimismGoerli, polygon, polygonMumbai, polygonZkEvmTestnet, sepolia, zkSync, zkSyncTestnet } from 'wagmi/chains';
@@ -35,7 +34,7 @@ export default function Home() {
           accentColorForeground: 'black',
         })}
         chains={chains}>
-        <main className={perm_marker.className}>
+        <main>
           <Hero />
         </main>
       </RainbowKitProvider>

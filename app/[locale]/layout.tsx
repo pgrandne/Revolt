@@ -1,5 +1,6 @@
 import '../globals.css'
 import { NextIntlClientProvider } from 'next-intl/client';
+import { Permanent_Marker, Roboto } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
 export const metadata = {
@@ -10,6 +11,22 @@ export const metadata = {
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'fr' }, { locale: 'es' }];
 }
+
+const perm_marker = Permanent_Marker({
+  variable: '--font-perm-marker',
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const roboto = Roboto({
+  variable: '--font-roboto',
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+
 
 export default async function LocaleLayout({ children, params: { locale } }:
   {
@@ -24,7 +41,7 @@ export default async function LocaleLayout({ children, params: { locale } }:
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${perm_marker.variable} ${roboto.variable}`}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

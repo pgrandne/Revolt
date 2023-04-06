@@ -34,7 +34,7 @@ const Hero = () => {
     }
 
     return (
-        <section className="flex justify-center h-screen w-screen">
+        <section className="font-permarker flex justify-center h-screen w-screen">
             <div className="absolute top-3 right-3 z-40 flex gap-2">
                 <LocaleSwitcher />
                 {wallet &&

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion"
-import { perm_marker, roboto } from '@/lib/utils/font';
 import Link from "@/app/components/LinkLocale"
 import { useNetwork, useAccount } from 'wagmi'
 import SaveButton from "@/app/components/SaveButton";
@@ -32,7 +31,7 @@ const Chap2 = () => {
 
     return (
 
-        <div className={`${perm_marker.className} relative flex justify-center w-screen h-screen my-auto overflow-hidden`}>
+        <div className="font-permarker relative flex justify-center w-screen h-screen my-auto overflow-hidden">
             <motion.div
                 className="absolute top-3 left-3"
                 initial={{ opacity: 0 }}
@@ -42,7 +41,7 @@ const Chap2 = () => {
             </motion.div>
             <div className="my-auto">
                 {!wallet &&
-                    <div className={`${roboto.className} font-bold my-10 text-center text-xl`}>
+                    <div className="font-roboto font-bold my-10 text-center text-xl">
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -69,7 +68,7 @@ const Chap2 = () => {
                 {wallet &&
                     <>
                         <motion.div
-                            className={`${roboto.className} font-bold my-10 text-center text-xl`}
+                            className="font-roboto font-bold my-10 text-center text-xl"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 3, duration: 2 }}

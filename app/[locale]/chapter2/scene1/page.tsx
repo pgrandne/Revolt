@@ -7,7 +7,6 @@ import Telegram from "./Telegram";
 import SaveButton from "@/app/components/SaveButton";
 import { ModalProgression } from "@/app/components/Modal";
 // import { Recover } from "@/app/components";
-import { perm_marker } from "@/lib/utils/font";
 import { useLocale } from "next-intl";
 import { useTranslations } from 'next-intl';
 
@@ -25,7 +24,7 @@ const Chap2s1 = () => {
 
     return (
         <>
-            <div className={`${perm_marker.className} absolute flex justify-center w-screen h-screen my-auto`}>
+            <div className="font-permarker absolute flex justify-center w-screen h-screen my-auto">
                 <motion.div
                     className="my-auto"
                     initial={{ opacity: 1 }}

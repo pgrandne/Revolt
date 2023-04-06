@@ -1,7 +1,5 @@
 'use client';
 
-import { perm_marker } from '@/lib/utils/font';
-
 import equipmentPic from "@/public/img/equipment.jpg"
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -19,7 +17,7 @@ const Construction = () => {
                     animate={{ opacity: [0, 1] }}
                     transition={{ duration: 5 }}
                 >
-                    <div className={`${perm_marker.className} absolute transform rounded-sm rotate-[-5deg] -mt-5 -ml-7 bg-red-800 p-2 text-3xl`}>
+                    <div className="font-permarker absolute transform rounded-sm rotate-[-5deg] -mt-5 -ml-7 bg-red-800 p-2 text-3xl">
                         {t('text')}
                     </div>
                     <Image
