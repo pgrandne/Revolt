@@ -12,17 +12,15 @@
         "download": "Download",
         "close": "Close"
     },
-
-    "Browser": { 
+    "Browser": {
         "text": "The first version of Revolte is not accessible  with Internet Explorer or Safari. Please use another browser (Brave, Chrome, Edge, Firefox)"
     },
-    "Mobile": { 
+    "Mobile": {
         "text": "The first version of Revolte is only accessible on Desktop. The mobile version will be available soon"
     },
     "Construction": {
         "text": "To be continued..."
-    }, 
-
+    },
     "Progression": {
         "title": "Select where you want to go",
         "chapter": "Chapter",
@@ -43,7 +41,9 @@
         "text2": "your feedback",
         "duration": "It only takes 1 minute",
         "sure": "Sure!",
-        "close": "Close"
+        "close": "Close",
+        "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
+        "link": "here"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -55,7 +55,6 @@
         "narration": "The Lurenberg Post, Newsroom",
         "hour1": "8:50 am",
         "hour2": "2:45 pm",
-
         "dialogue": {
             "d1": "Hey Azad, did you watch the news?",
             "d2": "Billions of fake money discovered!!! It's 15% of our GDP!",
@@ -87,7 +86,6 @@
     "Chap1s3": {
         "narration": "The Optimistic Brewery",
         "hour": "In the evening",
-
         "dialogue": {
             "d1": "Hey Azad, can you please buy some food? Rob is coming with Jessy after all...",
             "d2": "What can I get you, sir ?",
@@ -136,7 +134,6 @@
         "narration1": "The Lurenberg Post, Newsroom",
         "narration2": "The Lurenberg Post, Skyler's office",
         "hour": "10:20 am",
-
         "dialogue": {
             "d1": "Hello Azad",
             "d2": "I contacted you last week about a touchy matter",
@@ -179,20 +176,17 @@
             }
         }
     },
-
     "Chap1s5": {
-        "narration": "Central Street Station",        
+        "narration": "Central Street Station",
         "narration2": "Azad's place",
         "hour": "5:40 pm"
     },
-
     "Chap1s6": {
-        "hour": "October 31, 2023",        
-        "narration": "Government announces the end of cash",       
-        "hour1": "8:55 am", 
-        "hour2": "9:30 am", 
+        "hour": "October 31, 2023",
+        "narration": "Government announces the end of cash",
+        "hour1": "8:55 am",
+        "hour2": "9:30 am",
         "narration2": "The Lurenberg Post, Newsroom",
-
         "dialogue": {
             "d1": "This is insane. Are we in an Orwellian novel or what? They've banned cash!",
             "d2": "Really? Who is he? An inside man?",
@@ -246,10 +240,9 @@
             }
         }
     },
-    "Chap1s7": {               
-        "narration": "Azad's place",  
-        "hour": "8:00 pm", 
-
+    "Chap1s7": {
+        "narration": "Azad's place",
+        "hour": "8:00 pm",
         "dialogue": {
             "d1": "Your source is probably right. If you want to follow through with this investigation, you need funds. Your account being frozen for “suspicious activity“ is likely an attempt to intimidate you.",
             "d2": "It is a strange coincidence.",
@@ -312,7 +305,7 @@
         "text1": "Go to",
         "text2": "and download the extension."
     },
-    "Chap2": {        
+    "Chap2": {
         "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
         "link": "here",
         "metamask": "Metamask is required for Chapter 2 and it looks like you don't have it installed.",
@@ -343,7 +336,6 @@
         "networkissues": "The network seems to have some issues, come back later please",
         "clickon1": "You can click on",
         "clickon2": "to display the USDC balance in your wallet",
-
         "narration": "The Lurenberg Post, Newsroom",
         "dialogue": {
             "d1": "Hey Azad, did you install a wallet?",

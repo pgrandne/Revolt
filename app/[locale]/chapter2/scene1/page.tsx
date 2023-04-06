@@ -62,8 +62,7 @@ const Chap2s1 = () => {
                         <Telegram stage={stage} setStage={setStage} />
                     }
                 </div>
-                {
-                    stage === 7 &&
+                {stage === 7 &&
                     <motion.div
                         className="fixed bottom-8 right-[33%] animate-pulse"
                         initial={{ opacity: 0 }}
@@ -77,7 +76,8 @@ const Chap2s1 = () => {
                         />
                     </motion.div>
                 }
-                {modal && <ModalProgression route={`${locale}/construction`} />}
+
+                {modal && <ModalProgression route={`${locale}/chapter2/scene2`} />}
             </div>
         </>
     )

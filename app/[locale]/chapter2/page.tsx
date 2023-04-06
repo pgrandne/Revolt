@@ -28,9 +28,7 @@ const Chap2 = () => {
         setWallet(handleEthereum())
     }, [])
 
-
     return (
-
         <div className="font-permarker relative flex justify-center w-screen h-screen my-auto overflow-hidden">
             <motion.div
                 className="absolute top-3 left-3"

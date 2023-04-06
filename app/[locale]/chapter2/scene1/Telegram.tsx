@@ -6,6 +6,19 @@ import { AzadDiscussion, ExternalDiscussion, TelegramChoices, TelegramSkeleton }
 import ExternalDiscussionLink from "./ExternalDiscussionLink";
 import TelegramPaste from "./TelegramPaste";
 import { useTranslations } from 'next-intl';
+import { ToastContainer, toast } from 'react-toastify';
+
+const Msg = ({ feedback, link }: { feedback: string, link: string }) => (
+    <div>
+        {feedback} <a
+            className='underline'
+            href="https://msprr0gajgn.typeform.com/to/DSl54TqJ#url=chap2scene1" target="_blank"
+        >
+            {link}
+        </a>
+    </div>
+)
+
 
 const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetStateAction<number>>, }) => {
     const [azadText, setAzadText] = useState<string[]>([])
@@ -13,6 +26,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
     const [externalAnswer, setExternalAnswer] = useState('')
     const messageEnd = document.getElementById("end");
     const t = useTranslations('Chap2s1');
+    const f = useTranslations('Feedback')
 
     const scrollToBottom = () => {
         if (messageEnd !== null)
@@ -25,6 +39,9 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
             askGas()
             console.log('gas requested')
             setStage(7)
+        }
+        if (stage === 7) {
+            toast(<Msg feedback={f('feedback')} link={f('link')} />)
         }
     }, [stage]);
 
@@ -121,7 +138,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                                 <>
                                     <ExternalDiscussion text={externalAnswer} telegramWindow={true} delay={6} />
                                     {stage < 98 &&
-                                        <ExternalDiscussion text={t('dialogue.d10')} telegramWindow={true} delay={9.5}/>
+                                        <ExternalDiscussion text={t('dialogue.d10')} telegramWindow={true} delay={9.5} />
                                     }
                                 </>
                             }
@@ -142,6 +159,18 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
                     }
                 </div>
             </div>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </motion.div >
     )
 }
