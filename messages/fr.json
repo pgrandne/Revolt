@@ -41,7 +41,9 @@
         "text2": "votre avis",
         "duration": "Cela ne prend qu'une minute",
         "sure": "Bien sûr !",
-        "close": "Fermer"
+        "close": "Fermer",
+        "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
+        "link": "here"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",

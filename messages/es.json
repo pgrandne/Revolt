@@ -12,18 +12,16 @@
         "download": "Descargar",
         "close": "Cerrar"
     },
-
-    "Browser": { 
+    "Browser": {
         "text": "La primera versión de Revolte no es accesible con Internet Explorer o Safari. Por favor, usa otro navegador (Brave, Chrome, Edge, Firefox)"
     },
-    "Mobile": { 
+    "Mobile": {
         "text": "La primera versión de Revolte solo es accesible en escritorio. La versión móvil estará disponible pronto"
     },
     "Construction": {
         "text": "Continuará..."
-    }, 
-
-    "Progression": {       
+    },
+    "Progression": {
         "title": "Selecciona a dónde quieres ir",
         "chapter": "Capítulo",
         "resume": "Continuar la última sesión",
@@ -43,7 +41,9 @@
         "text2": "tu opinión",
         "duration": "Sólo lleva 1 minuto",
         "sure": "¡Seguro!",
-        "close": "Cerrar"
+        "close": "Cerrar",
+        "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
+        "link": "here"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -51,11 +51,10 @@
         "title": "Capítulo 1",
         "subtitle": "Nada es nunca seguro"
     },
-     "Chap1s2": {
+    "Chap1s2": {
         "narration": "The Lurenberg Post, Redacción",
         "hour1": "8:50 am",
         "hour2": "2:45 pm",
-
         "dialogue": {
             "d1": "Hey Azad, ¿viste las noticias?",
             "d2": "¡Se descubrieron miles de millones en moneda falsa! ¡Esto representa el 15% de nuestro PIB!",
@@ -87,7 +86,6 @@
     "Chap1s3": {
         "narration": "The Optimistic Brewery",
         "hour": "Por la noche",
-
         "dialogue": {
             "d1": "Hey Azad, ¿podrías comprar algo de comida, por favor? Rob está llegando con Jessy y no lo conté...",
             "d2": "¿Qué le gustaría, señor?",
@@ -132,11 +130,10 @@
         }
     },
     "Chap1s4": {
-        "narration": "30 de Octubre, 2023",        
+        "narration": "30 de Octubre, 2023",
         "narration1": "The Lurenberg Post, Redacción",
         "narration2": "The Lurenberg Post, Oficina de Skyler",
         "hour": "10:20 am",
-
         "dialogue": {
             "d1": "Hola Azad",
             "d2": "Te contacté la semana pasada sobre un asunto delicado",
@@ -179,20 +176,17 @@
             }
         }
     },
-
     "Chap1s5": {
-        "narration": "Central Street Station",        
+        "narration": "Central Street Station",
         "narration2": "En casa de Azad",
         "hour": "5:40 pm"
     },
-
     "Chap1s6": {
-        "hour": "31 de Octubre, 2023",        
+        "hour": "31 de Octubre, 2023",
         "narration": "El gobierno anuncia el fin del efectivo",
-        "hour1": "8:55 am", 
-        "hour2": "9:30 am", 
+        "hour1": "8:55 am",
+        "hour2": "9:30 am",
         "narration2": "The Lurenberg Post, Redacción",
-
         "dialogue": {
             "d1": "Es absurdo. ¿Estamos en una novela de Orwell o qué? ¡Han prohibido el efectivo!",
             "d2": "¿De verdad? ¿Quién es? ¿Un informante interno?",
@@ -247,9 +241,8 @@
         }
     },
     "Chap1s7": {
-        "narration": "En casa de Azad",  
-        "hour": "8:00 pm", 
-
+        "narration": "En casa de Azad",
+        "hour": "8:00 pm",
         "dialogue": {
             "d1": "Tu informante probablemente tenga razón. Si quieres llevar a cabo esta investigación, necesitas dinero. El bloqueo de tu cuenta por “actividad sospechosa“ probablemente es un intento de intimidación.",
             "d2": "Es una extraña coincidencia.",
@@ -343,7 +336,6 @@
         "networkissues": "La red parece tener problemas, por favor vuelve más tarde.",
         "clickon1": "Puedes hacer clic en",
         "clickon2": "para mostrar el saldo de USDC en tu wallet",
-
         "narration": "The Lurenberg Post, Redacción",
         "dialogue": {
             "d1": "Hola Azad, ¿instalaste una wallet?",
