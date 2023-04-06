@@ -58,7 +58,7 @@ $ git clone https://github.com/pgrandne/revolte.git
 ```
 
 ### Front End ###
-We use NextJS 13. The Front End scripts are in "src" folder.
+We use NextJS 13. The Front End scripts are in "app" folder.
 If you want to launch the Front End locally:
 
 1. Go to "revolte" folder
@@ -76,10 +76,9 @@ $ npm install
 $ npm run dev
 ```
 ### Back End ###
-We use .env for environment variables. Change the name of env.example to .env and fill in the 3 variables :
+We use .env for environment variables. Change the name of env.example to .env and fill in the 4 variables :
 
    - We use DATABASE_URL for our MongoDB database
    - We use PRIVATE KEY for interacting with the blockchain and send ERC-20 and eth (on Optimism Goerli)
    - We use ALCHEMY_ID for the provider
-   - We use USDC_CONTRACT for the contract address of USDC on Optimism Goerli
    - We use ETHERSCAN_API for contracts verification
