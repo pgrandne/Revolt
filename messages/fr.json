@@ -6,7 +6,7 @@
     },
     "Info": {
         "title": "une fiction interactive pour embarquer les utilisateurs du Web2 vers le Web3",
-        "subtitle": "est un projet opensource. Vous pouvez nous aider en faisant une donation à :",
+        "subtitle": "est un projet opensource. Vous pouvez nous aider en faisant un don à :",
         "deck": "Découvrez notre deck",
         "online": "En ligne",
         "download": "Télécharger",
@@ -39,9 +39,9 @@
         "nextbutton": "Épisode suivant"
     },
     "Feedback": {
-        "text1": "Aidez-nous à améliorer l'expérience et donnez-nous",
+        "text1": "Avant de passer à l'épisode suivant, donnez-nous",
         "text2": "votre avis",
-        "duration": "Cela ne prend qu'1 minute",
+        "duration": "Cela ne prend qu'une minute",
         "sure": "Bien sûr !",
         "close": "Fermer"
     },
