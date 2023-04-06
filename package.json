@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@prisma/client": "4.12.0",
-    "@rainbow-me/rainbowkit": "0.12.5",
+    "@rainbow-me/rainbowkit": "0.12.7",
     "encoding": "0.1.13",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "ethers": "5.7.2",
     "flag-icons": "6.6.6",
-    "framer-motion": "10.10.0",
+    "framer-motion": "10.11.2",
     "next": "13.2.4",
     "next-intl": "2.12.0",
     "react": "18.2.0",
@@ -25,7 +25,7 @@
     "react-dom": "18.2.0",
     "react-toastify": "9.1.2",
     "typescript": "5.0.3",
-    "wagmi": "0.12.8"
+    "wagmi": "0.12.9"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
