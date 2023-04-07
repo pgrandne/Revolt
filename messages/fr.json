@@ -42,8 +42,8 @@
         "duration": "Cela ne prend qu'une minute",
         "sure": "Bien sûr !",
         "close": "Fermer",
-        "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
-        "link": "here"
+        "feedback": "Aidez-nous à améliorer l'expérience et donnez-nous votre avis 🙏 Cliquez",
+        "link": "ici"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -305,9 +305,7 @@
         "text1": "Va sur",
         "text2": "et télécharge l'extension."
     },
-    "Chap2": {
-        "feedback": "Aidez-nous à améliorer l'expérience et donnez-nous votre avis 🦄. Cliquez ",
-        "link": "ici",
+    "Chap2": {        
         "metamask": "Metamask est requis pour le Chapitre 2 et il semble que vous ne l'ayez pas installé.",
         "metamaskLink1": "Vous pouvez cliquer ici ",
         "metamaskLink2": " pour l'installer",

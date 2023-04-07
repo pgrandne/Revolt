@@ -42,7 +42,7 @@
         "duration": "It only takes 1 minute",
         "sure": "Sure!",
         "close": "Close",
-        "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
+        "feedback": "Help us improve the experience and give us your feedback 🙏 Click",
         "link": "here"
     },
     "Chap1s1": {
@@ -306,8 +306,6 @@
         "text2": "and download the extension."
     },
     "Chap2": {
-        "feedback": "Help us improve the experience and give us your feedback 🦄. Click",
-        "link": "here",
         "metamask": "Metamask is required for Chapter 2 and it looks like you don't have it installed.",
         "metamaskLink1": "You can click on this ",
         "metamaskLink2": " to install it",
