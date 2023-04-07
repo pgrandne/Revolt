@@ -72,7 +72,10 @@ const Chap2 = () => {
                             transition={{ delay: 3, duration: 2 }}
                         >
                             {!isConnected &&
-                                <p >{t('click')} <span className="font-extrabold">“Connect Wallet“</span> {t('select')}</p>
+                                <p >
+                                    {t('continue')} <br /> 
+                                    {t('click')} <span className="font-extrabold">“Connect Wallet“</span> {t('select')}
+                                </p>
                             }
                             {isConnected && chain?.id !== 420 &&
                                 <p>{t('click')} <span className="font-extrabold">“Wrong Network“</span> {t('switch')}</p>}

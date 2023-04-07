@@ -41,7 +41,7 @@
         "text2": "tu opinión",
         "duration": "Sólo lleva 1 minuto",
         "sure": "¡Seguro!",
-        "close": "Cerrar",
+        "close": "Más tarde",
         "feedback": "Ayúdanos a mejorar la experiencia y danos tu opinión 🙏 Haz clic",
         "link": "aquí"
     },
@@ -312,7 +312,8 @@
         "gotochapter1": "O puedes ir al ",
         "gotochapter1end": "para redescubrir toda la historia y entender cómo funciona Metamask.",
         "chapter1": "Capítulo 1",
-        "click": "Haz clic en",
+        "continue": "Para continuar la aventura",
+        "click": "haz clic en",
         "select": "y selecciona Metamask",
         "switch": "y cambia a Optimism Goerli",
         "processing": "Procesando...",
