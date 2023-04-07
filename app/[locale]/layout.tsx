@@ -12,7 +12,7 @@ export const metadata = {
     description: 'Adventure game for Web3 onboarding',
     site: 'https://revolte.app',
     creator: '@IrruptionLab',
-    images: ['https://www.revolte.app/public/img/revolte_card.jpeg'],
+    images: ['https://www.revolte.app/img/revolte_card.jpeg'],
   },
 }
 
@@ -33,8 +33,6 @@ const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
 })
-
-
 
 export default async function LocaleLayout({ children, params: { locale } }:
   {
