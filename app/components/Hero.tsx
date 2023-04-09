@@ -14,7 +14,7 @@ import info from "@/public/svg/info.svg"
 import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitcher } from "./LocaleSwitcher";
 
-const Hero = () => {
+export const Hero = () => {
     const locale = useLocale()
     const t = useTranslations('Home')
     const router = useRouter();
@@ -166,4 +166,3 @@ const Hero = () => {
     )
 }
 
-export default Hero;

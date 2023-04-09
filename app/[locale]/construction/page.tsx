@@ -1,33 +1,17 @@
 'use client';
 
-import equipmentPic from "@/public/img/equipment.jpg"
+import { equipmentPic } from "@/public/img"
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { ToastContainer, toast } from 'react-toastify';
-import { useEffect } from "react"
-import 'react-toastify/dist/ReactToastify.css';
+import { Toast } from "@/app/components";
+import { useSearchParams } from 'next/navigation';
 
-const Msg = ({ feedback, link }: { feedback: string, link: string }) => (
-    <div>
-        {feedback} <a
-            className='underline'
-            href="https://msprr0gajgn.typeform.com/to/DSl54TqJ#url=chap2scene1" target="_blank"
-        >
-            {link}
-        </a>
-    </div>
-)
 const Construction = () => {
     const t = useTranslations('Construction');
     const f = useTranslations('Feedback');
-
-    useEffect(() =>         
-        {
-            toast(<Msg feedback={f('feedback')} link={f('link')} />)
-        }
-    );
-   
+    const searchParams = useSearchParams();
+    const progression = searchParams.get('source')
 
     return (
         <div className="flex justify-center h-screen">
@@ -49,21 +33,11 @@ const Construction = () => {
                     />
 
                 </motion.div>
-                <ToastContainer
-                        position="bottom-right"
-                        autoClose={7000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick={false}
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="dark"
-                    />
+                <Toast feedback={f('feedback')} link={f('link')} progression={progression} />
+
             </div>
         </div>
-        
+
     )
 }
 
