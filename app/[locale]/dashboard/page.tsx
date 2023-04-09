@@ -4,17 +4,17 @@
 import { useState, useEffect } from "react"
 
 const Dashboard = () => {
-    const [nbUsers, setNumberUsers] = useState(0)
+    const [nbUsers, setNbUsers] = useState(0)
     const getUsers = async () => {
-        const res = await fetch('/api/dashboard').then()
-        const users = res.toString()
-        return users
+        fetch('/api/dashboard')
+            .then((res) => res.json())
+            .then((res) => {
+                setNbUsers(res.nbUsers)
+            })
     }
 
     useEffect(() => {
-        const usersList = getUsers()
-        console.log(usersList)
-
+        getUsers()
     }, [])
 
     return (
@@ -22,6 +22,7 @@ const Dashboard = () => {
             <h1 className="font-permarker text-center text-7xl">
                 Dashboard
             </h1>
+            <p className=" mt-5 text-center text-5xl">{nbUsers} players</p>
         </div>
     )
 }
