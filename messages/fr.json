@@ -37,7 +37,7 @@
         "nextbutton": "Épisode suivant"
     },
     "Feedback": {
-        "text1": "Avant de passer à l'épisode suivant, donnez-nous",
+        "text1": "Avant de passer au chapitre suivant, donnez-nous",
         "text2": "votre avis",
         "duration": "Cela ne prend qu'une minute",
         "sure": "Bien sûr !",
@@ -318,7 +318,7 @@
         "switch": "et passez à Optimism Goerli",
         "processing": "Patientez...",
         "next": "Épisode suivant sans sauvegarder",
-        "save": "Sauvegarder votre progression",
+        "save": "Sauvegarder et passer au chapitre suivant",
         "or": "ou",
         "signin": "Signez pour enregistrer votre progression:",
         "chapter": "- chapitre:",
@@ -334,11 +334,11 @@
         "haveusdc": "Tu as déjà assez d'USDC, je n'ai pas besoin de t'en envoyer.",
         "networkissues": "Le réseau semble rencontrer des problèmes, reviens plus tard s'il te plaît.",
         "clickon1": "Tu peux cliquer sur",
-        "clickon2": "pour afficher le solde USDC dans ton wallet",
+        "clickon2": "pour afficher le solde USDC dans ton wallet. Puis ajoute le jeton.",
         "narration": "The Lurenberg Post, Rédaction",
         "dialogue": {
             "d1": "Hey Azad, as-tu installé un wallet ?",
-            "d2": "Très bien, je vais maintenant t'envoyer des fonds en USDC, une crypto-monnaie stable dont la valeur est indexée sur le dollar (1 USDC = 1 $).",
+            "d2": "Très bien, je vais maintenant t'envoyer des fonds en USDC, une crypto-monnaie stable dont la valeur est indexée sur le dollar.",
             "d3": "Clique sur l'extension Metamask de ton navigateur. Tu devrais maintenant voir les USDC dans l'onglet 'Actifs'.",
             "d4": "J'ai besoin de ton adresse pour t'envoyer les fonds maintenant. C'est une séquence unique de lettres et de chiffres qui commence par 0x......",
             "d5": "Lorsque tu cliques sur l'extension, tu verras l'adresse juste en dessous de l’intitulé du compte ('Compte 1' dans ton cas car tu viens juste de l'installer).",

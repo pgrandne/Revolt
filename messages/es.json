@@ -37,7 +37,7 @@
         "nextbutton": "Siguiente episodio"
     },
     "Feedback": {
-        "text1": "Antes de pasar al siguiente episodio, danos",
+        "text1": "Antes de pasar al siguiente capítulo, danos",
         "text2": "tu opinión",
         "duration": "Sólo lleva 1 minuto",
         "sure": "¡Seguro!",
@@ -252,14 +252,14 @@
             "d6": "Y sobre todo, nadie nunca podrá impedirte acceder a él. Nunca.",
             "d7": "¿Dinero real, quieres decir el que tienes en tu cuenta bancaria que no puedes usar desde que fue bloqueada?",
             "d8": "Incluso si se trata de divisas digitales, son bien reales, muchas tiendas aceptan criptomonedas.",
-            "d9": "Bueno, primero tienes que instalar un monedero digital. Metamask es el más utilizado.",
+            "d9": "Bueno, primero tienes que instalar una billetera digital. Metamask es el más utilizado.",
             "d10": "Cerca de 30 millones de personas lo utilizan. Es simplemente una extensión del navegador.",
             "d11": "Te guiaré, lo haremos juntos.",
-            "d12": "Cuando la extensión de Metamask esté descargada en tu navegador, se abrirá una nueva ventana y te pedirá que crees un nuevo monedero.",
+            "d12": "Cuando la extensión de Metamask esté descargada en tu navegador, se abrirá una nueva ventana y te pedirá que crees una nueva billetera.",
             "d13": "Primero, deberás elegir una contraseña que te permita acceder a la extensión desde tu dispositivo.",
             "d14": "Luego viene el paso más importante. Metamask generará aleatoriamente 12 palabras. Esto es lo que se llama la master key.",
             "d15": "Es la única y exclusiva clave que permite abrir tu buzón si retomamos la metáfora anterior.",
-            "d16": "Si la pierdes, tu monedero quedará bloqueado para siempre.",
+            "d16": "Si la pierdes, tu billetera quedará bloqueada para siempre.",
             "d17": "Y si alguien puede acceder a estas palabras, tendrá acceso a todo lo que se almacena en el interior.",
             "d18": "Por eso es esencial guardar estas 12 palabras en un lugar seguro.",
             "d19": "Vuelve a verme cuando hayas terminado todas las etapas que te acabo de describir."
@@ -274,7 +274,7 @@
                 "choice2": "Debería haber resuelto el problema la semana pasada."
             },
             "c3": {
-                "choice1": "No entendí eso del monedero digital...",
+                "choice1": "No entendí eso de la billetera digital...",
                 "choice2": "¿Está relacionado con Bitcoin y las criptomonedas?"
             },
             "c4": {
@@ -318,7 +318,7 @@
         "switch": "y cambia a Optimism Goerli",
         "processing": "Procesando...",
         "next": "Próximo episodio sin guardar",
-        "save": "Guardar tu progreso",
+        "save": "Guardar y avanzar al siguiente capítulo",
         "or": "o",
         "signin": "Firma para guardar tu progreso:",
         "chapter": "- capítulo:",
@@ -334,11 +334,11 @@
         "haveusdc": "Ya tienes suficiente USDC, no necesito enviarte más.",
         "networkissues": "La red parece tener problemas, por favor vuelve más tarde.",
         "clickon1": "Puedes hacer clic en",
-        "clickon2": "para mostrar el saldo de USDC en tu wallet",
+        "clickon2": "para mostrar el saldo de USDC en tu wallet. Luego agrega el token.",
         "narration": "The Lurenberg Post, Redacción",
         "dialogue": {
-            "d1": "Hola Azad, ¿instalaste una wallet?",
-            "d2": "Muy bien, ahora te enviaré algunos fondos en USDC, una criptomoneda estable cuyo valor está indexado al dólar (1 USDC = 1 $).",
+            "d1": "Hola Azad, ¿instalaste un wallet?",
+            "d2": "Muy bien, ahora te enviaré algunos fondos en USDC, una criptomoneda estable cuyo valor está indexado al dólar.",
             "d3": "Haz clic en la extensión de Metamask en tu navegador. Ahora deberías ver los USDC en la pestaña 'Activos'.",
             "d4": "Necesito tu dirección para enviarte los fondos ahora. Es una secuencia única de letras y números que comienza con 0x ......",
             "d5": "Cuando hagas clic en la extensión, verás la dirección justo debajo del nombre de la cuenta ('Cuenta 1' en tu caso porque acabas de instalarla).",

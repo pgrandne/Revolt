@@ -91,7 +91,7 @@ const Chap2 = () => {
                                     progression={progression}
                                     setModal={setModal}
                                 />
-                                <motion.span
+                                {/* <motion.span
                                     className="mx-auto"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
@@ -114,7 +114,7 @@ const Chap2 = () => {
                                         }
                                         {loading ? t('processing') : t('next')}
                                     </Link>
-                                </motion.div>
+                                </motion.div> */}
                             </motion.div>
                         }
                     </>

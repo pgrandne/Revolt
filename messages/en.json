@@ -37,7 +37,7 @@
         "nextbutton": "Next episode"
     },
     "Feedback": {
-        "text1": "Before moving on to the next episode, give us",
+        "text1": "Before moving on to the next chapter, give us",
         "text2": "your feedback",
         "duration": "It only takes 1 minute",
         "sure": "Sure!",
@@ -318,7 +318,7 @@
         "switch": "and switch to Optimism Goerli",
         "processing": "Processing...",
         "next": "Next episode without saving",
-        "save": "Save your progression",
+        "save": "Save and proceed to the next chapter",
         "or": "or",
         "signin": "Sign to save your progression:",
         "chapter": "- chapter:",
@@ -334,11 +334,11 @@
         "haveusdc": "You already have enough USDC, I don't need to send you any ",
         "networkissues": "The network seems to have some issues, come back later please",
         "clickon1": "You can click on",
-        "clickon2": "to display the USDC balance in your wallet",
+        "clickon2": "to display the USDC balance in your wallet. Then add the token.",
         "narration": "The Lurenberg Post, Newsroom",
         "dialogue": {
             "d1": "Hey Azad, did you install a wallet?",
-            "d2": "Alright, I will send you some funds now, in USDC currency. It's what we call a stablecoin, its value is pegged to dollars (1USDC = $1)",
+            "d2": "Alright, I will send you some funds now, in USDC currency. It's what we call a stablecoin, its value is pegged to dollars",
             "d3": "Have a look and click on the wallet extension on your browser. You should now be able to see USDC in the 'Assets' tab",
             "d4": "I need your address to send you the funds now. It is the unique sequence of letters and numbers that starts with 0x……",
             "d5": "Once you clicked on the wallet extension you'll find it written just below the account name (which should be 'Account 1' in your case, as you've just installed it)",
