@@ -1,4 +1,5 @@
 import '../globals.css'
+import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl/client';
 import { Permanent_Marker, Roboto } from 'next/font/google';
 import { notFound } from 'next/navigation';
@@ -52,6 +53,7 @@ export default async function LocaleLayout({ children, params: { locale } }:
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )
