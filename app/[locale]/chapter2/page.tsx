@@ -69,7 +69,7 @@ const Chap2 = () => {
                             className="font-roboto font-bold my-10 text-center text-xl"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 3, duration: 2 }}
+                            transition={{ delay: 2, duration: 2 }}
                         >
                             {!isConnected &&
                                 <p >
@@ -78,7 +78,10 @@ const Chap2 = () => {
                                 </p>
                             }
                             {isConnected && chain?.id !== 420 &&
-                                <p>{t('click')} <span className="font-extrabold">“Wrong Network“</span> {t('switch')}</p>}
+                                <p>
+                                    {t('continue')} <br /> 
+                                    {t('click')} <span className="font-extrabold">“Wrong Network“</span> {t('switch')}
+                                </p>}
                         </ motion.div>
                         {chain?.id === 420 &&
                             <motion.div

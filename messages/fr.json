@@ -244,7 +244,7 @@
         "narration": "Chez Azad",
         "hour": "20h00",
         "dialogue": {
-            "d1": "Ta source a probablement raison. Si tu veux mener à bien cette enquête, tu as besoin de fonds. Le blocage de ton compte pour “activité suspecte“ est probablement une tentative d'intimidation.",
+            "d1": "Ta source a probablement raison. Si tu veux mener à bien cette enquête, tu as besoin de fonds. Le blocage de ta carte est probablement une tentative d'intimidation.",
             "d2": "C'est une étrange coïncidence.",
             "d3": "Quoi qu'il en soit, tu as aussi besoin d'argent pour vivre, tu ne peux pas continuer à emprunter de l'argent à tout le monde comme tu le fais depuis une semaine.",
             "d4": "Tu te souviens de l'enquête SBFTX en début année ? J'ai appris pas mal de choses… Un wallet n'est pas une mauvaise idée pour résoudre ton problème, surtout s'il te permet de recevoir de l'argent.",
@@ -262,7 +262,7 @@
             "d16": "Si tu la perds, ton portefeuille sera verrouillé pour toujours.",
             "d17": "Et si quelqu'un peut accéder à ces mots, il aura accès à tout ce qui est stocké à l'intérieur.",
             "d18": "C'est pourquoi il est essentiel de garder ces 12 mots dans un endroit sûr.",
-            "d19": "Reviens me voir quand tu auras finis l'ensemble des étapes que je viens de te décrire."
+            "d19": "Dis moi quand tu auras finis l'ensemble des étapes que je viens de te décrire."
         },
         "choices": {
             "c1": {
