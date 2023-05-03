@@ -1,6 +1,6 @@
 import '../globals.css'
 import { Analytics } from '@vercel/analytics/react';
-import { NextIntlClientProvider } from 'next-intl/client';
+import { NextIntlClientProvider } from 'next-intl';
 import { Permanent_Marker, Roboto } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
