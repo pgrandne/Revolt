@@ -7,14 +7,6 @@ import { notFound } from 'next/navigation';
 export const metadata = {
   title: 'Revolte',
   description: 'Adventure game for Web3 onboarding',
-  twitter: {
-    card: 'revolte_equipment',
-    title: 'Revolte.app',
-    description: 'Adventure game for Web3 onboarding',
-    site: 'https://revolte.app',
-    creator: '@IrruptionLab',
-    images: ['https://www.revolte.app/img/revolte_card.jpeg'],
-  },
 }
 
 export function generateStaticParams() {
