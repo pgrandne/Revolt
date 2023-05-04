@@ -315,6 +315,7 @@
         "continue": "Pour continuer l'aventure",
         "click": "cliquez sur",
         "select": "et sélectionnez Metamask",
+        "network": "puis autorisez le changement de réseau",
         "switch": "et passez à Optimism Goerli",
         "processing": "Patientez...",
         "next": "Épisode suivant sans sauvegarder",

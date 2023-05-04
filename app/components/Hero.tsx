@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { ModalInfo, ModalSelectChapter } from "@/app/components";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "@/lib/utils/checkWallet";
-import { github, linkedin, twitter, donation, irruptionlab } from "@/public/svg";
+import { github, linkedin, twitter, donation, irruptionlab, discord } from "@/public/svg";
 import info from "@/public/svg/info.svg"
 import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitcher } from "./LocaleSwitcher";
@@ -122,12 +122,19 @@ export const Hero = () => {
                             alt="irruptionlab"
                         />
                     </a>
+                    <a href="https://discord.gg/ScjvqNRJ" target="_blank" rel="noreferrer">
+                        <Image
+                            className="footerIcon"
+                            src={discord}
+                            alt="discord"
+                        />
+                    </a>
                 </div>
                 <motion.div
                     className="hidden sm:block fixed top-5 left-5 -z-10"
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 6, duration: 1 }}
+                    transition={{ delay: 5, duration: 1 }}
                 >
                     <p className="text-white text-opacity-70 text-xl">{t('subtitle')}</p>
                 </motion.div>

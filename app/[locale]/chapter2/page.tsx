@@ -74,7 +74,8 @@ const Chap2 = () => {
                             {!isConnected &&
                                 <p >
                                     {t('continue')} <br /> 
-                                    {t('click')} <span className="font-extrabold">“Connect Wallet“</span> {t('select')}
+                                    {t('click')} <span className="font-extrabold">“Connect Wallet“</span> {t('select')}<br />
+                                    {t('network')} 
                                 </p>
                             }
                             {isConnected && chain?.id !== 420 &&

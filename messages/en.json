@@ -315,6 +315,7 @@
         "continue": "To continue the adventure",
         "click": "click on",
         "select": "and select Metamask",
+        "network": "then authorize network change",
         "switch": "and switch to Optimism Goerli",
         "processing": "Processing...",
         "next": "Next episode without saving",
