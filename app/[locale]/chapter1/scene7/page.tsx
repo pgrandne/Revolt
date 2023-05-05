@@ -10,10 +10,10 @@ const Chap1s7 = () => {
     const [stage, setStage] = useState(0)
     const [modalFeedback, setModalFeedback] = useState(false)
 
-    useEffect(() => {
-        if (stage === 9)        
-            setModalFeedback(true)               
-    }, [stage])
+    // useEffect(() => {
+    //     if (stage === 9)        
+    //         setModalFeedback(true)               
+    // }, [stage])
 
     return (
         <div className="flex flex-row">
@@ -26,7 +26,7 @@ const Chap1s7 = () => {
             <div className="basis-1/3 p-6 h-screen flex-grow-0">
                 <Discussion stage={stage} setStage={setStage} />
             </div>
-            {modalFeedback && 
+            {/* {modalFeedback && 
             <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -34,6 +34,18 @@ const Chap1s7 = () => {
             >
             < ModalFeedback setModalFeedback={setModalFeedback} />
             </motion.div>  
+            } */}
+            {
+                stage === 9 &&
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
+                >
+                    <LinkLocale href="/chapter2" className="absolute bottom-8 right-[33%] animate-pulse">
+                        <ArrowButton />
+                    </LinkLocale>
+                </motion.div>
             }
         </div >
     )
