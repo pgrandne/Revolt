@@ -18,7 +18,7 @@
     "eslint-config-next": "13.3.4",
     "ethers": "5.7.2",
     "flag-icons": "6.6.6",
-    "framer-motion": "10.12.7",
+    "framer-motion": "10.12.8",
     "next": "13.3.4",
     "next-intl": "2.13.2",
     "react": "18.2.0",
@@ -29,9 +29,9 @@
     "wagmi": "0.12.12"
   },
   "devDependencies": {
-    "@types/node": "18.16.3",
-    "@types/react": "18.2.1",
-    "@types/react-dom": "18.2.3",
+    "@types/node": "20.0.0",
+    "@types/react": "18.2.5",
+    "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "postcss": "8.4.23",
     "prisma": "4.12.0",
