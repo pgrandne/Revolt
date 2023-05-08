@@ -14,7 +14,7 @@
     "@rainbow-me/rainbowkit": "0.12.12",
     "@vercel/analytics": "^1.0.1",
     "encoding": "0.1.13",
-    "eslint": "8.39.0",
+    "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "ethers": "5.7.2",
     "flag-icons": "6.6.6",
@@ -29,8 +29,8 @@
     "wagmi": "0.12.12"
   },
   "devDependencies": {
-    "@types/node": "20.0.0",
-    "@types/react": "18.2.5",
+    "@types/node": "20.1.1",
+    "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "postcss": "8.4.23",
