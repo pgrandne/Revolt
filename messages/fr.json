@@ -30,6 +30,29 @@
         "error": "Erreur lors du chargement de la sauvegarde.",
         "wait": "Patientez..."
     },
+    "SelectChapter": {
+        "chapter": "Chapitre",
+        "episode": "épisode",
+        "episodes": "épisodes",
+        "textChap1-1": "Découvrez l'histoire",
+        "textChap1-2": "Installez votre wallet",
+        "textChap1-3": "Indispensable pour explorer le Web3",
+        "beginner": "Débutant",
+        "advanced": "Avancé",
+        "textChap2-1": "Continuez l'aventure",
+        "textChap2-2": "Apprenez les bases du Web3",
+        "textChap2-3": "Transactions, Gas, NFT...",
+        "underConstruction": "En construction",
+        "textChap3-1": "Continuez l'aventure",
+        "textChap3-2": "Découvrez les protocoles Web3 existants",
+        "textChap3-3": "Ce chaptitre est sur le mainnet",
+        "resume": "Reprendre la dernière session",
+        "close": "Fermer",
+
+        "connect": "Connectez votre wallet",        
+        "error": "Erreur lors du chargement de la sauvegarde.",
+        "wait": "Patientez..."
+    },
     "Save": {
         "saved": "Progression sauvegardée !",
         "next": "Vous pouvez passer à l'épisode suivant",
@@ -307,7 +330,8 @@
     },
     "Chap2": {        
         "metamask": "Metamask est requis pour le Chapitre 2 et il semble que vous ne l'ayez pas installé.",
-        "metamaskLink1": "Vous pouvez cliquer ici ",
+        "metamaskLink1": "Vous pouvez cliquer ",
+        "metamaskLink": "ici",
         "metamaskLink2": " pour l'installer",
         "gotochapter1": "Ou vous pouvez vous rendre au ",
         "gotochapter1end": "pour redécouvrir toute l'histoire et comprendre comment fonctionne Metamask.",

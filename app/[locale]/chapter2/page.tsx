@@ -53,7 +53,7 @@ const Chap2 = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 3, duration: 2 }}
                         >
-                            {t('metamaskLink1')}<a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">link</a>{t('metamaskLink2')}
+                            {t('metamaskLink1')}<a target="_blank" href="https://metamask.io/" rel="noopener noreferrer" className="underline">{t('metamaskLink')}</a>{t('metamaskLink2')}
                         </ motion.p>
                         <motion.p
                             initial={{ opacity: 0 }}
