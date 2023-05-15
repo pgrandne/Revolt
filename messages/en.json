@@ -1,7 +1,7 @@
 {
     "Home": {
         "title": "Story of a whistleblower",
-        "subtitle": "An adventure game to start exploring Web3",
+        "subtitle": "Learn about Web3 in a fun way. And earn incentives.",
         "buttonName": "Enter the adventure"
     },
     "Info": {
@@ -19,7 +19,8 @@
         "text": "The first version of Revolte is only accessible on Desktop. The mobile version will be available soon"
     },
     "Construction": {
-        "text": "To be continued..."
+        "text": "To be continued...",
+        "text2": "Stay tuned for new episodes! Follow us on social media."
     },
     "Progression": {
         "title": "Select where you want to go",
@@ -65,8 +66,8 @@
         "duration": "It only takes 1 minute",
         "sure": "Sure!",
         "close": "Later",
-        "feedback": "Help us improve the experience and give us your feedback 🙏 Click",
-        "link": "here"
+        "feedback": "Help us improve the experience and give us your",
+        "link": "feedback"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -148,7 +149,7 @@
             },
             "c7": {
                 "choice1": "Of all the times for my card to stop working, it had to choose now...",
-                "choice2": "I can't believe this is happening just when i'm having issues with my bank."
+                "choice2": "(say nothing)"
             }
         }
     },
@@ -163,7 +164,7 @@
             "d3": "Before I tell you, I need to make sure that our discussions remain private. The matter is extremely sensitive",
             "d4": "At this stage, I can only give you its code name: ClearPath",
             "d5": "Do not speak to anyone about our exchanges, I will never contact you anywhere other than on this encrypted app",
-            "d6": "There is a locker, number 29, at Central Street Station. The code is 091031. I have put a first sample of documents, you will realize the extent of the matter",
+            "d6": "There is a locker, number 29, at Central Street Station. The code is 081031. I have put a first sample of documents, you will realize the extent of the matter",
             "d7": "It sounded urgent, is there a problem?",
             "d8": "It costs nothing to see where it takes you",
             "d9": "What is it?"
@@ -207,7 +208,7 @@
     "Chap1s6": {
         "hour": "October 31, 2023",
         "narration": "Government announces the end of cash",
-        "hour1": "8:55 am",
+        "hour1": "The next morning",
         "hour2": "9:30 am",
         "narration2": "The Lurenberg Post, Newsroom",
         "dialogue": {
@@ -235,7 +236,7 @@
             },
             "c3": {
                 "choice1": "You're right. I need to find out.",
-                "choice2": "I need to get in touch with my source."
+                "choice2": "(say nothing)"
             },
             "c4": {
                 "choice1": "How did you find out?",
@@ -326,7 +327,8 @@
             }
         },
         "text1": "Go to",
-        "text2": "and download the extension."
+        "text2": "and download the extension.",
+        "text3": "(Required to continue the adventure)"
     },
     "Chap2": {
         "metamask": "Metamask is required for Chapter 2 and it looks like you don't have it installed.",

@@ -47,7 +47,7 @@ const Chap1s4 = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 1.5, duration: 1 }}
+                        transition={{ delay: 1, duration: 1 }}
                     >
                         <button
                             className="absolute bottom-8 right-8 animate-pulse"

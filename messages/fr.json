@@ -1,7 +1,7 @@
 {
     "Home": {
         "title": "Histoire d'un lanceur d'alerte",
-        "subtitle": "Une fiction interactive pour explorer le Web3",
+        "subtitle": "Découvrez le Web3 de façon ludique. Et gagnez des récompenses.",
         "buttonName": "Entrer dans l'aventure"
     },
     "Info": {
@@ -19,7 +19,8 @@
         "text": "La première version de Revolte n'est accessible que sur ordinateur. La version mobile sera bientôt disponible."
     },
     "Construction": {
-        "text": "À suivre..."
+        "text": "À suivre...",
+        "text2": "Ne manquez pas les nouveaux épisodes ! Suivez-nous sur les réseaux."
     },
     "Progression": {
         "title": "Sélectionner où vous souhaitez aller",
@@ -65,8 +66,8 @@
         "duration": "Cela ne prend qu'une minute",
         "sure": "Bien sûr !",
         "close": "Plus tard",
-        "feedback": "Aidez-nous à améliorer l'expérience et donnez-nous votre avis 🙏 Cliquez",
-        "link": "ici"
+        "feedback": "Aidez-nous à améliorer l'expérience et donnez-nous votre",
+        "link": "avis"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -147,8 +148,8 @@
                 "choice2": "Je ne vois pas comment le gouvernement pourrait résoudre le problème."
             },
             "c7": {
-                "choice1": "Les problèmes avec ma carte bancaire ne pouvaient pas arriver à un pire moment.",
-                "choice2": "Je n'arrive pas à croire que ça arrive juste au moment où j'ai des soucis avec ma banque."
+                "choice1": "Les soucis avec ma carte bancaire ne pouvaient pas arriver à un pire moment.",
+                "choice2": "(ne rien dire)"
             }
         }
     },
@@ -163,7 +164,7 @@
             "d3": "Avant de t'en parler, je dois m'assurer que nos échanges restent privés. L'affaire est extrêmement délicate",
             "d4": "À ce stade, je ne peux te donner que son nom de code : ClearPath",
             "d5": "Ne parle à personne de nos échanges, je ne te contacterai jamais ailleurs que sur cette application cryptée",
-            "d6": "Il y a un casier, le numéro 29, à la gare de Central Street. Le code est 311009. J'y ai mis un premier échantillon de documents, tu te rendras compte de l'ampleur de la situation",
+            "d6": "Il y a un casier, le numéro 29, à la gare de Central Street. Le code est 311008. J'y ai mis un premier échantillon de documents, tu te rendras compte de l'ampleur de la situation",
             "d7": "Ça avait l'air urgent, il y a un problème ?",
             "d8": "Ça ne coûte rien de voir où ça nous mène.",
             "d9": "Qu'est-ce que c'est ?"
@@ -207,7 +208,7 @@
     "Chap1s6": {
         "hour": "31 Octobre, 2023",
         "narration": "Le gouvernement annonce la fin de l'argent liquide",
-        "hour1": "8h55",
+        "hour1": "Dans la matinée",
         "hour2": "9h30",
         "narration2": "The Lurenberg Post, Rédaction ",
         "dialogue": {
@@ -235,7 +236,7 @@
             },
             "c3": {
                 "choice1": "Tu as raison. Je dois creuser.",
-                "choice2": "Je dois entrer en contact avec ma source."
+                "choice2": "(ne rien dire)"
             },
             "c4": {
                 "choice1": "Comment as-tu découvert ça ?",
@@ -326,7 +327,8 @@
             }
         },
         "text1": "Va sur",
-        "text2": "et télécharge l'extension."
+        "text2": "et télécharge l'extension.",
+        "text3": "(Etape indispensable pour la suite de l'aventure)"
     },
     "Chap2": {        
         "metamask": "Metamask est requis pour le Chapitre 2 et il semble que vous ne l'ayez pas installé.",

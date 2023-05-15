@@ -21,7 +21,7 @@ const Telegram = ({ stage, setStage }: { stage: number, setStage: Dispatch<SetSt
             className="flex w-full h-full overflow-hidden antialiased rounded-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
         >
             <div className="relative flex flex-col flex-1 bg-zinc-300">
                 <TelegramSkeleton />

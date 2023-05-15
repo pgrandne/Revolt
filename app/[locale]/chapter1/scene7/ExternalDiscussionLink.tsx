@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion"
 
-const ExternalDiscussion = ({ name, delay, text1, text2 }: {
+const ExternalDiscussion = ({ name, delay, text1, text2, text3 }: {
     name: string
     delay: number
     text1: string
     text2: string
+    text3: string
 }) => {
 
     return (
@@ -19,7 +20,7 @@ const ExternalDiscussion = ({ name, delay, text1, text2 }: {
             >
                 <div className={name}>{name}</div>
                 <div className="text-sm text-slate-900">
-                    {text1} <a className="underline" href="https://metamask.io/" target="_blank" rel="noreferrer">metamask.io</a> {text2}
+                    {text1} <a className="underline" href="https://metamask.io/" target="_blank" rel="noreferrer">metamask.io</a> {text2} <a className="italic"> {text3} </a>
                 </div>
             </motion.div>
         </div >

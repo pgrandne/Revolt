@@ -1,7 +1,7 @@
 {
     "Home": {
         "title": "Historia de un denunciante",
-        "subtitle": "Una aventura para empezar a explorar el Web3",
+        "subtitle": "Descubre el Web3 de manera divertida. Y gana recompensas.",
         "buttonName": "Empezar la aventura"
     },
     "Info": {
@@ -19,7 +19,8 @@
         "text": "La primera versión de Revolte solo es accesible en escritorio. La versión móvil estará disponible pronto"
     },
     "Construction": {
-        "text": "Continuará..."
+        "text": "Continuará...",
+        "text2": "¡No te pierdas nuevos episodios! Síguenos en redes."
     },
     "Progression": {
         "title": "Selecciona a dónde quieres ir",
@@ -65,8 +66,8 @@
         "duration": "Sólo lleva 1 minuto",
         "sure": "¡Seguro!",
         "close": "Más tarde",
-        "feedback": "Ayúdanos a mejorar la experiencia y danos tu opinión 🙏 Haz clic",
-        "link": "aquí"
+        "feedback": "Ayúdanos a mejorar la experiencia y danos tu ",
+        "link": "opinión"
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
@@ -148,7 +149,7 @@
             },
             "c7": {
                 "choice1": "Los problemas con mi tarjeta bancaria no podrían haber llegado en peor momento.",
-                "choice2": "No puedo creer que esto pasa justo cuando tengo problemas con mi banco."
+                "choice2": "(no decir nada)"
             }
         }
     },
@@ -163,7 +164,7 @@
             "d3": "Antes de hablarte de eso, debo asegurarme de que nuestros intercambios sean privados. El asunto es extremadamente delicado.",
             "d4": "En este punto, solo puedo darte su nombre en clave: ClearPath",
             "d5": "No hables con nadie sobre nuestros intercambios, nunca te contactaré en otra aplicación que no sea esta aplicación cifrada.",
-            "d6": "Hay un casillero, el número 29, en la estación de Central Street. El código es 311009. Puse una muestra inicial de documentos allí, te darás cuenta de la magnitud de la situación.",
+            "d6": "Hay un casillero, el número 29, en la estación de Central Street. El código es 311008. Puse una muestra inicial de documentos allí, te darás cuenta de la magnitud de la situación.",
             "d7": "Parecía urgente, ¿hay un problema?",
             "d8": "No cuesta nada ver a dónde nos lleva.",
             "d9": "¿Qué es eso?"
@@ -207,7 +208,7 @@
     "Chap1s6": {
         "hour": "31 de Octubre, 2023",
         "narration": "El gobierno anuncia el fin del efectivo",
-        "hour1": "8:55 am",
+        "hour1": "Por la mañana",
         "hour2": "9:30 am",
         "narration2": "The Lurenberg Post, Redacción",
         "dialogue": {
@@ -235,7 +236,7 @@
             },
             "c3": {
                 "choice1": "Tienes razón. Tengo que investigar.",
-                "choice2": "Tengo que contactar a mi informante."
+                "choice2": "(no decir nada)"
             },
             "c4": {
                 "choice1": "¿Cómo te enteraste?",
@@ -326,7 +327,8 @@
             }
         },
         "text1": "Ve a",
-        "text2": "y descarga la extensión."
+        "text2": "y descarga la extensión.",
+        "text3": "(Paso indispensable para continuar la aventura)"
     },
     "Chap2": {        
         "metamask": "Se requiere Metamask para el Capítulo 2 y parece que no lo tienes instalado.",
