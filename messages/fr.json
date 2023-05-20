@@ -6,7 +6,7 @@
     },
     "Info": {
         "title": "une fiction interactive pour embarquer les utilisateurs du Web2 vers le Web3",
-        "subtitle": "est un projet opensource. Vous pouvez nous aider en faisant un don à :",
+        "subtitle": "est un projet open source. Vous pouvez nous aider en faisant un don à :",
         "deck": "Découvrez notre deck",
         "online": "En ligne",
         "download": "Télécharger",
@@ -68,6 +68,19 @@
         "close": "Plus tard",
         "feedback": "Aidez-nous à améliorer l'expérience et donnez-nous votre",
         "link": "avis"
+    },
+    "ExpressVersion": {
+        "button":"Mode express",
+        "title": "Résumé du chapitre",
+        "text1": "Suite à la découverte d'un réseau colossal de faux billets, Azad, journaliste au Lurenberg Post, reçoit un message d'un mystérieux informateur se faisant appeler Cincinnatus. Les documents qu'il détient pourraient révéler une affaire sensible et explosive.",
+        "text2": "Azad met la main sur les documents classifiés relatifs à l'opération ClearPath. Cette révélation fracassante dévoile une stratégie visant à supprimer l'argent liquide et à promouvoir une société sans espèces.",
+        "text3": "Le lendemain, coup de tonnerre : le gouvernement annonce brusquement la fin de l'argent liquide dans une tentative désespérée de sauver l'économie. Azad se retrouve pris au piège, sa carte bancaire étant bloquée, mais une opportunité se présente à lui…",
+        "text4": "Dans l'espoir de mener à bien son enquête, Azad décide de suivre les conseils de Cincinnatus et d'installer un portefeuille électronique 'Metamask'. La promesse de soutien financier de son informateur l'encourage à poursuivre ses investigations, malgré les enjeux de plus en plus élevés.",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "install": "Installer Metamask",
+        "nextChapter": "Continuer l'aventure",
+        "note": "(Indispensable pour poursuivre l'aventure et explorer le Web3)"        
     },
     "Chap1s1": {
         "narration": "Lurenberg, Listenbourg",
