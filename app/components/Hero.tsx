@@ -9,8 +9,7 @@ import { useEffect, useState } from "react";
 import { ModalInfo, ModalSelectChapter } from "@/app/components";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { handleEthereum } from "@/lib/utils/checkWallet";
-import { github, linkedin, twitter, donation, irruptionlab, discord } from "@/public/svg";
-import info from "@/public/svg/info.svg"
+import { discord, donation, github, info, irruptionlab, linkedin, twitter } from "@/public/svg";
 import { useLocale, useTranslations } from 'next-intl';
 import { LocaleSwitcher } from "./LocaleSwitcher";
 
