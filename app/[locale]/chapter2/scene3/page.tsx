@@ -85,4 +85,4 @@ const Chap2s2 = () => {
 // }
 
 
-export default Chap2s3;
+export default Chap2s2;
