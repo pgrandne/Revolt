@@ -68,7 +68,7 @@ const Chap2s2 = () => {
 //                       className="fixed bottom-8 right-[33%] animate-pulse"
 //                       initial={{ opacity: 0 }}
 //                       animate={{ opacity: 1 }}
-//                       transition={{ delay: 14, duration: 1 }}
+//                       transition={{ delay: 14, duration: 1.5 }}
 //                   >
 //                       <SaveButton
 //                           setModal={setModal}
@@ -85,4 +85,4 @@ const Chap2s2 = () => {
 // }
 
 
-export default Chap2s2;
+export default Chap2s3;
