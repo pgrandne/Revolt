@@ -3,9 +3,9 @@
 import { redirect } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
-const Chap2s2 = () => {
+const Chap3s2 = () => {
   const locale = useLocale()
   redirect(`/${locale}/construction?source=chap2scene2`);
 }
 
-export default Chap2s2;
+export default Chap3s2;
